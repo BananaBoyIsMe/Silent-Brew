@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://8bxyucq7navv"]
+
+[ext_resource type="Script" uid="uid://dof614ccheyqi" path="res://script/enemy_1.gd" id="1_exoai"]
+[ext_resource type="Texture2D" uid="uid://cpjyp7yow84di" path="res://sprite/enemy/sb_enemy1_wing.png" id="2_1g8hu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hx534"]
+radius = 45.0
+
+[node name="enemy_1" type="Node2D"]
+script = ExtResource("1_exoai")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
+texture = ExtResource("2_1g8hu")
+offset = Vector2(0, -10)
+
+[node name="enemy" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy"]
+position = Vector2(1, 56)
+shape = SubResource("CircleShape2D_hx534")

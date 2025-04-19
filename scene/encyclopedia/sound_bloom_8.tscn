@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=3 uid="uid://cnwgjlw0p2epu"]
+
+[ext_resource type="Texture2D" uid="uid://dvgc400wwgst6" path="res://sprite/map_ency_inven/sb_encyclopedia.png" id="1_ha0gr"]
+[ext_resource type="Texture2D" uid="uid://yd1biqxq0t3g" path="res://sprite/plant/sb_plant8.png" id="2_tu0ao"]
+[ext_resource type="Texture2D" uid="uid://cwpxlsfj7rxjt" path="res://sprite/plant/sb_plant_frame.png" id="3_lojmm"]
+[ext_resource type="FontFile" uid="uid://bias1she8j2dm" path="res://sfont/Caveat-VariableFont_wght.ttf" id="4_f3sj3"]
+
+[node name="sound_bloom_8" type="Node2D"]
+
+[node name="encyclopedia" type="Sprite2D" parent="."]
+visible = false
+z_index = -1
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("1_ha0gr")
+
+[node name="SbPlant8" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(-361, -59)
+scale = Vector2(1, 0.979)
+texture = ExtResource("2_tu0ao")
+
+[node name="SbPlantFrame" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(-365, -59)
+texture = ExtResource("3_lojmm")
+
+[node name="SbPlantFrame2" type="Sprite2D" parent="."]
+modulate = Color(0.44, 0.44, 0.44, 1)
+z_index = 1
+position = Vector2(-365, -59)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("3_lojmm")
+
+[node name="name" type="Label" parent="."]
+offset_left = -486.0
+offset_top = -277.0
+offset_right = -224.0
+offset_bottom = -207.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_f3sj3")
+theme_override_font_sizes/font_size = 55
+text = "Sound Bloom"
+
+[node name="info" type="Label" parent="."]
+offset_left = -184.0
+offset_top = -308.0
+offset_right = 421.0
+offset_bottom = 127.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_f3sj3")
+theme_override_font_sizes/font_size = 55
+text = "... I really want to find it.
+Mama say it is use in potion 
+of sound and cure my voice.
+
+I miss singing and...
+I want to talk again."

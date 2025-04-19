@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bon5imptwhdtx"]
+
+[ext_resource type="Texture2D" uid="uid://bisye3om3teva" path="res://sprite/deco/sb_rock2.png" id="1_hospy"]
+
+[node name="rock_2" type="Node2D"]
+
+[node name="SbRock2" type="Sprite2D" parent="."]
+scale = Vector2(0.7, 0.8)
+texture = ExtResource("1_hospy")

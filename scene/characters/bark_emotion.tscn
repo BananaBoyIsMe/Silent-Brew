@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://tsjcm1n2xt3h"]
+
+[ext_resource type="Texture2D" uid="uid://ds6bh8lv5sgq0" path="res://sprite/bark/bark_emotion1.png" id="1_swglr"]
+
+[node name="bark_emotion" type="Node2D"]
+z_index = 100
+
+[node name="BabyBark1" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_swglr")

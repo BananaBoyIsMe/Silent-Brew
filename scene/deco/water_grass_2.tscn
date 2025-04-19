@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dk75nkxegpdth"]
+
+[ext_resource type="Texture2D" uid="uid://cyin3hirqvul7" path="res://sprite/deco/sb_water_grass2.png" id="1_kyb28"]
+
+[node name="water_grass_2" type="Node2D"]
+
+[node name="SbWaterGrass2" type="Sprite2D" parent="."]
+texture = ExtResource("1_kyb28")

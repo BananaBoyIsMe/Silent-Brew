@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://cwq12i3ur4po4"]
+
+[ext_resource type="Script" uid="uid://b3cnexkwb7a5n" path="res://script/character_emotion.gd" id="1_jt3vd"]
+[ext_resource type="Texture2D" uid="uid://ds6bh8lv5sgq0" path="res://sprite/bark/bark_emotion1.png" id="2_g484t"]
+[ext_resource type="Texture2D" uid="uid://bwf6dvven0to" path="res://sprite/character/sb_text_box2.png" id="3_g484t"]
+[ext_resource type="Texture2D" uid="uid://eupo2jqmyhau" path="res://sprite/character/sb_text_box3.png" id="3_pwrmf"]
+[ext_resource type="Texture2D" uid="uid://btp5le8h5dd5j" path="res://sprite/character/sb_text_box4.png" id="5_pwrmf"]
+
+[node name="character_emotion" type="Node2D"]
+script = ExtResource("1_jt3vd")
+
+[node name="character_png" type="Sprite2D" parent="."]
+texture = ExtResource("2_g484t")
+
+[node name="text_box3" type="Sprite2D" parent="."]
+position = Vector2(614, 153)
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("3_pwrmf")
+
+[node name="SbTextBox2" type="Sprite2D" parent="."]
+position = Vector2(-1159, -69)
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("3_g484t")
+
+[node name="Label" type="Label" parent="SbTextBox2"]
+offset_left = -1108.0
+offset_top = -454.0
+offset_right = 930.0
+offset_bottom = 788.0
+theme_override_font_sizes/font_size = 180
+text = "Hi like agap
+hdhid
+ahihjidhdifhf
+ahidfhhdfhifhiofjfkhfjkf
+"
+
+[node name="SbTextBox1" type="Sprite2D" parent="."]
+z_index = 101
+position = Vector2(977, -17)
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("5_pwrmf")
+
+[node name="Label2" type="Label" parent="SbTextBox1"]
+offset_left = -754.0
+offset_top = -332.0
+offset_right = 718.0
+offset_bottom = 662.0
+theme_override_font_sizes/font_size = 150
+text = "Hi Like pastea
+but you dont
+like it huh"

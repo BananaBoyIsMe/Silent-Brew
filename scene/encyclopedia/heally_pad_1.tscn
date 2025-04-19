@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3 uid="uid://cqt6yjb52spjt"]
+
+[ext_resource type="Texture2D" uid="uid://4ui6ogbv8407" path="res://sprite/plant/sb_plant1.png" id="1_jq62a"]
+[ext_resource type="Texture2D" uid="uid://dvgc400wwgst6" path="res://sprite/map_ency_inven/sb_encyclopedia.png" id="2_5ofo7"]
+[ext_resource type="Texture2D" uid="uid://cwpxlsfj7rxjt" path="res://sprite/plant/sb_plant_frame.png" id="3_2beve"]
+[ext_resource type="FontFile" uid="uid://bias1she8j2dm" path="res://sfont/Caveat-VariableFont_wght.ttf" id="4_ny7j1"]
+
+[node name="heally_pad" type="Node2D"]
+
+[node name="encyclopedia" type="Sprite2D" parent="."]
+visible = false
+z_index = -1
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("2_5ofo7")
+
+[node name="SbPlant1" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(-359, -57)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_jq62a")
+
+[node name="SbPlantFrame" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(-365, -59)
+texture = ExtResource("3_2beve")
+
+[node name="SbPlantFrame2" type="Sprite2D" parent="."]
+modulate = Color(0.44, 0.44, 0.44, 1)
+z_index = 1
+position = Vector2(-365, -59)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("3_2beve")
+
+[node name="name" type="Label" parent="."]
+offset_left = -469.0
+offset_top = -276.0
+offset_right = -266.0
+offset_bottom = -206.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_ny7j1")
+theme_override_font_sizes/font_size = 55
+text = "Heally Pad"
+
+[node name="info" type="Label" parent="."]
+offset_left = -155.0
+offset_top = -281.0
+offset_right = 326.0
+offset_bottom = 81.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_ny7j1")
+theme_override_font_sizes/font_size = 55
+text = "Mama say they are really 
+big and I can walk on it!
+
+They like water and can
+use in healing potio"

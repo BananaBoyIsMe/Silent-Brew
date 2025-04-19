@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cp1jc3ru13q5k"]
+
+[ext_resource type="Texture2D" uid="uid://d15wfifbnpqyn" path="res://sprite/tiles/sb_tile2.png" id="1_dx7p8"]
+[ext_resource type="Script" uid="uid://m3sb6mcwgg5j" path="res://script/tile_1.gd" id="1_kk161"]
+
+[node name="tile_2" type="Node2D"]
+script = ExtResource("1_kk161")
+
+[node name="SbTile" type="Sprite2D" parent="."]
+texture = ExtResource("1_dx7p8")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(-64, -110, 64, -110, 128, 0, 64, 110, -64, 110, -128, 0)
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

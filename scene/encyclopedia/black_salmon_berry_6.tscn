@@ -1,0 +1,69 @@
+[gd_scene load_steps=5 format=3 uid="uid://b16j7t3quyhu5"]
+
+[ext_resource type="Texture2D" uid="uid://dvgc400wwgst6" path="res://sprite/map_ency_inven/sb_encyclopedia.png" id="1_0ldn3"]
+[ext_resource type="Texture2D" uid="uid://chwsvmx5ls8xw" path="res://sprite/plant/sb_plant6.png" id="2_ekmuv"]
+[ext_resource type="Texture2D" uid="uid://cwpxlsfj7rxjt" path="res://sprite/plant/sb_plant_frame.png" id="3_mu8rg"]
+[ext_resource type="FontFile" uid="uid://bias1she8j2dm" path="res://sfont/Caveat-VariableFont_wght.ttf" id="4_ckq6c"]
+
+[node name="black_salmon_berry_6" type="Node2D"]
+
+[node name="encyclopedia" type="Sprite2D" parent="."]
+visible = false
+z_index = -1
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("1_0ldn3")
+
+[node name="SbPlant6" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(-361, -67)
+scale = Vector2(1, 0.979)
+texture = ExtResource("2_ekmuv")
+
+[node name="SbPlantFrame" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(-365, -59)
+texture = ExtResource("3_mu8rg")
+
+[node name="SbPlantFrame2" type="Sprite2D" parent="."]
+modulate = Color(0.9, 0.9, 0.9, 1)
+z_index = 1
+position = Vector2(-365, -59)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("3_mu8rg")
+
+[node name="name" type="Label" parent="."]
+offset_left = -495.0
+offset_top = -296.0
+offset_right = -244.0
+offset_bottom = -153.0
+rotation = -0.111457
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_ckq6c")
+theme_override_font_sizes/font_size = 55
+text = "Black Salmon"
+
+[node name="name2" type="Label" parent="."]
+offset_left = -369.0
+offset_top = -260.0
+offset_right = -118.0
+offset_bottom = -117.0
+rotation = -0.111457
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_ckq6c")
+theme_override_font_sizes/font_size = 55
+text = "Berry"
+
+[node name="info" type="Label" parent="."]
+offset_left = -179.0
+offset_top = -302.0
+offset_right = 379.0
+offset_bottom = 133.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_ckq6c")
+theme_override_font_sizes/font_size = 55
+text = "Mama let me eat these a lot!
+They are sour but tasty!
+
+She doesn't use them in any
+potion but sometime        e
+would make smooties!"

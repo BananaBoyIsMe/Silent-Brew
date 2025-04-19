@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=3 uid="uid://jnh7fuafracm"]
+
+[ext_resource type="Texture2D" uid="uid://vswin7sgd3qf" path="res://sprite/plant/sb_plant3.png" id="1_882b2"]
+[ext_resource type="Texture2D" uid="uid://dvgc400wwgst6" path="res://sprite/map_ency_inven/sb_encyclopedia.png" id="2_fc8tq"]
+[ext_resource type="Texture2D" uid="uid://cwpxlsfj7rxjt" path="res://sprite/plant/sb_plant_frame.png" id="3_uga31"]
+[ext_resource type="FontFile" uid="uid://bias1she8j2dm" path="res://sfont/Caveat-VariableFont_wght.ttf" id="4_bunq7"]
+
+[node name="crystal_fruit_3" type="Node2D"]
+
+[node name="SbPlant3" type="Sprite2D" parent="."]
+z_index = 3
+position = Vector2(-357, -57)
+texture = ExtResource("1_882b2")
+
+[node name="encyclopedia" type="Sprite2D" parent="."]
+z_index = -1
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("2_fc8tq")
+
+[node name="SbPlantFrame" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(-365, -59)
+texture = ExtResource("3_uga31")
+
+[node name="SbPlantFrame2" type="Sprite2D" parent="."]
+modulate = Color(0.441406, 0.441406, 0.441406, 1)
+z_index = 1
+position = Vector2(-365, -59)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("3_uga31")
+
+[node name="name" type="Label" parent="."]
+offset_left = -486.0
+offset_top = -274.0
+offset_right = -244.0
+offset_bottom = -204.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_bunq7")
+theme_override_font_sizes/font_size = 55
+text = "Crystal Fruit"
+
+[node name="info" type="Label" parent="."]
+offset_left = -174.0
+offset_top = -312.0
+offset_right = 362.0
+offset_bottom = 123.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_bunq7")
+theme_override_font_sizes/font_size = 55
+text = "The big vine tree in the town
+makes the crystal fruits.
+
+Mama loves this fruit! It is
+full of fresh water!         
+use in every potion!"

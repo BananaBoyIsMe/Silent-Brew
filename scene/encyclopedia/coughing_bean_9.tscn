@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=3 uid="uid://cf1m0cctuolv6"]
+
+[ext_resource type="Texture2D" uid="uid://dvgc400wwgst6" path="res://sprite/map_ency_inven/sb_encyclopedia.png" id="1_qfc7m"]
+[ext_resource type="Texture2D" uid="uid://bu7rfob4513gh" path="res://sprite/plant/sb_plant9.png" id="2_1jq42"]
+[ext_resource type="Texture2D" uid="uid://cwpxlsfj7rxjt" path="res://sprite/plant/sb_plant_frame.png" id="3_5gvjt"]
+[ext_resource type="FontFile" uid="uid://bias1she8j2dm" path="res://sfont/Caveat-VariableFont_wght.ttf" id="4_iec5f"]
+
+[node name="coughing_bean_9" type="Node2D"]
+
+[node name="encyclopedia" type="Sprite2D" parent="."]
+visible = false
+z_index = -1
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("1_qfc7m")
+
+[node name="SbPlant9" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(-361, -59)
+scale = Vector2(1, 0.979)
+texture = ExtResource("2_1jq42")
+
+[node name="SbPlantFrame" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(-365, -59)
+texture = ExtResource("3_5gvjt")
+
+[node name="SbPlantFrame2" type="Sprite2D" parent="."]
+modulate = Color(0.44, 0.44, 0.44, 1)
+z_index = 1
+position = Vector2(-365, -59)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("3_5gvjt")
+
+[node name="name" type="Label" parent="."]
+offset_left = -503.0
+offset_top = -279.0
+offset_right = -232.0
+offset_bottom = -209.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_iec5f")
+theme_override_font_sizes/font_size = 55
+text = "Coughing Bean"
+
+[node name="info" type="Label" parent="."]
+offset_left = -185.0
+offset_top = -302.0
+offset_right = 420.0
+offset_bottom = 133.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_iec5f")
+theme_override_font_sizes/font_size = 55
+text = "Mama likes to make potion of
+speed with the beans.
+
+I tried it once and I run sooo
+fasttttttttttttttttt        ttt.
+but I cough a lot too."

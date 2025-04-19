@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://bnkka14smy366"]
+
+[ext_resource type="Shader" uid="uid://cpp8eheswld8r" path="res://shader/menu_pic_1.gdshader" id="1_4x8jc"]
+[ext_resource type="Script" uid="uid://du30ccdj1lqj1" path="res://script/rigid_body_2d.gd" id="1_vgvh6"]
+[ext_resource type="Texture2D" uid="uid://b015whj3q5lgw" path="res://sprite/menu/sb_menu_1.png" id="2_hq1y6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_45pwu"]
+shader = ExtResource("1_4x8jc")
+shader_parameter/saturation = 0.5
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_krhc5"]
+size = Vector2(1395, 1080)
+
+[node name="menu_pic_2" type="Node2D"]
+process_mode = 3
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+process_mode = 3
+mass = 0.8
+gravity_scale = 0.0
+script = ExtResource("1_vgvh6")
+
+[node name="SbMenu" type="Sprite2D" parent="RigidBody2D"]
+process_mode = 3
+material = SubResource("ShaderMaterial_45pwu")
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_hq1y6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+process_mode = 3
+scale = Vector2(0.2, 0.2)
+shape = SubResource("RectangleShape2D_krhc5")
+disabled = true

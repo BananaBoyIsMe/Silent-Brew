@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dj5exfowx7tyd"]
+
+[ext_resource type="Texture2D" uid="uid://bci5dhetxr6mj" path="res://sprite/deco/sb_rock4.png" id="1_jnoj1"]
+
+[node name="rock_4" type="Node2D"]
+
+[node name="SbRock4" type="Sprite2D" parent="."]
+texture = ExtResource("1_jnoj1")

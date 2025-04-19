@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c24lno204c54k"]
+
+[ext_resource type="Texture2D" uid="uid://sm1t3urub2b6" path="res://sprite/deco/sb_heally_pad1.png" id="1_cshwt"]
+
+[node name="heally_pad_1" type="Node2D"]
+
+[node name="SbHeallyPad1" type="Sprite2D" parent="."]
+texture = ExtResource("1_cshwt")

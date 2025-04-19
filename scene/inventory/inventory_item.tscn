@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3pqvhcx12suf"]
+
+[ext_resource type="Script" uid="uid://claht4a8rtit3" path="res://script/inventory_item.gd" id="1_d507n"]
+[ext_resource type="Texture2D" uid="uid://4ui6ogbv8407" path="res://sprite/plant/sb_plant1.png" id="2_d507n"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d507n"]
+radius = 94.0053
+
+[node name="inventory_item" type="Node2D"]
+z_index = 10
+script = ExtResource("1_d507n")
+
+[node name="SbPlant" type="Sprite2D" parent="."]
+position = Vector2(5, 0)
+texture = ExtResource("2_d507n")
+
+[node name="itm" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="itm"]
+shape = SubResource("CircleShape2D_d507n")
+
+[connection signal="input_event" from="itm" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="itm" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="itm" to="." method="_on_area_2d_mouse_exited"]

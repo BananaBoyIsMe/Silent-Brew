@@ -1,0 +1,75 @@
+[gd_scene load_steps=6 format=3 uid="uid://bgqp6qw5jieci"]
+
+[ext_resource type="Texture2D" uid="uid://dvgc400wwgst6" path="res://sprite/map_ency_inven/sb_encyclopedia.png" id="1_ck5xi"]
+[ext_resource type="Script" uid="uid://d2gbajpfcpfon" path="res://script/encyclopedia.gd" id="1_rapip"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1p4s7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gn0pq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3m2vv"]
+
+[node name="encyclopedia" type="Node2D"]
+z_index = 200
+script = ExtResource("1_rapip")
+
+[node name="encyclopedia" type="Sprite2D" parent="."]
+position = Vector2(1005, 601)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("1_ck5xi")
+
+[node name="left_bt" type="Button" parent="."]
+offset_left = 462.0
+offset_top = 1036.0
+offset_right = 853.0
+offset_bottom = 1502.0
+rotation = -1.5708
+theme_override_font_sizes/font_size = 70
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1p4s7")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_gn0pq")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_3m2vv")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_3m2vv")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_3m2vv")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_3m2vv")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_3m2vv")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_3m2vv")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_3m2vv")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_3m2vv")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3m2vv")
+text = "▲"
+
+[node name="right_bt" type="Button" parent="."]
+offset_left = 1332.0
+offset_top = 631.0
+offset_right = 1753.0
+offset_bottom = 1094.0
+rotation = 1.5708
+theme_override_font_sizes/font_size = 70
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1p4s7")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_gn0pq")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_3m2vv")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_3m2vv")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_3m2vv")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_3m2vv")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_3m2vv")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_3m2vv")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_3m2vv")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_3m2vv")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3m2vv")
+text = "▲"
+
+[node name="pages" type="Label" parent="."]
+offset_left = 781.001
+offset_top = 808.0
+offset_right = 1017.0
+offset_bottom = 880.0
+theme_override_font_sizes/font_size = 45
+text = "Page 1/1"
+horizontal_alignment = 1
+
+[node name="info" type="Node2D" parent="."]
+
+[node name="Node2D" type="Node2D" parent="info"]
+
+[connection signal="button_up" from="left_bt" to="." method="_on_left_bt_button_up"]
+[connection signal="button_up" from="right_bt" to="." method="_on_right_bt_button_up"]

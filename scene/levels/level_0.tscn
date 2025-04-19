@@ -1,0 +1,1687 @@
+[gd_scene load_steps=23 format=3 uid="uid://dod05gte2navs"]
+
+[ext_resource type="Script" uid="uid://c1wnuj5i8cm4w" path="res://script/level_0.gd" id="1_l3yqt"]
+[ext_resource type="PackedScene" uid="uid://e2jhu0ksgvw1" path="res://scene/tiles/tile_1.tscn" id="1_po07k"]
+[ext_resource type="PackedScene" uid="uid://cwtosr5so2dc1" path="res://scene/deco/water_grass_1.tscn" id="2_u0eyq"]
+[ext_resource type="Texture2D" uid="uid://boeia04062ts5" path="res://sprite/tiles/sb_tree_tile3.png" id="3_habbe"]
+[ext_resource type="PackedScene" uid="uid://dk75nkxegpdth" path="res://scene/deco/water_grass_2.tscn" id="3_j5gnn"]
+[ext_resource type="Texture2D" uid="uid://41tovekmvj6a" path="res://sprite/tiles/sb_tree_tile2.png" id="5_sc81t"]
+[ext_resource type="Texture2D" uid="uid://eukrj1mwbad0" path="res://sprite/tiles/sb_bush1.png" id="6_l3r6p"]
+[ext_resource type="Texture2D" uid="uid://wjsitr7s6vxa" path="res://sprite/bark/mini_bark_sleep.png" id="6_qdd7x"]
+[ext_resource type="Texture2D" uid="uid://crw5uo7whh8f3" path="res://sprite/tiles/sb_bush2.png" id="7_rq37o"]
+[ext_resource type="Texture2D" uid="uid://bni37n30im65a" path="res://sprite/plant/sb_plant2.png" id="8_5da28"]
+[ext_resource type="Texture2D" uid="uid://chwsvmx5ls8xw" path="res://sprite/plant/sb_plant6.png" id="10_76f1d"]
+[ext_resource type="PackedScene" uid="uid://cpmshhm703uc3" path="res://scene/deco/rock_1.tscn" id="10_bkee5"]
+[ext_resource type="PackedScene" uid="uid://d2fn13up552pa" path="res://scene/deco/rock_3.tscn" id="11_76f1d"]
+[ext_resource type="PackedScene" uid="uid://dj5exfowx7tyd" path="res://scene/deco/rock_4.tscn" id="12_82v35"]
+[ext_resource type="PackedScene" uid="uid://dt67mb0e2caro" path="res://scene/deco/grass_1.tscn" id="13_82v35"]
+[ext_resource type="PackedScene" uid="uid://d2a4p3u65khhy" path="res://scene/deco/flower_1.tscn" id="16_mkcx0"]
+[ext_resource type="PackedScene" uid="uid://s8pxk22vv63m" path="res://scene/deco/flower_2.tscn" id="17_6w78g"]
+[ext_resource type="PackedScene" uid="uid://d1w8p4sjdwsms" path="res://scene/deco/grass_2.tscn" id="17_mkcx0"]
+[ext_resource type="PackedScene" uid="uid://cnjrfy04j0dno" path="res://scene/deco/grass_3.tscn" id="18_6w78g"]
+[ext_resource type="Texture2D" uid="uid://l7wtdmgcwydm" path="res://sprite/tiles/sb_camp.png" id="19_soeln"]
+[ext_resource type="Texture2D" uid="uid://crj5fby8vqum0" path="res://sprite/tiles/sb_campfire.png" id="20_2ubp3"]
+[ext_resource type="Texture2D" uid="uid://ocpv3miagxh3" path="res://sprite/character/mini_hannah2.png" id="23_h8cr7"]
+
+[node name="level0" type="Node2D"]
+script = ExtResource("1_l3yqt")
+
+[node name="tiles" type="Node2D" parent="."]
+
+[node name="tile_1_0" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(1, 1.05, 1.05, 1)
+position = Vector2(400, 321)
+rotation = 3.14159
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+
+[node name="tile_1_1" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(0.9, 0.9, 0.9, 1)
+position = Vector2(400, 395)
+rotation = -3.14159
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+
+[node name="tile_1_2" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(0.9, 0.9, 0.9, 1)
+position = Vector2(400, 469)
+rotation = -3.14159
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+
+[node name="tile_2_0" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(1, 1.02, 1.05, 1)
+position = Vector2(500, 284)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+
+[node name="tile_2_1" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(1, 1.1, 1.1, 1)
+position = Vector2(500, 358)
+scale = Vector2(0.5, 0.313)
+skew = 1.01328e-05
+tile_id = 2
+
+[node name="tile_2_2" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(0.9, 0.9, 0.9, 1)
+position = Vector2(500, 432)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+
+[node name="tile_2_3" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(0.98, 1.02, 0.98, 1)
+position = Vector2(500, 506)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+
+[node name="tile_2_4" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(0.98, 1.02, 0.98, 1)
+position = Vector2(500, 580)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+
+[node name="tile_2_5" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(0.97, 0.97, 0.97, 1)
+position = Vector2(500, 654)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+
+[node name="tile_3_0" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(1, 1.1, 1.1, 1)
+position = Vector2(600, 321)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+
+[node name="tile_3_1" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(0.95, 1.1, 1.12, 1)
+position = Vector2(600, 395)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+
+[node name="tile_3_2" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(1, 1.1, 1.08, 1)
+position = Vector2(600, 469)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+
+[node name="tile_3_3" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(1, 1.03, 1.02, 1)
+position = Vector2(600, 543)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+
+[node name="tile_3_4" parent="tiles" instance=ExtResource("1_po07k")]
+position = Vector2(600, 617)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+
+[node name="tile_3_5" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(0.97, 0.97, 0.97, 1)
+position = Vector2(600, 691)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+
+[node name="tile_4_1" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(0.95, 1.1, 1.15, 1)
+position = Vector2(700, 358)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+
+[node name="tile_4_2" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(0.9, 1.1, 1.15, 1)
+position = Vector2(700, 432)
+rotation = 3.14159
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+
+[node name="tile_4_3" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(0.95, 1.04, 1.08, 1)
+position = Vector2(700, 506)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+
+[node name="tile_4_4" parent="tiles" instance=ExtResource("1_po07k")]
+position = Vector2(700, 580)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+
+[node name="tile_4_5" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(0.97, 0.97, 0.97, 1)
+position = Vector2(700, 654)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+
+[node name="tile_5_1" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(0.9, 1.1, 1.2, 1)
+position = Vector2(800, 395)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+
+[node name="tile_5_2" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(0.9, 1.1, 1.15, 1)
+position = Vector2(800, 469)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+
+[node name="tile_5_3" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(0.94, 1.07, 1.1, 1)
+position = Vector2(800, 543)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+
+[node name="tile_5_4" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(1, 1.03, 1.04, 1)
+position = Vector2(800, 617)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+
+[node name="tile_5_5" parent="tiles" instance=ExtResource("1_po07k")]
+position = Vector2(800, 691)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+
+[node name="tile_6_2" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(0.9, 1.17, 1.24, 1)
+position = Vector2(900, 432)
+rotation = -3.14159
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+
+[node name="tile_6_3" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(0.9, 1.1, 1.15, 1)
+position = Vector2(900, 506)
+rotation = 3.14159
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+
+[node name="tile_6_4" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(0.95, 1.07, 1.1, 1)
+position = Vector2(900, 580)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+
+[node name="tile_6_5" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(1, 1.05, 1.05, 1)
+position = Vector2(900, 654)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+
+[node name="tile_6_6" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(0.98, 0.98, 0.98, 1)
+position = Vector2(900, 728)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+
+[node name="tile_7_1" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(0.9, 1.1, 1.2, 1)
+position = Vector2(1000, 395)
+rotation = 3.14159
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+
+[node name="tile_7_2" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(0.9, 1.15, 1.2, 1)
+position = Vector2(1000, 469)
+rotation = -3.14159
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+
+[node name="tile_7_3" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(0.95, 1.1, 1.15, 1)
+position = Vector2(1000, 543)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+
+[node name="tile_7_4" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(0.97, 1.07, 1.1, 1)
+position = Vector2(1000, 617)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+
+[node name="tile_7_5" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(1, 1.05, 1.05, 1)
+position = Vector2(1000, 691)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+
+[node name="tile_7_6" parent="tiles" instance=ExtResource("1_po07k")]
+position = Vector2(1000, 765)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+
+[node name="tile_8_1" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(0.98, 0.98, 0.98, 1)
+position = Vector2(1100, 358)
+scale = Vector2(0.5, 0.313)
+tile_id = 3
+
+[node name="tile_8_2" parent="tiles" instance=ExtResource("1_po07k")]
+position = Vector2(1100, 432)
+scale = Vector2(0.5, 0.313)
+tile_id = 3
+delay_time = 0.2
+
+[node name="water_grass_1" parent="tiles/tile_8_2" instance=ExtResource("2_u0eyq")]
+position = Vector2(40.0001, -108.626)
+scale = Vector2(0.7, 0.9)
+
+[node name="water_grass_2" parent="tiles/tile_8_2" instance=ExtResource("2_u0eyq")]
+position = Vector2(24.0001, -83.067)
+scale = Vector2(0.4, 0.514)
+
+[node name="tile_8_3" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(0.9, 1.12, 1.2, 1)
+position = Vector2(1100, 506)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+
+[node name="tile_8_4" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(0.9, 1.12, 1.2, 1)
+position = Vector2(1100, 580)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+
+[node name="tile_8_5" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(0.95, 1.1, 1.15, 1)
+position = Vector2(1100, 654)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+
+[node name="tile_8_6" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(1, 1.07, 1.07, 1)
+position = Vector2(1100, 728)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+
+[node name="tile_9_0" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(0.92, 0.92, 0.92, 1)
+position = Vector2(1200, 321)
+scale = Vector2(0.5, 0.313)
+tile_id = 3
+
+[node name="tile_9_1" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(0.95, 0.95, 0.95, 1)
+position = Vector2(1200, 395)
+scale = Vector2(0.5, 0.313)
+tile_id = 3
+delay_time = 0.2
+
+[node name="tile_9_2" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(0.98, 0.98, 0.98, 1)
+position = Vector2(1200, 469)
+scale = Vector2(0.5, 0.313)
+tile_id = 3
+delay_time = 0.4
+
+[node name="water_grass_2" parent="tiles/tile_9_2" instance=ExtResource("3_j5gnn")]
+position = Vector2(-58, 25.5591)
+scale = Vector2(0.7, 0.7)
+
+[node name="tile_9_3" parent="tiles" instance=ExtResource("1_po07k")]
+position = Vector2(1200, 543)
+scale = Vector2(0.5, 0.313)
+tile_id = 3
+delay_time = 0.6
+
+[node name="tile_9_4" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(0.9, 1.12, 1.2, 1)
+position = Vector2(1200, 617)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+
+[node name="tile_9_5" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(0.95, 1.1, 1.15, 1)
+position = Vector2(1200, 691)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+
+[node name="tile_9_6" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(1, 1.05, 1.05, 1)
+position = Vector2(1200, 765)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+
+[node name="tile_10_1" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(0.9, 0.9, 0.9, 1)
+position = Vector2(1300, 358)
+scale = Vector2(0.5, 0.313)
+tile_id = 3
+delay_time = 0.2
+
+[node name="tile_10_2" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(0.93, 0.93, 0.93, 1)
+position = Vector2(1300, 432)
+scale = Vector2(0.5, 0.313)
+tile_id = 3
+delay_time = 0.4
+
+[node name="tile_10_3" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(0.95, 0.95, 0.95, 1)
+position = Vector2(1300, 506)
+scale = Vector2(0.5, 0.313)
+tile_id = 3
+delay_time = 0.6
+
+[node name="tile_10_4" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(0.95, 0.95, 0.95, 1)
+position = Vector2(1300, 580)
+scale = Vector2(0.5, 0.313)
+tile_id = 3
+delay_time = 0.8
+
+[node name="tile_10_5" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(0.9, 1.12, 1.2, 1)
+position = Vector2(1300, 654)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+
+[node name="tile_10_6" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(0.95, 1.1, 1.12, 1)
+position = Vector2(1300, 728)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+
+[node name="tile_10_7" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(1, 1.05, 1.05, 1)
+position = Vector2(1300, 802)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+
+[node name="tile_11_2" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(0.92, 0.92, 0.92, 1)
+position = Vector2(1400, 469)
+scale = Vector2(0.5, 0.313)
+tile_id = 3
+delay_time = 0.6
+
+[node name="tile_11_3" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(0.92, 0.92, 0.92, 1)
+position = Vector2(1400, 543)
+scale = Vector2(0.5, 0.313)
+tile_id = 3
+delay_time = 0.8
+
+[node name="tile_11_4" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(0.96, 0.96, 0.96, 1)
+position = Vector2(1400, 617)
+scale = Vector2(0.5, 0.313)
+tile_id = 3
+delay_time = 1.0
+
+[node name="tile_11_5" parent="tiles" instance=ExtResource("1_po07k")]
+position = Vector2(1400, 691)
+scale = Vector2(0.5, 0.313)
+tile_id = 3
+delay_time = 1.2
+
+[node name="tile_11_6" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(0.9, 1.12, 1.15, 1)
+position = Vector2(1400, 765)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+
+[node name="tile_12_4" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(0.92, 0.92, 0.92, 1)
+position = Vector2(1500, 580)
+scale = Vector2(0.5, 0.313)
+tile_id = 3
+delay_time = 1.0
+
+[node name="tile_12_5" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(0.96, 0.96, 0.96, 1)
+position = Vector2(1500, 654)
+scale = Vector2(0.5, 0.313)
+tile_id = 3
+delay_time = 1.2
+
+[node name="tile_12_6" parent="tiles" instance=ExtResource("1_po07k")]
+position = Vector2(1500, 728)
+scale = Vector2(0.5, 0.313)
+tile_id = 3
+delay_time = 1.4
+
+[node name="tile_12_7" parent="tiles" instance=ExtResource("1_po07k")]
+modulate = Color(0.9, 1.12, 1.15, 1)
+position = Vector2(1500, 802)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+
+[node name="tree_bg_tiles" type="Node2D" parent="."]
+visible = false
+
+[node name="tree_bg2" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(501, 141)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("3_habbe")
+
+[node name="tree_bg3" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(586, 169)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("3_habbe")
+
+[node name="tree_bg4" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(701.12, 200.8)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("3_habbe")
+
+[node name="tree_bg5" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(801.12, 238.8)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("3_habbe")
+
+[node name="tree_bg6" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1005, 241)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("3_habbe")
+
+[node name="tree_bg7" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(639, 225)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("3_habbe")
+
+[node name="tree_bg8" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(628, 212)
+rotation = 1.5708
+scale = Vector2(0.31, 0.54)
+texture = ExtResource("3_habbe")
+
+[node name="tree_bg9" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(903, 279)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("3_habbe")
+
+[node name="tree_bg11" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(502, 125)
+rotation = 3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("3_habbe")
+
+[node name="tree_bg12" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(598, 145)
+rotation = 3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("3_habbe")
+
+[node name="tree_bg13" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(700, 180)
+rotation = 3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("3_habbe")
+
+[node name="tree_bg14" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(788, 205)
+rotation = 3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("3_habbe")
+
+[node name="tree_bg15" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(900, 231)
+rotation = -3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("3_habbe")
+
+[node name="tree_bg16" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1006, 239)
+rotation = -3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("3_habbe")
+
+[node name="tree_bg17" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1400.12, 881.8)
+rotation = -3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("3_habbe")
+
+[node name="tree_bg18" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1302.12, 912.8)
+rotation = -3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("3_habbe")
+
+[node name="tree_bg19" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1199.12, 880.8)
+rotation = -3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("3_habbe")
+
+[node name="tree_bg20" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1108.12, 845.8)
+rotation = -3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("3_habbe")
+
+[node name="tree_bg21" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1003, 872)
+rotation = -3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("3_habbe")
+
+[node name="tree_bg22" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(897, 835)
+rotation = -3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("3_habbe")
+
+[node name="tree_bg23" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(786, 790)
+rotation = -3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("3_habbe")
+
+[node name="tree_bg24" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(703, 764)
+rotation = -3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("3_habbe")
+
+[node name="tree_bg25" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(604, 791)
+rotation = -3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("3_habbe")
+
+[node name="tree_bg26" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(495, 766)
+rotation = -3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("3_habbe")
+
+[node name="tree_bg27" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(400, 745)
+rotation = -3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("3_habbe")
+
+[node name="tree_bg28" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(320, 702)
+rotation = -3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("3_habbe")
+
+[node name="tree_bg29" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(331, 629)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_sc81t")
+
+[node name="tree_bg30" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(327, 553)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_sc81t")
+
+[node name="tree_bg31" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(266, 522)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_sc81t")
+
+[node name="tree_bg32" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(249, 452)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_sc81t")
+
+[node name="tree_bg33" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(260, 434)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_sc81t")
+
+[node name="tree_bg34" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(252, 384)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_sc81t")
+
+[node name="tree_bg10" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1344, 242)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("3_habbe")
+
+[node name="tree_bg35" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1437, 284)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("3_habbe")
+
+[node name="tree_bg36" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1459, 361)
+rotation = 3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_sc81t")
+
+[node name="tree_bg37" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1529, 411)
+rotation = 3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_sc81t")
+
+[node name="tree_bg38" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1540, 493)
+rotation = 3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_sc81t")
+
+[node name="tree_bg39" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1568, 453)
+rotation = 3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_sc81t")
+
+[node name="tree_bg40" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1634, 543)
+rotation = 3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_sc81t")
+
+[node name="tree_bg41" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1633, 616)
+rotation = 3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_sc81t")
+
+[node name="tree_bg42" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1634, 687)
+rotation = 3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_sc81t")
+
+[node name="tree_bg43" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1635, 758)
+rotation = 3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_sc81t")
+
+[node name="tree_bg44" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1651, 805)
+rotation = 3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_sc81t")
+
+[node name="tree_bg45" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(188, 342)
+rotation = -3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("3_habbe")
+
+[node name="tree_bg46" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(158, 306)
+rotation = -3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("3_habbe")
+
+[node name="tree_bg47" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(170, 241)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_sc81t")
+
+[node name="tree_bg48" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(197, 189)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_sc81t")
+
+[node name="tree_bg49" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(238, 163)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_sc81t")
+
+[node name="tree_bg50" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(731, 253)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("3_habbe")
+
+[node name="tree_bg51" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(821, 289)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("3_habbe")
+
+[node name="tree_bg52" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(902, 314)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("3_habbe")
+
+[node name="tree_bg53" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(988, 286)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("3_habbe")
+
+[node name="tree_bg54" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1088, 251)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("3_habbe")
+
+[node name="tree_bg55" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1195, 213)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("3_habbe")
+
+[node name="tree_bg56" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1297, 239)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("3_habbe")
+
+[node name="tree_bg57" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1398, 272)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("3_habbe")
+
+[node name="tree_bg58" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(496, 185)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("3_habbe")
+
+[node name="tree_bg59" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(401, 211)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("3_habbe")
+
+[node name="tree_bg60" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(324, 177)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("3_habbe")
+
+[node name="tree_bg61" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(574, 189)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("3_habbe")
+
+[node name="tree_bg62" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(363, 555)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_sc81t")
+
+[node name="tree_bg63" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(365, 621)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_sc81t")
+
+[node name="tree_bg64" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(369, 687)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_sc81t")
+
+[node name="tree_bg65" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(694, 818)
+rotation = -3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("3_habbe")
+
+[node name="tree_bg66" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(846, 824)
+rotation = -3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("3_habbe")
+
+[node name="tree_bg67" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1100, 831)
+rotation = -3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("3_habbe")
+
+[node name="tree_bg68" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1433, 383)
+rotation = 3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_sc81t")
+
+[node name="tree_bg69" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1484, 395)
+rotation = 3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_sc81t")
+
+[node name="tree_bg70" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1611, 510)
+rotation = 3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_sc81t")
+
+[node name="tree_bg71" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1500, 912)
+rotation = -3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("3_habbe")
+
+[node name="tree_bg72" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1602, 884)
+rotation = -3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("3_habbe")
+
+[node name="bg" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="bg"]
+visible = false
+z_index = -10
+offset_left = -1.0
+offset_top = -3.0
+offset_right = 1928.0
+offset_bottom = 1094.0
+mouse_filter = 2
+color = Color(0.208031, 0.357422, 0.289145, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="bg"]
+visible = false
+z_index = -9
+offset_right = 1929.0
+offset_bottom = 1097.0
+scale = Vector2(1.00166, 0.161042)
+mouse_filter = 2
+color = Color(0.380392, 0.619608, 0.388235, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="bg"]
+visible = false
+z_index = -9
+offset_left = 687.0
+offset_top = 83.0
+offset_right = 2616.0
+offset_bottom = 1180.0
+scale = Vector2(0.644266, 0.144466)
+mouse_filter = 2
+color = Color(0.380392, 0.619608, 0.388235, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="bg"]
+visible = false
+z_index = -9
+offset_left = 1639.0
+offset_top = 83.0
+offset_right = 2090.0
+offset_bottom = 7261.0
+scale = Vector2(0.644266, 0.144466)
+mouse_filter = 2
+color = Color(0.380392, 0.619608, 0.388235, 1)
+
+[node name="ColorRect5" type="ColorRect" parent="bg"]
+visible = false
+z_index = -9
+offset_left = -2.0
+offset_top = 77.0
+offset_right = 290.0
+offset_bottom = 7352.0
+scale = Vector2(0.644266, 0.144466)
+mouse_filter = 2
+color = Color(0.380392, 0.619608, 0.388235, 1)
+
+[node name="ColorRect6" type="ColorRect" parent="bg"]
+visible = false
+z_index = -9
+offset_left = -13.0
+offset_top = 878.0
+offset_right = 2882.0
+offset_bottom = 2376.0
+scale = Vector2(0.575933, 0.154535)
+mouse_filter = 2
+color = Color(0.380392, 0.619608, 0.388235, 1)
+
+[node name="ColorRect7" type="ColorRect" parent="bg"]
+visible = false
+z_index = -9
+offset_left = 130.0
+offset_top = 808.0
+offset_right = 3025.0
+offset_bottom = 2306.0
+scale = Vector2(0.281707, 0.182947)
+mouse_filter = 2
+color = Color(0.380392, 0.619608, 0.388235, 1)
+
+[node name="ColorRect8" type="ColorRect" parent="bg"]
+visible = false
+z_index = -9
+offset_left = -104.0
+offset_top = 374.0
+offset_right = 2791.0
+offset_bottom = 1872.0
+scale = Vector2(0.138123, 0.355054)
+mouse_filter = 2
+color = Color(0.380392, 0.619608, 0.388235, 1)
+
+[node name="ColorRect9" type="ColorRect" parent="bg"]
+visible = false
+z_index = -9
+offset_left = 222.0
+offset_top = 684.0
+offset_right = 3117.0
+offset_bottom = 2182.0
+rotation = 0.278883
+scale = Vector2(0.142142, 0.242976)
+mouse_filter = 2
+color = Color(0.380392, 0.619608, 0.388235, 1)
+
+[node name="ColorRect10" type="ColorRect" parent="bg"]
+visible = false
+z_index = -9
+offset_left = 1916.0
+offset_top = 251.0
+offset_right = 4811.0
+offset_bottom = 1749.0
+rotation = 2.41256
+scale = Vector2(0.142142, 0.242976)
+mouse_filter = 2
+color = Color(0.380392, 0.619608, 0.388235, 1)
+
+[node name="bush" type="Node2D" parent="."]
+
+[node name="bush2" type="Sprite2D" parent="bush"]
+position = Vector2(900, 721)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("6_l3r6p")
+flip_h = true
+
+[node name="SbPlant2" type="Sprite2D" parent="bush/bush2"]
+position = Vector2(-3.33337, 13.3335)
+scale = Vector2(0.666667, 0.666667)
+texture = ExtResource("8_5da28")
+flip_h = true
+
+[node name="bush3" type="Sprite2D" parent="bush"]
+position = Vector2(999, 758)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("7_rq37o")
+flip_h = true
+
+[node name="SbPlant7" type="Sprite2D" parent="bush/bush3"]
+position = Vector2(3.33321, 13.3332)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("10_76f1d")
+
+[node name="bush4" type="Sprite2D" parent="bush"]
+position = Vector2(1303, 793)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("7_rq37o")
+flip_h = true
+
+[node name="SbPlant4" type="Sprite2D" parent="bush/bush4"]
+position = Vector2(-6.66675, 19.9999)
+scale = Vector2(0.666667, 0.666667)
+texture = ExtResource("8_5da28")
+
+[node name="bush5" type="Sprite2D" parent="bush"]
+position = Vector2(599, 681)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("7_rq37o")
+
+[node name="SbPlant7" type="Sprite2D" parent="bush/bush5"]
+position = Vector2(3.33321, 13.3332)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("10_76f1d")
+flip_h = true
+
+[node name="deco" type="Node2D" parent="."]
+z_index = 10
+
+[node name="grass_42" parent="deco" instance=ExtResource("13_82v35")]
+visible = false
+modulate = Color(0.98, 1.02, 0.98, 1)
+position = Vector2(430, 367)
+rotation = -0.174533
+scale = Vector2(0.35, 0.219)
+skew = -0.174533
+delay_speed = 0.14
+
+[node name="grass_1" parent="deco" instance=ExtResource("13_82v35")]
+visible = false
+modulate = Color(0.98, 1.02, 0.98, 1)
+position = Vector2(492, 505)
+rotation = -0.174533
+scale = Vector2(0.35, 0.219)
+skew = -0.174533
+delay_speed = 0.14
+
+[node name="grass_2" parent="deco" instance=ExtResource("13_82v35")]
+visible = false
+modulate = Color(0.98, 1.02, 0.98, 1)
+position = Vector2(497, 506)
+rotation = -0.174533
+scale = Vector2(0.35, 0.219)
+skew = -0.174533
+delay_speed = 0.145
+
+[node name="grass_3" parent="deco" instance=ExtResource("13_82v35")]
+visible = false
+modulate = Color(0.98, 1.02, 0.98, 1)
+position = Vector2(524, 523)
+rotation = -0.174533
+scale = Vector2(0.35, 0.219)
+skew = -0.174533
+delay_speed = 0.17
+
+[node name="grass_4" parent="deco" instance=ExtResource("13_82v35")]
+visible = false
+modulate = Color(0.98, 1.02, 0.98, 1)
+position = Vector2(552, 506)
+rotation = -0.174533
+scale = Vector2(0.35, 0.219)
+skew = -0.174533
+delay_speed = 0.19
+
+[node name="grass_5" parent="deco" instance=ExtResource("13_82v35")]
+visible = false
+modulate = Color(0.95, 1.04, 1.08, 1)
+position = Vector2(679, 519)
+rotation = -0.174533
+scale = Vector2(0.35, 0.219)
+skew = -0.174533
+delay_speed = 0.335
+
+[node name="grass_6" parent="deco" instance=ExtResource("13_82v35")]
+visible = false
+modulate = Color(0.95, 1.04, 1.08, 1)
+position = Vector2(671, 516)
+rotation = -0.174533
+scale = Vector2(0.35, 0.219)
+skew = -0.174533
+delay_speed = 0.33
+
+[node name="grass_7" parent="deco" instance=ExtResource("13_82v35")]
+visible = false
+modulate = Color(0.9, 1.1, 1.15, 1)
+position = Vector2(662, 426)
+rotation = -0.174533
+scale = Vector2(0.35, 0.219)
+skew = -0.174533
+delay_speed = 0.315
+
+[node name="grass_8" parent="deco" instance=ExtResource("13_82v35")]
+visible = false
+position = Vector2(632, 637)
+rotation = -0.174533
+scale = Vector2(0.35, 0.219)
+skew = -0.174533
+delay_speed = 0.287
+
+[node name="grass_9" parent="deco" instance=ExtResource("13_82v35")]
+visible = false
+position = Vector2(625, 636)
+rotation = -0.174533
+scale = Vector2(0.35, 0.219)
+skew = -0.174533
+delay_speed = 0.28
+
+[node name="grass_10" parent="deco" instance=ExtResource("13_82v35")]
+visible = false
+position = Vector2(630, 634)
+rotation = -0.174533
+scale = Vector2(0.35, 0.219)
+skew = -0.174533
+delay_speed = 0.283
+
+[node name="grass_11" parent="deco" instance=ExtResource("13_82v35")]
+visible = false
+modulate = Color(0.95, 1.1, 1.15, 1)
+position = Vector2(1030, 539)
+rotation = -0.174533
+scale = Vector2(0.35, 0.219)
+skew = -0.174533
+delay_speed = 0.57
+
+[node name="grass_12" parent="deco" instance=ExtResource("13_82v35")]
+visible = false
+modulate = Color(0.9, 1.15, 1.2, 1)
+position = Vector2(996, 470)
+rotation = -0.174533
+scale = Vector2(0.35, 0.219)
+skew = -0.174533
+delay_speed = 0.548
+
+[node name="grass_13" parent="deco" instance=ExtResource("13_82v35")]
+visible = false
+modulate = Color(0.9, 1.15, 1.2, 1)
+position = Vector2(978, 477)
+rotation = -0.174533
+scale = Vector2(0.35, 0.219)
+skew = -0.174533
+delay_speed = 0.53
+
+[node name="grass_14" parent="deco" instance=ExtResource("13_82v35")]
+visible = false
+modulate = Color(0.9, 1.12, 1.2, 1)
+position = Vector2(1180, 602)
+rotation = -0.174533
+scale = Vector2(0.35, 0.219)
+skew = -0.174533
+delay_speed = 0.73
+
+[node name="rock_1" parent="deco" instance=ExtResource("10_bkee5")]
+position = Vector2(415, 451)
+scale = Vector2(0.4, 0.4)
+
+[node name="rock_2" parent="deco" instance=ExtResource("10_bkee5")]
+modulate = Color(0.9, 1.12, 1.2, 1)
+position = Vector2(1279, 644)
+scale = Vector2(-0.4, 0.4)
+
+[node name="grass_15" parent="deco" instance=ExtResource("13_82v35")]
+visible = false
+modulate = Color(1, 1.05, 1.05, 1)
+position = Vector2(972, 681)
+rotation = -0.174533
+scale = Vector2(0.35, 0.219)
+skew = -0.174533
+delay_speed = 0.53
+
+[node name="grass_16" parent="deco" instance=ExtResource("13_82v35")]
+visible = false
+modulate = Color(1, 1.05, 1.05, 1)
+position = Vector2(967, 687)
+rotation = -0.174533
+scale = Vector2(0.35, 0.219)
+skew = -0.174533
+delay_speed = 0.53
+
+[node name="grass_17" parent="deco" instance=ExtResource("13_82v35")]
+visible = false
+modulate = Color(1, 1.05, 1.05, 1)
+position = Vector2(998, 677)
+rotation = -0.174533
+scale = Vector2(0.35, 0.219)
+skew = -0.174533
+delay_speed = 0.548
+
+[node name="grass_18" parent="deco" instance=ExtResource("13_82v35")]
+visible = false
+modulate = Color(1, 1.05, 1.05, 1)
+position = Vector2(1037, 686)
+rotation = -0.174533
+scale = Vector2(0.35, 0.219)
+skew = -0.174533
+delay_speed = 0.58
+
+[node name="grass_19" parent="deco" instance=ExtResource("13_82v35")]
+visible = false
+modulate = Color(1, 1.05, 1.05, 1)
+position = Vector2(993, 679)
+rotation = -0.174533
+scale = Vector2(0.35, 0.219)
+skew = -0.174533
+delay_speed = 0.548
+
+[node name="grass_20" parent="deco" instance=ExtResource("13_82v35")]
+visible = false
+modulate = Color(1, 1.05, 1.05, 1)
+position = Vector2(975, 686)
+rotation = -0.174533
+scale = Vector2(0.35, 0.219)
+skew = -0.174533
+delay_speed = 0.53
+
+[node name="grass_21" parent="deco" instance=ExtResource("13_82v35")]
+visible = false
+modulate = Color(0.9, 1.15, 1.2, 1)
+position = Vector2(1122, 652)
+rotation = -0.174533
+scale = Vector2(0.35, 0.219)
+skew = -0.174533
+delay_speed = 0.53
+
+[node name="grass_22" parent="deco" instance=ExtResource("13_82v35")]
+visible = false
+modulate = Color(0.9, 1.15, 1.2, 1)
+position = Vector2(1114, 663)
+rotation = -0.174533
+scale = Vector2(0.35, 0.219)
+skew = -0.174533
+delay_speed = 0.53
+
+[node name="grass_23" parent="deco" instance=ExtResource("13_82v35")]
+visible = false
+modulate = Color(1, 1.05, 1.05, 1)
+position = Vector2(920, 632)
+rotation = -0.174533
+scale = Vector2(0.35, 0.219)
+skew = -0.174533
+delay_speed = 0.53
+
+[node name="grass_24" parent="deco" instance=ExtResource("13_82v35")]
+visible = false
+modulate = Color(0.9, 1.15, 1.2, 1)
+position = Vector2(1001, 537)
+rotation = -0.174533
+scale = Vector2(0.35, 0.219)
+skew = -0.174533
+delay_speed = 0.53
+
+[node name="grass_25" parent="deco" instance=ExtResource("13_82v35")]
+visible = false
+modulate = Color(0.9, 1.15, 1.2, 1)
+position = Vector2(1007, 543)
+rotation = -0.174533
+scale = Vector2(0.35, 0.219)
+skew = -0.174533
+delay_speed = 0.53
+
+[node name="grass_26" parent="deco" instance=ExtResource("13_82v35")]
+visible = false
+modulate = Color(1, 1.05, 1.05, 1)
+position = Vector2(787, 618)
+rotation = -0.174533
+scale = Vector2(0.35, 0.219)
+skew = -0.174533
+delay_speed = 0.53
+
+[node name="grass_27" parent="deco" instance=ExtResource("13_82v35")]
+visible = false
+modulate = Color(1, 1.05, 1.05, 1)
+position = Vector2(796, 613)
+rotation = -0.174533
+scale = Vector2(0.35, 0.219)
+skew = -0.174533
+delay_speed = 0.53
+
+[node name="grass_28" parent="deco" instance=ExtResource("13_82v35")]
+visible = false
+modulate = Color(1, 1.05, 1.05, 1)
+position = Vector2(782, 616)
+rotation = -0.174533
+scale = Vector2(0.35, 0.219)
+skew = -0.174533
+delay_speed = 0.53
+
+[node name="grass_29" parent="deco" instance=ExtResource("13_82v35")]
+visible = false
+modulate = Color(1, 1.05, 1.05, 1)
+position = Vector2(824, 597)
+rotation = -0.174533
+scale = Vector2(0.35, 0.219)
+skew = -0.174533
+delay_speed = 0.53
+
+[node name="grass_30" parent="deco" instance=ExtResource("13_82v35")]
+visible = false
+modulate = Color(0.96, 1.1, 1.1, 1)
+position = Vector2(920, 565)
+rotation = -0.174533
+scale = Vector2(0.35, 0.219)
+skew = -0.174533
+delay_speed = 0.53
+
+[node name="grass_31" parent="deco" instance=ExtResource("13_82v35")]
+visible = false
+modulate = Color(1, 1.05, 1.05, 1)
+position = Vector2(898, 640)
+rotation = -0.174533
+scale = Vector2(0.35, 0.219)
+skew = -0.174533
+delay_speed = 0.53
+
+[node name="grass_32" parent="deco" instance=ExtResource("13_82v35")]
+visible = false
+modulate = Color(1, 1.05, 1.05, 1)
+position = Vector2(834, 621)
+rotation = -0.174533
+scale = Vector2(0.35, 0.219)
+skew = -0.174533
+delay_speed = 0.53
+
+[node name="grass_33" parent="deco" instance=ExtResource("13_82v35")]
+visible = false
+position = Vector2(808, 702)
+rotation = -0.174533
+scale = Vector2(0.35, 0.219)
+skew = -0.174533
+delay_speed = 0.53
+
+[node name="grass_34" parent="deco" instance=ExtResource("13_82v35")]
+visible = false
+position = Vector2(815, 706)
+rotation = -0.174533
+scale = Vector2(0.35, 0.219)
+skew = -0.174533
+delay_speed = 0.53
+
+[node name="grass_35" parent="deco" instance=ExtResource("13_82v35")]
+visible = false
+position = Vector2(707, 570)
+rotation = -0.174533
+scale = Vector2(0.35, 0.219)
+skew = -0.174533
+delay_speed = 0.53
+
+[node name="grass_36" parent="deco" instance=ExtResource("13_82v35")]
+visible = false
+modulate = Color(0.9, 1.15, 1.2, 1)
+position = Vector2(886, 483)
+rotation = -0.174533
+scale = Vector2(0.35, 0.219)
+skew = -0.174533
+delay_speed = 0.53
+
+[node name="grass_37" parent="deco" instance=ExtResource("13_82v35")]
+visible = false
+modulate = Color(0.9, 1.2, 1.2, 1)
+position = Vector2(937, 419)
+rotation = -0.174533
+scale = Vector2(0.35, 0.219)
+skew = -0.174533
+delay_speed = 0.53
+
+[node name="grass_38" parent="deco" instance=ExtResource("13_82v35")]
+visible = false
+modulate = Color(0.9, 1.2, 1.2, 1)
+position = Vector2(943, 427)
+rotation = -0.174533
+scale = Vector2(0.35, 0.219)
+skew = -0.174533
+delay_speed = 0.53
+
+[node name="rock_3" parent="deco" instance=ExtResource("11_76f1d")]
+position = Vector2(622, 641)
+rotation = -0.120428
+scale = Vector2(0.3, 0.3)
+
+[node name="rock_4" parent="deco" instance=ExtResource("12_82v35")]
+position = Vector2(400, 460)
+scale = Vector2(0.7, 0.7)
+
+[node name="grass_39" parent="deco" instance=ExtResource("13_82v35")]
+visible = false
+modulate = Color(0.9, 1.2, 1.2, 1)
+position = Vector2(787, 387)
+rotation = -0.174533
+scale = Vector2(0.35, 0.219)
+skew = -0.174533
+delay_speed = 0.53
+
+[node name="grass_40" parent="deco" instance=ExtResource("13_82v35")]
+visible = false
+modulate = Color(0.98, 1.02, 0.98, 1)
+position = Vector2(469, 430)
+rotation = -0.174533
+scale = Vector2(0.35, 0.219)
+skew = -0.174533
+delay_speed = 0.14
+
+[node name="grass_41" parent="deco" instance=ExtResource("13_82v35")]
+visible = false
+modulate = Color(0.98, 1.02, 0.98, 1)
+position = Vector2(480, 426)
+rotation = -0.174533
+scale = Vector2(0.35, 0.219)
+skew = -0.174533
+delay_speed = 0.14
+
+[node name="grass_43" parent="deco" instance=ExtResource("13_82v35")]
+visible = false
+modulate = Color(0.98, 1.05, 1.05, 1)
+position = Vector2(571, 337)
+rotation = -0.174533
+scale = Vector2(0.35, 0.219)
+skew = -0.174533
+delay_speed = 0.14
+
+[node name="grass_44" parent="deco" instance=ExtResource("13_82v35")]
+visible = false
+modulate = Color(0.9, 1.15, 1.2, 1)
+position = Vector2(1197, 693)
+rotation = -0.174533
+scale = Vector2(0.35, 0.219)
+skew = -0.174533
+delay_speed = 0.53
+
+[node name="grass_45" parent="deco" instance=ExtResource("13_82v35")]
+visible = false
+modulate = Color(0.9, 1.15, 1.2, 1)
+position = Vector2(1380, 751)
+rotation = -0.174533
+scale = Vector2(0.35, 0.219)
+skew = -0.174533
+delay_speed = 0.53
+
+[node name="grass_46" parent="deco" instance=ExtResource("13_82v35")]
+visible = false
+modulate = Color(0.9, 1.15, 1.2, 1)
+position = Vector2(1391, 747)
+rotation = -0.174533
+scale = Vector2(0.35, 0.219)
+skew = -0.174533
+delay_speed = 0.53
+
+[node name="flower_1" parent="deco" instance=ExtResource("16_mkcx0")]
+position = Vector2(482, 524)
+scale = Vector2(0.4, 0.35)
+
+[node name="flower_2" parent="deco" instance=ExtResource("17_6w78g")]
+modulate = Color(1.1, 1.02, 1.02, 1)
+position = Vector2(904, 600)
+scale = Vector2(0.3, 0.3)
+
+[node name="flower_3" parent="deco" instance=ExtResource("17_6w78g")]
+modulate = Color(1.1, 1.02, 1.02, 1)
+position = Vector2(900, 596)
+scale = Vector2(0.3, 0.3)
+
+[node name="flower_4" parent="deco" instance=ExtResource("17_6w78g")]
+modulate = Color(1.1, 1.02, 1.02, 1)
+position = Vector2(897, 599)
+scale = Vector2(0.35, 0.35)
+
+[node name="flower_5" parent="deco" instance=ExtResource("17_6w78g")]
+modulate = Color(1.1, 1.02, 1.02, 1)
+position = Vector2(860, 577)
+scale = Vector2(0.35, 0.35)
+
+[node name="flower_6" parent="deco" instance=ExtResource("17_6w78g")]
+modulate = Color(1.1, 1.02, 1.02, 1)
+position = Vector2(934, 576)
+rotation = 1.28631
+scale = Vector2(0.35, 0.35)
+
+[node name="flower_7" parent="deco" instance=ExtResource("17_6w78g")]
+modulate = Color(1.1, 1.02, 1.02, 1)
+position = Vector2(929, 571)
+rotation = 1.28631
+scale = Vector2(0.25, 0.25)
+
+[node name="flower_8" parent="deco" instance=ExtResource("16_mkcx0")]
+modulate = Color(1, 1.05, 1.05, 1)
+position = Vector2(979, 414)
+scale = Vector2(0.4, 0.35)
+
+[node name="flower_9" parent="deco" instance=ExtResource("17_6w78g")]
+modulate = Color(1.1, 1.02, 1.02, 1)
+position = Vector2(1120, 751)
+rotation = -0.169901
+scale = Vector2(0.25, 0.25)
+
+[node name="flower_10" parent="deco" instance=ExtResource("17_6w78g")]
+modulate = Color(1.1, 1.02, 1.02, 1)
+position = Vector2(1130, 746)
+rotation = -0.169901
+scale = Vector2(0.35, 0.35)
+
+[node name="flower_11" parent="deco" instance=ExtResource("17_6w78g")]
+modulate = Color(1.1, 1.02, 1.02, 1)
+position = Vector2(1157, 766)
+rotation = -5.18101
+scale = Vector2(0.35, 0.35)
+
+[node name="grass_47" parent="deco" instance=ExtResource("17_mkcx0")]
+modulate = Color(1, 1.07, 1.08, 1)
+position = Vector2(618, 557)
+scale = Vector2(0.6, 0.6)
+
+[node name="grass_48" parent="deco" instance=ExtResource("17_mkcx0")]
+modulate = Color(0.87, 1.18, 1.24, 1)
+position = Vector2(1132, 504)
+scale = Vector2(-0.4, 0.4)
+
+[node name="grass_50" parent="deco" instance=ExtResource("17_mkcx0")]
+modulate = Color(0.9, 1.16, 1.15, 1)
+position = Vector2(802, 401)
+rotation = 3.14159
+scale = Vector2(-0.6, -0.6)
+
+[node name="rock_5" parent="deco" instance=ExtResource("12_82v35")]
+modulate = Color(0.9, 1.06, 1.06, 1)
+position = Vector2(796, 407)
+scale = Vector2(0.6, 0.48)
+
+[node name="grass_49" parent="deco" instance=ExtResource("18_6w78g")]
+modulate = Color(0.93, 1.11, 1.15, 1)
+position = Vector2(1415, 783)
+scale = Vector2(0.7, 0.7)
+
+[node name="SbCamp" type="Sprite2D" parent="."]
+modulate = Color(0.8, 0.9, 0.9, 1)
+position = Vector2(470, 394)
+rotation = -0.139626
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("19_soeln")
+
+[node name="SbCampfire" type="Sprite2D" parent="."]
+position = Vector2(696, 422)
+rotation = -0.0698132
+scale = Vector2(0.38, 0.38)
+texture = ExtResource("20_2ubp3")
+
+[node name="character" type="Node2D" parent="."]
+
+[node name="MiniBarkSleep" type="Sprite2D" parent="character"]
+z_index = 20
+position = Vector2(897, 578)
+rotation = -0.872665
+scale = Vector2(0.2, 0.2)
+skew = -0.174533
+texture = ExtResource("6_qdd7x")
+
+[node name="MiniHannah2" type="Sprite2D" parent="character"]
+modulate = Color(1, 1, 1, 0)
+z_index = 20
+position = Vector2(500, 209)
+scale = Vector2(0.3, 0.288)
+texture = ExtResource("23_h8cr7")

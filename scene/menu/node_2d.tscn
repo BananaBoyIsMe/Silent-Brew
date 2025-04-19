@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqqidlgh60n5l"]
+
+[ext_resource type="PackedScene" uid="uid://5jyiare8nlf" path="res://scene/deco/grass_ani_1.tscn" id="1_k101n"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="grass_ani1" parent="." instance=ExtResource("1_k101n")]
+position = Vector2(760, 464)

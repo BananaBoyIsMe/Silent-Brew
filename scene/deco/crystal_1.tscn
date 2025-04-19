@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://do7y7tw44dg0r"]
+
+[ext_resource type="Texture2D" uid="uid://mtyr1g7wvefk" path="res://sprite/deco/sb_crystal1.png" id="1_mo3tu"]
+[ext_resource type="Script" uid="uid://civ0by4a2i6a7" path="res://script/crystal_1.gd" id="1_p66mn"]
+
+[node name="crystal_1" type="Node2D"]
+script = ExtResource("1_p66mn")
+
+[node name="SbCrystal1" type="Sprite2D" parent="."]
+texture = ExtResource("1_mo3tu")

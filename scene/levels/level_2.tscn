@@ -1,0 +1,518 @@
+[gd_scene load_steps=8 format=3 uid="uid://bi7y12uhx1hi2"]
+
+[ext_resource type="PackedScene" uid="uid://e2jhu0ksgvw1" path="res://scene/tiles/tile_1.tscn" id="1_ord2m"]
+[ext_resource type="PackedScene" uid="uid://bon5imptwhdtx" path="res://scene/deco/rock_2.tscn" id="3_j888y"]
+[ext_resource type="PackedScene" uid="uid://d2fn13up552pa" path="res://scene/deco/rock_3.tscn" id="4_1hr41"]
+[ext_resource type="PackedScene" uid="uid://dj5exfowx7tyd" path="res://scene/deco/rock_4.tscn" id="5_53l1r"]
+[ext_resource type="Texture2D" uid="uid://d2fuuwoserxjf" path="res://sprite/deco/sb_stalagmite1.png" id="6_53l1r"]
+[ext_resource type="Texture2D" uid="uid://bmwlkm4s3g623" path="res://sprite/deco/sb_stalagmite2.png" id="7_ord2m"]
+[ext_resource type="Texture2D" uid="uid://85m6cig1lk7p" path="res://sprite/bark/map_bark1.png" id="9_4xpwr"]
+
+[node name="level_2" type="Node2D"]
+
+[node name="tiles" type="Node2D" parent="."]
+
+[node name="tile_1_0" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(400, 321)
+rotation = 3.14159
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_1_1" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(400, 395)
+rotation = -3.14159
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_1_2" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(400, 469)
+rotation = -3.14159
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_1_3" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(400, 543)
+rotation = -3.14159
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_1_4" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(400, 617)
+rotation = -3.14159
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_1_5" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(400, 691)
+rotation = -3.14159
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+delay_time = 0.6
+
+[node name="tile_1_6" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(400, 765)
+rotation = -3.14159
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+delay_time = 0.3
+
+[node name="tile_2_0" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(500, 284)
+scale = Vector2(0.5, 0.313)
+skew = 1.01328e-05
+tile_id = 6
+
+[node name="tile_2_1" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(500, 358)
+scale = Vector2(0.5, 0.313)
+skew = 1.01328e-05
+tile_id = 6
+
+[node name="tile_2_2" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(500, 432)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_2_3" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(500, 506)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_2_4" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(500, 580)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_2_5" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(500, 654)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_2_6" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(500, 728)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+delay_time = 0.3
+
+[node name="tile_2_7" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(500, 802)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_3_0" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(600, 321)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_3_1" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(600, 395)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_3_2" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(600, 469)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_3_3" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(600, 543)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_3_4" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(600, 617)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_3_5" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(600, 691)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+delay_time = 0.6
+
+[node name="tile_3_6" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(600, 765)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+delay_time = 0.3
+
+[node name="tile_4_0" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(700, 284)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_4_1" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(700, 358)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_4_2" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(700, 432)
+rotation = 3.14159
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_4_3" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(700, 506)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_4_4" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(700, 580)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_4_5" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(700, 654)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_4_6" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(700, 728)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+delay_time = 0.3
+
+[node name="tile_5_0" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(800, 321)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_5_1" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(800, 395)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_5_2" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(800, 469)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_5_3" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(800, 543)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_5_6" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(800, 765)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_6_1" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(900, 358)
+rotation = 3.14159
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_6_2" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(900, 432)
+rotation = 3.14159
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_6_4" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(900, 580)
+rotation = 3.14159
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_6_7" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(900, 802)
+rotation = 3.14159
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_7_1" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(1000, 395)
+rotation = -3.14159
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_7_4" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(1000, 617)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_7_5" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(1000, 691)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_7_6" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(1000, 765)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+delay_time = 0.3
+
+[node name="tile_8_1" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(1100, 358)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_8_4" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(1100, 580)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_8_5" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(1100, 654)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_8_6" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(1100, 728)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+delay_time = 0.3
+
+[node name="tile_8_7" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(1100, 802)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_9_1" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(1200, 395)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_9_3" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(1200, 543)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_9_4" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(1200, 617)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_9_5" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(1200, 691)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+delay_time = 0.6
+
+[node name="tile_9_6" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(1200, 765)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+delay_time = 0.3
+
+[node name="tile_9_7" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(1200, 839)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_10_0" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(1300, 358)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_10_1" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(1300, 358)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_10_2" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(1300, 432)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_10_3" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(1300, 506)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_10_4" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(1300, 580)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_10_5" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(1300, 654)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+delay_time = 0.6
+
+[node name="tile_10_6" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(1300, 728)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+delay_time = 0.3
+
+[node name="tile_10_7" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(1300, 802)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_11_0" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(1400, 321)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_11_1" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(1400, 395)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_11_2" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(1400, 469)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_11_3" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(1400, 543)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_11_4" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(1400, 617)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_11_5" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(1400, 691)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+delay_time = 0.6
+
+[node name="tile_11_6" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(1400, 765)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+delay_time = 0.3
+
+[node name="tile_11_7" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(1400, 839)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_12_1" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(1500, 358)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_12_2" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(1500, 432)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_12_3" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(1500, 506)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_12_4" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(1500, 580)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tile_12_5" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(1500, 654)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+delay_time = 0.6
+
+[node name="tile_12_6" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(1500, 728)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+delay_time = 0.3
+
+[node name="tile_12_7" parent="tiles" instance=ExtResource("1_ord2m")]
+position = Vector2(1500, 802)
+scale = Vector2(0.5, 0.313)
+tile_id = 6
+
+[node name="tree_bg_tiles" type="Node2D" parent="."]
+
+[node name="bg" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="bg"]
+modulate = Color(0.904297, 0.60418, 0.374435, 1)
+z_index = -10
+offset_right = 1937.0
+offset_bottom = 1110.0
+mouse_filter = 2
+
+[node name="bush" type="Node2D" parent="."]
+
+[node name="deco" type="Node2D" parent="."]
+z_index = 10
+
+[node name="MapBark1" type="Sprite2D" parent="deco"]
+position = Vector2(499, 318)
+scale = Vector2(0.22, 0.22)
+texture = ExtResource("9_4xpwr")
+
+[node name="rock_2" parent="deco" instance=ExtResource("3_j888y")]
+modulate = Color(0.3, 0.3, 0.3, 1)
+position = Vector2(384, 632)
+rotation = -0.0593412
+scale = Vector2(0.8, 0.8)
+
+[node name="rock_6" parent="deco" instance=ExtResource("3_j888y")]
+modulate = Color(0.3, 0.3, 0.3, 1)
+position = Vector2(909, 375)
+rotation = 0.0523599
+scale = Vector2(-0.8, 0.8)
+
+[node name="rock_3" parent="deco" instance=ExtResource("4_1hr41")]
+modulate = Color(0.3, 0.3, 0.3, 1)
+position = Vector2(1433, 386)
+scale = Vector2(0.6, 0.6)
+
+[node name="rock_5" parent="deco" instance=ExtResource("4_1hr41")]
+modulate = Color(0.3, 0.3, 0.3, 1)
+position = Vector2(1178, 837)
+scale = Vector2(-0.6, 0.6)
+
+[node name="rock_4" parent="deco" instance=ExtResource("5_53l1r")]
+modulate = Color(0.3, 0.3, 0.3, 1)
+position = Vector2(1315, 374)
+scale = Vector2(0.7, 0.7)
+
+[node name="SbStalagmite1" type="Sprite2D" parent="deco"]
+modulate = Color(1.4, 1.4, 1.4, 1)
+position = Vector2(1392, 536)
+rotation = 0.0698132
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("6_53l1r")
+
+[node name="SbStalagmite2" type="Sprite2D" parent="deco"]
+modulate = Color(1.4, 1.4, 1.4, 1)
+position = Vector2(489.8, 787.8)
+rotation = 3.14159
+scale = Vector2(0.6, -0.6)
+texture = ExtResource("7_ord2m")
+
+[node name="SbStalagmite3" type="Sprite2D" parent="deco"]
+modulate = Color(1.4, 1.4, 1.4, 1)
+position = Vector2(484.8, 810.8)
+rotation = -0.0698132
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("7_ord2m")
+
+[node name="SbStalagmite4" type="Sprite2D" parent="deco"]
+modulate = Color(1.4, 1.4, 1.4, 1)
+position = Vector2(870, 352)
+rotation = 3.14159
+scale = Vector2(0.4, -0.4)
+texture = ExtResource("7_ord2m")
+
+[node name="SbStalagmite5" type="Sprite2D" parent="deco"]
+modulate = Color(1.4, 1.4, 1.4, 1)
+position = Vector2(886, 346)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("7_ord2m")
+
+[node name="SbStalagmite7" type="Sprite2D" parent="deco"]
+modulate = Color(1.4, 1.4, 1.4, 1)
+position = Vector2(928, 321)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("7_ord2m")
+
+[node name="SbStalagmite8" type="Sprite2D" parent="deco"]
+modulate = Color(1.4, 1.4, 1.4, 1)
+position = Vector2(897, 355)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_ord2m")

@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=3 uid="uid://bmsjpaflg0gf5"]
+
+[ext_resource type="Texture2D" uid="uid://dvgc400wwgst6" path="res://sprite/map_ency_inven/sb_encyclopedia.png" id="1_jr7kl"]
+[ext_resource type="Texture2D" uid="uid://c3im3p8e187qm" path="res://sprite/plant/sb_plant5.png" id="2_i03py"]
+[ext_resource type="Texture2D" uid="uid://cwpxlsfj7rxjt" path="res://sprite/plant/sb_plant_frame.png" id="3_ysg71"]
+[ext_resource type="FontFile" uid="uid://bias1she8j2dm" path="res://sfont/Caveat-VariableFont_wght.ttf" id="4_qdthl"]
+
+[node name="death_cap_5" type="Node2D"]
+
+[node name="encyclopedia" type="Sprite2D" parent="."]
+visible = false
+z_index = -1
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("1_jr7kl")
+
+[node name="SbPlant5" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(-361, -59)
+scale = Vector2(1, 0.979)
+texture = ExtResource("2_i03py")
+
+[node name="SbPlantFrame" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(-365, -59)
+texture = ExtResource("3_ysg71")
+
+[node name="SbPlantFrame2" type="Sprite2D" parent="."]
+modulate = Color(0.44, 0.44, 0.44, 1)
+z_index = 1
+position = Vector2(-365, -59)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("3_ysg71")
+
+[node name="name" type="Label" parent="."]
+offset_left = -469.0
+offset_top = -276.0
+offset_right = -266.0
+offset_bottom = -206.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_qdthl")
+theme_override_font_sizes/font_size = 55
+text = "Death Cap"
+
+[node name="info" type="Label" parent="."]
+offset_left = -192.0
+offset_top = -304.0
+offset_right = 366.0
+offset_bottom = 131.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_qdthl")
+theme_override_font_sizes/font_size = 55
+text = "Mama tell me to never eat it...
+or any mushroom with out
+telling her.
+I remeber them in the forest
+and cave. It is use in       on
+of poison gas."

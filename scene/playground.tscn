@@ -1,0 +1,236 @@
+[gd_scene load_steps=18 format=3 uid="uid://b3fgimaa00gty"]
+
+[ext_resource type="Script" uid="uid://nqilfgkxaweb" path="res://script/playground.gd" id="1_d7uwg"]
+[ext_resource type="PackedScene" uid="uid://bgqp6qw5jieci" path="res://scene/encyclopedia/encyclopedia.tscn" id="3_6cloe"]
+[ext_resource type="PackedScene" uid="uid://cwq12i3ur4po4" path="res://scene/characters/character_emotion.tscn" id="3_mnp3q"]
+[ext_resource type="Texture2D" uid="uid://cqnqj2p8x5d4u" path="res://sprite/map_ency_inven/sb_map_hand2.png" id="3_ovqeb"]
+[ext_resource type="Script" uid="uid://c0rna0at3oaka" path="res://script/paused_rewrite.gd" id="3_rjoos"]
+[ext_resource type="Texture2D" uid="uid://b8a7fdlwanb74" path="res://sprite/menu/silent_brew_title.png" id="5_538jc"]
+[ext_resource type="PackedScene" uid="uid://bnkka14smy366" path="res://scene/menu/menu_pic_2.tscn" id="5_hbvmf"]
+[ext_resource type="Shader" uid="uid://bqn6dfvp4y8qf" path="res://shader/silent_brew_title.gdshader" id="5_m2ofn"]
+[ext_resource type="Script" uid="uid://jke0dwdhb4ni" path="res://script/map_icon.gd" id="8_6hok2"]
+[ext_resource type="Texture2D" uid="uid://d2ibw8u5ny45n" path="res://sprite/menu/sb_map_icon.png" id="9_1xboh"]
+[ext_resource type="Texture2D" uid="uid://b3u4u2qvox2b4" path="res://sprite/menu/sb_map_icon_glow.png" id="10_rdccy"]
+[ext_resource type="Script" uid="uid://rmketipvsi3l" path="res://script/book_icon.gd" id="11_ggvlr"]
+[ext_resource type="Texture2D" uid="uid://d4nr8626y3x1t" path="res://sprite/map_ency_inven/sb_book_icon_glow.png" id="12_5clfj"]
+[ext_resource type="Texture2D" uid="uid://bdwsj6me28dy4" path="res://sprite/map_ency_inven/sb_book_icon.png" id="13_d4pn0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qcna6"]
+shader = ExtResource("5_m2ofn")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_72dm7"]
+size = Vector2(131.083, 83.7286)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_050qg"]
+size = Vector2(99.9856, 127.026)
+
+[node name="playground" type="Node2D"]
+script = ExtResource("1_d7uwg")
+
+[node name="menu" type="Node2D" parent="."]
+process_mode = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+process_mode = 1
+offset = Vector2(960, 540)
+
+[node name="encyclopedia" parent="." instance=ExtResource("3_6cloe")]
+position = Vector2(27, 2787)
+rotation = -1.5708
+
+[node name="map_image" type="Sprite2D" parent="."]
+z_index = 200
+position = Vector2(960, 2040)
+rotation = -1.5708
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("3_ovqeb")
+
+[node name="spawn_zoom" type="Node2D" parent="."]
+process_mode = 1
+position = Vector2(960, 540)
+
+[node name="map" type="Node2D" parent="spawn_zoom"]
+
+[node name="paused" type="Node2D" parent="."]
+process_mode = 3
+script = ExtResource("3_rjoos")
+
+[node name="screen_dark" type="ColorRect" parent="paused"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+z_index = 500
+offset_left = -64.0
+offset_top = -39.0
+offset_right = 1968.0
+offset_bottom = 1120.0
+color = Color(0, 0, 0, 1)
+
+[node name="resume_bt" type="Button" parent="paused"]
+z_index = 1201
+offset_left = 827.0
+offset_top = 393.0
+offset_right = 1091.0
+offset_bottom = 482.0
+theme_override_font_sizes/font_size = 40
+disabled = true
+text = "Start Game"
+
+[node name="select_bt" type="Button" parent="paused"]
+z_index = 1201
+offset_left = 827.0
+offset_top = 515.0
+offset_right = 1089.0
+offset_bottom = 607.0
+theme_override_font_sizes/font_size = 40
+disabled = true
+text = "Select Level"
+
+[node name="options_bt" type="Button" parent="paused"]
+z_index = 1201
+offset_left = 826.0
+offset_top = 640.0
+offset_right = 1088.0
+offset_bottom = 732.0
+theme_override_font_sizes/font_size = 40
+disabled = true
+text = "Options"
+
+[node name="credits_bt" type="Button" parent="paused"]
+z_index = 1201
+offset_left = 823.0
+offset_top = 770.0
+offset_right = 1085.0
+offset_bottom = 862.0
+theme_override_font_sizes/font_size = 40
+disabled = true
+text = "Credits"
+
+[node name="save_and_exit_bt" type="Button" parent="paused"]
+z_index = 1201
+offset_left = 822.0
+offset_top = 899.0
+offset_right = 1086.0
+offset_bottom = 991.0
+theme_override_font_sizes/font_size = 40
+disabled = true
+text = "Exit"
+
+[node name="SilentBrewTitle" type="Sprite2D" parent="paused"]
+modulate = Color(10, 10, 10, 1)
+z_index = 2000
+material = SubResource("ShaderMaterial_qcna6")
+position = Vector2(267, 152)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_538jc")
+offset = Vector2(2323.33, 156.667)
+vframes = 2
+
+[node name="SilentBrewTitle2" type="Sprite2D" parent="paused"]
+modulate = Color(10, 10, 10, 1)
+z_index = 2000
+material = SubResource("ShaderMaterial_qcna6")
+position = Vector2(1380, 296)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_538jc")
+vframes = 2
+frame = 1
+
+[node name="menu_pic_2" parent="." instance=ExtResource("5_hbvmf")]
+visible = false
+position = Vector2(653, 525)
+
+[node name="pausable" type="Node2D" parent="."]
+
+[node name="map_icon" type="Node2D" parent="."]
+script = ExtResource("8_6hok2")
+
+[node name="screen_dark" type="ColorRect" parent="map_icon"]
+modulate = Color(1, 1, 1, 0)
+z_index = 199
+offset_left = -64.0
+offset_top = -39.0
+offset_right = 1968.0
+offset_bottom = 1120.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="map_icon" type="Sprite2D" parent="map_icon"]
+z_index = 501
+position = Vector2(1500, -120)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("9_1xboh")
+
+[node name="map_glow" type="Sprite2D" parent="map_icon/map_icon"]
+visible = false
+z_index = 500
+texture = ExtResource("10_rdccy")
+
+[node name="Area2D" type="Area2D" parent="map_icon/map_icon"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="map_icon/map_icon/Area2D"]
+position = Vector2(-2.98462, 6.04175)
+rotation = -0.349066
+scale = Vector2(0.999999, 0.999999)
+shape = SubResource("RectangleShape2D_72dm7")
+
+[node name="book_icon" type="Node2D" parent="."]
+script = ExtResource("11_ggvlr")
+
+[node name="screen_dark" type="ColorRect" parent="book_icon"]
+modulate = Color(1, 1, 1, 0)
+z_index = 199
+offset_left = -64.0
+offset_top = -39.0
+offset_right = 1968.0
+offset_bottom = 1120.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="book_icon" type="Sprite2D" parent="book_icon"]
+z_index = 200
+position = Vector2(1672, -113)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("13_d4pn0")
+
+[node name="book_glow" type="Sprite2D" parent="book_icon/book_icon"]
+visible = false
+texture = ExtResource("12_5clfj")
+
+[node name="Area2D" type="Area2D" parent="book_icon/book_icon"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="book_icon/book_icon/Area2D"]
+position = Vector2(3.0769, -3.07691)
+rotation = -0.523599
+shape = SubResource("RectangleShape2D_050qg")
+
+[node name="bg_music" type="AudioStreamPlayer2D" parent="."]
+bus = &"Music"
+
+[node name="ambient" type="AudioStreamPlayer2D" parent="."]
+bus = &"Ambient"
+
+[node name="sfx" type="AudioStreamPlayer2D" parent="."]
+bus = &"SFX"
+
+[node name="character_emotion" parent="." instance=ExtResource("3_mnp3q")]
+process_mode = 1
+z_index = 100
+position = Vector2(256, 1280)
+scale = Vector2(0.5, 0.5)
+
+[node name="character_emotion2" parent="." instance=ExtResource("3_mnp3q")]
+process_mode = 1
+z_index = 100
+position = Vector2(1664, 1280)
+scale = Vector2(0.5, 0.5)
+
+[connection signal="button_up" from="paused/resume_bt" to="paused" method="_on_resume_bt_button_up"]
+[connection signal="button_up" from="paused/select_bt" to="paused" method="_on_select_bt_button_up"]
+[connection signal="button_up" from="paused/options_bt" to="paused" method="_on_options_bt_button_up"]
+[connection signal="button_up" from="paused/save_and_exit_bt" to="paused" method="_on_save_and_exit_bt_button_up"]
+[connection signal="input_event" from="map_icon/map_icon/Area2D" to="map_icon" method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="map_icon/map_icon/Area2D" to="map_icon" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="map_icon/map_icon/Area2D" to="map_icon" method="_on_area_2d_mouse_exited"]
+[connection signal="input_event" from="book_icon/book_icon/Area2D" to="book_icon" method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="book_icon/book_icon/Area2D" to="book_icon" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="book_icon/book_icon/Area2D" to="book_icon" method="_on_area_2d_mouse_exited"]

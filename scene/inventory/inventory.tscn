@@ -1,0 +1,100 @@
+[gd_scene load_steps=10 format=3 uid="uid://b7m8g1nleu1j0"]
+
+[ext_resource type="Texture2D" uid="uid://crdepgptj0rar" path="res://sprite/map_ency_inven/sb_inventory_20250323125025.png" id="1_gmc0f"]
+[ext_resource type="PackedScene" uid="uid://c3pqvhcx12suf" path="res://scene/inventory/inventory_item.tscn" id="2_wp4kf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wp4kf"]
+radius = 20.025
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1v387"]
+radius = 18.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2j4gn"]
+radius = 19.0263
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_07k05"]
+radius = 18.0278
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y0mn2"]
+radius = 19.0263
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_un00e"]
+radius = 17.0294
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1v387"]
+size = Vector2(281, 285)
+
+[node name="inventory" type="Node2D"]
+
+[node name="SbInventory" type="Sprite2D" parent="."]
+position = Vector2(1111, 441)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("1_gmc0f")
+
+[node name="item_slot1" type="Area2D" parent="SbInventory"]
+position = Vector2(232.5, 252.5)
+scale = Vector2(2.5, 2.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SbInventory/item_slot1"]
+shape = SubResource("CircleShape2D_wp4kf")
+
+[node name="item_slot2" type="Area2D" parent="SbInventory"]
+position = Vector2(497.5, 105)
+scale = Vector2(2.5, 2.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SbInventory/item_slot2"]
+shape = SubResource("CircleShape2D_1v387")
+
+[node name="item_slot3" type="Area2D" parent="SbInventory"]
+position = Vector2(235, 560)
+scale = Vector2(2.5, 2.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SbInventory/item_slot3"]
+shape = SubResource("CircleShape2D_2j4gn")
+
+[node name="item_slot4" type="Area2D" parent="SbInventory"]
+position = Vector2(500, 407.5)
+scale = Vector2(2.5, 2.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SbInventory/item_slot4"]
+shape = SubResource("CircleShape2D_07k05")
+
+[node name="item_slot5" type="Area2D" parent="SbInventory"]
+position = Vector2(235, 865)
+scale = Vector2(2.5, 2.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SbInventory/item_slot5"]
+shape = SubResource("CircleShape2D_y0mn2")
+
+[node name="item_slot6" type="Area2D" parent="SbInventory"]
+position = Vector2(497.5, 710)
+scale = Vector2(2.5, 2.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SbInventory/item_slot6"]
+shape = SubResource("CircleShape2D_un00e")
+
+[node name="inventory_item" parent="." instance=ExtResource("2_wp4kf")]
+position = Vector2(741, 674)
+item_id = 2
+
+[node name="inventory_item2" parent="." instance=ExtResource("2_wp4kf")]
+position = Vector2(349, 772)
+item_id = 3
+
+[node name="inventory_item3" parent="." instance=ExtResource("2_wp4kf")]
+position = Vector2(333, 428)
+item_id = 5
+
+[node name="item_temp_place" type="ColorRect" parent="."]
+offset_left = 151.0
+offset_top = 278.0
+offset_right = 929.0
+offset_bottom = 914.0
+mouse_filter = 2
+color = Color(0.291016, 0.291016, 0.291016, 1)
+
+[node name="item_temp" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="item_temp"]
+position = Vector2(526.5, 589.5)
+shape = SubResource("RectangleShape2D_1v387")
