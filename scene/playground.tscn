@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://b3fgimaa00gty"]
+[gd_scene load_steps=20 format=3 uid="uid://b3fgimaa00gty"]
 
 [ext_resource type="Script" uid="uid://nqilfgkxaweb" path="res://script/playground.gd" id="1_d7uwg"]
 [ext_resource type="PackedScene" uid="uid://bgqp6qw5jieci" path="res://scene/encyclopedia/encyclopedia.tscn" id="3_6cloe"]
@@ -14,6 +14,8 @@
 [ext_resource type="Script" uid="uid://rmketipvsi3l" path="res://script/book_icon.gd" id="11_ggvlr"]
 [ext_resource type="Texture2D" uid="uid://d4nr8626y3x1t" path="res://sprite/map_ency_inven/sb_book_icon_glow.png" id="12_5clfj"]
 [ext_resource type="Texture2D" uid="uid://bdwsj6me28dy4" path="res://sprite/map_ency_inven/sb_book_icon.png" id="13_d4pn0"]
+[ext_resource type="Texture2D" uid="uid://csmnrp7pu413y" path="res://sprite/tiles/sb_load1.png" id="15_mnp3q"]
+[ext_resource type="Script" uid="uid://cnb6sindcwf4l" path="res://script/move_buffer.gd" id="16_clkgy"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qcna6"]
 shader = ExtResource("5_m2ofn")
@@ -223,6 +225,44 @@ process_mode = 1
 z_index = 100
 position = Vector2(1664, 1280)
 scale = Vector2(0.5, 0.5)
+
+[node name="move_buffer" type="Node2D" parent="."]
+z_index = 100
+position = Vector2(421, 459)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("16_clkgy")
+
+[node name="move_buffer" type="TextureProgressBar" parent="move_buffer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -128.0
+offset_right = 128.0
+offset_bottom = 128.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+max_value = 0.8
+step = 0.02
+fill_mode = 5
+texture_progress = ExtResource("15_mnp3q")
+
+[node name="foreground" type="CanvasLayer" parent="."]
+
+[node name="foreground_black" type="Node2D" parent="foreground"]
+modulate = Color(1, 1, 1, 0)
+
+[node name="ColorRect" type="ColorRect" parent="foreground/foreground_black"]
+offset_left = -119.0
+offset_top = -56.0
+offset_right = -79.0
+offset_bottom = -16.0
+scale = Vector2(54.12, 30.16)
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
 
 [connection signal="button_up" from="paused/resume_bt" to="paused" method="_on_resume_bt_button_up"]
 [connection signal="button_up" from="paused/select_bt" to="paused" method="_on_select_bt_button_up"]

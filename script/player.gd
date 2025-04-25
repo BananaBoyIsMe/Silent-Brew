@@ -4,70 +4,61 @@ extends Node2D
 #@onready var sprite_material = $Player_sprite.material
 var sprite_material
 var saturation = 1.0
+var tween_walk1
 
 func _ready() -> void:
+	#print("Hi")
 	global.player = self
 	sprite_material = get_parent().material
 	#print(sprite_material)
+	global.connect("move_on_toggled", _on_move_toggled)
 
-func _physics_process(delta: float) -> void:
-	var path_num = global.player_direction.find(global.player_des_pos) + 1
-	if path_num >= global.player_direction.size():
-		path_num = global.player_direction.size() - 1
-	var target_vec = global.player_direction[path_num]
-	var target_pos = Vector2((target_vec.x * 100) + 256 - 960, (target_vec.y * 74) + (256 - (int(target_vec.x) % 2) * 37) - 64 - 540)
-	
-	var past_pos = Vector2((global.player_des_pos.x * 100) + 256 - 960, (global.player_des_pos.y * 74) + (256 - (int(global.player_des_pos.x) % 2) * 37) - 64 - 540)
-	
-	if global.move_now:
-		saturation += delta * 5
-		saturation = min(saturation, 10)
+func _on_move_toggled(state: bool):
+	if state:
+		tween_walk1 = create_tween()
+		tween_walk1.tween_property(self, "position", global.player_des_real_pos + Vector2(0, -40), 0.8)
+		#tween_walk1.kill()
+		#for i in range(20):
+			#if !global.move_now:
+				#break
+			#var tween = create_tween()
+			#tween.tween_property(self, "rotation_degrees", 7, 0.3)
+			#await tween.finished
+			#if !global.move_now:
+				#break
+			#var tween1 = create_tween()
+			#tween1.tween_property(self, "rotation_degrees", -7, 0.3)
+			#await tween1.finished
+	if !state:
+		#print(global.player_last_pos)
+		#tween_walk1.kill()
+		#tween_walk1 = create_tween()
+		#tween_walk1.tween_property(self, "position", global.player_last_pos + Vector2(0, -40), global.move_timer)
 		
-		var speed = log(position.distance_to(target_pos)/ log(2))
-		position = position.move_toward(target_pos, speed * 50 * delta)
-		if (position).distance_to(target_pos) <= 5:
-			if global.player_des_pos != target_vec:
-				global.turn += 1
-			global.player_des_pos = target_vec
-	
-	if !global.move_now:
-		saturation -= delta * 2
-		saturation = max(0, saturation)
-	
-	if sprite_material:
-		sprite_material.set("shader_parameter/saturation", saturation)
-	
-	if !global.move_now and global.player.position != past_pos:
-		global.player.position.x = move_toward(global.player.position.x
-		, past_pos.x
-		, 0.05 * abs(global.player.position.x - past_pos.x))
-		
-		global.player.position.y = move_toward(global.player.position.y
-		, past_pos.y
-		, 0.05 * abs(global.player.position.y - past_pos.y))
-		
-		#print(global.player.position)
-		#print(target_pos)
-	
+		var tween_walk2 = create_tween()
+		tween_walk2.tween_property(self, "position", global.player_last_pos + Vector2(0, -40), 0.8)
+		var tween2 = create_tween()
+		tween2.tween_property(self, "rotation_degrees", 0, 0.3)
+
+func _physics_process(_delta: float) -> void:
+	#if !global.move_now and self.rotation_degrees != 0:
+		#self.rotation_degrees = move_toward(self.rotation_degrees, 0, 0.8)
 	#if global.move_now:
-		#var path_num = global.player_direction.find(global.player_des_pos) + 1
-		#if path_num >= global.player_direction.size():
-			#path_num = global.player_direction.size() - 1
-		#print(path_num)
-		#var target_vec = global.player_direction[path_num]
-		#var target_pos = Vector2((target_vec.x * 100) + 256 - 960, (target_vec.y * 74) + (256 - (int(target_vec.x) % 2) * 37) - 64 - 540)
-		##var past_pos = Vector2((global.player_des_pos.x * 100) + 256 - 960, (global.player_des_pos.y * 74) + (256 - (int(global.player_des_pos.x) % 2) * 37) - 64 - 540)
-		##var speed = log(position.distance_to(target_pos)/ log(2))
-		#if ((position).distance_to(target_pos) <= 20):
-			#global.player_des_pos = target_vec
-		##if ((position).distance_to(target_pos) <= 2):
-		#if !((position).distance_to(target_pos) <= 2):
-			##position = position.move_toward(target_pos, speed * 100 * delta)
-			#position = position.move_toward(target_pos, 100 * delta)
-		#print(target_pos)
+		#self.position.x = move_toward(position.x, global.player_des_real_pos.x, 0.8 * 2.5)
+		#self.position.y = move_toward(position.y, global.player_des_real_pos.y - 40, 0.8 * 2)
+	global.player_cur_pos = self.position
+	#var path_num = global.player_direction.find(global.player_des_pos) + 1
+	#if path_num >= global.player_direction.size():
+		#path_num = global.player_direction.size() - 1
+	#var target_vec = global.player_direction[path_num]
+	#var target_pos = Vector2((target_vec.x * 100) + 256 - 960, (target_vec.y * 74) + (256 - (int(target_vec.x) % 2) * 37) - 64 - 540)
+	#
+	#var past_pos = Vector2((global.player_des_pos.x * 100) + 256 - 960, (global.player_des_pos.y * 74) + (256 - (int(global.player_des_pos.x) % 2) * 37) - 64 - 540)
+	#
+	#if global.move_now:
+		#saturation += delta * 5
+		#saturation = min(saturation, 10)
 		
-		# slope = -0.37
-		# y = -0.37x -161.52
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.name == "enemy":

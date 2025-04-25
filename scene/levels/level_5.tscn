@@ -1,789 +1,860 @@
 [gd_scene load_steps=11 format=3 uid="uid://b0snh07ubi6n"]
 
-[ext_resource type="PackedScene" uid="uid://e2jhu0ksgvw1" path="res://scene/tiles/tile_1.tscn" id="1_0wb0a"]
-[ext_resource type="PackedScene" uid="uid://d2a4p3u65khhy" path="res://scene/deco/flower_1.tscn" id="2_scrfv"]
-[ext_resource type="PackedScene" uid="uid://dj5exfowx7tyd" path="res://scene/deco/rock_4.tscn" id="3_b1tbl"]
-[ext_resource type="Texture2D" uid="uid://cpglhg4f8f1us" path="res://sprite/tiles/sb_grandmapa_hut.png" id="3_b48oh"]
-[ext_resource type="PackedScene" uid="uid://c24lno204c54k" path="res://scene/deco/heally_pad_1.tscn" id="6_q5nfm"]
-[ext_resource type="PackedScene" uid="uid://cwtosr5so2dc1" path="res://scene/deco/water_grass_1.tscn" id="7_rixw4"]
-[ext_resource type="PackedScene" uid="uid://dk75nkxegpdth" path="res://scene/deco/water_grass_2.tscn" id="8_0wb0a"]
-[ext_resource type="Texture2D" uid="uid://85m6cig1lk7p" path="res://sprite/bark/map_bark1.png" id="9_bc7w4"]
-[ext_resource type="PackedScene" uid="uid://d1w8p4sjdwsms" path="res://scene/deco/grass_2.tscn" id="10_sgilu"]
-[ext_resource type="PackedScene" uid="uid://cnjrfy04j0dno" path="res://scene/deco/grass_3.tscn" id="11_nimfe"]
+[ext_resource type="Script" uid="uid://ogym4e23mb2c" path="res://script/level_5.gd" id="1_0wb0a"]
+[ext_resource type="PackedScene" uid="uid://e2jhu0ksgvw1" path="res://scene/tiles/tile_1.tscn" id="1_rixw4"]
+[ext_resource type="PackedScene" uid="uid://d2a4p3u65khhy" path="res://scene/deco/flower_1.tscn" id="2_0wb0a"]
+[ext_resource type="PackedScene" uid="uid://dj5exfowx7tyd" path="res://scene/deco/rock_4.tscn" id="3_0h47t"]
+[ext_resource type="PackedScene" uid="uid://d1w8p4sjdwsms" path="res://scene/deco/grass_2.tscn" id="4_fpag2"]
+[ext_resource type="PackedScene" uid="uid://cnjrfy04j0dno" path="res://scene/deco/grass_3.tscn" id="5_1sw4s"]
+[ext_resource type="PackedScene" uid="uid://c24lno204c54k" path="res://scene/deco/heally_pad_1.tscn" id="6_1hokn"]
+[ext_resource type="PackedScene" uid="uid://cwtosr5so2dc1" path="res://scene/deco/water_grass_1.tscn" id="7_ecjs3"]
+[ext_resource type="PackedScene" uid="uid://dk75nkxegpdth" path="res://scene/deco/water_grass_2.tscn" id="8_ykhgw"]
+[ext_resource type="Texture2D" uid="uid://cpglhg4f8f1us" path="res://sprite/tiles/sb_grandmapa_hut.png" id="10_bc7w4"]
 
 [node name="level_5" type="Node2D"]
+script = ExtResource("1_0wb0a")
 
 [node name="tiles" type="Node2D" parent="."]
 
-[node name="tile_1_2" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_1_2" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.8, 0.8, 0.8, 1)
 position = Vector2(400, 469)
 rotation = -3.14159
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(1, 2)
 
-[node name="tile_1_3" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_1_3" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.83, 0.83, 0.83, 1)
 position = Vector2(400, 543)
 rotation = -3.14159
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(1, 3)
 
-[node name="tile_1_4" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_1_4" parent="tiles" instance=ExtResource("1_rixw4")]
 position = Vector2(400, 617)
 rotation = -3.14159
 scale = Vector2(0.5, 0.313)
 tile_id = 33
+tile_co = Vector2(1, 4)
 
-[node name="tile_1_5" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_1_5" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.9, 0.9, 0.9, 1)
 position = Vector2(400, 691)
 rotation = -3.14159
 scale = Vector2(0.5, 0.313)
 tile_id = 33
+tile_co = Vector2(1, 5)
 delay_time = 0.6
 
-[node name="tile_1_6" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_1_6" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.8, 0.8, 0.8, 1)
 position = Vector2(400, 765)
 rotation = -3.14159
 scale = Vector2(0.5, 0.313)
 tile_id = 33
+tile_co = Vector2(1, 6)
 delay_time = 0.3
 
-[node name="tile_2_3" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_2_3" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.8, 0.8, 0.8, 1)
 position = Vector2(500, 506)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(2, 3)
 
-[node name="tile_2_4" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_2_4" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.88, 0.88, 0.88, 1)
 position = Vector2(500, 580)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(2, 4)
 
-[node name="tile_2_5" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_2_5" parent="tiles" instance=ExtResource("1_rixw4")]
 position = Vector2(500, 654)
 scale = Vector2(0.5, 0.313)
 tile_id = 33
+tile_co = Vector2(2, 5)
 
-[node name="tile_2_6" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_2_6" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.9, 0.9, 0.9, 1)
 position = Vector2(500, 728)
 scale = Vector2(0.5, 0.313)
 tile_id = 33
+tile_co = Vector2(2, 6)
 delay_time = 0.3
 
-[node name="tile_2_7" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_2_7" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.8, 0.8, 0.8, 1)
 position = Vector2(500, 802)
 scale = Vector2(0.5, 0.313)
 tile_id = 33
+tile_co = Vector2(2, 0)
 
-[node name="tile_3_2" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_3_2" parent="tiles" instance=ExtResource("1_rixw4")]
 position = Vector2(600, 469)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(3, 2)
 
-[node name="tile_3_3" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_3_3" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.8, 0.8, 0.8, 1)
 position = Vector2(600, 543)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(3, 3)
 
-[node name="tile_3_4" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_3_4" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.9, 0.9, 0.9, 1)
 position = Vector2(600, 617)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(3, 4)
 
-[node name="tile_3_5" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_3_5" parent="tiles" instance=ExtResource("1_rixw4")]
 position = Vector2(600, 691)
 scale = Vector2(0.5, 0.313)
 tile_id = 33
+tile_co = Vector2(3, 5)
 delay_time = 0.6
 
-[node name="tile_3_6" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_3_6" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.9, 0.9, 0.9, 1)
 position = Vector2(600, 765)
 scale = Vector2(0.5, 0.313)
 tile_id = 33
+tile_co = Vector2(3, 6)
 delay_time = 0.3
 
-[node name="tile_4_1" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_4_1" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.8, 0.8, 0.8, 1)
 position = Vector2(700, 358)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(4, 0)
 
-[node name="tile_4_2" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_4_2" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.8, 0.8, 0.8, 1)
 position = Vector2(700, 432)
 rotation = 3.14159
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(4, 2)
 
-[node name="tile_4_3" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_4_3" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.8, 0.8, 0.8, 1)
 position = Vector2(700, 506)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(4, 3)
 
-[node name="tile_4_4" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_4_4" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.93, 0.93, 0.93, 1)
 position = Vector2(700, 580)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(4, 4)
 
-[node name="tile_4_5" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_4_5" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.93, 0.93, 0.93, 1)
 position = Vector2(700, 654)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(4, 5)
 
-[node name="tile_4_6" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_4_6" parent="tiles" instance=ExtResource("1_rixw4")]
 position = Vector2(700, 728)
 scale = Vector2(0.5, 0.313)
 tile_id = 33
+tile_co = Vector2(4, 6)
 delay_time = 0.3
 
-[node name="tile_4_7" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_4_7" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.9, 0.9, 0.9, 1)
 position = Vector2(700, 802)
 scale = Vector2(0.5, 0.313)
 tile_id = 33
+tile_co = Vector2(4, 0)
 
-[node name="tile_5_1" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_5_1" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.83, 0.83, 0.83, 1)
 position = Vector2(800, 395)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(5, 0)
 
-[node name="tile_5_2" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_5_2" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.89, 0.89, 0.89, 1)
 position = Vector2(800, 469)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(5, 2)
 
-[node name="tile_5_3" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_5_3" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.93, 0.93, 0.93, 1)
 position = Vector2(800, 543)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(5, 3)
 
-[node name="tile_5_4" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_5_4" parent="tiles" instance=ExtResource("1_rixw4")]
 position = Vector2(800, 617)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(5, 4)
 
-[node name="tile_5_5" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_5_5" parent="tiles" instance=ExtResource("1_rixw4")]
 position = Vector2(800, 691)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(5, 5)
 
-[node name="tile_5_6" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_5_6" parent="tiles" instance=ExtResource("1_rixw4")]
 position = Vector2(800, 765)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(5, 6)
 delay_time = 0.3
 
-[node name="tile_6_1" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_6_1" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.8, 0.8, 0.8, 1)
 position = Vector2(900, 358)
 rotation = 3.14159
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(6, 0)
 
-[node name="tile_6_2" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_6_2" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.9, 0.9, 0.9, 1)
 position = Vector2(900, 432)
 rotation = 3.14159
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(6, 2)
 
-[node name="tile_6_3" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_6_3" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.95, 0.95, 0.95, 1)
 position = Vector2(900, 506)
 rotation = 3.14159
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(6, 3)
 
-[node name="tile_6_4" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_6_4" parent="tiles" instance=ExtResource("1_rixw4")]
 position = Vector2(900, 580)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(6, 4)
 
-[node name="tile_6_5" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_6_5" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(1.02, 1.02, 1.02, 1)
 position = Vector2(900, 654)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(6, 5)
 
-[node name="tile_6_6" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_6_6" parent="tiles" instance=ExtResource("1_rixw4")]
 position = Vector2(900, 728)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(6, 6)
 delay_time = 0.3
 
-[node name="tile_7_1" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_7_1" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.8, 0.8, 0.8, 1)
 position = Vector2(1000, 395)
 rotation = -3.14159
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(7, 0)
 
-[node name="tile_7_2" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_7_2" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.9, 0.9, 0.9, 1)
 position = Vector2(1000, 469)
 rotation = -3.14159
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(7, 2)
 
-[node name="tile_7_3" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_7_3" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.92, 0.92, 0.92, 1)
 position = Vector2(1000, 543)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(7, 3)
 
-[node name="tile_7_4" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_7_4" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(1.02, 1.02, 1.02, 1)
 position = Vector2(1000, 617)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(7, 4)
 
-[node name="tile_7_5" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_7_5" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(1.02, 1.02, 1.02, 1)
 position = Vector2(1000, 691)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(7, 5)
 
-[node name="tile_7_6" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_7_6" parent="tiles" instance=ExtResource("1_rixw4")]
 position = Vector2(1000, 765)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(7, 6)
 delay_time = 0.3
 
-[node name="tile_8_2" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_8_2" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.8, 0.8, 0.8, 1)
 position = Vector2(1100, 432)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(8, 2)
 
-[node name="tile_8_3" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_8_3" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.84, 0.84, 0.84, 1)
 position = Vector2(1100, 506)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(8, 3)
 
-[node name="tile_8_4" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_8_4" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.91, 0.91, 0.91, 1)
 position = Vector2(1100, 580)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(8, 4)
 
-[node name="tile_8_5" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_8_5" parent="tiles" instance=ExtResource("1_rixw4")]
 position = Vector2(1100, 654)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(8, 5)
 
-[node name="tile_8_6" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_8_6" parent="tiles" instance=ExtResource("1_rixw4")]
 position = Vector2(1100, 728)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(8, 6)
 delay_time = 0.3
 
-[node name="tile_9_3" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_9_3" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.85, 0.85, 0.85, 1)
 position = Vector2(1200, 543)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(9, 3)
 
-[node name="tile_9_4" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_9_4" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.91, 0.91, 0.91, 1)
 position = Vector2(1200, 617)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(9, 4)
 
-[node name="tile_9_5" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_9_5" parent="tiles" instance=ExtResource("1_rixw4")]
 position = Vector2(1200, 691)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(9, 5)
 delay_time = 0.6
 
-[node name="tile_9_6" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_9_6" parent="tiles" instance=ExtResource("1_rixw4")]
 position = Vector2(1200, 765)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(9, 6)
 delay_time = 0.3
 
-[node name="tile_10_4" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_10_4" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.85, 0.85, 0.85, 1)
 position = Vector2(1300, 580)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(10, 4)
 
-[node name="tile_10_5" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_10_5" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.91, 0.91, 0.91, 1)
 position = Vector2(1300, 654)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(10, 5)
 delay_time = 0.6
 
-[node name="tile_10_6" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_10_6" parent="tiles" instance=ExtResource("1_rixw4")]
 position = Vector2(1300, 728)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(10, 6)
 delay_time = 0.3
 
-[node name="tile_11_3" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_11_3" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.85, 0.85, 0.85, 1)
 position = Vector2(1400, 543)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(11, 3)
 
-[node name="tile_11_4" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_11_4" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.91, 0.91, 0.91, 1)
 position = Vector2(1400, 617)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(11, 4)
 
-[node name="tile_11_5" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_11_5" parent="tiles" instance=ExtResource("1_rixw4")]
 position = Vector2(1400, 691)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(11, 5)
 delay_time = 0.6
 
-[node name="tile_11_6" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_11_6" parent="tiles" instance=ExtResource("1_rixw4")]
 position = Vector2(1400, 765)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(11, 6)
 delay_time = 0.3
 
-[node name="tile_12_4" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_12_4" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.85, 0.85, 0.85, 1)
 position = Vector2(1500, 580)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(12, 4)
 
-[node name="tile_12_5" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_12_5" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.91, 0.91, 0.91, 1)
 position = Vector2(1500, 654)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(12, 5)
 delay_time = 0.6
 
-[node name="tile_12_6" parent="tiles" instance=ExtResource("1_0wb0a")]
+[node name="tile_12_6" parent="tiles" instance=ExtResource("1_rixw4")]
 position = Vector2(1500, 728)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(12, 6)
 delay_time = 0.3
 
 [node name="tree_bg_tiles" type="Node2D" parent="."]
 
 [node name="bg" type="Node2D" parent="."]
 
+[node name="ColorRect11" type="ColorRect" parent="bg"]
+z_index = -10
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -9645.0
+offset_top = -5485.0
+offset_right = 9645.0
+offset_bottom = 5485.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.232605, 0.402344, 0.298909, 1)
+
 [node name="bush" type="Node2D" parent="."]
 
 [node name="deco" type="Node2D" parent="."]
 z_index = 10
 
-[node name="flower_1" parent="deco" instance=ExtResource("2_scrfv")]
+[node name="flower_1" parent="deco" instance=ExtResource("2_0wb0a")]
 position = Vector2(884, 566)
 scale = Vector2(0.4, 0.4)
 
-[node name="flower_2" parent="deco" instance=ExtResource("2_scrfv")]
+[node name="flower_2" parent="deco" instance=ExtResource("2_0wb0a")]
 position = Vector2(921, 583)
 scale = Vector2(0.4, 0.4)
 
-[node name="flower_3" parent="deco" instance=ExtResource("2_scrfv")]
+[node name="flower_3" parent="deco" instance=ExtResource("2_0wb0a")]
 position = Vector2(893, 576)
 scale = Vector2(0.4, 0.4)
 
-[node name="flower_4" parent="deco" instance=ExtResource("2_scrfv")]
+[node name="flower_4" parent="deco" instance=ExtResource("2_0wb0a")]
 position = Vector2(907, 568)
 scale = Vector2(0.4, 0.4)
 
-[node name="flower_5" parent="deco" instance=ExtResource("2_scrfv")]
+[node name="flower_5" parent="deco" instance=ExtResource("2_0wb0a")]
 position = Vector2(870, 583)
 scale = Vector2(0.3, 0.3)
 
-[node name="flower_6" parent="deco" instance=ExtResource("2_scrfv")]
+[node name="flower_6" parent="deco" instance=ExtResource("2_0wb0a")]
 position = Vector2(939, 578)
 scale = Vector2(0.3, 0.3)
 
-[node name="flower_12" parent="deco" instance=ExtResource("2_scrfv")]
+[node name="flower_12" parent="deco" instance=ExtResource("2_0wb0a")]
 position = Vector2(918, 599)
 scale = Vector2(0.3, 0.3)
 
-[node name="flower_13" parent="deco" instance=ExtResource("2_scrfv")]
+[node name="flower_13" parent="deco" instance=ExtResource("2_0wb0a")]
 position = Vector2(759, 687)
 scale = Vector2(0.3, 0.3)
 
-[node name="flower_14" parent="deco" instance=ExtResource("2_scrfv")]
+[node name="flower_14" parent="deco" instance=ExtResource("2_0wb0a")]
 position = Vector2(780, 675)
 scale = Vector2(0.3, 0.3)
 
-[node name="flower_15" parent="deco" instance=ExtResource("2_scrfv")]
+[node name="flower_15" parent="deco" instance=ExtResource("2_0wb0a")]
 position = Vector2(826, 683)
 scale = Vector2(0.3, 0.3)
 
-[node name="flower_16" parent="deco" instance=ExtResource("2_scrfv")]
+[node name="flower_16" parent="deco" instance=ExtResource("2_0wb0a")]
 position = Vector2(777, 685)
 scale = Vector2(0.4, 0.4)
 
-[node name="flower_17" parent="deco" instance=ExtResource("2_scrfv")]
+[node name="flower_17" parent="deco" instance=ExtResource("2_0wb0a")]
 position = Vector2(783, 691)
 scale = Vector2(0.4, 0.4)
 
-[node name="flower_18" parent="deco" instance=ExtResource("2_scrfv")]
+[node name="flower_18" parent="deco" instance=ExtResource("2_0wb0a")]
 position = Vector2(801, 685)
 scale = Vector2(0.4, 0.4)
 
-[node name="flower_19" parent="deco" instance=ExtResource("2_scrfv")]
+[node name="flower_19" parent="deco" instance=ExtResource("2_0wb0a")]
 position = Vector2(820, 694)
 scale = Vector2(0.4, 0.4)
 
-[node name="flower_20" parent="deco" instance=ExtResource("2_scrfv")]
+[node name="flower_20" parent="deco" instance=ExtResource("2_0wb0a")]
 position = Vector2(804, 708)
 scale = Vector2(0.4, 0.4)
 
-[node name="flower_21" parent="deco" instance=ExtResource("2_scrfv")]
+[node name="flower_21" parent="deco" instance=ExtResource("2_0wb0a")]
 position = Vector2(792, 700)
 scale = Vector2(0.5, 0.5)
 
-[node name="flower_22" parent="deco" instance=ExtResource("2_scrfv")]
+[node name="flower_22" parent="deco" instance=ExtResource("2_0wb0a")]
 position = Vector2(808, 694)
 scale = Vector2(0.5, 0.5)
 
-[node name="flower_23" parent="deco" instance=ExtResource("2_scrfv")]
+[node name="flower_23" parent="deco" instance=ExtResource("2_0wb0a")]
 position = Vector2(776, 705)
 scale = Vector2(0.5, 0.5)
 
-[node name="flower_24" parent="deco" instance=ExtResource("2_scrfv")]
+[node name="flower_24" parent="deco" instance=ExtResource("2_0wb0a")]
 position = Vector2(782, 696)
 scale = Vector2(0.5, 0.5)
 
-[node name="flower_7" parent="deco" instance=ExtResource("2_scrfv")]
+[node name="flower_7" parent="deco" instance=ExtResource("2_0wb0a")]
 position = Vector2(910, 565)
 scale = Vector2(0.3, 0.3)
 
-[node name="flower_8" parent="deco" instance=ExtResource("2_scrfv")]
+[node name="flower_8" parent="deco" instance=ExtResource("2_0wb0a")]
 position = Vector2(902, 579)
 scale = Vector2(0.4, 0.4)
 
-[node name="flower_9" parent="deco" instance=ExtResource("2_scrfv")]
+[node name="flower_9" parent="deco" instance=ExtResource("2_0wb0a")]
 position = Vector2(916, 578)
 scale = Vector2(0.4, 0.4)
 
-[node name="flower_10" parent="deco" instance=ExtResource("2_scrfv")]
+[node name="flower_10" parent="deco" instance=ExtResource("2_0wb0a")]
 position = Vector2(890, 588)
 scale = Vector2(0.5, 0.5)
 
-[node name="flower_11" parent="deco" instance=ExtResource("2_scrfv")]
+[node name="flower_11" parent="deco" instance=ExtResource("2_0wb0a")]
 position = Vector2(907, 584)
 scale = Vector2(0.5, 0.5)
 
-[node name="flower_25" parent="deco" instance=ExtResource("2_scrfv")]
+[node name="flower_25" parent="deco" instance=ExtResource("2_0wb0a")]
 modulate = Color(1, 0.9, 0.9, 1)
 position = Vector2(680, 665)
 scale = Vector2(0.5, 0.5)
 
-[node name="flower_26" parent="deco" instance=ExtResource("2_scrfv")]
+[node name="flower_26" parent="deco" instance=ExtResource("2_0wb0a")]
 modulate = Color(1, 0.9, 0.9, 1)
 position = Vector2(696, 670)
 scale = Vector2(0.5, 0.5)
 
-[node name="flower_27" parent="deco" instance=ExtResource("2_scrfv")]
+[node name="flower_27" parent="deco" instance=ExtResource("2_0wb0a")]
 modulate = Color(1, 0.9, 0.9, 1)
 position = Vector2(690, 663)
 scale = Vector2(0.5, 0.5)
 
-[node name="flower_28" parent="deco" instance=ExtResource("2_scrfv")]
+[node name="flower_28" parent="deco" instance=ExtResource("2_0wb0a")]
 modulate = Color(1, 0.9, 0.9, 1)
 position = Vector2(665, 654)
 scale = Vector2(0.5, 0.5)
 
-[node name="flower_29" parent="deco" instance=ExtResource("2_scrfv")]
+[node name="flower_29" parent="deco" instance=ExtResource("2_0wb0a")]
 modulate = Color(1, 0.9, 0.9, 1)
 position = Vector2(681, 650)
 scale = Vector2(0.4, 0.4)
 
-[node name="flower_30" parent="deco" instance=ExtResource("2_scrfv")]
+[node name="flower_30" parent="deco" instance=ExtResource("2_0wb0a")]
 modulate = Color(1, 0.9, 0.9, 1)
 position = Vector2(716, 666)
 scale = Vector2(0.4, 0.4)
 
-[node name="flower_31" parent="deco" instance=ExtResource("2_scrfv")]
+[node name="flower_31" parent="deco" instance=ExtResource("2_0wb0a")]
 modulate = Color(1, 0.9, 0.9, 1)
 position = Vector2(708, 662)
 scale = Vector2(0.4, 0.4)
 
-[node name="flower_32" parent="deco" instance=ExtResource("2_scrfv")]
+[node name="flower_32" parent="deco" instance=ExtResource("2_0wb0a")]
 modulate = Color(1, 0.9, 0.9, 1)
 position = Vector2(731, 656)
 scale = Vector2(0.4, 0.4)
 
-[node name="flower_33" parent="deco" instance=ExtResource("2_scrfv")]
+[node name="flower_33" parent="deco" instance=ExtResource("2_0wb0a")]
 modulate = Color(1, 0.9, 0.9, 1)
 position = Vector2(708, 645)
 scale = Vector2(0.3, 0.3)
 
-[node name="flower_34" parent="deco" instance=ExtResource("2_scrfv")]
+[node name="flower_34" parent="deco" instance=ExtResource("2_0wb0a")]
 modulate = Color(1, 0.9, 0.9, 1)
 position = Vector2(731, 636)
 scale = Vector2(0.3, 0.3)
 
-[node name="flower_35" parent="deco" instance=ExtResource("2_scrfv")]
+[node name="flower_35" parent="deco" instance=ExtResource("2_0wb0a")]
 modulate = Color(1, 0.9, 0.9, 1)
 position = Vector2(679, 626)
 scale = Vector2(0.3, 0.3)
 
-[node name="flower_36" parent="deco" instance=ExtResource("2_scrfv")]
+[node name="flower_36" parent="deco" instance=ExtResource("2_0wb0a")]
 modulate = Color(1, 0.9, 0.9, 1)
 position = Vector2(819, 528)
 scale = Vector2(0.5, 0.5)
 
-[node name="flower_37" parent="deco" instance=ExtResource("2_scrfv")]
+[node name="flower_37" parent="deco" instance=ExtResource("2_0wb0a")]
 modulate = Color(1, 0.9, 0.9, 1)
 position = Vector2(835, 533)
 scale = Vector2(0.5, 0.5)
 
-[node name="flower_38" parent="deco" instance=ExtResource("2_scrfv")]
+[node name="flower_38" parent="deco" instance=ExtResource("2_0wb0a")]
 modulate = Color(1, 0.9, 0.9, 1)
 position = Vector2(829, 526)
 scale = Vector2(0.5, 0.5)
 
-[node name="flower_39" parent="deco" instance=ExtResource("2_scrfv")]
+[node name="flower_39" parent="deco" instance=ExtResource("2_0wb0a")]
 modulate = Color(1, 0.9, 0.9, 1)
 position = Vector2(801, 512)
 scale = Vector2(0.5, 0.5)
 
-[node name="flower_40" parent="deco" instance=ExtResource("2_scrfv")]
+[node name="flower_40" parent="deco" instance=ExtResource("2_0wb0a")]
 modulate = Color(1, 0.9, 0.9, 1)
 position = Vector2(789, 526)
 scale = Vector2(0.4, 0.4)
 
-[node name="flower_41" parent="deco" instance=ExtResource("2_scrfv")]
+[node name="flower_41" parent="deco" instance=ExtResource("2_0wb0a")]
 modulate = Color(1, 0.9, 0.9, 1)
 position = Vector2(827, 554)
 scale = Vector2(0.4, 0.4)
 
-[node name="flower_42" parent="deco" instance=ExtResource("2_scrfv")]
+[node name="flower_42" parent="deco" instance=ExtResource("2_0wb0a")]
 modulate = Color(1, 0.9, 0.9, 1)
 position = Vector2(817, 540)
 scale = Vector2(0.4, 0.4)
 
-[node name="flower_43" parent="deco" instance=ExtResource("2_scrfv")]
+[node name="flower_43" parent="deco" instance=ExtResource("2_0wb0a")]
 modulate = Color(1, 0.9, 0.9, 1)
 position = Vector2(798, 528)
 scale = Vector2(0.4, 0.4)
 
-[node name="flower_44" parent="deco" instance=ExtResource("2_scrfv")]
+[node name="flower_44" parent="deco" instance=ExtResource("2_0wb0a")]
 modulate = Color(1, 0.9, 0.9, 1)
 position = Vector2(770, 540)
 scale = Vector2(0.3, 0.3)
 
-[node name="flower_45" parent="deco" instance=ExtResource("2_scrfv")]
+[node name="flower_45" parent="deco" instance=ExtResource("2_0wb0a")]
 modulate = Color(1, 0.9, 0.9, 1)
 position = Vector2(816, 518)
 scale = Vector2(0.3, 0.3)
 
-[node name="flower_46" parent="deco" instance=ExtResource("2_scrfv")]
+[node name="flower_46" parent="deco" instance=ExtResource("2_0wb0a")]
 modulate = Color(1, 0.9, 0.9, 1)
 position = Vector2(798, 547)
 scale = Vector2(0.3, 0.3)
 
-[node name="rock_4" parent="deco" instance=ExtResource("3_b1tbl")]
+[node name="rock_4" parent="deco" instance=ExtResource("3_0h47t")]
 modulate = Color(0.8, 0.8, 0.8, 1)
 position = Vector2(665, 578)
 rotation = 1.13795
 scale = Vector2(1.12, 1.4)
 
-[node name="rock_11" parent="deco" instance=ExtResource("3_b1tbl")]
+[node name="rock_11" parent="deco" instance=ExtResource("3_0h47t")]
 modulate = Color(0.8, 0.8, 0.8, 1)
 position = Vector2(695, 587)
 rotation = 2.40681
 scale = Vector2(1.12, 1.4)
 
-[node name="rock_12" parent="deco" instance=ExtResource("3_b1tbl")]
+[node name="rock_12" parent="deco" instance=ExtResource("3_0h47t")]
 modulate = Color(0.8, 0.8, 0.8, 1)
 position = Vector2(814, 607)
 rotation = 2.40681
 scale = Vector2(0.7, 0.875)
 
-[node name="rock_13" parent="deco" instance=ExtResource("3_b1tbl")]
+[node name="rock_13" parent="deco" instance=ExtResource("3_0h47t")]
 modulate = Color(0.8, 0.8, 0.8, 1)
 position = Vector2(909, 664)
 rotation = 2.40681
 scale = Vector2(0.7, 0.875)
 
-[node name="rock_5" parent="deco" instance=ExtResource("3_b1tbl")]
+[node name="rock_5" parent="deco" instance=ExtResource("3_0h47t")]
 modulate = Color(0.8, 0.8, 0.8, 1)
 position = Vector2(735, 581)
 rotation = -2.99149
 scale = Vector2(0.96, 1.2)
 
-[node name="rock_6" parent="deco" instance=ExtResource("3_b1tbl")]
+[node name="rock_6" parent="deco" instance=ExtResource("3_0h47t")]
 modulate = Color(0.8, 0.8, 0.8, 1)
 position = Vector2(778, 596)
 rotation = 0.300197
 scale = Vector2(0.96, 1.2)
 
-[node name="rock_7" parent="deco" instance=ExtResource("3_b1tbl")]
+[node name="rock_7" parent="deco" instance=ExtResource("3_0h47t")]
 modulate = Color(0.8, 0.8, 0.8, 1)
 position = Vector2(780, 627)
 rotation = 2.53422
 scale = Vector2(1.36, 1.7)
 
-[node name="rock_8" parent="deco" instance=ExtResource("3_b1tbl")]
+[node name="rock_8" parent="deco" instance=ExtResource("3_0h47t")]
 modulate = Color(0.8, 0.8, 0.8, 1)
 position = Vector2(826, 627)
 rotation = -0.118682
 scale = Vector2(1.2, 1.5)
 
-[node name="rock_9" parent="deco" instance=ExtResource("3_b1tbl")]
+[node name="rock_9" parent="deco" instance=ExtResource("3_0h47t")]
 modulate = Color(0.8, 0.8, 0.8, 1)
 position = Vector2(868, 650)
 rotation = -0.0593412
 scale = Vector2(1.2, 1.5)
 
-[node name="rock_10" parent="deco" instance=ExtResource("3_b1tbl")]
+[node name="rock_10" parent="deco" instance=ExtResource("3_0h47t")]
 modulate = Color(0.8, 0.8, 0.8, 1)
 position = Vector2(898, 638)
 rotation = -2.21308
 scale = Vector2(0.8, 1)
 
-[node name="rock_14" parent="deco" instance=ExtResource("3_b1tbl")]
+[node name="rock_14" parent="deco" instance=ExtResource("3_0h47t")]
 modulate = Color(0.8, 0.8, 0.8, 1)
 position = Vector2(697, 561)
 rotation = -2.21308
 scale = Vector2(0.8, 1)
 
-[node name="rock_15" parent="deco" instance=ExtResource("3_b1tbl")]
+[node name="rock_15" parent="deco" instance=ExtResource("3_0h47t")]
 modulate = Color(0.8, 0.8, 0.8, 1)
 position = Vector2(719, 599)
 rotation = -0.816814
 scale = Vector2(0.64, 0.8)
 
-[node name="grass_2" parent="deco" instance=ExtResource("10_sgilu")]
+[node name="grass_2" parent="deco" instance=ExtResource("4_fpag2")]
 modulate = Color(0.97, 0.97, 0.97, 1)
 position = Vector2(587, 553)
 scale = Vector2(0.7, 0.7)
 
-[node name="grass_3" parent="deco" instance=ExtResource("10_sgilu")]
+[node name="grass_3" parent="deco" instance=ExtResource("4_fpag2")]
 modulate = Color(0.97, 0.97, 0.97, 1)
 position = Vector2(600, 554)
 scale = Vector2(0.7, 0.7)
 
-[node name="grass_4" parent="deco" instance=ExtResource("10_sgilu")]
+[node name="grass_4" parent="deco" instance=ExtResource("4_fpag2")]
 modulate = Color(0.97, 0.97, 0.97, 1)
 position = Vector2(729, 519)
 scale = Vector2(0.7, 0.7)
 
-[node name="grass_5" parent="deco" instance=ExtResource("11_nimfe")]
+[node name="grass_5" parent="deco" instance=ExtResource("5_1sw4s")]
 modulate = Color(0.75, 0.75, 0.75, 1)
 position = Vector2(984, 354)
 scale = Vector2(0.7, 0.7)
 
-[node name="grass_6" parent="deco" instance=ExtResource("11_nimfe")]
+[node name="grass_6" parent="deco" instance=ExtResource("5_1sw4s")]
 modulate = Color(0.75, 0.75, 0.75, 1)
 position = Vector2(1130, 395)
 scale = Vector2(0.7, 0.7)
 
-[node name="grass_7" parent="deco" instance=ExtResource("11_nimfe")]
+[node name="grass_7" parent="deco" instance=ExtResource("5_1sw4s")]
 modulate = Color(0.75, 0.75, 0.75, 1)
 position = Vector2(876, 385)
 scale = Vector2(0.7, 0.7)
 
-[node name="grass_8" parent="deco" instance=ExtResource("11_nimfe")]
+[node name="grass_8" parent="deco" instance=ExtResource("5_1sw4s")]
 modulate = Color(0.75, 0.75, 0.75, 1)
 position = Vector2(891, 382)
 scale = Vector2(0.9, 0.9)
 
-[node name="grass_9" parent="deco" instance=ExtResource("11_nimfe")]
+[node name="grass_9" parent="deco" instance=ExtResource("5_1sw4s")]
 modulate = Color(0.75, 0.75, 0.75, 1)
 position = Vector2(927, 320)
 scale = Vector2(0.5, 0.5)
 
-[node name="grass_10" parent="deco" instance=ExtResource("11_nimfe")]
+[node name="grass_10" parent="deco" instance=ExtResource("5_1sw4s")]
 modulate = Color(0.75, 0.75, 0.75, 1)
 position = Vector2(1050, 401)
 scale = Vector2(0.5, 0.5)
 
-[node name="grass_11" parent="deco" instance=ExtResource("11_nimfe")]
+[node name="grass_11" parent="deco" instance=ExtResource("5_1sw4s")]
 modulate = Color(0.75, 0.75, 0.75, 1)
 position = Vector2(1225, 572)
 scale = Vector2(0.5, 0.5)
 
-[node name="grass_12" parent="deco" instance=ExtResource("11_nimfe")]
+[node name="grass_12" parent="deco" instance=ExtResource("5_1sw4s")]
 modulate = Color(0.75, 0.75, 0.75, 1)
 position = Vector2(1204, 569)
 scale = Vector2(0.7, 0.7)
 
-[node name="grass_13" parent="deco" instance=ExtResource("11_nimfe")]
+[node name="grass_13" parent="deco" instance=ExtResource("5_1sw4s")]
 modulate = Color(0.75, 0.75, 0.75, 1)
 position = Vector2(1422, 569)
 scale = Vector2(0.7, 0.7)
 
-[node name="grass_14" parent="deco" instance=ExtResource("11_nimfe")]
+[node name="grass_14" parent="deco" instance=ExtResource("5_1sw4s")]
 modulate = Color(0.75, 0.75, 0.75, 1)
 position = Vector2(1379, 503)
 scale = Vector2(0.7, 0.7)
 
-[node name="grass_15" parent="deco" instance=ExtResource("11_nimfe")]
+[node name="grass_15" parent="deco" instance=ExtResource("5_1sw4s")]
 modulate = Color(0.75, 0.75, 0.75, 1)
 position = Vector2(1491, 541)
 scale = Vector2(0.4, 0.4)
 
-[node name="grass_16" parent="deco" instance=ExtResource("11_nimfe")]
+[node name="grass_16" parent="deco" instance=ExtResource("5_1sw4s")]
 modulate = Color(0.8, 0.8, 0.8, 1)
 position = Vector2(481, 608)
 scale = Vector2(0.6, 0.6)
 
-[node name="grass_17" parent="deco" instance=ExtResource("11_nimfe")]
+[node name="grass_17" parent="deco" instance=ExtResource("5_1sw4s")]
 modulate = Color(0.9, 0.9, 0.9, 1)
 position = Vector2(876, 756)
 scale = Vector2(0.6, 0.6)
 
-[node name="heally_pad_1" parent="deco" instance=ExtResource("6_q5nfm")]
+[node name="heally_pad_1" parent="deco" instance=ExtResource("6_1hokn")]
 position = Vector2(423, 754)
 scale = Vector2(0.6, 0.6)
 
-[node name="heally_pad_2" parent="deco" instance=ExtResource("6_q5nfm")]
+[node name="heally_pad_2" parent="deco" instance=ExtResource("6_1hokn")]
 position = Vector2(475, 802)
 scale = Vector2(-0.4, 0.4)
 
-[node name="water_grass_1" parent="deco" instance=ExtResource("7_rixw4")]
+[node name="water_grass_1" parent="deco" instance=ExtResource("7_ecjs3")]
 position = Vector2(621, 728)
 scale = Vector2(0.4, 0.4)
 
-[node name="water_grass_2" parent="deco" instance=ExtResource("7_rixw4")]
+[node name="water_grass_2" parent="deco" instance=ExtResource("7_ecjs3")]
 position = Vector2(594, 742)
 scale = Vector2(0.5, 0.5)
 
-[node name="water_grass_3" parent="deco" instance=ExtResource("7_rixw4")]
+[node name="water_grass_3" parent="deco" instance=ExtResource("7_ecjs3")]
 modulate = Color(0.95, 0.95, 0.95, 1)
 position = Vector2(402, 631)
 scale = Vector2(-0.4, 0.4)
 
-[node name="water_grass_4" parent="deco" instance=ExtResource("8_0wb0a")]
+[node name="water_grass_4" parent="deco" instance=ExtResource("8_ykhgw")]
 position = Vector2(596, 768)
 scale = Vector2(0.5, 0.5)
 
-[node name="water_grass_5" parent="deco" instance=ExtResource("8_0wb0a")]
+[node name="water_grass_5" parent="deco" instance=ExtResource("8_ykhgw")]
 modulate = Color(0.95, 0.95, 0.95, 1)
 position = Vector2(376, 725)
 scale = Vector2(-0.4, 0.4)
-
-[node name="MapBark1" type="Sprite2D" parent="."]
-position = Vector2(1298, 612)
-scale = Vector2(0.22, 0.22)
-texture = ExtResource("9_bc7w4")
 
 [node name="SbGrandmapaHut" type="Sprite2D" parent="."]
 position = Vector2(632, 422)
 rotation = 0.0593412
 scale = Vector2(0.2, 0.2)
 skew = -0.0698132
-texture = ExtResource("3_b48oh")
+texture = ExtResource("10_bc7w4")

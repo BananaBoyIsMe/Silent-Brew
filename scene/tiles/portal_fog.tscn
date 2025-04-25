@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbfvufi4n47he"]
+
+[ext_resource type="Texture2D" uid="uid://mh03vupjivuj" path="res://sprite/tiles/fog.png" id="1_ib21k"]
+
+[sub_resource type="Gradient" id="Gradient_krucv"]
+offsets = PackedFloat32Array(0.02, 0.51, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="Curve" id="Curve_ib21k"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.211864, 0.012025), -0.725759, -0.725759, 0, 0, Vector2(0.440678, -0.350649), 0.0, 0.0, 0, 0, Vector2(0.909604, 0.424723), 0.0, 0.0, 0, 0, Vector2(1, -1), 0.0, 0.0, 0, 0]
+point_count = 5
+
+[node name="portal_fog" type="Node2D"]
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+amount = 50
+texture = ExtResource("1_ib21k")
+lifetime = 10.0
+emission_shape = 1
+emission_sphere_radius = 30.0
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 3.0
+initial_velocity_max = 7.0
+angular_velocity_min = -100.0
+angular_velocity_max = 100.0
+orbit_velocity_min = -0.2
+orbit_velocity_max = 0.2
+scale_amount_min = 0.1
+scale_amount_max = 3.0
+color = Color(1, 0.666016, 0.666016, 1)
+color_ramp = SubResource("Gradient_krucv")
+hue_variation_min = -1.0
+hue_variation_max = 1.0
+hue_variation_curve = SubResource("Curve_ib21k")

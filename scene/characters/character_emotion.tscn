@@ -17,35 +17,41 @@ position = Vector2(614, 153)
 scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("3_pwrmf")
 
+[node name="SbTextBox1" type="Sprite2D" parent="."]
+z_index = 101
+position = Vector2(732, -22)
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("5_pwrmf")
+
+[node name="Label1" type="Label" parent="SbTextBox1"]
+offset_left = -795.0
+offset_top = -335.0
+offset_right = 839.0
+offset_bottom = 659.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 150
+horizontal_alignment = 1
+
 [node name="SbTextBox2" type="Sprite2D" parent="."]
-position = Vector2(-1159, -69)
+position = Vector2(-991, -21)
 scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("3_g484t")
 
-[node name="Label" type="Label" parent="SbTextBox2"]
-offset_left = -1108.0
-offset_top = -454.0
-offset_right = 930.0
-offset_bottom = 788.0
+[node name="Label2" type="Label" parent="SbTextBox2"]
+offset_left = -1192.5
+offset_top = -455.0
+offset_right = 845.5
+offset_bottom = 787.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 180
 text = "Hi like agap
 hdhid
 ahihjidhdifhf
 ahidfhhdfhifhiofjfkhfjkf
 "
-
-[node name="SbTextBox1" type="Sprite2D" parent="."]
-z_index = 101
-position = Vector2(977, -17)
-scale = Vector2(1e-05, 1e-05)
-texture = ExtResource("5_pwrmf")
-
-[node name="Label2" type="Label" parent="SbTextBox1"]
-offset_left = -754.0
-offset_top = -332.0
-offset_right = 718.0
-offset_bottom = 662.0
-theme_override_font_sizes/font_size = 150
-text = "Hi Like pastea
-but you dont
-like it huh"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true

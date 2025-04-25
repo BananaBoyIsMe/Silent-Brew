@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bbpkj0rwcudua"]
+[gd_scene load_steps=12 format=3 uid="uid://bbpkj0rwcudua"]
 
 [ext_resource type="Script" uid="uid://dn5gqmcskh62i" path="res://script/level_1.gd" id="1_e3cis"]
 [ext_resource type="PackedScene" uid="uid://e2jhu0ksgvw1" path="res://scene/tiles/tile_1.tscn" id="1_w3nd6"]
@@ -9,7 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://crw5uo7whh8f3" path="res://sprite/tiles/sb_bush2.png" id="5_uckp0"]
 [ext_resource type="Texture2D" uid="uid://chwsvmx5ls8xw" path="res://sprite/plant/sb_plant6.png" id="6_laxja"]
 [ext_resource type="PackedScene" uid="uid://s8pxk22vv63m" path="res://scene/deco/flower_2.tscn" id="8_laxja"]
-[ext_resource type="Texture2D" uid="uid://85m6cig1lk7p" path="res://sprite/bark/map_bark1.png" id="9_ibynq"]
+[ext_resource type="PackedScene" uid="uid://cbfvufi4n47he" path="res://scene/tiles/portal_fog.tscn" id="10_e3cis"]
+[ext_resource type="PackedScene" uid="uid://b7m8g1nleu1j0" path="res://scene/inventory/inventory.tscn" id="11_hv11a"]
 
 [node name="level1" type="Node2D"]
 script = ExtResource("1_e3cis")
@@ -21,24 +22,28 @@ modulate = Color(0.81, 0.81, 0.81, 1)
 position = Vector2(300, 358)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(0, 1)
 
 [node name="tile_0_2" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.84, 0.84, 0.84, 1)
 position = Vector2(300, 432)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(0, 2)
 
 [node name="tile_0_6" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.87, 0.87, 0.87, 1)
 position = Vector2(300, 728)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(0, 6)
 
 [node name="tile_0_7" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.8, 0.8, 0.8, 1)
 position = Vector2(300, 802)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(0, 7)
 
 [node name="tile_1_0" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.83, 0.83, 0.83, 1)
@@ -46,6 +51,7 @@ position = Vector2(400, 321)
 rotation = 3.14159
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(1, 0)
 
 [node name="tile_1_1" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.87, 0.87, 0.87, 1)
@@ -53,6 +59,7 @@ position = Vector2(400, 395)
 rotation = -3.14159
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(1, 1)
 
 [node name="tile_1_2" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.9, 0.9, 0.9, 1)
@@ -60,6 +67,7 @@ position = Vector2(400, 469)
 rotation = -3.14159
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(1, 2)
 
 [node name="tile_1_3" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.92, 0.92, 0.92, 1)
@@ -67,6 +75,7 @@ position = Vector2(400, 543)
 rotation = -3.14159
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(1, 3)
 
 [node name="tile_1_4" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.9, 0.9, 0.9, 1)
@@ -74,6 +83,7 @@ position = Vector2(400, 617)
 rotation = -3.14159
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(1, 4)
 
 [node name="tile_1_5" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.88, 0.88, 0.88, 1)
@@ -81,6 +91,7 @@ position = Vector2(400, 691)
 rotation = -3.14159
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(1, 5)
 
 [node name="tile_1_6" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.85, 0.85, 0.85, 1)
@@ -88,6 +99,7 @@ position = Vector2(400, 765)
 rotation = -3.14159
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(1, 6)
 
 [node name="tile_1_7" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.8, 0.8, 0.8, 1)
@@ -95,6 +107,7 @@ position = Vector2(400, 839)
 rotation = -3.14159
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(1, 7)
 
 [node name="tile_2_1" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.87, 0.87, 0.87, 1)
@@ -102,60 +115,70 @@ position = Vector2(500, 358)
 scale = Vector2(0.5, 0.313)
 skew = 1.01328e-05
 tile_id = 2
+tile_co = Vector2(2, 1)
 
 [node name="tile_2_2" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.92, 0.92, 0.92, 1)
 position = Vector2(500, 432)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(2, 2)
 
 [node name="tile_2_3" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.92, 0.92, 0.92, 1)
 position = Vector2(500, 506)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(2, 3)
 
 [node name="tile_2_4" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.9, 0.9, 0.9, 1)
 position = Vector2(500, 580)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(2, 4)
 
 [node name="tile_2_5" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.87, 0.87, 0.87, 1)
 position = Vector2(500, 654)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(2, 5)
 
 [node name="tile_2_6" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.83, 0.83, 0.83, 1)
 position = Vector2(500, 728)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(2, 6)
 
 [node name="tile_3_0" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.87, 0.87, 0.87, 1)
 position = Vector2(600, 321)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(3, 0)
 
 [node name="tile_3_1" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.92, 0.92, 0.92, 1)
 position = Vector2(600, 395)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(3, 1)
 
 [node name="tile_3_2" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.92, 0.92, 0.92, 1)
 position = Vector2(600, 469)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(3, 2)
 
 [node name="tile_4_1" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.88, 0.88, 0.88, 1)
 position = Vector2(700, 358)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(4, 1)
 
 [node name="tile_4_2" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.9, 0.9, 0.9, 1)
@@ -163,48 +186,56 @@ position = Vector2(700, 432)
 rotation = 3.14159
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(4, 2)
 
 [node name="tile_4_3" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.93, 0.93, 0.93, 1)
 position = Vector2(700, 506)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(4, 3)
 
 [node name="tile_4_4" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.9, 0.9, 0.9, 1)
 position = Vector2(700, 580)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(4, 4)
 
 [node name="tile_5_1" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.87, 0.87, 0.87, 1)
 position = Vector2(800, 395)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(5, 1)
 
 [node name="tile_5_2" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.9, 0.9, 0.9, 1)
 position = Vector2(800, 469)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(5, 2)
 
 [node name="tile_5_3" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.93, 0.93, 0.93, 1)
 position = Vector2(800, 543)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(5, 3)
 
 [node name="tile_5_4" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.9, 0.9, 0.9, 1)
 position = Vector2(800, 617)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(5, 4)
 
 [node name="tile_5_5" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.84, 0.84, 0.84, 1)
 position = Vector2(800, 691)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(5, 5)
 
 [node name="tile_6_3" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.89, 0.89, 0.89, 1)
@@ -212,24 +243,28 @@ position = Vector2(900, 506)
 rotation = 3.14159
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(6, 3)
 
 [node name="tile_6_4" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.96, 0.96, 0.96, 1)
 position = Vector2(900, 580)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(6, 4)
 
 [node name="tile_6_5" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.9, 0.9, 0.9, 1)
 position = Vector2(900, 654)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(6, 5)
 
 [node name="tile_6_6" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.83, 0.83, 0.83, 1)
 position = Vector2(900, 728)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(6, 6)
 
 [node name="tile_7_2" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.89, 0.89, 0.89, 1)
@@ -237,162 +272,189 @@ position = Vector2(1000, 469)
 rotation = -3.14159
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(7, 2)
 
 [node name="tile_7_3" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.95, 0.95, 0.95, 1)
 position = Vector2(1000, 543)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(7, 3)
 
 [node name="tile_7_4" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.93, 0.93, 0.93, 1)
 position = Vector2(1000, 617)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(7, 4)
 
 [node name="tile_7_5" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.87, 0.87, 0.87, 1)
 position = Vector2(1000, 691)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(7, 5)
 
 [node name="tile_7_6" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.8, 0.8, 0.8, 1)
 position = Vector2(1000, 765)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(7, 6)
 
 [node name="tile_8_1" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.86, 0.86, 0.86, 1)
 position = Vector2(1100, 358)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(8, 1)
 
 [node name="tile_8_2" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.9, 0.9, 0.9, 1)
 position = Vector2(1100, 432)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(8, 2)
 
 [node name="tile_8_3" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.95, 0.95, 0.95, 1)
 position = Vector2(1100, 506)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(8, 3)
 
 [node name="tile_8_4" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.9, 0.9, 0.9, 1)
 position = Vector2(1100, 580)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(8, 4)
 
 [node name="tile_8_5" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.86, 0.86, 0.86, 1)
 position = Vector2(1100, 654)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(8, 5)
 
 [node name="tile_9_0" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.87, 0.87, 0.87, 1)
 position = Vector2(1200, 321)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(9, 0)
 
 [node name="tile_9_1" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.92, 0.92, 0.92, 1)
 position = Vector2(1200, 395)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(9, 1)
 
 [node name="tile_9_2" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.93, 0.93, 0.93, 1)
 position = Vector2(1200, 469)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(9, 2)
 
 [node name="tile_10_1" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.89, 0.89, 0.89, 1)
 position = Vector2(1300, 358)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(10, 1)
 
 [node name="tile_10_2" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.95, 0.95, 0.95, 1)
 position = Vector2(1300, 432)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(10, 2)
 
 [node name="tile_10_3" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.9, 0.9, 0.9, 1)
 position = Vector2(1300, 506)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(10, 3)
 
 [node name="tile_11_0" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.85, 0.85, 0.85, 1)
 position = Vector2(1400, 321)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(11, 0)
 
 [node name="tile_11_1" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.9, 0.9, 0.9, 1)
 position = Vector2(1400, 395)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(11, 1)
 
 [node name="tile_11_2" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.95, 0.95, 0.95, 1)
 position = Vector2(1400, 469)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(11, 2)
 
 [node name="tile_11_3" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.9, 0.9, 0.9, 1)
 position = Vector2(1400, 543)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(11, 3)
 
 [node name="tile_11_4" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.83, 0.83, 0.83, 1)
 position = Vector2(1400, 617)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(11, 4)
 
 [node name="tile_12_1" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.85, 0.85, 0.85, 1)
 position = Vector2(1500, 358)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(12, 1)
 
 [node name="tile_12_2" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.88, 0.88, 0.88, 1)
 position = Vector2(1500, 432)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(12, 2)
 
 [node name="tile_12_3" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.9, 0.9, 0.9, 1)
 position = Vector2(1500, 506)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(12, 3)
 
 [node name="tile_12_4" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.86, 0.86, 0.86, 1)
 position = Vector2(1500, 580)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(12, 4)
 
 [node name="tile_13_2" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.87, 0.87, 0.87, 1)
 position = Vector2(1600, 470)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(13, 2)
 
 [node name="tile_13_3" parent="tiles" instance=ExtResource("1_w3nd6")]
 modulate = Color(0.87, 0.87, 0.87, 1)
 position = Vector2(1600, 543)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
+tile_co = Vector2(13, 3)
 
 [node name="tree_bg_tiles" type="Node2D" parent="."]
 
@@ -1133,10 +1195,10 @@ color = Color(0.208031, 0.357422, 0.289145, 1)
 [node name="ColorRect2" type="ColorRect" parent="bg"]
 z_index = -9
 offset_left = 1.0
-offset_top = 1.0
+offset_top = 241.0
 offset_right = 1930.0
-offset_bottom = 1098.0
-scale = Vector2(1.00561, 0.22272)
+offset_bottom = 1338.0
+scale = Vector2(6.96561, -6.90743)
 mouse_filter = 2
 color = Color(0.380392, 0.619608, 0.388235, 1)
 
@@ -1152,21 +1214,21 @@ color = Color(0.380392, 0.619608, 0.388235, 1)
 
 [node name="ColorRect4" type="ColorRect" parent="bg"]
 z_index = -9
-offset_left = 1696.0
-offset_top = 81.0
-offset_right = 2147.0
-offset_bottom = 7259.0
-scale = Vector2(0.644266, 0.144466)
+offset_left = 1694.0
+offset_top = 111.0
+offset_right = 2145.0
+offset_bottom = 7289.0
+scale = Vector2(27.1872, 0.1859)
 mouse_filter = 2
 color = Color(0.380392, 0.619608, 0.388235, 1)
 
 [node name="ColorRect5" type="ColorRect" parent="bg"]
 z_index = -9
-offset_left = -2.0
-offset_top = 78.4618
-offset_right = 290.0
-offset_bottom = 7353.46
-scale = Vector2(0.644266, 0.144466)
+offset_left = 193.0
+offset_top = -8621.0
+offset_right = 485.0
+offset_bottom = -1346.0
+scale = Vector2(-41.7905, 2.82026)
 mouse_filter = 2
 color = Color(0.380392, 0.619608, 0.388235, 1)
 
@@ -1176,7 +1238,7 @@ offset_left = -15.0
 offset_top = 898.0
 offset_right = 2880.0
 offset_bottom = 2396.0
-scale = Vector2(0.677005, 0.163187)
+scale = Vector2(4.88246, 7.35338)
 mouse_filter = 2
 color = Color(0.380392, 0.619608, 0.388235, 1)
 
@@ -2823,7 +2885,25 @@ position = Vector2(1416, 514)
 rotation = -0.492183
 scale = Vector2(-0.27, 0.27)
 
-[node name="MapBark1" type="Sprite2D" parent="deco"]
-position = Vector2(399, 727)
-scale = Vector2(0.22, 0.22)
-texture = ExtResource("9_ibynq")
+[node name="portal_fog" parent="." instance=ExtResource("10_e3cis")]
+position = Vector2(1592, 460)
+
+[node name="portal_fog2" parent="." instance=ExtResource("10_e3cis")]
+position = Vector2(1608, 530)
+
+[node name="portal_fog3" parent="." instance=ExtResource("10_e3cis")]
+position = Vector2(1631, 503)
+
+[node name="inventory" parent="." instance=ExtResource("11_hv11a")]
+z_index = 100
+position = Vector2(211, 183)
+scale = Vector2(0.8, 0.8)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = 80
+offset_left = -93.0
+offset_top = -54.0
+offset_right = -53.0
+offset_bottom = -14.0
+scale = Vector2(55.2219, 33.9334)
+color = Color(0, 0, 0, 0.268)

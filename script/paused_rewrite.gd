@@ -139,7 +139,11 @@ func activate_menu():
 	save_and_exit.visible = true
 	
 	stop = true
-	await get_tree().create_timer(2).timeout
+	await get_tree().create_timer(1).timeout
+	if global.current_level != null:
+		global.current_level.queue_free()
+		global.current_level = null
+	await get_tree().create_timer(1).timeout
 	stop = false
 	
 	resume.disabled = false
@@ -147,9 +151,6 @@ func activate_menu():
 	options.disabled = false
 	credits.disabled = false
 	save_and_exit.disabled = false
-	if global.current_level != null:
-		global.current_level.queue_free()
-		global.current_level = null
 
 func deactivate_menu():
 	#var tween = create_tween()
@@ -176,12 +177,32 @@ func deactivate_menu():
 			get_node("../spawn_zoom/map").scale = Vector2(1.25, 1.25)
 		2:
 			level = load("res://scene/levels/level_1.tscn").instantiate()
+			get_node("../spawn_zoom/map").position += Vector2(100, 0)
+		3:
+			level = load("res://scene/levels/level_2.tscn").instantiate()
+			get_node("../spawn_zoom/map").scale = Vector2(1.25, 1.25)
+		4:
+			level = load("res://scene/levels/level_3.tscn").instantiate()
+			get_node("../spawn_zoom/map").position += Vector2(0, -20)
+			get_node("../spawn_zoom/map").scale = Vector2(1.2, 1.2)
+		5:
+			level = load("res://scene/levels/level_4.tscn").instantiate()
+			get_node("../spawn_zoom/map").scale = Vector2(1.2, 1.2)
+		6:
+			level = load("res://scene/levels/level_5.tscn").instantiate()
+			get_node("../spawn_zoom/map").scale = Vector2(1.2, 1.2)
+		7:
+			level = load("res://scene/levels/level_6.tscn").instantiate()
+			get_node("../spawn_zoom/map").scale = Vector2(1.2, 1.2)
 	level.position = Vector2(-1920, -3000)/2
 	get_node("../spawn_zoom/map").add_child(level)
+	#level.modulate.a = 0
 	global.current_level = level
 	
 	var tween_level = create_tween()
 	tween_level.tween_property(level, "position", Vector2(-1920, -1080)/2, 2).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	#var tween_level1 = create_tween()
+	#tween_level1.tween_property(global.current_level, "modulate:a", 1, 2).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
 	
 	global.in_game = true
 	resume.disabled = true
@@ -362,7 +383,7 @@ func _on_options_bt_button_up() -> void:
 	options_scene_real.position.x -= 2000
 	get_parent().add_child(options_scene_real)
 	for j in range(10):
-		for i in pause_stuff[j]:
+		for i in pause_stuff:
 			var dir = Vector2(1, rng.randf_range(-0.5, 0.5))
 			i.get_child(0).linear_velocity = dir * 10000
 			i.get_child(0).angular_velocity = rng.randf_range(-10, 10)
@@ -392,36 +413,36 @@ func _on_options_bt_button_up() -> void:
 	
 	await get_tree().create_timer(0.8).timeout
 	
-	for i in pause_stuff[1]:
+	for i in pause_stuff:
 		i.queue_free()
-	pause_stuff[1] = []
+	pause_stuff = []
 	
 	for i in range(10):
 		#print()
 		match rng.randi_range(1, 3):
 			1:
-				pause_stuff[1].append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
-				pause_stuff[1][i].get_child(0).get_child(0).texture = load("res://sprite/menu/sb_menu_1.png")
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/menu/sb_menu_1.png")
 			2:
-				pause_stuff[1].append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
-				pause_stuff[1][i].get_child(0).get_child(0).texture = load("res://sprite/menu/sb_menu_2.png")
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/menu/sb_menu_2.png")
 			3:
-				pause_stuff[1].append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
-				pause_stuff[1][i].get_child(0).get_child(0).texture = load("res://sprite/menu/sb_menu_3.png")
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/menu/sb_menu_3.png")
 		var size = rng.randf_range(0.1, 0.35)
-		pause_stuff[1][i].get_child(0).get_child(0).scale = Vector2(size, size)
-		pause_stuff[1][i].get_child(0).get_child(1).scale = Vector2(size, size)
+		pause_stuff[i].get_child(0).get_child(0).scale = Vector2(size, size)
+		pause_stuff[i].get_child(0).get_child(1).scale = Vector2(size, size)
 		var item_position = Vector2(-1200, rng.randf_range(0, 1080))
-		pause_stuff[1][i].get_child(0).position = item_position
+		pause_stuff[i].get_child(0).position = item_position
 		#print(dir)
-		pause_stuff[1][i].get_child(0).linear_velocity = Vector2(1, 0) * rng.randf_range(1500, 4000)
+		pause_stuff[i].get_child(0).linear_velocity = Vector2(1, 0) * rng.randf_range(1500, 4000)
 		#pause_stuff1[i].get_child(0).apply_impulse(dir * randf_range(1000, 2000))
-		pause_stuff[1][i].get_child(0).angular_velocity = rng.randf_range(-50, 50)
+		pause_stuff[i].get_child(0).angular_velocity = rng.randf_range(-50, 50)
 		
-		pause_stuff[1][i].get_child(0).set_collision_mask_value(1, false)
-		pause_stuff[1][i].get_child(0).set_collision_mask_value(rng.randi_range(1, 4), true)
+		pause_stuff[i].get_child(0).set_collision_mask_value(1, false)
+		pause_stuff[i].get_child(0).set_collision_mask_value(rng.randi_range(1, 4), true)
 		
-		add_child(pause_stuff[1][i])
+		add_child(pause_stuff[i])
 	
 	await get_tree().create_timer(0.2).timeout
 

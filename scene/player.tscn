@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://b665l2hbfkgm7"]
+[gd_scene load_steps=5 format=3 uid="uid://b665l2hbfkgm7"]
 
 [ext_resource type="Script" uid="uid://cup525j6jeia" path="res://script/player.gd" id="1_os8wr"]
 [ext_resource type="Texture2D" uid="uid://85m6cig1lk7p" path="res://sprite/bark/map_bark1.png" id="1_v4gul"]
+[ext_resource type="Script" uid="uid://dt6gbhwbhwr8i" path="res://script/player_sprite.gd" id="3_fvtld"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ofndg"]
 radius = 60.0
@@ -12,6 +13,7 @@ script = ExtResource("1_os8wr")
 [node name="Player_sprite" type="Sprite2D" parent="."]
 z_index = 10
 texture = ExtResource("1_v4gul")
+script = ExtResource("3_fvtld")
 
 [node name="Area2D" type="Area2D" parent="."]
 

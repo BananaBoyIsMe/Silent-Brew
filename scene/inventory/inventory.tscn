@@ -74,18 +74,21 @@ scale = Vector2(2.5, 2.5)
 shape = SubResource("CircleShape2D_un00e")
 
 [node name="inventory_item" parent="." instance=ExtResource("2_wp4kf")]
+visible = false
 position = Vector2(741, 674)
 item_id = 2
 
 [node name="inventory_item2" parent="." instance=ExtResource("2_wp4kf")]
-position = Vector2(349, 772)
+position = Vector2(474, 650)
 item_id = 3
 
 [node name="inventory_item3" parent="." instance=ExtResource("2_wp4kf")]
+visible = false
 position = Vector2(333, 428)
 item_id = 5
 
 [node name="item_temp_place" type="ColorRect" parent="."]
+modulate = Color(1, 1, 1, 0.2)
 offset_left = 151.0
 offset_top = 278.0
 offset_right = 929.0

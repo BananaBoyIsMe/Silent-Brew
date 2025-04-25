@@ -1,17 +1,22 @@
 extends Node2D
 
 var mouse_in = false
-var tile_co = Vector2(0, 0)
 var sprite_material
 var saturation = 1.0
 var rng = RandomNumberGenerator.new()
 
+var tile_text_load = preload("res://scene/tiles/tile_text.tscn")
+
 @export var tile_id = 1
+@export var tile_co = Vector2(0, 0)
 @export var delay_time:float = 0
 
 @onready var tile_tex = $SbTile
 var original_scale
 var original_modulate
+
+@export var input_tile = false
+@export var input_text_str: String
 
 func _ready() -> void:
 	match rng.randi_range(1, 2):
@@ -105,7 +110,17 @@ func _on_area_2d_mouse_exited() -> void:
 	mouse_in = false
 
 func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
+	if global.in_cutscene:
+		return
 	if (event is InputEventMouseButton and event.pressed) or (event is InputEventScreenTouch and event.pressed):
+		if input_tile:
+			var tile_text = tile_text_load.instantiate()
+			tile_text.position = get_parent().get_parent().get_local_mouse_position()
+			tile_text.get_child(0).text = input_text_str
+			tile_text.scale = Vector2(1.1, 1.1)
+			get_parent().get_parent().add_child(tile_text)
+			#print("Hi")
+			return
 		#if global.player_des_pos != global.player_direction[-1]:
 			#print(global.tween999)
 			#global.player.position.x = (global.player_des_pos.x * 100) + 256
@@ -116,11 +131,31 @@ func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int
 		#print(target_pos)
 		#if !global.player.position.distance_to(target_pos) <= 5:
 		global.player_direction = global.find_shortest_path_even_q(global.player_des_pos, tile_co, global.all_room_dict[global.current_room])
-		#print(global.player_direction)
-		global.move_now = true
+		global.player_direction_num = 1
+		print(global.player_direction)
+		#print(global.player_des_pos)
+		global.player_direction_real_pos = []
+		#if global.player_direction.size() == 1:
+			#for i in global.player_direction:
+				#global.player_direction_real_pos.append(get_node("../tile_" + str(int(i.x)) + "_" + str(int(i.y))).position)
+			#global.player_des_real_pos = global.player_direction_real_pos[global.player_direction_num]
+			#global.player_last_pos = global.player_direction_real_pos[global.player_direction_num - 1]
+			#global.move_now = true
+			#return
+		if global.player_direction.size() > 1:
+			#global.player_des_pos = global.player_direction[global.player_direction_num]
+			for i in global.player_direction:
+				global.player_direction_real_pos.append(get_node("../tile_" + str(int(i.x)) + "_" + str(int(i.y))).position)
+			global.player_des_real_pos = global.player_direction_real_pos[global.player_direction_num]
+			global.player_last_pos = global.player_direction_real_pos[global.player_direction_num - 1]
+			#print("../tile_" + str(int(global.player_des_pos.x)) + "_" + str(int(global.player_des_pos.y)))
+			#print(global.player_des_real_pos)
+			global.move_now = true
+		#print("Bye")
 	
 	if (event is InputEventMouseButton and !event.pressed) or (event is InputEventScreenTouch and !event.pressed):
 		global.move_now = false
+		#print("Hi")
 		
 
 func allow_collision():
