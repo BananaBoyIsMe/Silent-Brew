@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bgqp6qw5jieci"]
+[gd_scene load_steps=7 format=3 uid="uid://bgqp6qw5jieci"]
 
 [ext_resource type="Texture2D" uid="uid://dvgc400wwgst6" path="res://sprite/map_ency_inven/sb_encyclopedia.png" id="1_ck5xi"]
 [ext_resource type="Script" uid="uid://d2gbajpfcpfon" path="res://script/encyclopedia.gd" id="1_rapip"]
+[ext_resource type="Texture2D" uid="uid://drb0xdauq288q" path="res://sprite/menu/sb_next_button.png" id="3_jr4cy"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1p4s7"]
 
@@ -36,7 +37,6 @@ theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_3m2vv")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_3m2vv")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_3m2vv")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_3m2vv")
-text = "▲"
 
 [node name="right_bt" type="Button" parent="."]
 offset_left = 1332.0
@@ -56,7 +56,6 @@ theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_3m2vv")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_3m2vv")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_3m2vv")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_3m2vv")
-text = "▲"
 
 [node name="pages" type="Label" parent="."]
 offset_left = 781.001
@@ -70,6 +69,17 @@ horizontal_alignment = 1
 [node name="info" type="Node2D" parent="."]
 
 [node name="Node2D" type="Node2D" parent="info"]
+
+[node name="SbNextButton" type="Sprite2D" parent="."]
+position = Vector2(692, 839)
+scale = Vector2(0.8, 0.444)
+texture = ExtResource("3_jr4cy")
+
+[node name="SbNextButton2" type="Sprite2D" parent="."]
+position = Vector2(1103, 843)
+rotation = 3.14159
+scale = Vector2(0.8, 0.444)
+texture = ExtResource("3_jr4cy")
 
 [connection signal="button_up" from="left_bt" to="." method="_on_left_bt_button_up"]
 [connection signal="button_up" from="right_bt" to="." method="_on_right_bt_button_up"]
