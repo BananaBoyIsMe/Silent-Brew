@@ -469,7 +469,6 @@ tile_co = Vector2(12, 7)
 [node name="bg" type="Node2D" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="bg"]
-visible = false
 modulate = Color(0.904297, 0.60418, 0.374435, 1)
 z_index = -10
 offset_left = -11219.0

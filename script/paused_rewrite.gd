@@ -124,7 +124,7 @@ func activate_menu():
 	
 	paused = true
 	pause_stuff = []
-	for i in range(20):
+	for i in range(12):
 		#print()
 		match rng.randi_range(1, 9):
 			1:
@@ -322,7 +322,7 @@ func _on_select_bt_button_up() -> void:
 	select_scene_real = select_scene.instantiate()
 	select_scene_real.position.x += 2000
 	get_parent().add_child(select_scene_real)
-	for j in range(20):
+	for j in range(12):
 		for i in pause_stuff:
 			var dir = Vector2(-1, rng.randf_range(-0.5, 0.5))
 			i.get_child(0).linear_velocity = dir * 6000
@@ -357,7 +357,7 @@ func _on_select_bt_button_up() -> void:
 		i.queue_free()
 	pause_stuff = []
 	
-	for i in range(20):
+	for i in range(12):
 		#print()
 		match rng.randi_range(1, 9):
 			1:
@@ -406,7 +406,7 @@ func _on_select_bt_button_up() -> void:
 
 func back_to_menu_select() -> void:
 	audio.play_button()
-	for j in range(20):
+	for j in range(12):
 		for i in pause_stuff:
 			var dir = Vector2(1, rng.randf_range(-0.5, 0.5))
 			i.get_child(0).linear_velocity = dir * 6000
@@ -435,7 +435,7 @@ func back_to_menu_select() -> void:
 		i.queue_free()
 	pause_stuff = []
 	
-	for i in range(20):
+	for i in range(12):
 		#print()
 		match rng.randi_range(1, 9):
 			1:
@@ -493,7 +493,7 @@ func _on_options_bt_button_up() -> void:
 	options_scene_real = options_scene.instantiate()
 	options_scene_real.position.x -= 2000
 	get_parent().add_child(options_scene_real)
-	for j in range(20):
+	for j in range(12):
 		for i in pause_stuff:
 			var dir = Vector2(1, rng.randf_range(-0.5, 0.5))
 			i.get_child(0).linear_velocity = dir * 6000
@@ -528,7 +528,7 @@ func _on_options_bt_button_up() -> void:
 		i.queue_free()
 	pause_stuff = []
 	
-	for i in range(20):
+	for i in range(12):
 		#print()
 		match rng.randi_range(1, 9):
 			1:
@@ -577,7 +577,7 @@ func _on_options_bt_button_up() -> void:
 
 func back_to_menu_options() -> void:
 	audio.play_button()
-	for j in range(20):
+	for j in range(12):
 		for i in pause_stuff:
 			var dir = Vector2(-1, rng.randf_range(-0.5, 0.5))
 			i.get_child(0).linear_velocity = dir * 6000
@@ -606,7 +606,7 @@ func back_to_menu_options() -> void:
 		i.queue_free()
 	pause_stuff = []
 	
-	for i in range(20):
+	for i in range(12):
 		#print()
 		match rng.randi_range(1, 9):
 			1:
@@ -664,7 +664,7 @@ func _on_credits_bt_button_up() -> void:
 	credits_scene_real = credits_scene.instantiate()
 	credits_scene_real.position.x -= 2000
 	get_parent().add_child(credits_scene_real)
-	for j in range(20):
+	for j in range(12):
 		for i in pause_stuff:
 			var dir = Vector2(1, rng.randf_range(-0.5, 0.5))
 			i.get_child(0).linear_velocity = dir * 6000
@@ -699,7 +699,7 @@ func _on_credits_bt_button_up() -> void:
 		i.queue_free()
 	pause_stuff = []
 	
-	for i in range(20):
+	for i in range(12):
 		#print()
 		match rng.randi_range(1, 9):
 			1:
@@ -748,7 +748,7 @@ func _on_credits_bt_button_up() -> void:
 
 func back_to_menu_credits() -> void:
 	audio.play_button()
-	for j in range(20):
+	for j in range(12):
 		for i in pause_stuff:
 			var dir = Vector2(-1, rng.randf_range(-0.5, 0.5))
 			i.get_child(0).linear_velocity = dir * 6000
@@ -777,7 +777,7 @@ func back_to_menu_credits() -> void:
 		i.queue_free()
 	pause_stuff = []
 	
-	for i in range(20):
+	for i in range(12):
 		#print()
 		match rng.randi_range(1, 9):
 			1:
