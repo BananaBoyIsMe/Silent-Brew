@@ -57,6 +57,7 @@ func _input(event: InputEvent) -> void:
 		_on_right_bt_button_up()
 
 func _on_left_bt_button_up() -> void:
+	audio.play_button()
 	if not_done or gone:
 		return
 	
@@ -66,7 +67,69 @@ func _on_left_bt_button_up() -> void:
 	if current_level < 1:
 		current_level = 20
 	
-	level_num.text = "level: " + str(current_level)
+	level_num.text = "Level " + str(current_level) + ": "
+	match current_level:
+		1:
+			level_num.text += "Calm camp"
+			play_bt.disabled = false
+		2:
+			level_num.text += "The bees"
+			play_bt.disabled = false
+		3:
+			level_num.text += "The beach"
+			play_bt.disabled = false
+		4:
+			level_num.text += "Slippery crystal cave"
+			play_bt.disabled = false
+		5:
+			level_num.text += "Lava cave"
+			play_bt.disabled = false
+		6:
+			level_num.text += "Granny hut"
+			play_bt.disabled = false
+		7:
+			level_num.text += "Murder Maple (Coming soon)"
+			play_bt.disabled = false
+		8:
+			level_num.text += "River monster (Coming soon)"
+			play_bt.disabled = true
+		9:
+			level_num.text += "The empty town (Coming soon)"
+			play_bt.disabled = true
+		10:
+			level_num.text += "Uncle Nord (Coming soon)"
+			play_bt.disabled = true
+		11:
+			level_num.text += "The lake (Coming soon)"
+			play_bt.disabled = true
+		12:
+			level_num.text += "The star monster (Coming soon)"
+			play_bt.disabled = true
+		13:
+			level_num.text += "Riri (Coming soon)"
+			play_bt.disabled = true
+		14:
+			level_num.text += "The ruined camp (Coming soon)"
+			play_bt.disabled = true
+		15:
+			level_num.text += "The plain (Coming soon)"
+			play_bt.disabled = true
+		16:
+			level_num.text += "Home (Coming soon)"
+			play_bt.disabled = true
+		17:
+			level_num.text += "The waterfall (Coming soon)"
+			play_bt.disabled = true
+		18:
+			level_num.text += "Summit run (Coming soon)"
+			play_bt.disabled = true
+		19:
+			level_num.text += "Mother (Coming soon)"
+			play_bt.disabled = true
+		20:
+			level_num.text += "Mountain heart (Coming soon)"
+			play_bt.disabled = true
+	level_num.text = level_num.text
 	
 	var add_level = current_level - 2
 	if add_level == -1:
@@ -103,6 +166,7 @@ func _on_left_bt_button_up() -> void:
 	not_done = false
 
 func _on_right_bt_button_up() -> void:
+	audio.play_button()
 	if not_done or gone:
 		return
 	
@@ -112,7 +176,69 @@ func _on_right_bt_button_up() -> void:
 	if current_level > 20:
 		current_level = 1
 	
-	level_num.text = "level: " + str(current_level)
+	level_num.text = "Level " + str(current_level) + ": "
+	match current_level:
+		1:
+			level_num.text += "Calm camp"
+			play_bt.disabled = false
+		2:
+			level_num.text += "The bees"
+			play_bt.disabled = false
+		3:
+			level_num.text += "The beach"
+			play_bt.disabled = false
+		4:
+			level_num.text += "Slippery crystal cave"
+			play_bt.disabled = false
+		5:
+			level_num.text += "Lava cave"
+			play_bt.disabled = false
+		6:
+			level_num.text += "Granny hut"
+			play_bt.disabled = false
+		7:
+			level_num.text += "Murder Maple (Coming soon)"
+			play_bt.disabled = false
+		8:
+			level_num.text += "River monster (Coming soon)"
+			play_bt.disabled = true
+		9:
+			level_num.text += "The empty town (Coming soon)"
+			play_bt.disabled = true
+		10:
+			level_num.text += "Uncle Nord (Coming soon)"
+			play_bt.disabled = true
+		11:
+			level_num.text += "The lake (Coming soon)"
+			play_bt.disabled = true
+		12:
+			level_num.text += "The star monster (Coming soon)"
+			play_bt.disabled = true
+		13:
+			level_num.text += "Riri (Coming soon)"
+			play_bt.disabled = true
+		14:
+			level_num.text += "The ruined camp (Coming soon)"
+			play_bt.disabled = true
+		15:
+			level_num.text += "The plain (Coming soon)"
+			play_bt.disabled = true
+		16:
+			level_num.text += "Home (Coming soon)"
+			play_bt.disabled = true
+		17:
+			level_num.text += "The waterfall (Coming soon)"
+			play_bt.disabled = true
+		18:
+			level_num.text += "Summit run (Coming soon)"
+			play_bt.disabled = true
+		19:
+			level_num.text += "Mother (Coming soon)"
+			play_bt.disabled = true
+		20:
+			level_num.text += "Mountain heart (Coming soon)"
+			play_bt.disabled = true
+	level_num.text = level_num.text
 	
 	var add_level = current_level + 2
 	if add_level == 22:
@@ -149,6 +275,7 @@ func _on_right_bt_button_up() -> void:
 	not_done = false
 
 func _on_play_button_up() -> void:
+	audio.play_button()
 	if gone:
 		return
 	gone = true
@@ -162,6 +289,7 @@ func _on_play_button_up() -> void:
 	self.queue_free()
 
 func _on_back_button_up() -> void:
+	audio.play_button()
 	if gone:
 		return
 	gone = true

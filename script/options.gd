@@ -14,6 +14,7 @@ func _input(event: InputEvent) -> void:
 		return_bt.disabled = true
 
 func _on_return_button_up() -> void:
+	audio.play_button()
 	if gone:
 		return
 	gone = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b0snh07ubi6n"]
+[gd_scene load_steps=12 format=3 uid="uid://b0snh07ubi6n"]
 
 [ext_resource type="Script" uid="uid://ogym4e23mb2c" path="res://script/level_5.gd" id="1_0wb0a"]
 [ext_resource type="PackedScene" uid="uid://e2jhu0ksgvw1" path="res://scene/tiles/tile_1.tscn" id="1_rixw4"]
@@ -10,6 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://cwtosr5so2dc1" path="res://scene/deco/water_grass_1.tscn" id="7_ecjs3"]
 [ext_resource type="PackedScene" uid="uid://dk75nkxegpdth" path="res://scene/deco/water_grass_2.tscn" id="8_ykhgw"]
 [ext_resource type="Texture2D" uid="uid://cpglhg4f8f1us" path="res://sprite/tiles/sb_grandmapa_hut.png" id="10_bc7w4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rixw4"]
+size = Vector2(136, 164)
 
 [node name="level_5" type="Node2D"]
 script = ExtResource("1_0wb0a")
@@ -23,6 +26,8 @@ rotation = -3.14159
 scale = Vector2(0.5, 0.313)
 tile_id = 2
 tile_co = Vector2(1, 2)
+input_tile = true
+input_text_str = "Granny's hut!"
 
 [node name="tile_1_3" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.83, 0.83, 0.83, 1)
@@ -38,6 +43,8 @@ rotation = -3.14159
 scale = Vector2(0.5, 0.313)
 tile_id = 33
 tile_co = Vector2(1, 4)
+input_tile = true
+input_text_str = "Grandma's beautiful pond"
 
 [node name="tile_1_5" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.9, 0.9, 0.9, 1)
@@ -47,6 +54,8 @@ scale = Vector2(0.5, 0.313)
 tile_id = 33
 tile_co = Vector2(1, 5)
 delay_time = 0.6
+input_tile = true
+input_text_str = "Grandma's beautiful pond"
 
 [node name="tile_1_6" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.8, 0.8, 0.8, 1)
@@ -56,6 +65,8 @@ scale = Vector2(0.5, 0.313)
 tile_id = 33
 tile_co = Vector2(1, 6)
 delay_time = 0.3
+input_tile = true
+input_text_str = "Grandma's beautiful pond"
 
 [node name="tile_2_3" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.8, 0.8, 0.8, 1)
@@ -63,6 +74,8 @@ position = Vector2(500, 506)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
 tile_co = Vector2(2, 3)
+input_tile = true
+input_text_str = "Granny's hut!"
 
 [node name="tile_2_4" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.88, 0.88, 0.88, 1)
@@ -76,6 +89,8 @@ position = Vector2(500, 654)
 scale = Vector2(0.5, 0.313)
 tile_id = 33
 tile_co = Vector2(2, 5)
+input_tile = true
+input_text_str = "No wet fur!"
 
 [node name="tile_2_6" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.9, 0.9, 0.9, 1)
@@ -84,6 +99,8 @@ scale = Vector2(0.5, 0.313)
 tile_id = 33
 tile_co = Vector2(2, 6)
 delay_time = 0.3
+input_tile = true
+input_text_str = "No wet fur!"
 
 [node name="tile_2_7" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.8, 0.8, 0.8, 1)
@@ -91,6 +108,8 @@ position = Vector2(500, 802)
 scale = Vector2(0.5, 0.313)
 tile_id = 33
 tile_co = Vector2(2, 0)
+input_tile = true
+input_text_str = "No wet fur!"
 
 [node name="tile_3_2" parent="tiles" instance=ExtResource("1_rixw4")]
 position = Vector2(600, 469)
@@ -118,6 +137,8 @@ scale = Vector2(0.5, 0.313)
 tile_id = 33
 tile_co = Vector2(3, 5)
 delay_time = 0.6
+input_tile = true
+input_text_str = "ohhhl water sausage!"
 
 [node name="tile_3_6" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.9, 0.9, 0.9, 1)
@@ -126,6 +147,8 @@ scale = Vector2(0.5, 0.313)
 tile_id = 33
 tile_co = Vector2(3, 6)
 delay_time = 0.3
+input_tile = true
+input_text_str = "ohhhl water sausage!"
 
 [node name="tile_4_1" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.8, 0.8, 0.8, 1)
@@ -148,6 +171,8 @@ position = Vector2(700, 506)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
 tile_co = Vector2(4, 3)
+input_tile = true
+input_text_str = "Granny's hut!"
 
 [node name="tile_4_4" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.93, 0.93, 0.93, 1)
@@ -169,6 +194,8 @@ scale = Vector2(0.5, 0.313)
 tile_id = 33
 tile_co = Vector2(4, 6)
 delay_time = 0.3
+input_tile = true
+input_text_str = "Nice pond!"
 
 [node name="tile_4_7" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.9, 0.9, 0.9, 1)
@@ -176,6 +203,8 @@ position = Vector2(700, 802)
 scale = Vector2(0.5, 0.313)
 tile_id = 33
 tile_co = Vector2(4, 0)
+input_tile = true
+input_text_str = "Nice pond!"
 
 [node name="tile_5_1" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.83, 0.83, 0.83, 1)
@@ -216,6 +245,7 @@ scale = Vector2(0.5, 0.313)
 tile_id = 2
 tile_co = Vector2(5, 6)
 delay_time = 0.3
+input_text_str = "Grandma has good pond!"
 
 [node name="tile_6_1" parent="tiles" instance=ExtResource("1_rixw4")]
 modulate = Color(0.8, 0.8, 0.8, 1)
@@ -858,3 +888,19 @@ rotation = 0.0593412
 scale = Vector2(0.2, 0.2)
 skew = -0.0698132
 texture = ExtResource("10_bc7w4")
+
+[node name="coming_soon" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coming_soon"]
+position = Vector2(648, 484)
+shape = SubResource("RectangleShape2D_rixw4")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 495.0
+offset_top = 1865.0
+offset_right = 1507.0
+offset_bottom = 2282.0
+theme_override_font_sizes/font_size = 100
+text = "To be continued!
+
+See you next update!"

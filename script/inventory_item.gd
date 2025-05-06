@@ -8,6 +8,7 @@ var in_slot = false
 @onready var item_area = $itm
 
 func _ready() -> void:
+	global.connect("inv_toggled", delete_inv)
 	match item_id:
 		1:
 			item_sprite.texture = load("res://sprite/plant/sb_plant1.png")
@@ -43,6 +44,10 @@ func _ready() -> void:
 			item_sprite.texture = load("res://sprite/plant/sb_plant11.png")
 			item_area.name = "item11"
 
+func delete_inv(state: bool):
+	if !state and !in_slot:
+		self.queue_free()
+
 func _physics_process(_delta: float) -> void:
 	if !global.dragging_item:
 		drag_on = false
@@ -51,12 +56,13 @@ func _physics_process(_delta: float) -> void:
 		position = get_global_mouse_position()
 
 func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
+	#print(event)
 	var overlapping_areas = item_area.get_overlapping_areas()
 	var size_down = false
 	for i in overlapping_areas:
 		if i.name.begins_with("item_slot"):
 			size_down = true
-	if size_down and scale.x > 0.6:
+	if size_down and scale.x > 0.55:
 		var tween = create_tween()
 		tween.tween_property(self, "scale", Vector2(0.5, 0.5), 0.5).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
 	elif !size_down and scale.x < 0.55:
@@ -65,17 +71,18 @@ func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int
 	
 	if event.is_action_pressed("left_click"):
 		if overlapping_areas.size() > 0 and drag_on and global.dragging_item:
-			var area = overlapping_areas[0]
-			if area.name.begins_with("item_slot"):
-				var num = area.name.right(-1).to_int()
-				if global.inventory_list_id[num] == 0:
-						global.inventory_list_id[num] = item_id
-						global.inventory_list_obj[num] = self
-						drag_on = false
-						global.dragging_item = false
-						in_slot = true
-						position = area.global_position
-						return
+			for area in overlapping_areas:
+				if area.name.begins_with("item_slot"):
+					#print("Hi")
+					var num = area.name.right(-1).to_int()
+					if global.inventory_list_id[num] == 0:
+							global.inventory_list_id[num] = item_id
+							global.inventory_list_obj[num] = self
+							drag_on = false
+							global.dragging_item = false
+							in_slot = true
+							position = area.global_position
+							return
 		if overlapping_areas.size() > 0 and global.dragging_item:
 			var area = overlapping_areas
 			for i in area:

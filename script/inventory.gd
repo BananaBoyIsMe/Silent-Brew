@@ -8,7 +8,20 @@ extends Node2D
 @onready var item_slot6 = $SbInventory/item_slot6
 
 func _ready() -> void:
-	pass
+	global.connect("add_inventory", new_item)
+
+func new_item(item: String):
+	match item:
+		"black_berry":
+			var itemm = load("res://scene/inventory/inventory_item.tscn").instantiate()
+			itemm.item_id = 6
+			itemm.position = Vector2(543.0, 600.0)
+			add_child(itemm)
+		"snow":
+			var itemm = load("res://scene/inventory/inventory_item.tscn").instantiate()
+			itemm.item_id = 2
+			itemm.position = Vector2(450.0, 500.0)
+			add_child(itemm)
 
 func _physics_process(_delta: float) -> void:
 	pass

@@ -1,6 +1,7 @@
-[gd_scene load_steps=20 format=3 uid="uid://b3fgimaa00gty"]
+[gd_scene load_steps=29 format=3 uid="uid://b3fgimaa00gty"]
 
 [ext_resource type="Script" uid="uid://nqilfgkxaweb" path="res://script/playground.gd" id="1_d7uwg"]
+[ext_resource type="PackedScene" uid="uid://b7m8g1nleu1j0" path="res://scene/inventory/inventory.tscn" id="2_xbpqc"]
 [ext_resource type="PackedScene" uid="uid://bgqp6qw5jieci" path="res://scene/encyclopedia/encyclopedia.tscn" id="3_6cloe"]
 [ext_resource type="PackedScene" uid="uid://cwq12i3ur4po4" path="res://scene/characters/character_emotion.tscn" id="3_mnp3q"]
 [ext_resource type="Texture2D" uid="uid://cqnqj2p8x5d4u" path="res://sprite/map_ency_inven/sb_map_hand2.png" id="3_ovqeb"]
@@ -8,23 +9,35 @@
 [ext_resource type="Texture2D" uid="uid://b8a7fdlwanb74" path="res://sprite/menu/silent_brew_title.png" id="5_538jc"]
 [ext_resource type="PackedScene" uid="uid://bnkka14smy366" path="res://scene/menu/menu_pic_2.tscn" id="5_hbvmf"]
 [ext_resource type="Shader" uid="uid://bqn6dfvp4y8qf" path="res://shader/silent_brew_title.gdshader" id="5_m2ofn"]
+[ext_resource type="Script" uid="uid://btwdxptr2qarq" path="res://script/inv_icon.gd" id="8_5lseb"]
 [ext_resource type="Script" uid="uid://jke0dwdhb4ni" path="res://script/map_icon.gd" id="8_6hok2"]
 [ext_resource type="Texture2D" uid="uid://d2ibw8u5ny45n" path="res://sprite/menu/sb_map_icon.png" id="9_1xboh"]
+[ext_resource type="Texture2D" uid="uid://b7tdoe4j8a6g2" path="res://sprite/map_ency_inven/sb_inv_icon.png" id="9_prf6u"]
 [ext_resource type="Texture2D" uid="uid://b3u4u2qvox2b4" path="res://sprite/menu/sb_map_icon_glow.png" id="10_rdccy"]
+[ext_resource type="Texture2D" uid="uid://bowqse04gwgsr" path="res://sprite/map_ency_inven/sb_inv_icon_glow.png" id="10_xbpqc"]
 [ext_resource type="Script" uid="uid://rmketipvsi3l" path="res://script/book_icon.gd" id="11_ggvlr"]
 [ext_resource type="Texture2D" uid="uid://d4nr8626y3x1t" path="res://sprite/map_ency_inven/sb_book_icon_glow.png" id="12_5clfj"]
 [ext_resource type="Texture2D" uid="uid://bdwsj6me28dy4" path="res://sprite/map_ency_inven/sb_book_icon.png" id="13_d4pn0"]
+[ext_resource type="Script" uid="uid://cp5fhmwo2o3q0" path="res://script/pause_icon.gd" id="14_7ufgt"]
+[ext_resource type="Texture2D" uid="uid://cvn2s66l2kja1" path="res://sprite/map_ency_inven/sb_pause_icon.png" id="14_vi3lg"]
 [ext_resource type="Texture2D" uid="uid://csmnrp7pu413y" path="res://sprite/tiles/sb_load1.png" id="15_mnp3q"]
 [ext_resource type="Script" uid="uid://cnb6sindcwf4l" path="res://script/move_buffer.gd" id="16_clkgy"]
+[ext_resource type="PackedScene" uid="uid://c8kwmcofaojl1" path="res://scene/levels/time.tscn" id="23_d84w1"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qcna6"]
 shader = ExtResource("5_m2ofn")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_prf6u"]
+size = Vector2(103.846, 153.846)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_72dm7"]
 size = Vector2(131.083, 83.7286)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_050qg"]
 size = Vector2(99.9856, 127.026)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ufgt"]
+size = Vector2(123.077, 141.538)
 
 [node name="playground" type="Node2D"]
 script = ExtResource("1_d7uwg")
@@ -35,6 +48,14 @@ process_mode = 1
 [node name="Camera2D" type="Camera2D" parent="."]
 process_mode = 1
 offset = Vector2(960, 540)
+
+[node name="time" parent="." instance=ExtResource("23_d84w1")]
+position = Vector2(0, -360)
+
+[node name="inventory" parent="." instance=ExtResource("2_xbpqc")]
+z_index = 200
+position = Vector2(0, 3400)
+rotation = -1.5708
 
 [node name="encyclopedia" parent="." instance=ExtResource("3_6cloe")]
 position = Vector2(27, 2787)
@@ -143,6 +164,36 @@ position = Vector2(653, 525)
 
 [node name="pausable" type="Node2D" parent="."]
 
+[node name="inv_icon" type="Node2D" parent="."]
+script = ExtResource("8_5lseb")
+
+[node name="screen_dark" type="ColorRect" parent="inv_icon"]
+modulate = Color(1, 1, 1, 0)
+z_index = 199
+offset_left = -64.0
+offset_top = -39.0
+offset_right = 1968.0
+offset_bottom = 1120.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="inv_icon" type="Sprite2D" parent="inv_icon"]
+z_index = 501
+position = Vector2(1330, -120)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("9_prf6u")
+
+[node name="inv_glow" type="Sprite2D" parent="inv_icon/inv_icon"]
+visible = false
+z_index = 500
+texture = ExtResource("10_xbpqc")
+
+[node name="Area2D" type="Area2D" parent="inv_icon/inv_icon"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="inv_icon/inv_icon/Area2D"]
+position = Vector2(-3.46155, 10.7692)
+shape = SubResource("RectangleShape2D_prf6u")
+
 [node name="map_icon" type="Node2D" parent="."]
 script = ExtResource("8_6hok2")
 
@@ -190,7 +241,7 @@ color = Color(0, 0, 0, 1)
 
 [node name="book_icon" type="Sprite2D" parent="book_icon"]
 z_index = 200
-position = Vector2(1672, -113)
+position = Vector2(1667, -113)
 scale = Vector2(0.65, 0.65)
 texture = ExtResource("13_d4pn0")
 
@@ -205,6 +256,87 @@ position = Vector2(3.0769, -3.07691)
 rotation = -0.523599
 shape = SubResource("RectangleShape2D_050qg")
 
+[node name="pause_icon" type="Node2D" parent="."]
+process_mode = 3
+z_index = 102
+script = ExtResource("14_7ufgt")
+
+[node name="screen_dark" type="ColorRect" parent="pause_icon"]
+visible = false
+z_index = 199
+offset_left = -64.0
+offset_top = -39.0
+offset_right = 1968.0
+offset_bottom = 1120.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0.3)
+
+[node name="yes_bt" type="Button" parent="pause_icon/screen_dark"]
+z_index = 1201
+layout_mode = 0
+offset_left = 818.0
+offset_top = 568.0
+offset_right = 978.0
+offset_bottom = 657.0
+theme_override_font_sizes/font_size = 40
+text = "Yes"
+
+[node name="no_bt" type="Button" parent="pause_icon/screen_dark"]
+z_index = 1201
+layout_mode = 0
+offset_left = 1058.0
+offset_top = 568.0
+offset_right = 1218.0
+offset_bottom = 657.0
+theme_override_font_sizes/font_size = 40
+text = "No"
+
+[node name="Label" type="Label" parent="pause_icon/screen_dark"]
+layout_mode = 0
+offset_left = 798.0
+offset_top = 483.0
+offset_right = 1239.0
+offset_bottom = 552.0
+theme_override_font_sizes/font_size = 50
+text = "Go to main menu?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="pause_icon2" type="Sprite2D" parent="pause_icon"]
+modulate = Color(0.8, 0.8, 0.8, 1)
+z_index = 200
+position = Vector2(1855.2, -112.8)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("14_vi3lg")
+
+[node name="pause_icon" type="Sprite2D" parent="pause_icon"]
+modulate = Color(0.8, 0.8, 0.8, 1)
+z_index = 200
+position = Vector2(1805.2, -112.8)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("14_vi3lg")
+
+[node name="pause_glow" type="Sprite2D" parent="pause_icon/pause_icon"]
+visible = false
+modulate = Color(1.2, 1.2, 1.2, 1)
+z_index = -1
+scale = Vector2(1.6, 1.15)
+texture = ExtResource("14_vi3lg")
+
+[node name="pause_glow2" type="Sprite2D" parent="pause_icon/pause_icon"]
+visible = false
+modulate = Color(1.2, 1.2, 1.2, 1)
+z_index = -1
+position = Vector2(77, 0)
+scale = Vector2(1.6, 1.15)
+texture = ExtResource("14_vi3lg")
+
+[node name="Area2D" type="Area2D" parent="pause_icon/pause_icon"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pause_icon/pause_icon/Area2D"]
+position = Vector2(38.4615, -1.53846)
+shape = SubResource("RectangleShape2D_7ufgt")
+
 [node name="bg_music" type="AudioStreamPlayer2D" parent="."]
 bus = &"Music"
 
@@ -215,13 +347,11 @@ bus = &"Ambient"
 bus = &"SFX"
 
 [node name="character_emotion" parent="." instance=ExtResource("3_mnp3q")]
-process_mode = 1
 z_index = 100
 position = Vector2(256, 1280)
 scale = Vector2(0.5, 0.5)
 
 [node name="character_emotion2" parent="." instance=ExtResource("3_mnp3q")]
-process_mode = 1
 z_index = 100
 position = Vector2(1664, 1280)
 scale = Vector2(0.5, 0.5)
@@ -267,10 +397,19 @@ color = Color(0, 0, 0, 1)
 [connection signal="button_up" from="paused/resume_bt" to="paused" method="_on_resume_bt_button_up"]
 [connection signal="button_up" from="paused/select_bt" to="paused" method="_on_select_bt_button_up"]
 [connection signal="button_up" from="paused/options_bt" to="paused" method="_on_options_bt_button_up"]
+[connection signal="button_up" from="paused/credits_bt" to="paused" method="_on_credits_bt_button_up"]
 [connection signal="button_up" from="paused/save_and_exit_bt" to="paused" method="_on_save_and_exit_bt_button_up"]
+[connection signal="input_event" from="inv_icon/inv_icon/Area2D" to="inv_icon" method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="inv_icon/inv_icon/Area2D" to="inv_icon" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="inv_icon/inv_icon/Area2D" to="inv_icon" method="_on_area_2d_mouse_exited"]
 [connection signal="input_event" from="map_icon/map_icon/Area2D" to="map_icon" method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="map_icon/map_icon/Area2D" to="map_icon" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="map_icon/map_icon/Area2D" to="map_icon" method="_on_area_2d_mouse_exited"]
 [connection signal="input_event" from="book_icon/book_icon/Area2D" to="book_icon" method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="book_icon/book_icon/Area2D" to="book_icon" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="book_icon/book_icon/Area2D" to="book_icon" method="_on_area_2d_mouse_exited"]
+[connection signal="button_down" from="pause_icon/screen_dark/yes_bt" to="pause_icon" method="_on_yes_bt_button_down"]
+[connection signal="button_down" from="pause_icon/screen_dark/no_bt" to="pause_icon" method="_on_no_bt_button_down"]
+[connection signal="input_event" from="pause_icon/pause_icon/Area2D" to="pause_icon" method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="pause_icon/pause_icon/Area2D" to="pause_icon" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="pause_icon/pause_icon/Area2D" to="pause_icon" method="_on_area_2d_mouse_exited"]

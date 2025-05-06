@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://dod05gte2navs"]
+[gd_scene load_steps=24 format=3 uid="uid://dod05gte2navs"]
 
 [ext_resource type="Script" uid="uid://c1wnuj5i8cm4w" path="res://script/level_0.gd" id="1_l3yqt"]
 [ext_resource type="PackedScene" uid="uid://e2jhu0ksgvw1" path="res://scene/tiles/tile_1.tscn" id="1_po07k"]
@@ -22,6 +22,9 @@
 [ext_resource type="Texture2D" uid="uid://l7wtdmgcwydm" path="res://sprite/tiles/sb_camp.png" id="19_soeln"]
 [ext_resource type="Texture2D" uid="uid://crj5fby8vqum0" path="res://sprite/tiles/sb_campfire.png" id="20_2ubp3"]
 [ext_resource type="Texture2D" uid="uid://ocpv3miagxh3" path="res://sprite/character/mini_hannah2.png" id="23_h8cr7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s5dkk"]
+radius = 14.0357
 
 [node name="level0" type="Node2D"]
 script = ExtResource("1_l3yqt")
@@ -1094,21 +1097,20 @@ texture = ExtResource("3_habbe")
 [node name="bg" type="Node2D" parent="."]
 
 [node name="ColorRect11" type="ColorRect" parent="bg"]
-visible = false
 z_index = -10
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -9645.0
-offset_top = -5485.0
-offset_right = 9645.0
-offset_bottom = 5485.0
+offset_left = -8586.0
+offset_top = -4991.0
+offset_right = 10704.0
+offset_bottom = 5979.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-color = Color(0.232605, 0.402344, 0.298909, 1)
+color = Color(0.255981, 0.455078, 0.333753, 1)
 
 [node name="bush" type="Node2D" parent="."]
 
@@ -1700,3 +1702,27 @@ z_index = 20
 position = Vector2(500, 209)
 scale = Vector2(0.3, 0.288)
 texture = ExtResource("23_h8cr7")
+
+[node name="blackberry" type="Area2D" parent="."]
+position = Vector2(600, 691)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="blackberry"]
+shape = SubResource("CircleShape2D_s5dkk")
+
+[node name="blackberry" type="Area2D" parent="blackberry"]
+position = Vector2(399, 77)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="blackberry/blackberry"]
+shape = SubResource("CircleShape2D_s5dkk")
+
+[node name="snow" type="Area2D" parent="."]
+position = Vector2(899, 730)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="snow"]
+shape = SubResource("CircleShape2D_s5dkk")
+
+[node name="snow" type="Area2D" parent="snow"]
+position = Vector2(404, 75)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="snow/snow"]
+shape = SubResource("CircleShape2D_s5dkk")

@@ -1,7 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://sj6lkjotakf8"]
+[gd_scene load_steps=13 format=3 uid="uid://sj6lkjotakf8"]
 
 [ext_resource type="Script" uid="uid://dticv84bm3252" path="res://script/select_level.gd" id="1_8ebih"]
-[ext_resource type="Texture2D" uid="uid://bxei8083yl6sj" path="res://sprite/menu/sb_select_level1.png" id="2_y0jeh"]
+[ext_resource type="Texture2D" uid="uid://drb0xdauq288q" path="res://sprite/menu/sb_next_button.png" id="2_vf7qe"]
+[ext_resource type="Texture2D" uid="uid://m7c5mcabu5tv" path="res://sprite/menu/sb_level1.png" id="3_aduhs"]
+[ext_resource type="Texture2D" uid="uid://bh6mydb5crovb" path="res://sprite/menu/sb_level2.png" id="4_7a70o"]
+[ext_resource type="Texture2D" uid="uid://by8pvfe0qmyo7" path="res://sprite/menu/sb_level3.png" id="5_88rkn"]
+[ext_resource type="Texture2D" uid="uid://ckjv6kps6ibol" path="res://sprite/menu/sb_level_lock_blur.png" id="5_kuypm"]
+[ext_resource type="Texture2D" uid="uid://dbo1lt2brqixh" path="res://sprite/menu/sb_level4.png" id="6_uloro"]
+[ext_resource type="Texture2D" uid="uid://23v8jfuyjw0y" path="res://sprite/menu/sb_level5.png" id="7_55kyr"]
+[ext_resource type="Texture2D" uid="uid://f08qkn3r8i0y" path="res://sprite/menu/sb_level6.png" id="8_8ehqn"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_div0t"]
 
@@ -11,7 +18,6 @@
 
 [node name="select_level" type="Node2D"]
 z_index = 600
-position = Vector2(0, -14)
 script = ExtResource("1_8ebih")
 
 [node name="title" type="Label" parent="."]
@@ -43,8 +49,13 @@ theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_nnhxp")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_nnhxp")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_nnhxp")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_nnhxp")
-text = "▲"
 metadata/_edit_use_anchors_ = true
+
+[node name="SbNextButton" type="Sprite2D" parent="left_bt"]
+position = Vector2(144.125, 77.0005)
+rotation = 1.5708
+scale = Vector2(0.8, 0.5)
+texture = ExtResource("2_vf7qe")
 
 [node name="right_bt" type="Button" parent="."]
 offset_left = 1880.0
@@ -64,13 +75,18 @@ theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_nnhxp")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_nnhxp")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_nnhxp")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_nnhxp")
-text = "▲"
 metadata/_edit_use_anchors_ = true
+
+[node name="SbNextButton2" type="Sprite2D" parent="right_bt"]
+position = Vector2(149, 76.9995)
+rotation = 1.5708
+scale = Vector2(0.8, 0.5)
+texture = ExtResource("2_vf7qe")
 
 [node name="sb_select_level1" type="Sprite2D" parent="."]
 position = Vector2(960, 500)
 scale = Vector2(0.15, 0.15)
-texture = ExtResource("2_y0jeh")
+texture = ExtResource("3_aduhs")
 
 [node name="1" type="Label" parent="sb_select_level1"]
 offset_left = -1293.33
@@ -87,7 +103,7 @@ metadata/_edit_use_anchors_ = true
 modulate = Color(1, 1, 1, 0.5)
 position = Vector2(1500, 500)
 scale = Vector2(0.07, 0.07)
-texture = ExtResource("2_y0jeh")
+texture = ExtResource("4_7a70o")
 
 [node name="2" type="Label" parent="sb_select_level2"]
 offset_left = -1293.33
@@ -104,7 +120,7 @@ metadata/_edit_use_anchors_ = true
 modulate = Color(1, 1, 1, 0)
 position = Vector2(2040, 500)
 scale = Vector2(0.07, 0.07)
-texture = ExtResource("2_y0jeh")
+texture = ExtResource("5_88rkn")
 
 [node name="3" type="Label" parent="sb_select_level3"]
 offset_left = -1293.33
@@ -121,7 +137,7 @@ metadata/_edit_use_anchors_ = true
 modulate = Color(1, 1, 1, 0)
 position = Vector2(2040, 500)
 scale = Vector2(0.07, 0.07)
-texture = ExtResource("2_y0jeh")
+texture = ExtResource("6_uloro")
 
 [node name="4" type="Label" parent="sb_select_level4"]
 offset_left = -1293.33
@@ -138,7 +154,7 @@ metadata/_edit_use_anchors_ = true
 modulate = Color(1, 1, 1, 0)
 position = Vector2(2040, 500)
 scale = Vector2(0.07, 0.07)
-texture = ExtResource("2_y0jeh")
+texture = ExtResource("7_55kyr")
 
 [node name="5" type="Label" parent="sb_select_level5"]
 offset_left = -1293.33
@@ -155,7 +171,7 @@ metadata/_edit_use_anchors_ = true
 modulate = Color(1, 1, 1, 0)
 position = Vector2(2040, 500)
 scale = Vector2(0.07, 0.07)
-texture = ExtResource("2_y0jeh")
+texture = ExtResource("8_8ehqn")
 
 [node name="6" type="Label" parent="sb_select_level6"]
 offset_left = -1293.33
@@ -170,9 +186,9 @@ metadata/_edit_use_anchors_ = true
 
 [node name="sb_select_level7" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(2040, 500)
+position = Vector2(2040.4, 499.6)
 scale = Vector2(0.07, 0.07)
-texture = ExtResource("2_y0jeh")
+texture = ExtResource("5_kuypm")
 
 [node name="7" type="Label" parent="sb_select_level7"]
 offset_left = -1293.33
@@ -187,9 +203,9 @@ metadata/_edit_use_anchors_ = true
 
 [node name="sb_select_level8" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(2040, 500)
+position = Vector2(2040.4, 499.6)
 scale = Vector2(0.07, 0.07)
-texture = ExtResource("2_y0jeh")
+texture = ExtResource("5_kuypm")
 
 [node name="8" type="Label" parent="sb_select_level8"]
 offset_left = -1293.33
@@ -204,9 +220,9 @@ metadata/_edit_use_anchors_ = true
 
 [node name="sb_select_level9" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(2040, 500)
+position = Vector2(2040.4, 499.6)
 scale = Vector2(0.07, 0.07)
-texture = ExtResource("2_y0jeh")
+texture = ExtResource("5_kuypm")
 
 [node name="9" type="Label" parent="sb_select_level9"]
 offset_left = -1293.33
@@ -221,9 +237,9 @@ metadata/_edit_use_anchors_ = true
 
 [node name="sb_select_level10" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(2040, 500)
+position = Vector2(2040.4, 499.6)
 scale = Vector2(0.07, 0.07)
-texture = ExtResource("2_y0jeh")
+texture = ExtResource("5_kuypm")
 
 [node name="10" type="Label" parent="sb_select_level10"]
 offset_left = -1293.33
@@ -238,9 +254,9 @@ metadata/_edit_use_anchors_ = true
 
 [node name="sb_select_level11" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(2040, 500)
+position = Vector2(2040.4, 499.6)
 scale = Vector2(0.07, 0.07)
-texture = ExtResource("2_y0jeh")
+texture = ExtResource("5_kuypm")
 
 [node name="11" type="Label" parent="sb_select_level11"]
 offset_left = -1293.33
@@ -255,9 +271,9 @@ metadata/_edit_use_anchors_ = true
 
 [node name="sb_select_level12" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(2040, 500)
+position = Vector2(2040.4, 499.6)
 scale = Vector2(0.07, 0.07)
-texture = ExtResource("2_y0jeh")
+texture = ExtResource("5_kuypm")
 
 [node name="12" type="Label" parent="sb_select_level12"]
 offset_left = -1293.33
@@ -272,9 +288,9 @@ metadata/_edit_use_anchors_ = true
 
 [node name="sb_select_level13" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(2040, 500)
+position = Vector2(2040.4, 499.6)
 scale = Vector2(0.07, 0.07)
-texture = ExtResource("2_y0jeh")
+texture = ExtResource("5_kuypm")
 
 [node name="13" type="Label" parent="sb_select_level13"]
 offset_left = -1293.33
@@ -289,9 +305,9 @@ metadata/_edit_use_anchors_ = true
 
 [node name="sb_select_level14" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(2040, 500)
+position = Vector2(2040.4, 499.6)
 scale = Vector2(0.07, 0.07)
-texture = ExtResource("2_y0jeh")
+texture = ExtResource("5_kuypm")
 
 [node name="14" type="Label" parent="sb_select_level14"]
 offset_left = -1293.33
@@ -306,9 +322,9 @@ metadata/_edit_use_anchors_ = true
 
 [node name="sb_select_level15" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(2040, 500)
+position = Vector2(2040.4, 499.6)
 scale = Vector2(0.07, 0.07)
-texture = ExtResource("2_y0jeh")
+texture = ExtResource("5_kuypm")
 
 [node name="15" type="Label" parent="sb_select_level15"]
 offset_left = -1293.33
@@ -323,9 +339,9 @@ metadata/_edit_use_anchors_ = true
 
 [node name="sb_select_level16" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(2040, 500)
+position = Vector2(2040.4, 499.6)
 scale = Vector2(0.07, 0.07)
-texture = ExtResource("2_y0jeh")
+texture = ExtResource("5_kuypm")
 
 [node name="16" type="Label" parent="sb_select_level16"]
 offset_left = -1293.33
@@ -340,9 +356,9 @@ metadata/_edit_use_anchors_ = true
 
 [node name="sb_select_level17" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(2040, 500)
+position = Vector2(2040.4, 499.6)
 scale = Vector2(0.07, 0.07)
-texture = ExtResource("2_y0jeh")
+texture = ExtResource("5_kuypm")
 
 [node name="17" type="Label" parent="sb_select_level17"]
 offset_left = -1293.33
@@ -357,9 +373,9 @@ metadata/_edit_use_anchors_ = true
 
 [node name="sb_select_level18" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(2040, 500)
+position = Vector2(2040.4, 499.6)
 scale = Vector2(0.07, 0.07)
-texture = ExtResource("2_y0jeh")
+texture = ExtResource("5_kuypm")
 
 [node name="18" type="Label" parent="sb_select_level18"]
 offset_left = -1293.33
@@ -374,9 +390,9 @@ metadata/_edit_use_anchors_ = true
 
 [node name="sb_select_level19" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(-120, 500)
+position = Vector2(-119.6, 499.6)
 scale = Vector2(0.07, 0.07)
-texture = ExtResource("2_y0jeh")
+texture = ExtResource("5_kuypm")
 
 [node name="19" type="Label" parent="sb_select_level19"]
 offset_left = -1293.33
@@ -391,9 +407,9 @@ metadata/_edit_use_anchors_ = true
 
 [node name="sb_select_level20" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.5)
-position = Vector2(420, 500)
+position = Vector2(420.4, 499.6)
 scale = Vector2(0.07, 0.07)
-texture = ExtResource("2_y0jeh")
+texture = ExtResource("5_kuypm")
 
 [node name="20" type="Label" parent="sb_select_level20"]
 offset_left = -1293.33
@@ -407,12 +423,20 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="level_num" type="Label" parent="."]
-offset_left = 613.0
-offset_top = 684.0
-offset_right = 1316.0
-offset_bottom = 921.0
-theme_override_font_sizes/font_size = 100
-text = "Level: 1"
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 543.0
+offset_top = 666.0
+offset_right = 1400.0
+offset_bottom = 903.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 80
+text = "Level 1: The camp"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true

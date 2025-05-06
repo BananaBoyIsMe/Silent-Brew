@@ -1,0 +1,78 @@
+[gd_scene load_steps=2 format=3 uid="uid://e5bb33e6sw0x"]
+
+[ext_resource type="Script" uid="uid://cx05cfxxuuaut" path="res://script/credits.gd" id="1_c8jmj"]
+
+[node name="credits" type="Node2D"]
+script = ExtResource("1_c8jmj")
+
+[node name="title" type="Label" parent="."]
+z_index = 600
+offset_left = 611.0
+offset_top = 10.0
+offset_right = 1314.0
+offset_bottom = 247.0
+theme_override_font_sizes/font_size = 100
+text = "Credits"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="title2" type="Label" parent="."]
+z_index = 600
+offset_left = 611.0
+offset_top = 243.0
+offset_right = 1314.0
+offset_bottom = 480.0
+theme_override_font_sizes/font_size = 40
+text = "All Made by
+Loma 
+aka Lazy Koala 
+aka Unknown Dolphin"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="title3" type="Label" parent="."]
+z_index = 600
+offset_left = 544.0
+offset_top = 519.0
+offset_right = 1381.0
+offset_bottom = 756.0
+theme_override_font_sizes/font_size = 100
+text = "Special Thanks to"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="title4" type="Label" parent="."]
+z_index = 600
+offset_left = 214.0
+offset_top = 718.0
+offset_right = 917.0
+offset_bottom = 955.0
+theme_override_font_sizes/font_size = 40
+text = "My adviser -
+Dr. Wasimon Panichpattanakul"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="title5" type="Label" parent="."]
+z_index = 600
+offset_left = 1036.0
+offset_top = 719.0
+offset_right = 1739.0
+offset_bottom = 956.0
+theme_override_font_sizes/font_size = 40
+text = "My inspiration -
+My mom <3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="return" type="Button" parent="."]
+offset_left = 844.0
+offset_top = 931.0
+offset_right = 1111.0
+offset_bottom = 1051.0
+scale = Vector2(0.879995, 0.88)
+theme_override_font_sizes/font_size = 50
+text = "Return"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="button_up" from="return" to="." method="_on_return_button_up"]

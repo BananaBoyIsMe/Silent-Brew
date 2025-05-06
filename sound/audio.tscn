@@ -1,0 +1,61 @@
+[gd_scene load_steps=11 format=3 uid="uid://cieroyxnhx6jr"]
+
+[ext_resource type="Script" uid="uid://csplrn02ak535" path="res://sound/audio.gd" id="1_dqtri"]
+[ext_resource type="AudioStream" uid="uid://ddrqrry1s1h5l" path="res://sound/menu-wind.mp3" id="2_2316i"]
+[ext_resource type="AudioStream" uid="uid://djtu0oxya46sw" path="res://sound/walking.wav" id="2_jhm12"]
+[ext_resource type="AudioStream" uid="uid://celqmqi8baf72" path="res://sound/dark-cave.mp3" id="4_5ld2b"]
+[ext_resource type="AudioStream" uid="uid://tjponx6wixvk" path="res://sound/button.wav" id="4_lwdmc"]
+[ext_resource type="AudioStream" uid="uid://2g5g6bff8ce8" path="res://sound/died.wav" id="5_yhrpk"]
+[ext_resource type="AudioStream" uid="uid://w5kg6slyjgfe" path="res://sound/portal.wav" id="6_80enp"]
+[ext_resource type="AudioStream" uid="uid://b2663dt3tohx6" path="res://sound/lava-level.mp3" id="7_80enp"]
+[ext_resource type="AudioStream" uid="uid://jcxe08mc0qyt" path="res://sound/birdy-forest.mp3" id="9_feeuw"]
+[ext_resource type="AudioStream" uid="uid://lt22x2q0lsxw" path="res://sound/beach.mp3" id="10_fqkr5"]
+
+[node name="audio" type="Node2D"]
+script = ExtResource("1_dqtri")
+
+[node name="room1" type="AudioStreamPlayer2D" parent="."]
+bus = &"Music"
+
+[node name="menu" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_2316i")
+volume_db = 10.0
+bus = &"Music"
+
+[node name="walking" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_jhm12")
+volume_db = -10.0
+bus = &"SFX"
+
+[node name="dark_cave" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_5ld2b")
+volume_db = -10.0
+bus = &"Ambient"
+
+[node name="button" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_lwdmc")
+volume_db = -10.0
+bus = &"SFX"
+
+[node name="died" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_yhrpk")
+volume_db = -10.0
+bus = &"SFX"
+
+[node name="portal" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_80enp")
+volume_db = -10.0
+bus = &"SFX"
+
+[node name="lava" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_80enp")
+volume_db = -10.0
+bus = &"Ambient"
+
+[node name="bird_forest" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_feeuw")
+bus = &"Ambient"
+
+[node name="beach" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_fqkr5")
+bus = &"Ambient"

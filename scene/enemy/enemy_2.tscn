@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://bpl3sin2uru15"]
+
+[ext_resource type="Script" uid="uid://c1gjigijavcje" path="res://script/enemy_2.gd" id="1_1too2"]
+[ext_resource type="Texture2D" uid="uid://d02tf4v3caq7" path="res://sprite/enemy/sb_enemy2.png" id="1_yn1iw"]
+[ext_resource type="Script" uid="uid://2xreyvorrly7" path="res://script/updown_bat.gd" id="2_yn1iw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y6mq7"]
+radius = 45.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1too2"]
+radius = 364.001
+
+[node name="enemy_2" type="Node2D"]
+script = ExtResource("1_1too2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_yn1iw")
+offset = Vector2(0, -10)
+script = ExtResource("2_yn1iw")
+
+[node name="enemy" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy"]
+position = Vector2(0, 40)
+shape = SubResource("CircleShape2D_y6mq7")
+
+[node name="detect" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detect"]
+shape = SubResource("CircleShape2D_1too2")
+
+[connection signal="area_entered" from="detect" to="." method="_on_detect_area_entered"]
+[connection signal="area_exited" from="detect" to="." method="_on_detect_area_exited"]

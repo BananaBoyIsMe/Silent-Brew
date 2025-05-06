@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bi7y12uhx1hi2"]
+[gd_scene load_steps=10 format=3 uid="uid://bi7y12uhx1hi2"]
 
 [ext_resource type="Script" uid="uid://cby73ro3r1tl5" path="res://script/level_4.gd" id="1_fcv56"]
 [ext_resource type="PackedScene" uid="uid://e2jhu0ksgvw1" path="res://scene/tiles/tile_1.tscn" id="1_ord2m"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://d2fuuwoserxjf" path="res://sprite/deco/sb_stalagmite1.png" id="6_53l1r"]
 [ext_resource type="Texture2D" uid="uid://bmwlkm4s3g623" path="res://sprite/deco/sb_stalagmite2.png" id="7_ord2m"]
 [ext_resource type="PackedScene" uid="uid://cbfvufi4n47he" path="res://scene/tiles/portal_fog.tscn" id="8_fcv56"]
+[ext_resource type="PackedScene" uid="uid://bpl3sin2uru15" path="res://scene/enemy/enemy_2.tscn" id="9_4nr0o"]
 
 [node name="level_4" type="Node2D"]
 script = ExtResource("1_fcv56")
@@ -34,13 +35,6 @@ rotation = -3.14159
 scale = Vector2(0.5, 0.313)
 tile_id = 6
 tile_co = Vector2(1, 2)
-
-[node name="tile_1_3" parent="tiles" instance=ExtResource("1_ord2m")]
-position = Vector2(400, 543)
-rotation = -3.14159
-scale = Vector2(0.5, 0.313)
-tile_id = 6
-tile_co = Vector2(1, 3)
 
 [node name="tile_1_4" parent="tiles" instance=ExtResource("1_ord2m")]
 position = Vector2(400, 617)
@@ -97,12 +91,6 @@ scale = Vector2(0.5, 0.313)
 tile_id = 6
 tile_co = Vector2(2, 4)
 
-[node name="tile_2_5" parent="tiles" instance=ExtResource("1_ord2m")]
-position = Vector2(500, 654)
-scale = Vector2(0.5, 0.313)
-tile_id = 6
-tile_co = Vector2(2, 5)
-
 [node name="tile_2_6" parent="tiles" instance=ExtResource("1_ord2m")]
 position = Vector2(500, 728)
 scale = Vector2(0.5, 0.313)
@@ -115,18 +103,14 @@ position = Vector2(500, 802)
 scale = Vector2(0.5, 0.313)
 tile_id = 6
 tile_co = Vector2(2, 7)
+input_tile = true
+input_text_str = "Spiky rock!"
 
 [node name="tile_3_0" parent="tiles" instance=ExtResource("1_ord2m")]
 position = Vector2(600, 321)
 scale = Vector2(0.5, 0.313)
 tile_id = 6
 tile_co = Vector2(3, 0)
-
-[node name="tile_3_1" parent="tiles" instance=ExtResource("1_ord2m")]
-position = Vector2(600, 395)
-scale = Vector2(0.5, 0.313)
-tile_id = 6
-tile_co = Vector2(3, 1)
 
 [node name="tile_3_2" parent="tiles" instance=ExtResource("1_ord2m")]
 position = Vector2(600, 469)
@@ -240,13 +224,15 @@ rotation = 3.14159
 scale = Vector2(0.5, 0.313)
 tile_id = 6
 tile_co = Vector2(6, 1)
+input_tile = true
+input_text_str = "So spiky!"
 
 [node name="tile_6_2" parent="tiles" instance=ExtResource("1_ord2m")]
 position = Vector2(900, 432)
 rotation = 3.14159
 scale = Vector2(0.5, 0.313)
 tile_id = 6
-tile_co = Vector2(6, 0)
+tile_co = Vector2(6, 2)
 
 [node name="tile_6_4" parent="tiles" instance=ExtResource("1_ord2m")]
 position = Vector2(900, 580)
@@ -337,13 +323,6 @@ scale = Vector2(0.5, 0.313)
 tile_id = 6
 tile_co = Vector2(9, 4)
 
-[node name="tile_9_5" parent="tiles" instance=ExtResource("1_ord2m")]
-position = Vector2(1200, 691)
-scale = Vector2(0.5, 0.313)
-tile_id = 6
-tile_co = Vector2(9, 5)
-delay_time = 0.6
-
 [node name="tile_9_6" parent="tiles" instance=ExtResource("1_ord2m")]
 position = Vector2(1200, 765)
 scale = Vector2(0.5, 0.313)
@@ -395,12 +374,6 @@ tile_id = 6
 tile_co = Vector2(10, 6)
 delay_time = 0.3
 
-[node name="tile_10_7" parent="tiles" instance=ExtResource("1_ord2m")]
-position = Vector2(1300, 802)
-scale = Vector2(0.5, 0.313)
-tile_id = 6
-tile_co = Vector2(10, 7)
-
 [node name="tile_11_0" parent="tiles" instance=ExtResource("1_ord2m")]
 position = Vector2(1400, 321)
 scale = Vector2(0.5, 0.313)
@@ -413,17 +386,13 @@ scale = Vector2(0.5, 0.313)
 tile_id = 6
 tile_co = Vector2(11, 1)
 
-[node name="tile_11_2" parent="tiles" instance=ExtResource("1_ord2m")]
-position = Vector2(1400, 469)
-scale = Vector2(0.5, 0.313)
-tile_id = 6
-tile_co = Vector2(11, 2)
-
 [node name="tile_11_3" parent="tiles" instance=ExtResource("1_ord2m")]
 position = Vector2(1400, 543)
 scale = Vector2(0.5, 0.313)
 tile_id = 6
 tile_co = Vector2(11, 3)
+input_tile = true
+input_text_str = "Coolest hot rock!"
 
 [node name="tile_11_4" parent="tiles" instance=ExtResource("1_ord2m")]
 position = Vector2(1400, 617)
@@ -502,8 +471,11 @@ tile_co = Vector2(12, 7)
 [node name="ColorRect" type="ColorRect" parent="bg"]
 modulate = Color(0.904297, 0.60418, 0.374435, 1)
 z_index = -10
-offset_right = 1937.0
-offset_bottom = 1110.0
+offset_left = -11219.0
+offset_top = -5644.0
+offset_right = -9282.0
+offset_bottom = -4534.0
+scale = Vector2(13.2, 12.72)
 mouse_filter = 2
 
 [node name="bush" type="Node2D" parent="."]
@@ -595,3 +567,24 @@ position = Vector2(1481, 799)
 
 [node name="portal_fog4" parent="." instance=ExtResource("8_fcv56")]
 position = Vector2(1524, 798)
+
+[node name="enemy_1" parent="." instance=ExtResource("9_4nr0o")]
+position = Vector2(600, 691)
+scale = Vector2(0.4, 0.4)
+target_pos = Vector2(700, 654)
+cur_pos = Vector2(600, 691)
+cur_tile = Vector2(3, 5)
+
+[node name="enemy_2" parent="." instance=ExtResource("9_4nr0o")]
+position = Vector2(1100, 802)
+scale = Vector2(0.4, 0.4)
+target_pos = Vector2(1300, 728)
+cur_pos = Vector2(1100, 802)
+cur_tile = Vector2(8, 7)
+
+[node name="enemy_3" parent="." instance=ExtResource("9_4nr0o")]
+position = Vector2(1201, 395)
+scale = Vector2(0.4, 0.4)
+target_pos = Vector2(1300, 506)
+cur_pos = Vector2(1200, 395)
+cur_tile = Vector2(9, 1)

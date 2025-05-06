@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cbfvufi4n47he"]
+[gd_scene load_steps=5 format=3 uid="uid://cbfvufi4n47he"]
 
 [ext_resource type="Texture2D" uid="uid://mh03vupjivuj" path="res://sprite/tiles/fog.png" id="1_ib21k"]
 
@@ -10,6 +10,9 @@ colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0)
 _limits = [-1.0, 1.0, 0.0, 1.0]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.211864, 0.012025), -0.725759, -0.725759, 0, 0, Vector2(0.440678, -0.350649), 0.0, 0.0, 0, 0, Vector2(0.909604, 0.424723), 0.0, 0.0, 0, 0, Vector2(1, -1), 0.0, 0.0, 0, 0]
 point_count = 5
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t31vi"]
+radius = 13.0
 
 [node name="portal_fog" type="Node2D"]
 
@@ -35,3 +38,8 @@ color_ramp = SubResource("Gradient_krucv")
 hue_variation_min = -1.0
 hue_variation_max = 1.0
 hue_variation_curve = SubResource("Curve_ib21k")
+
+[node name="portal" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="portal"]
+shape = SubResource("CircleShape2D_t31vi")

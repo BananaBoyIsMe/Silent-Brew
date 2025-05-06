@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://chwsvmx5ls8xw" path="res://sprite/plant/sb_plant6.png" id="6_laxja"]
 [ext_resource type="PackedScene" uid="uid://s8pxk22vv63m" path="res://scene/deco/flower_2.tscn" id="8_laxja"]
 [ext_resource type="PackedScene" uid="uid://cbfvufi4n47he" path="res://scene/tiles/portal_fog.tscn" id="10_e3cis"]
-[ext_resource type="PackedScene" uid="uid://b7m8g1nleu1j0" path="res://scene/inventory/inventory.tscn" id="11_hv11a"]
+[ext_resource type="PackedScene" uid="uid://8bxyucq7navv" path="res://scene/enemy/enemy_1.tscn" id="11_hv11a"]
 
 [node name="level1" type="Node2D"]
 script = ExtResource("1_e3cis")
@@ -1194,10 +1194,10 @@ color = Color(0.208031, 0.357422, 0.289145, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="bg"]
 z_index = -9
-offset_left = 1.0
-offset_top = 241.0
-offset_right = 1930.0
-offset_bottom = 1338.0
+offset_left = 193.0
+offset_top = 238.0
+offset_right = 2122.0
+offset_bottom = 1335.0
 scale = Vector2(6.96561, -6.90743)
 mouse_filter = 2
 color = Color(0.380392, 0.619608, 0.388235, 1)
@@ -1234,9 +1234,9 @@ color = Color(0.380392, 0.619608, 0.388235, 1)
 
 [node name="ColorRect6" type="ColorRect" parent="bg"]
 z_index = -9
-offset_left = -15.0
+offset_left = 193.0
 offset_top = 898.0
-offset_right = 2880.0
+offset_right = 3088.0
 offset_bottom = 2396.0
 scale = Vector2(4.88246, 7.35338)
 mouse_filter = 2
@@ -2894,16 +2894,60 @@ position = Vector2(1608, 530)
 [node name="portal_fog3" parent="." instance=ExtResource("10_e3cis")]
 position = Vector2(1631, 503)
 
-[node name="inventory" parent="." instance=ExtResource("11_hv11a")]
-z_index = 100
-position = Vector2(211, 183)
-scale = Vector2(0.8, 0.8)
+[node name="enemy_1" parent="." instance=ExtResource("11_hv11a")]
+z_index = 10
+position = Vector2(400, 304)
+rotation = 0.523599
+scale = Vector2(0.35, 0.35)
+cur_tile = Vector2(1, 0)
+direction = 4
+cur_tile_pos = Vector2(400, 321)
+next_tile = Vector2(2, 1)
+next_tile_pos = Vector2(500, 358)
+cur_rotation = 30
 
-[node name="ColorRect" type="ColorRect" parent="."]
-z_index = 80
-offset_left = -93.0
-offset_top = -54.0
-offset_right = -53.0
-offset_bottom = -14.0
-scale = Vector2(55.2219, 33.9334)
-color = Color(0, 0, 0, 0.268)
+[node name="enemy_2" parent="." instance=ExtResource("11_hv11a")]
+z_index = 10
+position = Vector2(697, 497)
+rotation = -0.523599
+scale = Vector2(0.35, 0.35)
+cur_tile = Vector2(4, 3)
+direction = 3
+cur_tile_pos = Vector2(700, 506)
+next_tile = Vector2(5, 2)
+next_tile_pos = Vector2(800, 469)
+cur_rotation = -30
+
+[node name="enemy_3" parent="." instance=ExtResource("11_hv11a")]
+z_index = 10
+position = Vector2(1005, 677)
+rotation = 0.523599
+scale = Vector2(0.35, 0.35)
+cur_tile = Vector2(7, 5)
+cur_tile_pos = Vector2(1000, 691)
+next_tile = Vector2(6, 5)
+next_tile_pos = Vector2(900, 654)
+cur_rotation = 30
+
+[node name="enemy_4" parent="." instance=ExtResource("11_hv11a")]
+z_index = 10
+position = Vector2(1205, 454)
+rotation = 0.523599
+scale = Vector2(0.35, 0.35)
+cur_tile = Vector2(9, 2)
+cur_tile_pos = Vector2(1200, 469)
+next_tile = Vector2(8, 2)
+next_tile_pos = Vector2(1100, 432)
+cur_rotation = 30
+
+[node name="enemy_5" parent="." instance=ExtResource("11_hv11a")]
+z_index = 10
+position = Vector2(1495, 343)
+rotation = -0.523599
+scale = Vector2(0.35, 0.35)
+cur_tile = Vector2(12, 1)
+direction = 6
+cur_tile_pos = Vector2(1500, 358)
+next_tile = Vector2(11, 1)
+next_tile_pos = Vector2(1400, 395)
+cur_rotation = -30

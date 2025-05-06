@@ -11,6 +11,14 @@ var player_input = true
 var player_input_num = 0
 
 func _ready() -> void:
+	global.turn = 0
+	other_emotion.visible = true
+	bark_emotion.visible = true
+	bark_emotion.gone_text(1)
+	other_emotion.gone_text(2)
+	global.in_cutscene = true
+	other_emotion.position.y = 1280
+	bark_emotion.position.y = 1280
 	other_emotion.change_character_png("hannah1", false)
 	bark_emotion.change_character_png("bark2", false)
 	await get_tree().create_timer(2).timeout
@@ -44,7 +52,6 @@ func _ready() -> void:
 		await get_tree().create_timer(0.4).timeout
 	tween_hannah4 = create_tween()
 	tween_hannah4.tween_property(mini_hannah, "rotation_degrees", 0, 0.3)
-	
 	
 	var tween_hannah5 = create_tween()
 	tween_hannah5.tween_property(mini_hannah, "position", mini_hannah.position + Vector2(10, 20), 1)
@@ -116,7 +123,6 @@ func on_user_input_received():
 			await get_tree().create_timer(0.2).timeout
 			tween = create_tween()
 			tween.tween_property(foreground, "modulate:a", 0, 1)
-			global.in_cutscene = false
 			
 			global.player_des_pos = Vector2(6, 4)
 			global.player_des_real_pos = Vector2(900, 580)
@@ -136,7 +142,7 @@ func on_user_input_received():
 			await get_tree().create_timer(2.5).timeout
 			
 			bark_emotion.new_text("\nMom is gone again...", 1)
-			bark_emotion.change_character_png("bark2", true)
+			bark_emotion.change_character_png("bark3", true)
 			await get_tree().create_timer(0.5).timeout
 			player_input = false
 			
@@ -158,8 +164,95 @@ func on_user_input_received():
 			bark_emotion.gone_text(1)
 			await get_tree().create_timer(0.3).timeout
 			bark_emotion.change_character_png("bark1", true)
+			global.in_cutscene = false
+		11:
+			bark_emotion.gone_text(1)
+			await get_tree().create_timer(0.3).timeout
+			bark_emotion.new_text("\nShe's gone for\n so long now...", 1)
+			bark_emotion.change_character_png("bark11", true)
+			await get_tree().create_timer(0.5).timeout
+			player_input = false
+		12:
+			bark_emotion.gone_text(1)
+			await get_tree().create_timer(0.3).timeout
+			bark_emotion.new_text("\nI'm scared...", 1)
+			bark_emotion.change_character_png("bark9", true)
+			await get_tree().create_timer(0.5).timeout
+			player_input = false
+		13:
+			bark_emotion.gone_text(1)
+			await get_tree().create_timer(0.3).timeout
+			bark_emotion.new_text("\nOh! What is that \nrainbow fog thing...", 1)
+			bark_emotion.change_character_png("bark10", true)
+			await get_tree().create_timer(0.5).timeout
+			player_input = false
+		14:
+			bark_emotion.gone_text(1)
+			await get_tree().create_timer(0.3).timeout
+			bark_emotion.new_text("\nLet's check it out!", 1)
+			bark_emotion.change_character_png("bark12", true)
+			await get_tree().create_timer(0.5).timeout
+			player_input = false
+		15:
+			bark_emotion.gone_text(1)
+			await get_tree().create_timer(0.3).timeout
+			bark_emotion.change_character_png("bark1", true)
+			global.in_cutscene = false
+
+func next_scene() -> void:
+	global.in_cutscene = true
+	bark_emotion.gone_text(1)
+	bark_emotion.change_character_png("bark8", false)
+	bark_emotion.new_text("\nWanna sleep...", 1)
+	#bark_emotion.new_text("\nIt's been a day now...\nwhere is mom?", 1)
+	
+	await get_tree().create_timer(2.4).timeout
+	bark_emotion.gone_text(1)
+	other_emotion.gone_text(2)
+	var foreground = get_node("../../../foreground/foreground_black")
+	var tween = create_tween()
+	tween.tween_property(foreground, "modulate:a", 1, 1)
+	await get_tree().create_timer(1.2).timeout
+	bark_emotion.position.y = 1280
+	other_emotion.position.y = 1280
+	
+	
+	var portal = load("res://scene/tiles/portal_fog.tscn").instantiate()
+	portal.position = Vector2(1500, 802)
+	add_child(portal)
+	
+	var portal2 = load("res://scene/tiles/portal_fog.tscn").instantiate()
+	portal2.position = Vector2(1000, 395)
+	add_child(portal2)
+	
+	var portal3 = load("res://scene/tiles/portal_fog.tscn").instantiate()
+	portal3.position = Vector2(500, 654)
+	add_child(portal3)
+	
+	await get_tree().create_timer(0.2).timeout
+	tween = create_tween()
+	tween.tween_property(foreground, "modulate:a", 0, 1)
+	
+	await get_tree().create_timer(1.5).timeout
+	
+	bark_emotion.change_character_png("bark8", false)
+	await get_tree().create_timer(0.5).timeout
+	var tween_bark_emo = create_tween()
+	tween_bark_emo.tween_property(bark_emotion, "position:y", 900, 2).set_trans(Tween.TRANS_QUART).set_ease(Tween.EASE_OUT)
+	await get_tree().create_timer(1.5).timeout
+	bark_emotion.shake_head(0.5, 2)
+	await get_tree().create_timer(3.5).timeout
+	
+	bark_emotion.gone_text(1)
+	bark_emotion.new_text("\nWhere is mom?", 1)
+	bark_emotion.change_character_png("bark10", true)
+	await get_tree().create_timer(0.5).timeout
+	player_input = false
+	pass
 
 func _input(event):
+	#if event.is_action_pressed("ui_cancel"):
+		#return
 	if !player_input and (event is InputEventKey or event is InputEventMouseButton):
 		#print("User pressed something!")
 		player_input = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://q4lyywuu3gv1"]
+[gd_scene load_steps=14 format=3 uid="uid://q4lyywuu3gv1"]
 
 [ext_resource type="PackedScene" uid="uid://e2jhu0ksgvw1" path="res://scene/tiles/tile_1.tscn" id="1_gy3ye"]
 [ext_resource type="Script" uid="uid://6nyqjnk0jfka" path="res://script/level_2.gd" id="1_r8pdm"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bci5dhetxr6mj" path="res://sprite/deco/sb_rock4.png" id="8_4xpwr"]
 [ext_resource type="PackedScene" uid="uid://d1w8p4sjdwsms" path="res://scene/deco/grass_2.tscn" id="10_kc607"]
 [ext_resource type="PackedScene" uid="uid://cnjrfy04j0dno" path="res://scene/deco/grass_3.tscn" id="11_f1sy4"]
+[ext_resource type="Texture2D" uid="uid://dj24n7fq6qeh5" path="res://sprite/deco/sb_footprint.png" id="12_jmycu"]
 [ext_resource type="PackedScene" uid="uid://cbfvufi4n47he" path="res://scene/tiles/portal_fog.tscn" id="12_r8pdm"]
 
 [node name="level_2" type="Node2D"]
@@ -119,6 +120,8 @@ position = Vector2(500, 506)
 scale = Vector2(0.5, 0.313)
 tile_id = 4
 tile_co = Vector2(2, 3)
+input_tile = true
+input_text_str = "A star! like the one in the sky!"
 
 [node name="tile_2_4" parent="tiles" instance=ExtResource("1_gy3ye")]
 modulate = Color(0.95, 0.95, 0.95, 1)
@@ -864,6 +867,48 @@ scale = Vector2(0.7, 0.7)
 modulate = Color(0.84, 0.84, 0.84, 1)
 position = Vector2(483, 303)
 scale = Vector2(0.6, 0.6)
+
+[node name="SbFootprint" type="Sprite2D" parent="deco"]
+modulate = Color(0.7, 0.7, 0.7, 0.552)
+position = Vector2(1092, 591)
+scale = Vector2(0.2, 0.1)
+skew = 0.0349066
+texture = ExtResource("12_jmycu")
+
+[node name="SbFootprint2" type="Sprite2D" parent="deco"]
+modulate = Color(0.7, 0.7, 0.7, 0.552)
+position = Vector2(1137, 583)
+scale = Vector2(0.2, 0.1)
+skew = 0.0349066
+texture = ExtResource("12_jmycu")
+
+[node name="SbFootprint5" type="Sprite2D" parent="deco"]
+modulate = Color(0.7, 0.7, 0.7, 0.552)
+position = Vector2(1170.05, 531.792)
+scale = Vector2(0.2, 0.1)
+skew = 0.0349066
+texture = ExtResource("12_jmycu")
+
+[node name="SbFootprint6" type="Sprite2D" parent="deco"]
+modulate = Color(0.7, 0.7, 0.7, 0.552)
+position = Vector2(1215.05, 523.792)
+scale = Vector2(0.2, 0.1)
+skew = 0.0349066
+texture = ExtResource("12_jmycu")
+
+[node name="SbFootprint3" type="Sprite2D" parent="deco"]
+modulate = Color(0.7, 0.7, 0.7, 0.552)
+position = Vector2(1129, 558)
+scale = Vector2(0.25, 0.125)
+skew = 0.0349066
+texture = ExtResource("12_jmycu")
+
+[node name="SbFootprint4" type="Sprite2D" parent="deco"]
+modulate = Color(0.7, 0.7, 0.7, 0.552)
+position = Vector2(1172, 555)
+scale = Vector2(0.25, 0.125)
+skew = 0.0349066
+texture = ExtResource("12_jmycu")
 
 [node name="portal_fog" parent="." instance=ExtResource("12_r8pdm")]
 position = Vector2(1500, 503)

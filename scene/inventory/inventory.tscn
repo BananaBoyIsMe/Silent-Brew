@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://b7m8g1nleu1j0"]
 
+[ext_resource type="Script" uid="uid://dm144ena6fabd" path="res://script/inventory.gd" id="1_1v387"]
 [ext_resource type="Texture2D" uid="uid://crdepgptj0rar" path="res://sprite/map_ency_inven/sb_inventory_20250323125025.png" id="1_gmc0f"]
-[ext_resource type="PackedScene" uid="uid://c3pqvhcx12suf" path="res://scene/inventory/inventory_item.tscn" id="2_wp4kf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wp4kf"]
 radius = 20.025
@@ -25,6 +25,7 @@ radius = 17.0294
 size = Vector2(281, 285)
 
 [node name="inventory" type="Node2D"]
+script = ExtResource("1_1v387")
 
 [node name="SbInventory" type="Sprite2D" parent="."]
 position = Vector2(1111, 441)
@@ -72,20 +73,6 @@ scale = Vector2(2.5, 2.5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SbInventory/item_slot6"]
 shape = SubResource("CircleShape2D_un00e")
-
-[node name="inventory_item" parent="." instance=ExtResource("2_wp4kf")]
-visible = false
-position = Vector2(741, 674)
-item_id = 2
-
-[node name="inventory_item2" parent="." instance=ExtResource("2_wp4kf")]
-position = Vector2(474, 650)
-item_id = 3
-
-[node name="inventory_item3" parent="." instance=ExtResource("2_wp4kf")]
-visible = false
-position = Vector2(333, 428)
-item_id = 5
 
 [node name="item_temp_place" type="ColorRect" parent="."]
 modulate = Color(1, 1, 1, 0.2)

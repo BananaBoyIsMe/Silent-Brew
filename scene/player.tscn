@@ -1,11 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://b665l2hbfkgm7"]
+[gd_scene load_steps=10 format=3 uid="uid://b665l2hbfkgm7"]
 
 [ext_resource type="Script" uid="uid://cup525j6jeia" path="res://script/player.gd" id="1_os8wr"]
 [ext_resource type="Texture2D" uid="uid://85m6cig1lk7p" path="res://sprite/bark/map_bark1.png" id="1_v4gul"]
 [ext_resource type="Script" uid="uid://dt6gbhwbhwr8i" path="res://script/player_sprite.gd" id="3_fvtld"]
+[ext_resource type="Texture2D" uid="uid://dkl536pi1jtxw" path="res://sprite/menu/sb_next_button2.png" id="4_ct4mp"]
+[ext_resource type="Script" uid="uid://cg3imevisuip8" path="res://script/player_direction.gd" id="4_s4jxa"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ofndg"]
 radius = 60.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oh5ij"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hp4bs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g2vtq"]
 
 [node name="player" type="Node2D"]
 script = ExtResource("1_os8wr")
@@ -15,10 +23,196 @@ z_index = 10
 texture = ExtResource("1_v4gul")
 script = ExtResource("3_fvtld")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="player" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
 position = Vector2(1, 155)
 shape = SubResource("CircleShape2D_ofndg")
 
-[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[node name="left_up_bt" type="Button" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.6)
+offset_left = -453.0
+offset_top = -136.0
+offset_right = -161.0
+offset_bottom = 3.99998
+rotation = -1.22173
+scale = Vector2(-0.6, 1.5)
+theme_override_font_sizes/font_size = 100
+theme_override_styles/focus = SubResource("StyleBoxEmpty_oh5ij")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_hp4bs")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g2vtq")
+script = ExtResource("4_s4jxa")
+metadata/_edit_use_anchors_ = true
+
+[node name="SbNextButton2" type="Sprite2D" parent="left_up_bt"]
+position = Vector2(144.667, 77.275)
+rotation = 1.54027
+scale = Vector2(1.00039, -2.49985)
+skew = 0.0256385
+texture = ExtResource("4_ct4mp")
+
+[node name="up_bt" type="Button" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.6)
+offset_left = 89.0
+offset_top = -314.0
+offset_right = 381.0
+offset_bottom = -174.0
+scale = Vector2(-0.6, 1.5)
+theme_override_font_sizes/font_size = 100
+theme_override_styles/focus = SubResource("StyleBoxEmpty_oh5ij")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_hp4bs")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g2vtq")
+script = ExtResource("4_s4jxa")
+metadata/_edit_use_anchors_ = true
+
+[node name="SbNextButton2" type="Sprite2D" parent="up_bt"]
+position = Vector2(150.257, 72.7163)
+rotation = 1.54027
+scale = Vector2(1.00039, -2.49985)
+skew = 0.0256385
+texture = ExtResource("4_ct4mp")
+
+[node name="right_up_bt" type="Button" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.6)
+offset_left = 538.0
+offset_top = 44.0
+offset_right = 830.0
+offset_bottom = 184.0
+rotation = 1.22173
+scale = Vector2(-0.6, 1.5)
+theme_override_font_sizes/font_size = 100
+theme_override_styles/focus = SubResource("StyleBoxEmpty_oh5ij")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_hp4bs")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g2vtq")
+script = ExtResource("4_s4jxa")
+metadata/_edit_use_anchors_ = true
+
+[node name="SbNextButton2" type="Sprite2D" parent="right_up_bt"]
+position = Vector2(150.257, 72.7163)
+rotation = 1.54027
+scale = Vector2(1.00039, -2.49985)
+skew = 0.0256385
+texture = ExtResource("4_ct4mp")
+
+[node name="right_down_bt" type="Button" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.6)
+offset_left = 436.0
+offset_top = 421.0
+offset_right = 728.0
+offset_bottom = 561.0
+rotation = 1.91986
+scale = Vector2(-0.6, 1.5)
+theme_override_font_sizes/font_size = 100
+theme_override_styles/focus = SubResource("StyleBoxEmpty_oh5ij")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_hp4bs")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g2vtq")
+script = ExtResource("4_s4jxa")
+metadata/_edit_use_anchors_ = true
+
+[node name="SbNextButton2" type="Sprite2D" parent="right_down_bt"]
+position = Vector2(150.257, 72.7163)
+rotation = 1.54027
+scale = Vector2(1.00039, -2.49985)
+skew = 0.0256385
+texture = ExtResource("4_ct4mp")
+
+[node name="down_bt" type="Button" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.6)
+offset_left = -123.0
+offset_top = 597.0
+offset_right = 277.0
+offset_bottom = 797.0
+rotation = 3.14159
+scale = Vector2(-0.6, 1.5)
+theme_override_font_sizes/font_size = 100
+theme_override_styles/focus = SubResource("StyleBoxEmpty_oh5ij")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_hp4bs")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g2vtq")
+script = ExtResource("4_s4jxa")
+metadata/_edit_use_anchors_ = true
+
+[node name="SbNextButton2" type="Sprite2D" parent="down_bt"]
+position = Vector2(203.333, 111.333)
+rotation = 1.54027
+scale = Vector2(1.00039, -2.49985)
+skew = 0.0256385
+texture = ExtResource("4_ct4mp")
+
+[node name="left_down_bt" type="Button" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.6)
+offset_left = -500.0
+offset_top = 243.0
+offset_right = -208.0
+offset_bottom = 383.0
+rotation = -1.91986
+scale = Vector2(-0.6, 1.5)
+theme_override_font_sizes/font_size = 100
+theme_override_styles/focus = SubResource("StyleBoxEmpty_oh5ij")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_hp4bs")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_g2vtq")
+script = ExtResource("4_s4jxa")
+metadata/_edit_use_anchors_ = true
+
+[node name="SbNextButton2" type="Sprite2D" parent="left_down_bt"]
+position = Vector2(150.257, 72.7163)
+rotation = 1.54027
+scale = Vector2(1.00039, -2.49985)
+skew = 0.0256385
+texture = ExtResource("4_ct4mp")
+
+[connection signal="area_entered" from="player" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="player" to="." method="_on_player_area_exited"]

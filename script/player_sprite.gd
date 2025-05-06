@@ -1,7 +1,7 @@
 extends Sprite2D
 
 func dance() -> void:
-	if global.move_now:
+	if global.move_now and not global.current_room == 4:
 		var tween = create_tween()
 		tween.tween_property(self, "rotation_degrees", 7, 0.2)
 		await tween.finished

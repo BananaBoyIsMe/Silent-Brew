@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 global="*res://script/global.gd"
+audio="*res://sound/audio.tscn"
 
 [display]
 

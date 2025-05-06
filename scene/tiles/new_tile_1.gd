@@ -19,6 +19,7 @@ var original_modulate
 @export var input_text_str: String
 
 func _ready() -> void:
+	global.connect("inv_toggled", disable_tile)
 	match rng.randi_range(1, 2):
 		1:
 			self.rotation_degrees = 180
@@ -110,7 +111,8 @@ func _on_area_2d_mouse_exited() -> void:
 	mouse_in = false
 
 func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
-	if global.in_cutscene:
+	if global.in_cutscene or !global.in_game or global.inv_on or global.encyclopedia_on or global.map_on:
+		global.move_now = false
 		return
 	if (event is InputEventMouseButton and event.pressed) or (event is InputEventScreenTouch and event.pressed):
 		if input_tile:
@@ -121,27 +123,13 @@ func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int
 			get_parent().get_parent().add_child(tile_text)
 			#print("Hi")
 			return
-		#if global.player_des_pos != global.player_direction[-1]:
-			#print(global.tween999)
-			#global.player.position.x = (global.player_des_pos.x * 100) + 256
-			#global.player.position.y = (global.player_des_pos.y * 74) + (256 - (int(global.player_des_pos.x) % 2) * 37) - 64
-			#await get_tree().create_timer(0.1).timeout
-			#pass
-		#var target_pos = Vector2((tile_co.x * 100) + 256 - 960, (tile_co.y * 74) + (256 - (int(tile_co.x) % 2) * 37) - 64 - 540)
-		#print(target_pos)
-		#if !global.player.position.distance_to(target_pos) <= 5:
-		global.player_direction = global.find_shortest_path_even_q(global.player_des_pos, tile_co, global.all_room_dict[global.current_room])
+		global.tile_co = tile_co
+		global.player_direction = global.find_shortest_path_even_q(global.player_des_pos, global.tile_co, global.all_room_dict[global.current_room])
 		global.player_direction_num = 1
-		print(global.player_direction)
+		#print(global.player_direction)
 		#print(global.player_des_pos)
 		global.player_direction_real_pos = []
-		#if global.player_direction.size() == 1:
-			#for i in global.player_direction:
-				#global.player_direction_real_pos.append(get_node("../tile_" + str(int(i.x)) + "_" + str(int(i.y))).position)
-			#global.player_des_real_pos = global.player_direction_real_pos[global.player_direction_num]
-			#global.player_last_pos = global.player_direction_real_pos[global.player_direction_num - 1]
-			#global.move_now = true
-			#return
+
 		if global.player_direction.size() > 1:
 			#global.player_des_pos = global.player_direction[global.player_direction_num]
 			for i in global.player_direction:
@@ -157,6 +145,12 @@ func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int
 		global.move_now = false
 		#print("Hi")
 		
+
+func disable_tile(state: bool) -> void:
+	if state:
+		$Area2D/CollisionPolygon2D.disabled = true
+	else:
+		$Area2D/CollisionPolygon2D.disabled = false
 
 func allow_collision():
 	await get_tree().create_timer(2).timeout

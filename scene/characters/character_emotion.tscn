@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://btp5le8h5dd5j" path="res://sprite/character/sb_text_box4.png" id="5_pwrmf"]
 
 [node name="character_emotion" type="Node2D"]
+process_mode = 3
 script = ExtResource("1_jt3vd")
 
 [node name="character_png" type="Sprite2D" parent="."]
@@ -35,6 +36,7 @@ theme_override_font_sizes/font_size = 150
 horizontal_alignment = 1
 
 [node name="SbTextBox2" type="Sprite2D" parent="."]
+z_index = 60
 position = Vector2(-991, -21)
 scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("3_g484t")

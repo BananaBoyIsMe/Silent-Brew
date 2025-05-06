@@ -15,6 +15,7 @@ func _ready() -> void:
 func _on_map_toggled(state: bool):
 	if state:
 		global.book_on = false
+		global.inv_on = false
 		var tween1 = create_tween()
 		tween1.tween_property(map_image, "position:y", 500, 1).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_QUAD)
 		var tween2 = create_tween()
@@ -30,6 +31,8 @@ func _on_map_toggled(state: bool):
 		tween3.tween_property(screen_dark, "modulate:a", 0, 1)
 
 func _input(event: InputEvent) -> void:
+	if !global.in_game or global.in_cutscene:
+		return
 	if event is InputEventKey:
 		if event.keycode == 77 and event.pressed and global.in_game:
 			map_glow.visible = true
@@ -41,6 +44,8 @@ func _input(event: InputEvent) -> void:
 func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	#print(event)
 	if event is InputEventMouseButton:
+		if !global.in_game or global.in_cutscene:
+			return
 		if event.button_index == 1 and !event.pressed:
 			global.map_on = !global.map_on
 

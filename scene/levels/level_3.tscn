@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://crbvb01xj4fnu"]
+[gd_scene load_steps=11 format=3 uid="uid://crbvb01xj4fnu"]
 
 [ext_resource type="PackedScene" uid="uid://e2jhu0ksgvw1" path="res://scene/tiles/tile_1.tscn" id="1_7g7x8"]
 [ext_resource type="Script" uid="uid://bx8nibgsku6iq" path="res://script/level_3.gd" id="1_tyujp"]
@@ -9,26 +9,18 @@
 [ext_resource type="PackedScene" uid="uid://b778vxr6ctudk" path="res://scene/deco/crystal_2.tscn" id="6_gpgsl"]
 [ext_resource type="PackedScene" uid="uid://cbfvufi4n47he" path="res://scene/tiles/portal_fog.tscn" id="8_tyujp"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tyujp"]
+radius = 12.0
+height = 44.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sbqfj"]
+radius = 14.0
+height = 50.0
+
 [node name="level_3" type="Node2D"]
 script = ExtResource("1_tyujp")
 
 [node name="tiles" type="Node2D" parent="."]
-
-[node name="tile_1_0" parent="tiles" instance=ExtResource("1_7g7x8")]
-modulate = Color(0.63, 0.77, 0.9, 1)
-position = Vector2(400, 321)
-rotation = 3.14159
-scale = Vector2(0.5, 0.313)
-tile_id = 55
-tile_co = Vector2(1, 0)
-
-[node name="tile_1_1" parent="tiles" instance=ExtResource("1_7g7x8")]
-modulate = Color(0.63, 0.77, 0.9, 1)
-position = Vector2(400, 395)
-rotation = -3.14159
-scale = Vector2(0.5, 0.313)
-tile_id = 55
-tile_co = Vector2(1, 1)
 
 [node name="tile_1_2" parent="tiles" instance=ExtResource("1_7g7x8")]
 modulate = Color(0.2, 0.25, 0.3, 1)
@@ -45,32 +37,6 @@ rotation = -3.14159
 scale = Vector2(0.5, 0.313)
 tile_id = 55
 tile_co = Vector2(1, 3)
-
-[node name="tile_1_5" parent="tiles" instance=ExtResource("1_7g7x8")]
-modulate = Color(0.63, 0.77, 0.9, 1)
-position = Vector2(400, 691)
-rotation = -3.14159
-scale = Vector2(0.5, 0.313)
-tile_id = 55
-tile_co = Vector2(1, 0)
-delay_time = 0.6
-
-[node name="tile_1_6" parent="tiles" instance=ExtResource("1_7g7x8")]
-modulate = Color(0.63, 0.77, 0.9, 1)
-position = Vector2(400, 765)
-rotation = -3.14159
-scale = Vector2(0.5, 0.313)
-tile_id = 55
-tile_co = Vector2(1, 6)
-delay_time = 0.3
-
-[node name="tile_2_0" parent="tiles" instance=ExtResource("1_7g7x8")]
-modulate = Color(0.63, 0.77, 0.9, 1)
-position = Vector2(500, 284)
-scale = Vector2(0.5, 0.313)
-skew = 1.01328e-05
-tile_id = 55
-tile_co = Vector2(2, 0)
 
 [node name="tile_2_1" parent="tiles" instance=ExtResource("1_7g7x8")]
 modulate = Color(0.63, 0.77, 0.9, 1)
@@ -204,13 +170,6 @@ tile_id = 55
 tile_co = Vector2(4, 6)
 delay_time = 0.3
 
-[node name="tile_5_0" parent="tiles" instance=ExtResource("1_7g7x8")]
-modulate = Color(0.63, 0.77, 0.9, 1)
-position = Vector2(800, 321)
-scale = Vector2(0.5, 0.313)
-tile_id = 55
-tile_co = Vector2(5, 0)
-
 [node name="tile_5_1" parent="tiles" instance=ExtResource("1_7g7x8")]
 modulate = Color(0.63, 0.77, 0.9, 1)
 position = Vector2(800, 395)
@@ -253,14 +212,6 @@ scale = Vector2(0.5, 0.313)
 tile_id = 55
 tile_co = Vector2(5, 6)
 delay_time = 0.3
-
-[node name="tile_6_0" parent="tiles" instance=ExtResource("1_7g7x8")]
-modulate = Color(0.63, 0.77, 0.9, 1)
-position = Vector2(900, 284)
-rotation = 3.14159
-scale = Vector2(0.5, 0.313)
-tile_id = 55
-tile_co = Vector2(6, 0)
 
 [node name="tile_6_1" parent="tiles" instance=ExtResource("1_7g7x8")]
 modulate = Color(0.63, 0.77, 0.9, 1)
@@ -556,14 +507,6 @@ tile_id = 55
 tile_co = Vector2(11, 5)
 delay_time = 0.6
 
-[node name="tile_11_6" parent="tiles" instance=ExtResource("1_7g7x8")]
-modulate = Color(0.63, 0.77, 0.9, 1)
-position = Vector2(1400, 765)
-scale = Vector2(0.5, 0.313)
-tile_id = 55
-tile_co = Vector2(11, 6)
-delay_time = 0.3
-
 [node name="tile_12_0" parent="tiles" instance=ExtResource("1_7g7x8")]
 modulate = Color(0.63, 0.77, 0.9, 1)
 position = Vector2(1500, 284)
@@ -614,13 +557,6 @@ scale = Vector2(0.5, 0.313)
 tile_id = 55
 tile_co = Vector2(12, 6)
 delay_time = 0.3
-
-[node name="tile_12_7" parent="tiles" instance=ExtResource("1_7g7x8")]
-modulate = Color(0.63, 0.77, 0.9, 1)
-position = Vector2(1500, 802)
-scale = Vector2(0.5, 0.313)
-tile_id = 55
-tile_co = Vector2(12, 7)
 
 [node name="tree_bg_tiles" type="Node2D" parent="."]
 visible = false
@@ -1132,3 +1068,301 @@ position = Vector2(677, 507)
 
 [node name="portal_fog2" parent="." instance=ExtResource("8_tyujp")]
 position = Vector2(720, 506)
+
+[node name="hole" type="Node2D" parent="."]
+
+[node name="hole" type="Area2D" parent="hole"]
+position = Vector2(399, 469)
+rotation = 1.5708
+scale = Vector2(0.8, 0.8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hole/hole"]
+shape = SubResource("CapsuleShape2D_tyujp")
+
+[node name="hole" type="Area2D" parent="hole/hole"]
+position = Vector2(93.7499, -253.75)
+scale = Vector2(1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hole/hole/hole"]
+shape = SubResource("CapsuleShape2D_tyujp")
+
+[node name="hole" type="Area2D" parent="hole/hole/hole"]
+position = Vector2(43.7501, -122.5)
+scale = Vector2(1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hole/hole/hole/hole"]
+shape = SubResource("CapsuleShape2D_tyujp")
+
+[node name="hole" type="Area2D" parent="hole/hole/hole/hole"]
+position = Vector2(93.75, 1.25006)
+scale = Vector2(1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hole/hole/hole/hole/hole"]
+shape = SubResource("CapsuleShape2D_tyujp")
+
+[node name="hole" type="Area2D" parent="hole/hole/hole/hole/hole"]
+position = Vector2(-183.75, -250)
+scale = Vector2(1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hole/hole/hole/hole/hole/hole"]
+shape = SubResource("CapsuleShape2D_tyujp")
+
+[node name="hole" type="Area2D" parent="hole/hole/hole/hole/hole/hole"]
+position = Vector2(276.25, -0.00012207)
+scale = Vector2(1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hole/hole/hole/hole/hole/hole/hole"]
+shape = SubResource("CapsuleShape2D_tyujp")
+
+[node name="hole" type="Area2D" parent="hole/hole/hole/hole/hole/hole/hole"]
+position = Vector2(-510, -127.5)
+scale = Vector2(1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hole/hole/hole/hole/hole/hole/hole/hole"]
+shape = SubResource("CapsuleShape2D_tyujp")
+
+[node name="hole" type="Area2D" parent="hole/hole/hole/hole/hole/hole/hole/hole"]
+position = Vector2(417.5, -123.75)
+scale = Vector2(1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hole/hole/hole/hole/hole/hole/hole/hole/hole"]
+shape = SubResource("CapsuleShape2D_tyujp")
+
+[node name="hole" type="Area2D" parent="hole/hole/hole/hole/hole/hole/hole/hole/hole"]
+position = Vector2(-276.25, -251.25)
+scale = Vector2(1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hole/hole/hole/hole/hole/hole/hole/hole/hole/hole"]
+shape = SubResource("CapsuleShape2D_tyujp")
+
+[node name="hole" type="Area2D" parent="hole/hole/hole/hole/hole/hole/hole/hole/hole/hole"]
+position = Vector2(-47.5001, -121.25)
+scale = Vector2(1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hole/hole/hole/hole/hole/hole/hole/hole/hole/hole/hole"]
+shape = SubResource("CapsuleShape2D_tyujp")
+
+[node name="hole" type="Area2D" parent="hole/hole/hole/hole/hole/hole/hole/hole/hole/hole/hole"]
+position = Vector2(413.75, -128.75)
+scale = Vector2(1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hole/hole/hole/hole/hole/hole/hole/hole/hole/hole/hole/hole"]
+shape = SubResource("CapsuleShape2D_tyujp")
+
+[node name="block" type="Node2D" parent="."]
+
+[node name="block_12_5_1500_654" type="Area2D" parent="block"]
+position = Vector2(1569, 654)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="block/block_12_5_1500_654"]
+shape = SubResource("CapsuleShape2D_sbqfj")
+
+[node name="block_12_2_1500_432" type="Area2D" parent="block"]
+position = Vector2(1572, 432)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="block/block_12_2_1500_432"]
+shape = SubResource("CapsuleShape2D_sbqfj")
+
+[node name="block_9_3_1200_543" type="Area2D" parent="block"]
+position = Vector2(1200, 478)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="block/block_9_3_1200_543"]
+shape = SubResource("CapsuleShape2D_sbqfj")
+
+[node name="block_8_3_1100_506" type="Area2D" parent="block"]
+position = Vector2(1033, 475)
+rotation = -0.827155
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="block/block_8_3_1100_506"]
+shape = SubResource("CapsuleShape2D_sbqfj")
+
+[node name="block_9_6_1200_765" type="Area2D" parent="block"]
+position = Vector2(1146, 790)
+rotation = -0.745954
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="block/block_9_6_1200_765"]
+shape = SubResource("CapsuleShape2D_sbqfj")
+
+[node name="block_9_6_1200_766" type="Area2D" parent="block"]
+position = Vector2(1199, 813)
+rotation = -3.16779
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="block/block_9_6_1200_766"]
+position = Vector2(2.0255, -0.947277)
+shape = SubResource("CapsuleShape2D_sbqfj")
+
+[node name="block_12_0_1500_284" type="Area2D" parent="block"]
+position = Vector2(1502, 228)
+rotation = -3.16779
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="block/block_12_0_1500_284"]
+position = Vector2(2.0255, -0.947277)
+shape = SubResource("CapsuleShape2D_sbqfj")
+
+[node name="block_12_0_1500_285" type="Area2D" parent="block"]
+position = Vector2(1557, 249)
+rotation = -3.16779
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="block/block_12_0_1500_285"]
+position = Vector2(2.0255, -0.947277)
+shape = SubResource("CapsuleShape2D_sbqfj")
+
+[node name="block_8_2_1100_432" type="Area2D" parent="block"]
+position = Vector2(1039, 461)
+rotation = -2.38671
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="block/block_8_2_1100_432"]
+position = Vector2(2.0255, -0.947277)
+shape = SubResource("CapsuleShape2D_sbqfj")
+
+[node name="block_8_2_1100_433" type="Area2D" parent="block"]
+position = Vector2(1166, 460)
+rotation = -3.88963
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="block/block_8_2_1100_433"]
+position = Vector2(2.0255, -0.947277)
+shape = SubResource("CapsuleShape2D_sbqfj")
+
+[node name="block_8_0_1100_284" type="Area2D" parent="block"]
+position = Vector2(1097, 229)
+rotation = -3.88963
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="block/block_8_0_1100_284"]
+position = Vector2(2.0255, -0.947277)
+shape = SubResource("CapsuleShape2D_sbqfj")
+
+[node name="block_6_1_900_358" type="Area2D" parent="block"]
+position = Vector2(840, 320)
+rotation = -3.88963
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="block/block_6_1_900_358"]
+position = Vector2(2.0255, -0.947277)
+shape = SubResource("CapsuleShape2D_sbqfj")
+
+[node name="block_1_3_400_543" type="Area2D" parent="block"]
+position = Vector2(335, 567)
+rotation = -3.88963
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="block/block_1_3_400_543"]
+position = Vector2(2.0255, -0.947277)
+shape = SubResource("CapsuleShape2D_sbqfj")
+
+[node name="block_2_4_500_580" type="Area2D" parent="block"]
+position = Vector2(572, 605)
+rotation = -3.88963
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="block/block_2_4_500_580"]
+position = Vector2(2.0255, -0.947277)
+shape = SubResource("CapsuleShape2D_sbqfj")
+
+[node name="block_2_5_500_655" type="Area2D" parent="block"]
+position = Vector2(571, 624)
+rotation = -5.10269
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="block/block_2_5_500_655"]
+position = Vector2(2.0255, -0.947277)
+shape = SubResource("CapsuleShape2D_sbqfj")
+
+[node name="block_2_7_500_802" type="Area2D" parent="block"]
+position = Vector2(503, 860)
+rotation = -3.10386
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="block/block_2_7_500_802"]
+position = Vector2(2.0255, -0.947277)
+shape = SubResource("CapsuleShape2D_sbqfj")
+
+[node name="block_2_7_500_803" type="Area2D" parent="block"]
+position = Vector2(503, 860)
+rotation = -3.10386
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="block/block_2_7_500_803"]
+position = Vector2(77.4928, 38.1034)
+shape = SubResource("CapsuleShape2D_sbqfj")
+
+[node name="block_2_2_500_432" type="Area2D" parent="block"]
+position = Vector2(504, 370)
+rotation = -3.10386
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="block/block_2_2_500_432"]
+position = Vector2(2.0255, -0.947277)
+shape = SubResource("CapsuleShape2D_sbqfj")
+
+[node name="block_6_5_900_654" type="Area2D" parent="block"]
+position = Vector2(834, 685)
+rotation = -2.2481
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="block/block_6_5_900_654"]
+position = Vector2(2.0255, -0.947277)
+shape = SubResource("CapsuleShape2D_sbqfj")
+
+[node name="block_7_5_1000_691" type="Area2D" parent="block"]
+position = Vector2(1070, 721)
+rotation = -3.98608
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="block/block_7_5_1000_691"]
+position = Vector2(2.0255, -0.947277)
+shape = SubResource("CapsuleShape2D_sbqfj")
+
+[node name="block_7_3_1000_543" type="Area2D" parent="block"]
+position = Vector2(1002, 483)
+rotation = -3.122
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="block/block_7_3_1000_543"]
+position = Vector2(2.0255, -0.947277)
+shape = SubResource("CapsuleShape2D_sbqfj")
+
+[node name="block_8_3_1100_507" type="Area2D" parent="block"]
+position = Vector2(1168, 479)
+rotation = -2.30504
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="block/block_8_3_1100_507"]
+position = Vector2(2.0255, -0.947277)
+shape = SubResource("CapsuleShape2D_sbqfj")
+
+[node name="block_7_6_1000_765" type="Area2D" parent="block"]
+position = Vector2(1072, 736)
+rotation = -2.30504
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="block/block_7_6_1000_765"]
+position = Vector2(2.0255, -0.947277)
+shape = SubResource("CapsuleShape2D_sbqfj")
+
+[node name="block_6_7_900_802" type="Area2D" parent="block"]
+position = Vector2(837, 838)
+rotation = -2.30504
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="block/block_6_7_900_802"]
+position = Vector2(2.0255, -0.947277)
+shape = SubResource("CapsuleShape2D_sbqfj")
+
+[node name="block_6_7_900_803" type="Area2D" parent="block"]
+position = Vector2(962, 835)
+rotation = -2.30504
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="block/block_6_7_900_803"]
+position = Vector2(2.0255, -0.947277)
+shape = SubResource("CapsuleShape2D_sbqfj")
+
+[node name="block_2_5_500_654" type="Area2D" parent="block"]
+position = Vector2(430, 637)
+rotation = -2.30504
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="block/block_2_5_500_654"]
+position = Vector2(2.0255, -0.947277)
+shape = SubResource("CapsuleShape2D_sbqfj")
+
+[node name="block_4_6_700_728" type="Area2D" parent="block"]
+position = Vector2(772, 695)
+rotation = -2.30504
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="block/block_4_6_700_728"]
+position = Vector2(2.0255, -0.947277)
+shape = SubResource("CapsuleShape2D_sbqfj")
+
+[node name="block_7_6_1000_766" type="Area2D" parent="block"]
+position = Vector2(999, 819)
+rotation = -2.30504
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="block/block_7_6_1000_766"]
+position = Vector2(2.0255, -0.947277)
+shape = SubResource("CapsuleShape2D_sbqfj")

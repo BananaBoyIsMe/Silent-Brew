@@ -24,8 +24,10 @@ var pause_stuff = [[], [], [], [], [], [], [], [], [], [], []]
 
 var select_scene = preload("res://scene/select_level.tscn")
 var options_scene = preload("res://scene/options.tscn")
+var credits_scene = preload("res://scene/credits.tscn")
 var select_scene_real
 var options_scene_real
+var credits_scene_real
 
 var screen_size = Vector2(1920, 1080)
 
@@ -39,6 +41,9 @@ var screen_size = Vector2(1920, 1080)
 @onready var silent_title = $SilentBrewTitle
 @onready var brew_title = $SilentBrewTitle2
 
+@onready var character_emotion1 = $"../character_emotion"
+@onready var character_emotion2 = $"../character_emotion2"
+
 @onready var map_icon = $"../map_icon/map_icon"
 @onready var map_glow = $"../map_icon/map_icon/map_glow"
 @onready var map_image = $"../map_image"
@@ -46,6 +51,15 @@ var screen_size = Vector2(1920, 1080)
 @onready var book_icon = $"../book_icon/book_icon"
 @onready var book_glow = $"../book_icon/book_icon/book_glow"
 @onready var book_image = $"../encyclopedia"
+
+@onready var inv_icon = $"../inv_icon/inv_icon"
+@onready var inv_glow = $"../inv_icon/inv_icon/inv_glow"
+@onready var inv_image = $"../inventory"
+
+@onready var time_icon = $"../time"
+
+@onready var pause_icon = $"../pause_icon/pause_icon"
+@onready var pause_icon2 = $"../pause_icon/pause_icon2"
 
 func get_random_outside_position() -> Vector2:
 	var margin = 500
@@ -68,6 +82,12 @@ func get_random_outside_position() -> Vector2:
 	return positionn
 
 func activate_menu():
+	audio.stop_all()
+	audio.play_menu()
+	global.inv_on = false
+	global.book_on = false
+	global.encyclopedia_on = false
+	global.map_on = false
 	resume.position = Vector2(827, 393)
 	select_level.position = Vector2(827, 515)
 	options.position = Vector2(826, 640)
@@ -89,12 +109,24 @@ func activate_menu():
 	tween5.tween_property(map_icon, "position:y", -120, 0.8).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_QUAD)
 	var tween6 = create_tween()
 	tween6.tween_property(book_icon, "position:y", -120, 0.8).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_QUAD)
+	var tween7 = create_tween()
+	tween7.tween_property(pause_icon, "position:y", -120, 0.8).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_QUAD)
+	var tween8 = create_tween()
+	tween8.tween_property(pause_icon2, "position:y", -120, 0.8).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_QUAD)
+	var tween9 = create_tween()
+	tween9.tween_property(character_emotion1, "position:y", 1280, 0.8).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_QUAD)
+	var tween10 = create_tween()
+	tween10.tween_property(character_emotion2, "position:y", 1280, 0.8).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_QUAD)
+	var tween11 = create_tween()
+	tween11.tween_property(inv_icon, "position:y", -120, 0.8).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_QUAD)
+	var tween12 = create_tween()
+	tween12.tween_property(time_icon, "position:y", -360, 0.8).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_QUAD)
 	
 	paused = true
 	pause_stuff = []
-	for i in range(10):
+	for i in range(20):
 		#print()
-		match rng.randi_range(1, 3):
+		match rng.randi_range(1, 9):
 			1:
 				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
 				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/menu/sb_menu_1.png")
@@ -104,7 +136,25 @@ func activate_menu():
 			3:
 				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
 				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/menu/sb_menu_3.png")
-		var size = rng.randf_range(0.1, 0.35)
+			4:
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/plant/sb_plant3.png")
+			5:
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/plant/sb_plant8.png")
+			6:
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/plant/sb_plant7.png")
+			7:
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/plant/sb_plant5.png")
+			8:
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/plant/sb_plant11.png")
+			9:
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/plant/sb_plant6.png")
+		var size = rng.randf_range(0.1, 0.5)
 		pause_stuff[i].get_child(0).get_child(0).scale = Vector2(size, size)
 		pause_stuff[i].get_child(0).get_child(1).scale = Vector2(size, size)
 		var item_position = get_random_outside_position()
@@ -126,10 +176,10 @@ func activate_menu():
 	
 	if global.current_level != null:
 		var tween_level = create_tween()
-		tween_level.tween_property(global.current_level, "position:y", -3000, 2).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
+		tween_level.tween_property(global.current_level, "position:y", 6000, 2).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
 	
 	var tween1 = create_tween()
-	tween1.tween_property(map_image, "position:y", 2040, 1).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
+	tween1.tween_property(map_image, "position:y", 2440, 1).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
 	
 	global.in_game = false
 	resume.visible = true
@@ -139,11 +189,13 @@ func activate_menu():
 	save_and_exit.visible = true
 	
 	stop = true
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(0.5).timeout
 	if global.current_level != null:
-		global.current_level.queue_free()
-		global.current_level = null
-	await get_tree().create_timer(1).timeout
+		var tween_level = create_tween()
+		tween_level.tween_property(global.current_level, "modulate:a", 0, 1)
+	character_emotion1.visible = false
+	character_emotion2.visible = false
+	await get_tree().create_timer(1.5).timeout
 	stop = false
 	
 	resume.disabled = false
@@ -151,6 +203,10 @@ func activate_menu():
 	options.disabled = false
 	credits.disabled = false
 	save_and_exit.disabled = false
+	
+	if global.current_level != null:
+		global.current_level.queue_free()
+		global.current_level = null
 
 func deactivate_menu():
 	#var tween = create_tween()
@@ -165,6 +221,15 @@ func deactivate_menu():
 	tween5.tween_property(map_icon, "position:y", 90, 0.8).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_QUAD)
 	var tween6 = create_tween()
 	tween6.tween_property(book_icon, "position:y", 90, 0.8).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_QUAD)
+	var tween7 = create_tween()
+	tween7.tween_property(pause_icon, "position:y", 90, 0.8).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_QUAD)
+	var tween8 = create_tween()
+	tween8.tween_property(pause_icon2, "position:y", 90, 0.8).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_QUAD)
+	var tween9 = create_tween()
+	tween9.tween_property(inv_icon, "position:y", 90, 0.8).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_QUAD)
+	var tween10 = create_tween()
+	tween10.tween_property(time_icon, "position:y", 0, 0.8).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_QUAD)
+	
 	for i in pause_stuff:
 		var dir = (i.get_child(0).position - screen_size/2).normalized()
 		i.get_child(0).linear_velocity = dir * randf_range(1500, 2500)
@@ -174,25 +239,30 @@ func deactivate_menu():
 	match global.current_room:
 		1:
 			level = load("res://scene/levels/level_0.tscn").instantiate()
+			get_node("../spawn_zoom/map").position = Vector2(0, 0)
 			get_node("../spawn_zoom/map").scale = Vector2(1.25, 1.25)
 		2:
 			level = load("res://scene/levels/level_1.tscn").instantiate()
-			get_node("../spawn_zoom/map").position += Vector2(100, 0)
+			get_node("../spawn_zoom/map").position = Vector2(100, 0)
 		3:
 			level = load("res://scene/levels/level_2.tscn").instantiate()
+			get_node("../spawn_zoom/map").position = Vector2(0, 0)
 			get_node("../spawn_zoom/map").scale = Vector2(1.25, 1.25)
 		4:
 			level = load("res://scene/levels/level_3.tscn").instantiate()
-			get_node("../spawn_zoom/map").position += Vector2(0, -20)
+			get_node("../spawn_zoom/map").position = Vector2(0, -20)
 			get_node("../spawn_zoom/map").scale = Vector2(1.2, 1.2)
 		5:
 			level = load("res://scene/levels/level_4.tscn").instantiate()
+			get_node("../spawn_zoom/map").position = Vector2(0, 0)
 			get_node("../spawn_zoom/map").scale = Vector2(1.2, 1.2)
 		6:
 			level = load("res://scene/levels/level_5.tscn").instantiate()
+			get_node("../spawn_zoom/map").position = Vector2(0, 0)
 			get_node("../spawn_zoom/map").scale = Vector2(1.2, 1.2)
 		7:
 			level = load("res://scene/levels/level_6.tscn").instantiate()
+			get_node("../spawn_zoom/map").position = Vector2(0, 0)
 			get_node("../spawn_zoom/map").scale = Vector2(1.2, 1.2)
 	level.position = Vector2(-1920, -3000)/2
 	get_node("../spawn_zoom/map").add_child(level)
@@ -204,7 +274,6 @@ func deactivate_menu():
 	#var tween_level1 = create_tween()
 	#tween_level1.tween_property(global.current_level, "modulate:a", 1, 2).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
 	
-	global.in_game = true
 	resume.disabled = true
 	select_level.disabled = true
 	options.disabled = true
@@ -229,30 +298,34 @@ func deactivate_menu():
 		node.set_process(true)
 	
 	screen_dark.visible = false
+	global.in_game = true
 
 func _ready() -> void:
 	activate_menu()
 
-func _input(event: InputEvent) -> void:
+#func _input(event: InputEvent) -> void:
 	#pause menu code
-	if event is InputEventKey and event.keycode == 4194305 and !paused and event.pressed and !stop:
-		activate_menu()
+	#if event is InputEventKey and event.keycode == 4194305 and !paused and event.pressed and !stop:
+		#activate_menu()
 
 	#elif event is InputEventKey and event.keycode == 4194305 and paused and event.pressed and !stop:
 		#deactivate_pause(1)
 		#get_parent().start_room()
+	#pass
 
 func _on_resume_bt_button_up() -> void:
+	audio.play_button()
 	deactivate_menu()
 
 func _on_select_bt_button_up() -> void:
+	audio.play_button()
 	select_scene_real = select_scene.instantiate()
 	select_scene_real.position.x += 2000
 	get_parent().add_child(select_scene_real)
-	for j in range(10):
+	for j in range(20):
 		for i in pause_stuff:
 			var dir = Vector2(-1, rng.randf_range(-0.5, 0.5))
-			i.get_child(0).linear_velocity = dir * 10000
+			i.get_child(0).linear_velocity = dir * 6000
 			i.get_child(0).angular_velocity = rng.randf_range(-10, 10)
 	
 	resume.disabled = true
@@ -284,9 +357,9 @@ func _on_select_bt_button_up() -> void:
 		i.queue_free()
 	pause_stuff = []
 	
-	for i in range(10):
+	for i in range(20):
 		#print()
-		match rng.randi_range(1, 3):
+		match rng.randi_range(1, 9):
 			1:
 				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
 				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/menu/sb_menu_1.png")
@@ -296,7 +369,25 @@ func _on_select_bt_button_up() -> void:
 			3:
 				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
 				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/menu/sb_menu_3.png")
-		var size = rng.randf_range(0.1, 0.35)
+			4:
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/plant/sb_plant3.png")
+			5:
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/plant/sb_plant8.png")
+			6:
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/plant/sb_plant7.png")
+			7:
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/plant/sb_plant5.png")
+			8:
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/plant/sb_plant11.png")
+			9:
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/plant/sb_plant6.png")
+		var size = rng.randf_range(0.1, 0.5)
 		pause_stuff[i].get_child(0).get_child(0).scale = Vector2(size, size)
 		pause_stuff[i].get_child(0).get_child(1).scale = Vector2(size, size)
 		var item_position = Vector2(2800, rng.randf_range(0, 1080))
@@ -314,10 +405,11 @@ func _on_select_bt_button_up() -> void:
 	await get_tree().create_timer(0.2).timeout
 
 func back_to_menu_select() -> void:
-	for j in range(10):
-		for i in pause_stuff[j]:
+	audio.play_button()
+	for j in range(20):
+		for i in pause_stuff:
 			var dir = Vector2(1, rng.randf_range(-0.5, 0.5))
-			i.get_child(0).linear_velocity = dir * 10000
+			i.get_child(0).linear_velocity = dir * 6000
 			i.get_child(0).angular_velocity = rng.randf_range(-10, 10)
 	
 	var tween1 = create_tween()
@@ -339,36 +431,54 @@ func back_to_menu_select() -> void:
 	
 	await get_tree().create_timer(0.8).timeout
 	
-	for i in pause_stuff[1]:
+	for i in pause_stuff:
 		i.queue_free()
-	pause_stuff[1] = []
+	pause_stuff = []
 	
-	for i in range(10):
+	for i in range(20):
 		#print()
-		match rng.randi_range(1, 3):
+		match rng.randi_range(1, 9):
 			1:
-				pause_stuff[1].append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
-				pause_stuff[1][i].get_child(0).get_child(0).texture = load("res://sprite/menu/sb_menu_1.png")
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/menu/sb_menu_1.png")
 			2:
-				pause_stuff[1].append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
-				pause_stuff[1][i].get_child(0).get_child(0).texture = load("res://sprite/menu/sb_menu_2.png")
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/menu/sb_menu_2.png")
 			3:
-				pause_stuff[1].append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
-				pause_stuff[1][i].get_child(0).get_child(0).texture = load("res://sprite/menu/sb_menu_3.png")
-		var size = rng.randf_range(0.1, 0.35)
-		pause_stuff[1][i].get_child(0).get_child(0).scale = Vector2(size, size)
-		pause_stuff[1][i].get_child(0).get_child(1).scale = Vector2(size, size)
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/menu/sb_menu_3.png")
+			4:
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/plant/sb_plant3.png")
+			5:
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/plant/sb_plant8.png")
+			6:
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/plant/sb_plant7.png")
+			7:
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/plant/sb_plant5.png")
+			8:
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/plant/sb_plant11.png")
+			9:
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/plant/sb_plant6.png")
+		var size = rng.randf_range(0.1, 0.5)
+		pause_stuff[i].get_child(0).get_child(0).scale = Vector2(size, size)
+		pause_stuff[i].get_child(0).get_child(1).scale = Vector2(size, size)
 		var item_position = Vector2(-1000, rng.randf_range(0, 1080))
-		pause_stuff[1][i].get_child(0).position = item_position
+		pause_stuff[i].get_child(0).position = item_position
 		#print(dir)
-		pause_stuff[1][i].get_child(0).linear_velocity = Vector2(1, 0) * rng.randf_range(1500, 4000)
+		pause_stuff[i].get_child(0).linear_velocity = Vector2(1, 0) * rng.randf_range(1500, 4000)
 		#pause_stuff1[i].get_child(0).apply_impulse(dir * randf_range(1000, 2000))
-		pause_stuff[1][i].get_child(0).angular_velocity = rng.randf_range(-50, 50)
+		pause_stuff[i].get_child(0).angular_velocity = rng.randf_range(-50, 50)
 		
-		pause_stuff[1][i].get_child(0).set_collision_mask_value(1, false)
-		pause_stuff[1][i].get_child(0).set_collision_mask_value(rng.randi_range(1, 4), true)
+		pause_stuff[i].get_child(0).set_collision_mask_value(1, false)
+		pause_stuff[i].get_child(0).set_collision_mask_value(rng.randi_range(1, 4), true)
 		
-		add_child(pause_stuff[1][i])
+		add_child(pause_stuff[i])
 	
 	await get_tree().create_timer(0.2).timeout
 	
@@ -379,13 +489,14 @@ func back_to_menu_select() -> void:
 	save_and_exit.disabled = false
 
 func _on_options_bt_button_up() -> void:
+	audio.play_button()
 	options_scene_real = options_scene.instantiate()
 	options_scene_real.position.x -= 2000
 	get_parent().add_child(options_scene_real)
-	for j in range(10):
+	for j in range(20):
 		for i in pause_stuff:
 			var dir = Vector2(1, rng.randf_range(-0.5, 0.5))
-			i.get_child(0).linear_velocity = dir * 10000
+			i.get_child(0).linear_velocity = dir * 6000
 			i.get_child(0).angular_velocity = rng.randf_range(-10, 10)
 	
 	resume.disabled = true
@@ -417,9 +528,9 @@ func _on_options_bt_button_up() -> void:
 		i.queue_free()
 	pause_stuff = []
 	
-	for i in range(10):
+	for i in range(20):
 		#print()
-		match rng.randi_range(1, 3):
+		match rng.randi_range(1, 9):
 			1:
 				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
 				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/menu/sb_menu_1.png")
@@ -429,7 +540,25 @@ func _on_options_bt_button_up() -> void:
 			3:
 				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
 				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/menu/sb_menu_3.png")
-		var size = rng.randf_range(0.1, 0.35)
+			4:
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/plant/sb_plant3.png")
+			5:
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/plant/sb_plant8.png")
+			6:
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/plant/sb_plant7.png")
+			7:
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/plant/sb_plant5.png")
+			8:
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/plant/sb_plant11.png")
+			9:
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/plant/sb_plant6.png")
+		var size = rng.randf_range(0.1, 0.5)
 		pause_stuff[i].get_child(0).get_child(0).scale = Vector2(size, size)
 		pause_stuff[i].get_child(0).get_child(1).scale = Vector2(size, size)
 		var item_position = Vector2(-1200, rng.randf_range(0, 1080))
@@ -447,10 +576,11 @@ func _on_options_bt_button_up() -> void:
 	await get_tree().create_timer(0.2).timeout
 
 func back_to_menu_options() -> void:
-	for j in range(10):
-		for i in pause_stuff[j]:
+	audio.play_button()
+	for j in range(20):
+		for i in pause_stuff:
 			var dir = Vector2(-1, rng.randf_range(-0.5, 0.5))
-			i.get_child(0).linear_velocity = dir * 10000
+			i.get_child(0).linear_velocity = dir * 6000
 			i.get_child(0).angular_velocity = rng.randf_range(-10, 10)
 	
 	var tween1 = create_tween()
@@ -472,36 +602,225 @@ func back_to_menu_options() -> void:
 	
 	await get_tree().create_timer(0.8).timeout
 	
-	for i in pause_stuff[1]:
+	for i in pause_stuff:
 		i.queue_free()
-	pause_stuff[1] = []
+	pause_stuff = []
 	
-	for i in range(10):
+	for i in range(20):
 		#print()
-		match rng.randi_range(1, 3):
+		match rng.randi_range(1, 9):
 			1:
-				pause_stuff[1].append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
-				pause_stuff[1][i].get_child(0).get_child(0).texture = load("res://sprite/menu/sb_menu_1.png")
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/menu/sb_menu_1.png")
 			2:
-				pause_stuff[1].append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
-				pause_stuff[1][i].get_child(0).get_child(0).texture = load("res://sprite/menu/sb_menu_2.png")
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/menu/sb_menu_2.png")
 			3:
-				pause_stuff[1].append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
-				pause_stuff[1][i].get_child(0).get_child(0).texture = load("res://sprite/menu/sb_menu_3.png")
-		var size = rng.randf_range(0.1, 0.35)
-		pause_stuff[1][i].get_child(0).get_child(0).scale = Vector2(size, size)
-		pause_stuff[1][i].get_child(0).get_child(1).scale = Vector2(size, size)
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/menu/sb_menu_3.png")
+			4:
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/plant/sb_plant3.png")
+			5:
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/plant/sb_plant8.png")
+			6:
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/plant/sb_plant7.png")
+			7:
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/plant/sb_plant5.png")
+			8:
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/plant/sb_plant11.png")
+			9:
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/plant/sb_plant6.png")
+		var size = rng.randf_range(0.1, 0.5)
+		pause_stuff[i].get_child(0).get_child(0).scale = Vector2(size, size)
+		pause_stuff[i].get_child(0).get_child(1).scale = Vector2(size, size)
 		var item_position = Vector2(2500, rng.randf_range(0, 1080))
-		pause_stuff[1][i].get_child(0).position = item_position
+		pause_stuff[i].get_child(0).position = item_position
 		#print(dir)
-		pause_stuff[1][i].get_child(0).linear_velocity = Vector2(-1, 0) * rng.randf_range(1000, 3000)
+		pause_stuff[i].get_child(0).linear_velocity = Vector2(-1, 0) * rng.randf_range(1000, 3000)
+		#pause_stuff[i].get_child(0).apply_impulse(dir * randf_range(1000, 2000))
+		pause_stuff[i].get_child(0).angular_velocity = rng.randf_range(-50, 50)
+		
+		pause_stuff[i].get_child(0).set_collision_mask_value(1, false)
+		pause_stuff[i].get_child(0).set_collision_mask_value(rng.randi_range(1, 4), true)
+		
+		add_child(pause_stuff[i])
+	
+	await get_tree().create_timer(0.2).timeout
+	
+	resume.disabled = false
+	select_level.disabled = false
+	options.disabled = false
+	credits.disabled = false
+	save_and_exit.disabled = false
+
+func _on_credits_bt_button_up() -> void:
+	audio.play_button()
+	credits_scene_real = credits_scene.instantiate()
+	credits_scene_real.position.x -= 2000
+	get_parent().add_child(credits_scene_real)
+	for j in range(20):
+		for i in pause_stuff:
+			var dir = Vector2(1, rng.randf_range(-0.5, 0.5))
+			i.get_child(0).linear_velocity = dir * 6000
+			i.get_child(0).angular_velocity = rng.randf_range(-10, 10)
+	
+	resume.disabled = true
+	select_level.disabled = true
+	options.disabled = true
+	credits.disabled = true
+	save_and_exit.disabled = true
+	
+	var tween1 = create_tween()
+	tween1.tween_property(resume, "position:x", 6000, 1).set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_QUAD)
+	var tween2 = create_tween()
+	tween2.tween_property(select_level, "position:x", 6000, 1).set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_QUAD)
+	var tween3 = create_tween()
+	tween3.tween_property(options, "position:x", 6000, 1).set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_QUAD)
+	var tween4 = create_tween()
+	tween4.tween_property(credits, "position:x", 6000, 1).set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_QUAD)
+	var tween5 = create_tween()
+	tween5.tween_property(save_and_exit, "position:x", 6000, 1).set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_QUAD)
+	var tween6 = create_tween()
+	tween6.tween_property(silent_title, "position:x", 6000, 1).set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_QUAD)
+	var tween7 = create_tween()
+	tween7.tween_property(credits_scene_real, "position:x", 0, 1).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
+	var tween8 = create_tween()
+	tween8.tween_property(brew_title, "position:x", 6000, 0.92).set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_QUAD)
+	
+	await get_tree().create_timer(0.8).timeout
+	
+	for i in pause_stuff:
+		i.queue_free()
+	pause_stuff = []
+	
+	for i in range(20):
+		#print()
+		match rng.randi_range(1, 9):
+			1:
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/menu/sb_menu_1.png")
+			2:
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/menu/sb_menu_2.png")
+			3:
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/menu/sb_menu_3.png")
+			4:
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/plant/sb_plant3.png")
+			5:
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/plant/sb_plant8.png")
+			6:
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/plant/sb_plant7.png")
+			7:
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/plant/sb_plant5.png")
+			8:
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/plant/sb_plant11.png")
+			9:
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/plant/sb_plant6.png")
+		var size = rng.randf_range(0.1, 0.5)
+		pause_stuff[i].get_child(0).get_child(0).scale = Vector2(size, size)
+		pause_stuff[i].get_child(0).get_child(1).scale = Vector2(size, size)
+		var item_position = Vector2(-1200, rng.randf_range(0, 1080))
+		pause_stuff[i].get_child(0).position = item_position
+		#print(dir)
+		pause_stuff[i].get_child(0).linear_velocity = Vector2(1, 0) * rng.randf_range(1500, 4000)
 		#pause_stuff1[i].get_child(0).apply_impulse(dir * randf_range(1000, 2000))
-		pause_stuff[1][i].get_child(0).angular_velocity = rng.randf_range(-50, 50)
+		pause_stuff[i].get_child(0).angular_velocity = rng.randf_range(-50, 50)
 		
-		pause_stuff[1][i].get_child(0).set_collision_mask_value(1, false)
-		pause_stuff[1][i].get_child(0).set_collision_mask_value(rng.randi_range(1, 4), true)
+		pause_stuff[i].get_child(0).set_collision_mask_value(1, false)
+		pause_stuff[i].get_child(0).set_collision_mask_value(rng.randi_range(1, 4), true)
 		
-		add_child(pause_stuff[1][i])
+		add_child(pause_stuff[i])
+	
+	await get_tree().create_timer(0.2).timeout
+
+func back_to_menu_credits() -> void:
+	audio.play_button()
+	for j in range(20):
+		for i in pause_stuff:
+			var dir = Vector2(-1, rng.randf_range(-0.5, 0.5))
+			i.get_child(0).linear_velocity = dir * 6000
+			i.get_child(0).angular_velocity = rng.randf_range(-10, 10)
+	
+	var tween1 = create_tween()
+	tween1.tween_property(resume, "position:x", 827, 0.98).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
+	var tween2 = create_tween()
+	tween2.tween_property(select_level, "position:x", 827, 0.98).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
+	var tween3 = create_tween()
+	tween3.tween_property(options, "position:x", 827, 0.98).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
+	var tween4 = create_tween()
+	tween4.tween_property(credits, "position:x", 827, 0.98).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
+	var tween5 = create_tween()
+	tween5.tween_property(save_and_exit, "position:x", 827, 0.98).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
+	var tween6 = create_tween()
+	tween6.tween_property(silent_title, "position:x", 267, 1).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
+	var tween7 = create_tween()
+	tween7.tween_property(credits_scene_real, "position:x", -4000, 1).set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_QUAD)
+	var tween8 = create_tween()
+	tween8.tween_property(brew_title, "position:x", 1380, 1.02).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
+	
+	await get_tree().create_timer(0.8).timeout
+	
+	for i in pause_stuff:
+		i.queue_free()
+	pause_stuff = []
+	
+	for i in range(20):
+		#print()
+		match rng.randi_range(1, 9):
+			1:
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/menu/sb_menu_1.png")
+			2:
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/menu/sb_menu_2.png")
+			3:
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/menu/sb_menu_3.png")
+			4:
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/plant/sb_plant3.png")
+			5:
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/plant/sb_plant8.png")
+			6:
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/plant/sb_plant7.png")
+			7:
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/plant/sb_plant5.png")
+			8:
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/plant/sb_plant11.png")
+			9:
+				pause_stuff.append(load("res://scene/menu/menu_pic_2.tscn").instantiate())
+				pause_stuff[i].get_child(0).get_child(0).texture = load("res://sprite/plant/sb_plant6.png")
+		var size = rng.randf_range(0.1, 0.5)
+		pause_stuff[i].get_child(0).get_child(0).scale = Vector2(size, size)
+		pause_stuff[i].get_child(0).get_child(1).scale = Vector2(size, size)
+		var item_position = Vector2(2500, rng.randf_range(0, 1080))
+		pause_stuff[i].get_child(0).position = item_position
+		#print(dir)
+		pause_stuff[i].get_child(0).linear_velocity = Vector2(-1, 0) * rng.randf_range(1000, 3000)
+		#pause_stuff[i].get_child(0).apply_impulse(dir * randf_range(1000, 2000))
+		pause_stuff[i].get_child(0).angular_velocity = rng.randf_range(-50, 50)
+		
+		pause_stuff[i].get_child(0).set_collision_mask_value(1, false)
+		pause_stuff[i].get_child(0).set_collision_mask_value(rng.randi_range(1, 4), true)
+		
+		add_child(pause_stuff[i])
 	
 	await get_tree().create_timer(0.2).timeout
 	
@@ -512,4 +831,5 @@ func back_to_menu_options() -> void:
 	save_and_exit.disabled = false
 
 func _on_save_and_exit_bt_button_up() -> void:
+	audio.play_button()
 	get_tree().quit()
