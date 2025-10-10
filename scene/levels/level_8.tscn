@@ -1,0 +1,1190 @@
+[gd_scene load_steps=80 format=3 uid="uid://cy5by05tt6qvo"]
+
+[ext_resource type="Script" uid="uid://bqnse61tkadwi" path="res://script/level_8.gd" id="1_pae2s"]
+[ext_resource type="PackedScene" uid="uid://e2jhu0ksgvw1" path="res://scene/tiles/tile_1.tscn" id="2_6pvbj"]
+[ext_resource type="PackedScene" uid="uid://ccgyamsaj7lyt" path="res://scene/enemy/enemy_3.tscn" id="3_aw74n"]
+[ext_resource type="Texture2D" uid="uid://dl3f5yexoxhnf" path="res://sprite/deco/sb_rock5.png" id="3_dq2i1"]
+[ext_resource type="Shader" uid="uid://bwuo38ypvi2eh" path="res://shader/aurora.gdshader" id="3_qlo1l"]
+[ext_resource type="Texture2D" uid="uid://bci5dhetxr6mj" path="res://sprite/deco/sb_rock4.png" id="4_qlo1l"]
+[ext_resource type="Texture2D" uid="uid://ks6mte6pqtdp" path="res://sprite/deco/sb_rock6.png" id="5_6pvbj"]
+[ext_resource type="Shader" uid="uid://et1hrwqhr2lf" path="res://shader/no_saturation.gdshader" id="6_k4ucc"]
+[ext_resource type="Texture2D" uid="uid://eukrj1mwbad0" path="res://sprite/tiles/sb_bush1.png" id="7_okl68"]
+[ext_resource type="PackedScene" uid="uid://cbfvufi4n47he" path="res://scene/tiles/portal_fog.tscn" id="9_6rh22"]
+[ext_resource type="Shader" uid="uid://bkexlxs4tam0g" path="res://shader/nighttime.gdshader" id="9_dq2i1"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dq2i1"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.70000003325
+shader_parameter/saturation = 0.850000040375
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qlo1l"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.7200000342
+shader_parameter/saturation = 0.850000040375
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6pvbj"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.74000003515
+shader_parameter/saturation = 0.850000040375
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_k4ucc"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.7600000361
+shader_parameter/saturation = 0.850000040375
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_okl68"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.78000003705
+shader_parameter/saturation = 0.850000040375
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6rh22"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.800000038
+shader_parameter/saturation = 0.850000040375
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_n8t5k"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.7200000342
+shader_parameter/saturation = 0.850000040375
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4q357"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.74000003515
+shader_parameter/saturation = 0.800000038
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_w3f7b"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.7600000361
+shader_parameter/saturation = 0.730000034675
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_o1ac7"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.78000003705
+shader_parameter/saturation = 0.730000034675
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dth6t"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.800000038
+shader_parameter/saturation = 0.770000036575
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_l5vhg"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.82000003895
+shader_parameter/saturation = 0.800000038
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wwv2v"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.70000003325
+shader_parameter/saturation = 0.70000003325
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5w53d"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.70000003325
+shader_parameter/saturation = 0.850000040375
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_o16ya"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.730000034675
+shader_parameter/saturation = 0.800000038
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tdr4s"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.750000035625
+shader_parameter/saturation = 0.650000030875
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_w8up5"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.78000003705
+shader_parameter/saturation = 0.650000030875
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_chbax"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.82000003895
+shader_parameter/saturation = 0.690000032775
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0vehv"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.830000039425
+shader_parameter/saturation = 0.770000036575
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_n1vnq"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.82000003895
+shader_parameter/saturation = 0.800000038
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g1c43"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.70000003325
+shader_parameter/saturation = 0.70000003325
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ic8sb"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.7200000342
+shader_parameter/saturation = 0.82000003895
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_05rxr"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.74000003515
+shader_parameter/saturation = 0.66000003135
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gkh2u"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.770000036575
+shader_parameter/saturation = 0.50000002375
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gxhrs"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.770000036575
+shader_parameter/saturation = 0.50000002375
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kcunu"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.82000003895
+shader_parameter/saturation = 0.670000031825
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_85off"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.850000040375
+shader_parameter/saturation = 0.800000038
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nejsm"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.8800000418
+shader_parameter/saturation = 0.830000039425
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_e2faq"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.7200000342
+shader_parameter/saturation = 0.82000003895
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2w406"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.730000034675
+shader_parameter/saturation = 0.7200000342
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xghef"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.770000036575
+shader_parameter/saturation = 0.50000002375
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jb7rm"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.66000003135
+shader_parameter/saturation = 0.400000019
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_55o8a"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.770000036575
+shader_parameter/saturation = 0.50000002375
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_j0seb"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.8400000399
+shader_parameter/saturation = 0.670000031825
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_27yte"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.8800000418
+shader_parameter/saturation = 0.800000038
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pgqub"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.930000044175
+shader_parameter/saturation = 0.850000040375
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mict6"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.7200000342
+shader_parameter/saturation = 0.82000003895
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_psjqn"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.74000003515
+shader_parameter/saturation = 0.66000003135
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pju0d"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.770000036575
+shader_parameter/saturation = 0.50000002375
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t32b7"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.770000036575
+shader_parameter/saturation = 0.50000002375
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ap3jw"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.82000003895
+shader_parameter/saturation = 0.670000031825
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qwgxy"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.86000004085
+shader_parameter/saturation = 0.790000037525
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rfe2h"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.90000004275
+shader_parameter/saturation = 0.800000038
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qk3k2"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.70000003325
+shader_parameter/saturation = 0.850000040375
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1go3v"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.730000034675
+shader_parameter/saturation = 0.800000038
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hg0ui"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.750000035625
+shader_parameter/saturation = 0.650000030875
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7wypa"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.78000003705
+shader_parameter/saturation = 0.650000030875
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ftt2n"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.750000035625
+shader_parameter/saturation = 0.6000000285
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dyycb"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.800000038
+shader_parameter/saturation = 0.790000037525
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8cbsi"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.850000040375
+shader_parameter/saturation = 0.800000038
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8xj5g"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.8400000399
+shader_parameter/saturation = 0.800000038
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_321rj"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.7200000342
+shader_parameter/saturation = 0.850000040375
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_06owv"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.74000003515
+shader_parameter/saturation = 0.800000038
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_eeb3x"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.7600000361
+shader_parameter/saturation = 0.730000034675
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sh543"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.74000003515
+shader_parameter/saturation = 0.650000030875
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qwt4a"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.70000003325
+shader_parameter/saturation = 0.70000003325
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qjngw"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.82000003895
+shader_parameter/saturation = 0.850000040375
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yk0mg"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.82000003895
+shader_parameter/saturation = 0.850000040375
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jwmn2"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.70000003325
+shader_parameter/saturation = 0.850000040375
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_e182l"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.7200000342
+shader_parameter/saturation = 0.850000040375
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ceh1w"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.74000003515
+shader_parameter/saturation = 0.850000040375
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bsnrr"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.7600000361
+shader_parameter/saturation = 0.850000040375
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qk6v0"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.78000003705
+shader_parameter/saturation = 0.850000040375
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yigbn"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.800000038
+shader_parameter/saturation = 0.850000040375
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qptsr"]
+shader = ExtResource("3_qlo1l")
+shader_parameter/speed = 0.050000002375
+shader_parameter/distortion = 0.0
+shader_parameter/intensity = 1.0000000475
+shader_parameter/transparency = 0.150000007125
+shader_parameter/color1 = Color(1, 0.8, 0.7, 1)
+shader_parameter/color2 = Color(0.6, 0.8, 1, 1)
+shader_parameter/color3 = Color(0.5, 0.7, 0.9, 0.6)
+shader_parameter/color4 = Color(0.5, 1, 0.5, 1)
+shader_parameter/color5 = Color(0.9, 0.9, 0.3, 1)
+shader_parameter/seed_offset = Vector2(0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uxchn"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.8390000398525
+shader_parameter/saturation = 0.750000035625
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g5tuk"]
+shader = ExtResource("6_k4ucc")
+shader_parameter/brightness = 0.800000038
+shader_parameter/saturation = 0.70000003325
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_o8te8"]
+shader = ExtResource("9_dq2i1")
+shader_parameter/darkness = 0.50000002375
+shader_parameter/desaturate = 0.30000001425
+shader_parameter/tint_color = Color(0.12528992, 0.13906068, 0.62890625, 1)
+shader_parameter/tint_strength = 0.10000000475
+shader_parameter/contrast = 1.20000003325
+
+[node name="level_8" type="Node2D"]
+script = ExtResource("1_pae2s")
+
+[node name="tiles" type="Node2D" parent="."]
+
+[node name="tile_2_1" parent="tiles" instance=ExtResource("2_6pvbj")]
+modulate = Color(0.85, 0.85, 0.85, 1)
+position = Vector2(500, 358)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(2, 1)
+
+[node name="SbTile" parent="tiles/tile_2_1" index="0"]
+material = SubResource("ShaderMaterial_dq2i1")
+
+[node name="tile_2_2" parent="tiles" instance=ExtResource("2_6pvbj")]
+modulate = Color(0.85, 0.85, 0.85, 1)
+position = Vector2(500, 432)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(2, 2)
+
+[node name="SbTile" parent="tiles/tile_2_2" index="0"]
+material = SubResource("ShaderMaterial_qlo1l")
+
+[node name="tile_2_3" parent="tiles" instance=ExtResource("2_6pvbj")]
+modulate = Color(0.85, 0.85, 0.85, 1)
+position = Vector2(500, 506)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(2, 3)
+
+[node name="SbTile" parent="tiles/tile_2_3" index="0"]
+material = SubResource("ShaderMaterial_6pvbj")
+
+[node name="tile_2_4" parent="tiles" instance=ExtResource("2_6pvbj")]
+modulate = Color(0.85, 0.85, 0.85, 1)
+position = Vector2(500, 580)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(2, 4)
+
+[node name="SbTile" parent="tiles/tile_2_4" index="0"]
+material = SubResource("ShaderMaterial_k4ucc")
+
+[node name="tile_2_5" parent="tiles" instance=ExtResource("2_6pvbj")]
+modulate = Color(0.91, 0.91, 0.91, 1)
+position = Vector2(500, 654)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(2, 5)
+input_tile = true
+input_text_str = "@Poor bushes...|@Wonder how long@it's barely living..."
+input_face_str = "11|3"
+
+[node name="SbTile" parent="tiles/tile_2_5" index="0"]
+material = SubResource("ShaderMaterial_okl68")
+
+[node name="tile_2_6" parent="tiles" instance=ExtResource("2_6pvbj")]
+position = Vector2(500, 728)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(2, 6)
+delay_time = 0.3
+
+[node name="SbTile" parent="tiles/tile_2_6" index="0"]
+material = SubResource("ShaderMaterial_6rh22")
+
+[node name="tile_3_0" parent="tiles" instance=ExtResource("2_6pvbj")]
+modulate = Color(0.8, 0.8, 0.8, 1)
+position = Vector2(600, 321)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(3, 0)
+
+[node name="SbTile" parent="tiles/tile_3_0" index="0"]
+material = SubResource("ShaderMaterial_n8t5k")
+
+[node name="tile_3_1" parent="tiles" instance=ExtResource("2_6pvbj")]
+modulate = Color(0.8, 0.8, 0.8, 1)
+position = Vector2(600, 395)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(3, 1)
+
+[node name="SbTile" parent="tiles/tile_3_1" index="0"]
+material = SubResource("ShaderMaterial_4q357")
+
+[node name="tile_3_2" parent="tiles" instance=ExtResource("2_6pvbj")]
+modulate = Color(0.8, 0.8, 0.8, 1)
+position = Vector2(600, 469)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(3, 2)
+
+[node name="SbTile" parent="tiles/tile_3_2" index="0"]
+material = SubResource("ShaderMaterial_w3f7b")
+
+[node name="tile_3_3" parent="tiles" instance=ExtResource("2_6pvbj")]
+modulate = Color(0.85, 0.85, 0.85, 1)
+position = Vector2(600, 543)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(3, 3)
+
+[node name="SbTile" parent="tiles/tile_3_3" index="0"]
+material = SubResource("ShaderMaterial_o1ac7")
+
+[node name="tile_3_4" parent="tiles" instance=ExtResource("2_6pvbj")]
+modulate = Color(0.9, 0.9, 0.9, 1)
+position = Vector2(600, 617)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(3, 4)
+
+[node name="SbTile" parent="tiles/tile_3_4" index="0"]
+material = SubResource("ShaderMaterial_dth6t")
+
+[node name="tile_3_5" parent="tiles" instance=ExtResource("2_6pvbj")]
+position = Vector2(600, 691)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(3, 5)
+input_tile = true
+input_text_str = "@No time to@ look at the rocks!"
+input_face_str = "11"
+
+[node name="SbTile" parent="tiles/tile_3_5" index="0"]
+material = SubResource("ShaderMaterial_l5vhg")
+
+[node name="tile_3_6" parent="tiles" instance=ExtResource("2_6pvbj")]
+position = Vector2(600, 765)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(3, 6)
+input_tile = true
+input_text_str = "@No time to@ look at the rocks!"
+input_face_str = "11"
+
+[node name="SbTile" parent="tiles/tile_3_6" index="0"]
+material = SubResource("ShaderMaterial_wwv2v")
+
+[node name="tile_4_0" parent="tiles" instance=ExtResource("2_6pvbj")]
+modulate = Color(0.8, 0.8, 0.8, 1)
+position = Vector2(700, 284)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(4, 0)
+
+[node name="SbTile" parent="tiles/tile_4_0" index="0"]
+material = SubResource("ShaderMaterial_5w53d")
+
+[node name="tile_4_1" parent="tiles" instance=ExtResource("2_6pvbj")]
+modulate = Color(0.8, 0.8, 0.8, 1)
+position = Vector2(700, 358)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(4, 1)
+
+[node name="SbTile" parent="tiles/tile_4_1" index="0"]
+material = SubResource("ShaderMaterial_o16ya")
+
+[node name="tile_4_2" parent="tiles" instance=ExtResource("2_6pvbj")]
+modulate = Color(0.8, 0.8, 0.8, 1)
+position = Vector2(700, 432)
+rotation = 3.14159
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(4, 2)
+
+[node name="SbTile" parent="tiles/tile_4_2" index="0"]
+material = SubResource("ShaderMaterial_tdr4s")
+
+[node name="tile_4_3" parent="tiles" instance=ExtResource("2_6pvbj")]
+modulate = Color(0.85, 0.85, 0.85, 1)
+position = Vector2(700, 506)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(4, 3)
+
+[node name="SbTile" parent="tiles/tile_4_3" index="0"]
+material = SubResource("ShaderMaterial_w8up5")
+
+[node name="tile_4_4" parent="tiles" instance=ExtResource("2_6pvbj")]
+modulate = Color(0.93, 0.93, 0.93, 1)
+position = Vector2(700, 580)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(4, 4)
+
+[node name="SbTile" parent="tiles/tile_4_4" index="0"]
+material = SubResource("ShaderMaterial_chbax")
+
+[node name="tile_4_5" parent="tiles" instance=ExtResource("2_6pvbj")]
+modulate = Color(0.93, 0.93, 0.93, 1)
+position = Vector2(700, 654)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(4, 5)
+
+[node name="SbTile" parent="tiles/tile_4_5" index="0"]
+material = SubResource("ShaderMaterial_0vehv")
+
+[node name="tile_4_6" parent="tiles" instance=ExtResource("2_6pvbj")]
+position = Vector2(700, 728)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(4, 6)
+input_tile = true
+input_text_str = "@No time to@ look at the rocks!"
+input_face_str = "11"
+
+[node name="SbTile" parent="tiles/tile_4_6" index="0"]
+material = SubResource("ShaderMaterial_n1vnq")
+
+[node name="tile_4_7" parent="tiles" instance=ExtResource("2_6pvbj")]
+position = Vector2(700, 802)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(4, 7)
+input_tile = true
+input_text_str = "@No time to@ look at the rocks!"
+input_face_str = "11"
+
+[node name="SbTile" parent="tiles/tile_4_7" index="0"]
+material = SubResource("ShaderMaterial_g1c43")
+
+[node name="tile_5_0" parent="tiles" instance=ExtResource("2_6pvbj")]
+modulate = Color(0.83, 0.83, 0.83, 1)
+position = Vector2(800, 321)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(5, 0)
+
+[node name="SbTile" parent="tiles/tile_5_0" index="0"]
+material = SubResource("ShaderMaterial_ic8sb")
+
+[node name="tile_5_1" parent="tiles" instance=ExtResource("2_6pvbj")]
+modulate = Color(0.83, 0.83, 0.83, 1)
+position = Vector2(800, 395)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(5, 1)
+
+[node name="SbTile" parent="tiles/tile_5_1" index="0"]
+material = SubResource("ShaderMaterial_05rxr")
+
+[node name="tile_5_2" parent="tiles" instance=ExtResource("2_6pvbj")]
+modulate = Color(0.89, 0.89, 0.89, 1)
+position = Vector2(800, 469)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(5, 2)
+
+[node name="SbTile" parent="tiles/tile_5_2" index="0"]
+material = SubResource("ShaderMaterial_gkh2u")
+
+[node name="tile_5_3" parent="tiles" instance=ExtResource("2_6pvbj")]
+modulate = Color(0.93, 0.93, 0.93, 1)
+position = Vector2(800, 543)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(5, 3)
+
+[node name="SbTile" parent="tiles/tile_5_3" index="0"]
+material = SubResource("ShaderMaterial_gxhrs")
+
+[node name="tile_5_4" parent="tiles" instance=ExtResource("2_6pvbj")]
+position = Vector2(800, 617)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(5, 4)
+
+[node name="SbTile" parent="tiles/tile_5_4" index="0"]
+material = SubResource("ShaderMaterial_kcunu")
+
+[node name="tile_5_5" parent="tiles" instance=ExtResource("2_6pvbj")]
+position = Vector2(800, 691)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(5, 5)
+
+[node name="SbTile" parent="tiles/tile_5_5" index="0"]
+material = SubResource("ShaderMaterial_85off")
+
+[node name="tile_5_6" parent="tiles" instance=ExtResource("2_6pvbj")]
+position = Vector2(800, 765)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(5, 6)
+input_tile = true
+input_text_str = "@No time to@ look at the rocks!"
+input_face_str = "11"
+
+[node name="SbTile" parent="tiles/tile_5_6" index="0"]
+material = SubResource("ShaderMaterial_nejsm")
+
+[node name="tile_6_0" parent="tiles" instance=ExtResource("2_6pvbj")]
+modulate = Color(0.8, 0.8, 0.8, 1)
+position = Vector2(900, 284)
+rotation = 3.14159
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(6, 0)
+
+[node name="SbTile" parent="tiles/tile_6_0" index="0"]
+material = SubResource("ShaderMaterial_e2faq")
+
+[node name="tile_6_1" parent="tiles" instance=ExtResource("2_6pvbj")]
+modulate = Color(0.8, 0.8, 0.8, 1)
+position = Vector2(900, 358)
+rotation = 3.14159
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(6, 1)
+
+[node name="SbTile" parent="tiles/tile_6_1" index="0"]
+material = SubResource("ShaderMaterial_2w406")
+
+[node name="tile_6_2" parent="tiles" instance=ExtResource("2_6pvbj")]
+modulate = Color(0.9, 0.9, 0.9, 1)
+position = Vector2(900, 432)
+rotation = 3.14159
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(6, 2)
+input_tile = true
+input_text_str = "@Mom said to@never ever touch@the leaves...| @It's really scary...@I just wanna@ find mom."
+input_face_str = "11|9"
+
+[node name="SbTile" parent="tiles/tile_6_2" index="0"]
+material = SubResource("ShaderMaterial_xghef")
+
+[node name="tile_6_3" parent="tiles" instance=ExtResource("2_6pvbj")]
+modulate = Color(0.95, 0.95, 0.95, 1)
+position = Vector2(900, 506)
+rotation = 3.14159
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(6, 3)
+input_tile = true
+input_text_str = "@Mom said to@never ever touch@the leaves...| @It's really scary...@I just wanna@ find mom."
+input_face_str = "11|9"
+
+[node name="SbTile" parent="tiles/tile_6_3" index="0"]
+material = SubResource("ShaderMaterial_jb7rm")
+
+[node name="tile_6_4" parent="tiles" instance=ExtResource("2_6pvbj")]
+position = Vector2(900, 580)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(6, 4)
+
+[node name="SbTile" parent="tiles/tile_6_4" index="0"]
+material = SubResource("ShaderMaterial_55o8a")
+
+[node name="tile_6_5" parent="tiles" instance=ExtResource("2_6pvbj")]
+modulate = Color(1.02, 1.02, 1.02, 1)
+position = Vector2(900, 654)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(6, 5)
+
+[node name="SbTile" parent="tiles/tile_6_5" index="0"]
+material = SubResource("ShaderMaterial_j0seb")
+
+[node name="tile_6_6" parent="tiles" instance=ExtResource("2_6pvbj")]
+position = Vector2(900, 728)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(6, 6)
+
+[node name="SbTile" parent="tiles/tile_6_6" index="0"]
+material = SubResource("ShaderMaterial_27yte")
+
+[node name="tile_6_7" parent="tiles" instance=ExtResource("2_6pvbj")]
+position = Vector2(900, 802)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(6, 7)
+
+[node name="SbTile" parent="tiles/tile_6_7" index="0"]
+material = SubResource("ShaderMaterial_pgqub")
+
+[node name="tile_7_0" parent="tiles" instance=ExtResource("2_6pvbj")]
+modulate = Color(0.8, 0.8, 0.8, 1)
+position = Vector2(1000, 321)
+rotation = -3.14159
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(7, 0)
+
+[node name="SbTile" parent="tiles/tile_7_0" index="0"]
+material = SubResource("ShaderMaterial_mict6")
+
+[node name="tile_7_1" parent="tiles" instance=ExtResource("2_6pvbj")]
+modulate = Color(0.8, 0.8, 0.8, 1)
+position = Vector2(1000, 395)
+rotation = -3.14159
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(7, 1)
+
+[node name="SbTile" parent="tiles/tile_7_1" index="0"]
+material = SubResource("ShaderMaterial_psjqn")
+
+[node name="tile_7_2" parent="tiles" instance=ExtResource("2_6pvbj")]
+modulate = Color(0.9, 0.9, 0.9, 1)
+position = Vector2(1000, 469)
+rotation = -3.14159
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(7, 2)
+
+[node name="SbTile" parent="tiles/tile_7_2" index="0"]
+material = SubResource("ShaderMaterial_pju0d")
+
+[node name="tile_7_3" parent="tiles" instance=ExtResource("2_6pvbj")]
+modulate = Color(0.92, 0.92, 0.92, 1)
+position = Vector2(1000, 543)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(7, 3)
+
+[node name="SbTile" parent="tiles/tile_7_3" index="0"]
+material = SubResource("ShaderMaterial_t32b7")
+
+[node name="tile_7_4" parent="tiles" instance=ExtResource("2_6pvbj")]
+modulate = Color(1.02, 1.02, 1.02, 1)
+position = Vector2(1000, 617)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(7, 4)
+
+[node name="SbTile" parent="tiles/tile_7_4" index="0"]
+material = SubResource("ShaderMaterial_ap3jw")
+
+[node name="tile_7_5" parent="tiles" instance=ExtResource("2_6pvbj")]
+modulate = Color(1.02, 1.02, 1.02, 1)
+position = Vector2(1000, 691)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(7, 5)
+
+[node name="SbTile" parent="tiles/tile_7_5" index="0"]
+material = SubResource("ShaderMaterial_qwgxy")
+
+[node name="tile_7_6" parent="tiles" instance=ExtResource("2_6pvbj")]
+position = Vector2(1000, 765)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(7, 6)
+
+[node name="SbTile" parent="tiles/tile_7_6" index="0"]
+material = SubResource("ShaderMaterial_rfe2h")
+
+[node name="tile_8_0" parent="tiles" instance=ExtResource("2_6pvbj")]
+modulate = Color(0.8, 0.8, 0.8, 1)
+position = Vector2(1100, 284)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(8, 0)
+
+[node name="SbTile" parent="tiles/tile_8_0" index="0"]
+material = SubResource("ShaderMaterial_qk3k2")
+
+[node name="tile_8_1" parent="tiles" instance=ExtResource("2_6pvbj")]
+modulate = Color(0.8, 0.8, 0.8, 1)
+position = Vector2(1100, 358)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(8, 1)
+
+[node name="SbTile" parent="tiles/tile_8_1" index="0"]
+material = SubResource("ShaderMaterial_1go3v")
+
+[node name="tile_8_2" parent="tiles" instance=ExtResource("2_6pvbj")]
+modulate = Color(0.8, 0.8, 0.8, 1)
+position = Vector2(1100, 432)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(8, 2)
+
+[node name="SbTile" parent="tiles/tile_8_2" index="0"]
+material = SubResource("ShaderMaterial_hg0ui")
+
+[node name="tile_8_3" parent="tiles" instance=ExtResource("2_6pvbj")]
+modulate = Color(0.84, 0.84, 0.84, 1)
+position = Vector2(1100, 506)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(8, 3)
+
+[node name="SbTile" parent="tiles/tile_8_3" index="0"]
+material = SubResource("ShaderMaterial_7wypa")
+
+[node name="tile_8_4" parent="tiles" instance=ExtResource("2_6pvbj")]
+modulate = Color(0.91, 0.91, 0.91, 1)
+position = Vector2(1100, 580)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(8, 4)
+input_tile = true
+input_text_str = "@No time to@ look at the rocks!"
+input_face_str = "11"
+
+[node name="SbTile" parent="tiles/tile_8_4" index="0"]
+material = SubResource("ShaderMaterial_ftt2n")
+
+[node name="tile_8_5" parent="tiles" instance=ExtResource("2_6pvbj")]
+position = Vector2(1100, 654)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(8, 5)
+
+[node name="SbTile" parent="tiles/tile_8_5" index="0"]
+material = SubResource("ShaderMaterial_dyycb")
+
+[node name="tile_8_6" parent="tiles" instance=ExtResource("2_6pvbj")]
+position = Vector2(1100, 728)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(8, 6)
+input_tile = true
+input_text_str = "@Poor bushes...|@Wonder how long@it's barely living..."
+input_face_str = "11|3"
+
+[node name="SbTile" parent="tiles/tile_8_6" index="0"]
+material = SubResource("ShaderMaterial_8cbsi")
+
+[node name="tile_8_7" parent="tiles" instance=ExtResource("2_6pvbj")]
+visible = false
+position = Vector2(1100, 802)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(8, 7)
+
+[node name="SbTile" parent="tiles/tile_8_7" index="0"]
+material = SubResource("ShaderMaterial_8xj5g")
+
+[node name="tile_9_0" parent="tiles" instance=ExtResource("2_6pvbj")]
+modulate = Color(0.85, 0.85, 0.85, 1)
+position = Vector2(1200, 321)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(9, 0)
+
+[node name="SbTile" parent="tiles/tile_9_0" index="0"]
+material = SubResource("ShaderMaterial_321rj")
+
+[node name="tile_9_1" parent="tiles" instance=ExtResource("2_6pvbj")]
+modulate = Color(0.85, 0.85, 0.85, 1)
+position = Vector2(1200, 395)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(9, 1)
+
+[node name="SbTile" parent="tiles/tile_9_1" index="0"]
+material = SubResource("ShaderMaterial_06owv")
+
+[node name="tile_9_2" parent="tiles" instance=ExtResource("2_6pvbj")]
+modulate = Color(0.85, 0.85, 0.85, 1)
+position = Vector2(1200, 469)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(9, 2)
+
+[node name="SbTile" parent="tiles/tile_9_2" index="0"]
+material = SubResource("ShaderMaterial_eeb3x")
+
+[node name="tile_9_3" parent="tiles" instance=ExtResource("2_6pvbj")]
+modulate = Color(0.85, 0.85, 0.85, 1)
+position = Vector2(1200, 543)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(9, 3)
+input_tile = true
+input_text_str = "@No time to@ look at the rocks!"
+input_face_str = "11"
+
+[node name="SbTile" parent="tiles/tile_9_3" index="0"]
+material = SubResource("ShaderMaterial_sh543")
+
+[node name="tile_9_4" parent="tiles" instance=ExtResource("2_6pvbj")]
+modulate = Color(0.91, 0.91, 0.91, 1)
+position = Vector2(1200, 617)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(9, 4)
+input_tile = true
+input_text_str = "@No time to@ look at the rocks!"
+input_face_str = "11"
+
+[node name="SbTile" parent="tiles/tile_9_4" index="0"]
+material = SubResource("ShaderMaterial_qwt4a")
+
+[node name="tile_9_5" parent="tiles" instance=ExtResource("2_6pvbj")]
+visible = false
+position = Vector2(1200, 691)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(9, 5)
+
+[node name="SbTile" parent="tiles/tile_9_5" index="0"]
+material = SubResource("ShaderMaterial_qjngw")
+
+[node name="tile_9_6" parent="tiles" instance=ExtResource("2_6pvbj")]
+visible = false
+position = Vector2(1200, 765)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(9, 6)
+
+[node name="SbTile" parent="tiles/tile_9_6" index="0"]
+material = SubResource("ShaderMaterial_yk0mg")
+
+[node name="tile_10_1" parent="tiles" instance=ExtResource("2_6pvbj")]
+modulate = Color(0.85, 0.85, 0.85, 1)
+position = Vector2(1300, 358)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(10, 1)
+
+[node name="SbTile" parent="tiles/tile_10_1" index="0"]
+material = SubResource("ShaderMaterial_jwmn2")
+
+[node name="tile_10_2" parent="tiles" instance=ExtResource("2_6pvbj")]
+modulate = Color(0.85, 0.85, 0.85, 1)
+position = Vector2(1300, 432)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(10, 2)
+
+[node name="SbTile" parent="tiles/tile_10_2" index="0"]
+material = SubResource("ShaderMaterial_e182l")
+
+[node name="tile_10_3" parent="tiles" instance=ExtResource("2_6pvbj")]
+modulate = Color(0.85, 0.85, 0.85, 1)
+position = Vector2(1300, 506)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(10, 3)
+
+[node name="SbTile" parent="tiles/tile_10_3" index="0"]
+material = SubResource("ShaderMaterial_ceh1w")
+
+[node name="tile_10_4" parent="tiles" instance=ExtResource("2_6pvbj")]
+modulate = Color(0.85, 0.85, 0.85, 1)
+position = Vector2(1300, 580)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(10, 4)
+
+[node name="SbTile" parent="tiles/tile_10_4" index="0"]
+material = SubResource("ShaderMaterial_bsnrr")
+
+[node name="tile_10_5" parent="tiles" instance=ExtResource("2_6pvbj")]
+visible = false
+modulate = Color(0.91, 0.91, 0.91, 1)
+position = Vector2(1300, 654)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(10, 5)
+
+[node name="SbTile" parent="tiles/tile_10_5" index="0"]
+material = SubResource("ShaderMaterial_qk6v0")
+
+[node name="tile_10_6" parent="tiles" instance=ExtResource("2_6pvbj")]
+visible = false
+position = Vector2(1300, 728)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(10, 6)
+
+[node name="SbTile" parent="tiles/tile_10_6" index="0"]
+material = SubResource("ShaderMaterial_yigbn")
+
+[node name="tree_bg_tiles" type="Node2D" parent="."]
+
+[node name="bg" type="Node2D" parent="."]
+
+[node name="ColorRect11" type="ColorRect" parent="bg"]
+z_index = -10
+material = SubResource("ShaderMaterial_qptsr")
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -3085.0
+offset_top = -2970.0
+offset_right = 5642.0
+offset_bottom = 4867.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.21087265, 0.29101563, 0.24140331, 1)
+
+[node name="bush" type="Node2D" parent="."]
+
+[node name="deco" type="Node2D" parent="."]
+z_index = 10
+
+[node name="SbRock5" type="Sprite2D" parent="deco"]
+modulate = Color(0.9293498, 0.9293498, 0.9293498, 1)
+position = Vector2(646.00006, 728)
+rotation = 0.064577185
+scale = Vector2(0.9609375, 0.9453125)
+texture = ExtResource("3_dq2i1")
+flip_h = true
+
+[node name="SbRock7" type="Sprite2D" parent="deco"]
+position = Vector2(742.00006, 760)
+rotation = 0.064577185
+scale = Vector2(0.9609375, 0.9453125)
+texture = ExtResource("3_dq2i1")
+
+[node name="SbRock4" type="Sprite2D" parent="deco"]
+modulate = Color(0.76027983, 0.76027983, 0.76027983, 1)
+position = Vector2(1028, 620)
+texture = ExtResource("4_qlo1l")
+
+[node name="SbRock6" type="Sprite2D" parent="deco"]
+position = Vector2(1159.9999, 547)
+rotation = 0.12217305
+texture = ExtResource("5_6pvbj")
+
+[node name="SbBush1" type="Sprite2D" parent="deco"]
+self_modulate = Color(0.03137255, 0.03137255, 0.03137255, 1)
+material = SubResource("ShaderMaterial_uxchn")
+position = Vector2(1099.0001, 712.00006)
+scale = Vector2(0.3398432, 0.3398432)
+texture = ExtResource("7_okl68")
+
+[node name="SbBush2" type="Sprite2D" parent="deco"]
+self_modulate = Color(0.03137255, 0.03137255, 0.03137255, 1)
+material = SubResource("ShaderMaterial_g5tuk")
+position = Vector2(498, 643)
+scale = Vector2(0.23632722, 0.25195304)
+texture = ExtResource("7_okl68")
+flip_h = true
+
+[node name="enemy_3" parent="." instance=ExtResource("3_aw74n")]
+position = Vector2(901, 451)
+scale = Vector2(0.2, 0.2)
+
+[node name="portal_fog" parent="." instance=ExtResource("9_6rh22")]
+position = Vector2(900, 787)
+
+[node name="overlay" type="Node2D" parent="."]
+z_index = 1000
+
+[node name="ColorRect" type="ColorRect" parent="overlay"]
+material = SubResource("ShaderMaterial_o8te8")
+offset_left = -2999.0
+offset_top = -1322.0
+offset_right = 9670.0
+offset_bottom = 4439.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[editable path="tiles/tile_2_1"]
+[editable path="tiles/tile_2_2"]
+[editable path="tiles/tile_2_3"]
+[editable path="tiles/tile_2_4"]
+[editable path="tiles/tile_2_5"]
+[editable path="tiles/tile_2_6"]
+[editable path="tiles/tile_3_0"]
+[editable path="tiles/tile_3_1"]
+[editable path="tiles/tile_3_2"]
+[editable path="tiles/tile_3_3"]
+[editable path="tiles/tile_3_4"]
+[editable path="tiles/tile_3_5"]
+[editable path="tiles/tile_3_6"]
+[editable path="tiles/tile_4_0"]
+[editable path="tiles/tile_4_1"]
+[editable path="tiles/tile_4_2"]
+[editable path="tiles/tile_4_3"]
+[editable path="tiles/tile_4_4"]
+[editable path="tiles/tile_4_5"]
+[editable path="tiles/tile_4_6"]
+[editable path="tiles/tile_4_7"]
+[editable path="tiles/tile_5_0"]
+[editable path="tiles/tile_5_1"]
+[editable path="tiles/tile_5_2"]
+[editable path="tiles/tile_5_3"]
+[editable path="tiles/tile_5_4"]
+[editable path="tiles/tile_5_5"]
+[editable path="tiles/tile_5_6"]
+[editable path="tiles/tile_6_0"]
+[editable path="tiles/tile_6_1"]
+[editable path="tiles/tile_6_2"]
+[editable path="tiles/tile_6_3"]
+[editable path="tiles/tile_6_4"]
+[editable path="tiles/tile_6_5"]
+[editable path="tiles/tile_6_6"]
+[editable path="tiles/tile_6_7"]
+[editable path="tiles/tile_7_0"]
+[editable path="tiles/tile_7_1"]
+[editable path="tiles/tile_7_2"]
+[editable path="tiles/tile_7_3"]
+[editable path="tiles/tile_7_4"]
+[editable path="tiles/tile_7_5"]
+[editable path="tiles/tile_7_6"]
+[editable path="tiles/tile_8_0"]
+[editable path="tiles/tile_8_1"]
+[editable path="tiles/tile_8_2"]
+[editable path="tiles/tile_8_3"]
+[editable path="tiles/tile_8_4"]
+[editable path="tiles/tile_8_5"]
+[editable path="tiles/tile_8_6"]
+[editable path="tiles/tile_8_7"]
+[editable path="tiles/tile_9_0"]
+[editable path="tiles/tile_9_1"]
+[editable path="tiles/tile_9_2"]
+[editable path="tiles/tile_9_3"]
+[editable path="tiles/tile_9_4"]
+[editable path="tiles/tile_9_5"]
+[editable path="tiles/tile_9_6"]
+[editable path="tiles/tile_10_1"]
+[editable path="tiles/tile_10_2"]
+[editable path="tiles/tile_10_3"]
+[editable path="tiles/tile_10_4"]
+[editable path="tiles/tile_10_5"]
+[editable path="tiles/tile_10_6"]

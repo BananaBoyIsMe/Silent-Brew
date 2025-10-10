@@ -37,7 +37,7 @@ func _physics_process(delta: float) -> void:
 		audio.play_walking()
 		var tween_walk1 = create_tween()
 		tween_walk1.tween_property(global.player, "position", global.player_des_real_pos + Vector2(0, -40), 0.8)
-		global.emit_signal("enemy_move")
+		#global.emit_signal("enemy_move")
 		#print(global.player_direction)
 		#print(global.player_des_pos)
 	

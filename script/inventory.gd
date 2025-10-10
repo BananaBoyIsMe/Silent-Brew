@@ -22,6 +22,11 @@ func new_item(item: String):
 			itemm.item_id = 2
 			itemm.position = Vector2(450.0, 500.0)
 			add_child(itemm)
+		"water_cry":
+			var itemm = load("res://scene/inventory/inventory_item.tscn").instantiate()
+			itemm.item_id = 3
+			itemm.position = Vector2(450.0, 500.0)
+			add_child(itemm)
 
 func _physics_process(_delta: float) -> void:
 	pass

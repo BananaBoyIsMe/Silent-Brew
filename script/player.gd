@@ -181,7 +181,6 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 					bark_emotion.gone_text(1)
 					global.inv_on = false
 					get_parent().next_scene()
-				
 		"snow":
 			undo = false
 			await get_tree().create_timer(0.7).timeout
@@ -199,7 +198,14 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 					bark_emotion.change_character_png("bark1", true)
 					await get_tree().create_timer(5).timeout
 					bark_emotion.gone_text(1)
+		"water_cry":
+			undo = false
+			await get_tree().create_timer(0.7).timeout
 			
+			if !undo:
+				global.emit_signal("add_inventory", "water_cry")
+				global.inv_on = false
+				global.inv_on = !global.inv_on
 	
 	if area.name.contains("block"):
 		audio.play_walking()

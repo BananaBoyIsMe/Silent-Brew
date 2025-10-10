@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://b3fgimaa00gty"]
+[gd_scene load_steps=31 format=3 uid="uid://b3fgimaa00gty"]
 
 [ext_resource type="Script" uid="uid://nqilfgkxaweb" path="res://script/playground.gd" id="1_d7uwg"]
 [ext_resource type="PackedScene" uid="uid://b7m8g1nleu1j0" path="res://scene/inventory/inventory.tscn" id="2_xbpqc"]
@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://jke0dwdhb4ni" path="res://script/map_icon.gd" id="8_6hok2"]
 [ext_resource type="Texture2D" uid="uid://d2ibw8u5ny45n" path="res://sprite/menu/sb_map_icon.png" id="9_1xboh"]
 [ext_resource type="Texture2D" uid="uid://b7tdoe4j8a6g2" path="res://sprite/map_ency_inven/sb_inv_icon.png" id="9_prf6u"]
+[ext_resource type="Script" uid="uid://dql4akfgy7d41" path="res://script/title_gif.gd" id="10_0o3fd"]
 [ext_resource type="Texture2D" uid="uid://b3u4u2qvox2b4" path="res://sprite/menu/sb_map_icon_glow.png" id="10_rdccy"]
 [ext_resource type="Texture2D" uid="uid://bowqse04gwgsr" path="res://sprite/map_ency_inven/sb_inv_icon_glow.png" id="10_xbpqc"]
 [ext_resource type="Script" uid="uid://rmketipvsi3l" path="res://script/book_icon.gd" id="11_ggvlr"]
@@ -23,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://csmnrp7pu413y" path="res://sprite/tiles/sb_load1.png" id="15_mnp3q"]
 [ext_resource type="Script" uid="uid://cnb6sindcwf4l" path="res://script/move_buffer.gd" id="16_clkgy"]
 [ext_resource type="PackedScene" uid="uid://c8kwmcofaojl1" path="res://scene/levels/time.tscn" id="23_d84w1"]
+[ext_resource type="Texture2D" uid="uid://ba4cehmmktav" path="res://sprite/menu/sb_promote.png" id="24_a330a"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_qcna6"]
 shader = ExtResource("5_m2ofn")
@@ -81,6 +83,7 @@ script = ExtResource("3_rjoos")
 [node name="screen_dark" type="ColorRect" parent="paused"]
 visible = false
 modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0.8)
 z_index = 500
 offset_left = -64.0
 offset_top = -39.0
@@ -157,6 +160,14 @@ scale = Vector2(0.3, 0.3)
 texture = ExtResource("5_538jc")
 vframes = 2
 frame = 1
+
+[node name="SbPromote" type="Sprite2D" parent="paused"]
+modulate = Color(1.2, 1.2, 1.2, 1)
+z_index = -1000
+position = Vector2(993, 543)
+scale = Vector2(0.53, 0.53)
+texture = ExtResource("24_a330a")
+script = ExtResource("10_0o3fd")
 
 [node name="menu_pic_2" parent="." instance=ExtResource("5_hbvmf")]
 visible = false

@@ -1,0 +1,426 @@
+[gd_scene load_steps=11 format=3 uid="uid://bhcohtw80b4h1"]
+
+[ext_resource type="PackedScene" uid="uid://e2jhu0ksgvw1" path="res://scene/tiles/tile_1.tscn" id="1_35uwu"]
+[ext_resource type="Script" uid="uid://jhfgd4soit51" path="res://script/level_7.gd" id="1_yo76x"]
+[ext_resource type="Texture2D" uid="uid://0j1ip6s8fj0f" path="res://sprite/deco/sb_house_soap_basil.png" id="2_070ud"]
+[ext_resource type="Shader" uid="uid://bkexlxs4tam0g" path="res://shader/nighttime.gdshader" id="3_8kic1"]
+[ext_resource type="Texture2D" uid="uid://exll0ujaajpo" path="res://sprite/deco/sb_house_table.png" id="3_w3uop"]
+[ext_resource type="Texture2D" uid="uid://bg0eflm8ad267" path="res://sprite/deco/sb_house_wall1.png" id="4_hiiki"]
+[ext_resource type="Texture2D" uid="uid://jbavx237x7hl" path="res://sprite/character/mini_lori1.png" id="6_w3uop"]
+[ext_resource type="Texture2D" uid="uid://dn563k6r0b1h1" path="res://sprite/character/mini_nori1.png" id="7_hiiki"]
+[ext_resource type="PackedScene" uid="uid://cbfvufi4n47he" path="res://scene/tiles/portal_fog.tscn" id="9_1os57"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vuqmg"]
+shader = ExtResource("3_8kic1")
+shader_parameter/darkness = 0.5200000247
+shader_parameter/desaturate = 0.450000021375
+shader_parameter/tint_color = Color(0.2, 0.3, 0.8, 1)
+shader_parameter/tint_strength = 0.05
+shader_parameter/contrast = 1.300000038
+
+[node name="level_7" type="Node2D"]
+script = ExtResource("1_yo76x")
+
+[node name="tiles" type="Node2D" parent="."]
+
+[node name="tile_3_4" parent="tiles" instance=ExtResource("1_35uwu")]
+modulate = Color(0.7372549, 0.72156864, 0.72156864, 1)
+position = Vector2(600, 617)
+scale = Vector2(0.5, 0.313)
+tile_id = 4
+tile_co = Vector2(3, 4)
+input_tile = true
+input_text_str = "@A nice table!|@Granny is so@ good at decoration!"
+input_face_str = "13|12"
+
+[node name="tile_rope" parent="tiles" instance=ExtResource("1_35uwu")]
+modulate = Color(0.7372549, 0.72156864, 0.72156864, 1)
+position = Vector2(1416, 347.00003)
+scale = Vector2(0.5, 0.47299755)
+tile_id = 4
+input_tile = true
+input_text_str = "@Grandpa Nori's rope!|@I don't know @what he use it for."
+input_face_str = "13|11"
+
+[node name="tile_cutlery" parent="tiles" instance=ExtResource("1_35uwu")]
+modulate = Color(0.7372549, 0.72156864, 0.72156864, 1)
+position = Vector2(1225, 224)
+scale = Vector2(0.5, 0.47299755)
+tile_id = 4
+input_tile = true
+input_text_str = "@Granny's cutlepy!|@...|@Culery? Cutiery?|@Food eating stuff!"
+input_face_str = "13|1|10|12"
+
+[node name="tile_cutlery2" parent="tiles" instance=ExtResource("1_35uwu")]
+modulate = Color(0.7372549, 0.72156864, 0.72156864, 1)
+position = Vector2(1020, 154)
+scale = Vector2(0.5, 0.47299755)
+tile_id = 4
+input_tile = true
+input_text_str = "@Thingy thingies...| @I don't what@ they are...."
+input_face_str = "10|3"
+
+[node name="tile_4_1" parent="tiles" instance=ExtResource("1_35uwu")]
+modulate = Color(0.6651851, 0.6262097, 0.60971165, 1)
+position = Vector2(700, 358)
+scale = Vector2(0.5, 0.313)
+tile_id = 4
+tile_co = Vector2(4, 1)
+input_tile = true
+input_text_str = "@Let's not go there...|@ I don't wanna@ @wake granny up!"
+input_face_str = "11|3"
+
+[node name="tile_4_4" parent="tiles" instance=ExtResource("1_35uwu")]
+modulate = Color(0.79607844, 0.76862746, 0.76862746, 1)
+position = Vector2(700, 580)
+scale = Vector2(0.5, 0.313)
+tile_id = 4
+tile_co = Vector2(4, 4)
+input_tile = true
+input_text_str = "@A nice table!|@Granny is so@ good at decoration!"
+input_face_str = "13|12"
+
+[node name="tile_4_5" parent="tiles" instance=ExtResource("1_35uwu")]
+modulate = Color(0.79607844, 0.76862746, 0.76862746, 1)
+position = Vector2(700, 654)
+scale = Vector2(0.5, 0.313)
+tile_id = 4
+tile_co = Vector2(4, 5)
+input_tile = true
+input_text_str = "@A nice table!|@Granny is so@ good at decoration!"
+input_face_str = "13|12"
+
+[node name="tile_5_0" parent="tiles" instance=ExtResource("1_35uwu")]
+modulate = Color(0.6651851, 0.6262097, 0.60971165, 1)
+position = Vector2(800, 321)
+scale = Vector2(0.5, 0.313)
+tile_id = 4
+tile_co = Vector2(5, 0)
+input_tile = true
+input_text_str = "@Let's not go there...|@ I don't wanna@ @wake granny up!"
+input_face_str = "11|3"
+
+[node name="tile_5_1" parent="tiles" instance=ExtResource("1_35uwu")]
+modulate = Color(0.7372549, 0.72156864, 0.72156864, 1)
+position = Vector2(800, 395)
+scale = Vector2(0.5, 0.313)
+tile_id = 4
+tile_co = Vector2(5, 1)
+input_tile = true
+input_text_str = "@Let's not go there...|@ I don't wanna@ @wake granny up!"
+input_face_str = "11|3"
+
+[node name="tile_5_3" parent="tiles" instance=ExtResource("1_35uwu")]
+modulate = Color(0.8378605, 0.80946815, 0.80946815, 1)
+position = Vector2(800, 543)
+scale = Vector2(0.5, 0.313)
+tile_id = 4
+tile_co = Vector2(5, 3)
+
+[node name="tile_5_4" parent="tiles" instance=ExtResource("1_35uwu")]
+modulate = Color(0.85490197, 0.8156863, 0.8156863, 1)
+position = Vector2(800, 617)
+scale = Vector2(0.5, 0.313)
+tile_id = 4
+tile_co = Vector2(5, 4)
+input_tile = true
+input_text_str = "@A nice table!|@Granny is so@ good at decoration!"
+input_face_str = "13|12"
+
+[node name="tile_5_5" parent="tiles" instance=ExtResource("1_35uwu")]
+modulate = Color(0.8378605, 0.8152507, 0.8152507, 1)
+position = Vector2(800, 691)
+scale = Vector2(0.5, 0.313)
+tile_id = 4
+tile_co = Vector2(5, 5)
+input_tile = true
+input_text_str = "@A nice table!|@Granny is so@ good at decoration!"
+input_face_str = "13|12"
+
+[node name="tile_6_1" parent="tiles" instance=ExtResource("1_35uwu")]
+modulate = Color(0.7372549, 0.72156864, 0.72156864, 1)
+position = Vector2(900, 358)
+rotation = 3.14159
+scale = Vector2(0.5, 0.313)
+tile_id = 4
+tile_co = Vector2(6, 1)
+input_tile = true
+input_text_str = "@Let's not go there...|@ I don't wanna@ @wake granny up!"
+input_face_str = "11|3"
+
+[node name="tile_6_2" parent="tiles" instance=ExtResource("1_35uwu")]
+modulate = Color(0.8392157, 0.8156863, 0.8156863, 1)
+position = Vector2(900, 432)
+rotation = 3.14159
+scale = Vector2(0.5, 0.313)
+tile_id = 4
+tile_co = Vector2(6, 2)
+
+[node name="tile_6_3" parent="tiles" instance=ExtResource("1_35uwu")]
+modulate = Color(0.9063318, 0.8808251, 0.8808251, 1)
+position = Vector2(900, 506)
+rotation = 3.14159
+scale = Vector2(0.5, 0.313)
+tile_id = 4
+tile_co = Vector2(6, 3)
+
+[node name="tile_6_4" parent="tiles" instance=ExtResource("1_35uwu")]
+modulate = Color(0.95468724, 0.9309246, 0.9309246, 1)
+position = Vector2(900, 580)
+scale = Vector2(0.5, 0.313)
+tile_id = 4
+tile_co = Vector2(6, 4)
+
+[node name="tile_6_5" parent="tiles" instance=ExtResource("1_35uwu")]
+modulate = Color(0.9309246, 0.9013065, 0.8911433, 1)
+position = Vector2(900, 654)
+scale = Vector2(0.5, 0.313)
+tile_id = 4
+tile_co = Vector2(6, 5)
+input_tile = true
+input_text_str = "@A nice table!|@Granny is so@ good at decoration!"
+input_face_str = "13|12"
+
+[node name="tile_6_6" parent="tiles" instance=ExtResource("1_35uwu")]
+modulate = Color(0.8378605, 0.8152507, 0.8152507, 1)
+position = Vector2(900, 728)
+scale = Vector2(0.5, 0.313)
+tile_id = 4
+tile_co = Vector2(6, 6)
+input_tile = true
+input_text_str = "@A nice table!|@Granny is so@ good at decoration!"
+input_face_str = "13|12"
+
+[node name="tile_7_1" parent="tiles" instance=ExtResource("1_35uwu")]
+modulate = Color(0.8152507, 0.785777, 0.785777, 1)
+position = Vector2(1000, 395)
+rotation = -3.14159
+scale = Vector2(0.5, 0.313)
+tile_id = 4
+tile_co = Vector2(7, 1)
+
+[node name="tile_7_2" parent="tiles" instance=ExtResource("1_35uwu")]
+modulate = Color(0.90588236, 0.88235295, 0.88235295, 1)
+position = Vector2(1000, 469)
+rotation = -3.14159
+scale = Vector2(0.5, 0.313)
+tile_id = 4
+tile_co = Vector2(7, 2)
+
+[node name="tile_7_3" parent="tiles" instance=ExtResource("1_35uwu")]
+modulate = Color(0.9309246, 0.9063318, 0.9063318, 1)
+position = Vector2(1000, 543)
+scale = Vector2(0.5, 0.313)
+tile_id = 4
+tile_co = Vector2(7, 3)
+
+[node name="tile_7_4" parent="tiles" instance=ExtResource("1_35uwu")]
+position = Vector2(1000, 617)
+scale = Vector2(0.5, 0.313)
+tile_id = 4
+tile_co = Vector2(7, 4)
+
+[node name="tile_7_5" parent="tiles" instance=ExtResource("1_35uwu")]
+modulate = Color(0.9309246, 0.9013065, 0.8911433, 1)
+position = Vector2(1000, 691)
+scale = Vector2(0.5, 0.313)
+tile_id = 4
+tile_co = Vector2(7, 5)
+input_tile = true
+input_text_str = "@A nice table!|@Granny is so@ good at decoration!"
+input_face_str = "13|12"
+
+[node name="tile_7_6" parent="tiles" instance=ExtResource("1_35uwu")]
+modulate = Color(0.8209799, 0.785777, 0.785777, 1)
+position = Vector2(1000, 765)
+scale = Vector2(0.5, 0.313)
+tile_id = 4
+tile_co = Vector2(7, 6)
+
+[node name="tile_8_2" parent="tiles" instance=ExtResource("1_35uwu")]
+modulate = Color(0.85430586, 0.8152507, 0.8152507, 1)
+position = Vector2(1100, 432)
+scale = Vector2(0.5, 0.313)
+tile_id = 4
+tile_co = Vector2(8, 2)
+
+[node name="tile_8_3" parent="tiles" instance=ExtResource("1_35uwu")]
+modulate = Color(0.9063318, 0.8808251, 0.8808251, 1)
+position = Vector2(1100, 506)
+scale = Vector2(0.5, 0.313)
+tile_id = 4
+tile_co = Vector2(8, 3)
+
+[node name="tile_8_4" parent="tiles" instance=ExtResource("1_35uwu")]
+position = Vector2(1100, 580)
+scale = Vector2(0.5, 0.313)
+tile_id = 4
+tile_co = Vector2(8, 4)
+
+[node name="tile_8_5" parent="tiles" instance=ExtResource("1_35uwu")]
+position = Vector2(1100, 654)
+scale = Vector2(0.5, 0.313)
+tile_id = 4
+tile_co = Vector2(8, 5)
+
+[node name="tile_8_6" parent="tiles" instance=ExtResource("1_35uwu")]
+modulate = Color(0.85490197, 0.8156863, 0.8156863, 1)
+position = Vector2(1100, 728)
+scale = Vector2(0.5, 0.313)
+tile_id = 4
+tile_co = Vector2(8, 6)
+
+[node name="tile_9_2" parent="tiles" instance=ExtResource("1_35uwu")]
+modulate = Color(0.8392157, 0.8156863, 0.8156863, 1)
+position = Vector2(1200, 469)
+scale = Vector2(0.5, 0.313)
+tile_id = 4
+tile_co = Vector2(9, 2)
+input_tile = true
+input_text_str = "@a chest.|@I don't think@I should touch it..."
+input_face_str = "2|3"
+
+[node name="tile_9_3" parent="tiles" instance=ExtResource("1_35uwu")]
+modulate = Color(0.886004, 0.85430586, 0.85430586, 1)
+position = Vector2(1200, 543)
+scale = Vector2(0.5, 0.313)
+tile_id = 4
+tile_co = Vector2(9, 3)
+
+[node name="tile_9_4" parent="tiles" instance=ExtResource("1_35uwu")]
+position = Vector2(1200, 617)
+scale = Vector2(0.5, 0.313)
+tile_id = 4
+tile_co = Vector2(9, 4)
+
+[node name="tile_9_5" parent="tiles" instance=ExtResource("1_35uwu")]
+modulate = Color(0.92941177, 0.9019608, 0.8901961, 1)
+position = Vector2(1200, 691)
+scale = Vector2(0.5, 0.313)
+tile_id = 4
+tile_co = Vector2(9, 5)
+
+[node name="tile_10_3" parent="tiles" instance=ExtResource("1_35uwu")]
+modulate = Color(0.8378605, 0.8152507, 0.8152507, 1)
+position = Vector2(1300, 506)
+scale = Vector2(0.5, 0.313)
+tile_id = 4
+tile_co = Vector2(10, 3)
+input_tile = true
+
+[node name="tile_10_4" parent="tiles" instance=ExtResource("1_35uwu")]
+modulate = Color(0.886004, 0.85430586, 0.85430586, 1)
+position = Vector2(1300, 580)
+scale = Vector2(0.5, 0.313)
+tile_id = 4
+tile_co = Vector2(10, 4)
+
+[node name="tile_10_5" parent="tiles" instance=ExtResource("1_35uwu")]
+modulate = Color(0.92941177, 0.9019608, 0.8901961, 1)
+position = Vector2(1300, 654)
+scale = Vector2(0.5, 0.313)
+tile_id = 4
+tile_co = Vector2(10, 5)
+
+[node name="tile_11_3" parent="tiles" instance=ExtResource("1_35uwu")]
+modulate = Color(0.8378605, 0.8152507, 0.8152507, 1)
+position = Vector2(1400, 543)
+scale = Vector2(0.5, 0.313)
+tile_id = 4
+tile_co = Vector2(11, 3)
+
+[node name="tile_11_4" parent="tiles" instance=ExtResource("1_35uwu")]
+modulate = Color(0.85430586, 0.8152507, 0.8152507, 1)
+position = Vector2(1400, 617)
+scale = Vector2(0.5, 0.313)
+tile_id = 4
+tile_co = Vector2(11, 4)
+
+[node name="tile_12_4" parent="tiles" instance=ExtResource("1_35uwu")]
+modulate = Color(0.7483791, 0.7220274, 0.7220274, 1)
+position = Vector2(1500, 580)
+scale = Vector2(0.5, 0.313)
+tile_id = 4
+tile_co = Vector2(12, 4)
+input_tile = true
+input_text_str = "@Granny's Basils!| @Granny said they@ repel bugs...| @Maybe that's why@Granny's house has @ no bugs."
+input_face_str = "12|1|13"
+
+[node name="tree_bg_tiles" type="Node2D" parent="."]
+
+[node name="bush" type="Node2D" parent="."]
+
+[node name="deco" type="Node2D" parent="."]
+z_index = 10
+
+[node name="SbHouseSoapBasil" type="Sprite2D" parent="deco"]
+z_index = 1
+position = Vector2(1497, 532)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_070ud")
+
+[node name="SbHouseTable" type="Sprite2D" parent="deco"]
+position = Vector2(832, 610.00006)
+rotation = 0.034906585
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_w3uop")
+
+[node name="SbHouseWall1" type="Sprite2D" parent="deco"]
+position = Vector2(1187, 276)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_hiiki")
+
+[node name="overlay" type="Node2D" parent="."]
+visible = false
+z_index = 1000
+
+[node name="ColorRect" type="ColorRect" parent="overlay"]
+material = SubResource("ShaderMaterial_vuqmg")
+offset_left = -2046.0
+offset_top = -1777.0
+offset_right = 5096.0
+offset_bottom = 2851.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="bg" type="Node2D" parent="."]
+
+[node name="ColorRect11" type="ColorRect" parent="bg"]
+z_index = -10
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -3085.0
+offset_top = -2970.0
+offset_right = 5642.0
+offset_bottom = 4867.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.2901961, 0.26047796, 0.2117647, 1)
+
+[node name="MiniLori1" type="Sprite2D" parent="."]
+z_index = 10
+position = Vector2(1103, 427)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("6_w3uop")
+
+[node name="MiniNori1" type="Sprite2D" parent="."]
+z_index = 10
+position = Vector2(906, 415)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_hiiki")
+
+[node name="portal_fog" parent="." instance=ExtResource("9_1os57")]
+z_index = 10
+position = Vector2(1000, 749)
+
+[node name="portal_fog2" parent="." instance=ExtResource("9_1os57")]
+z_index = 10
+position = Vector2(1400, 545)
+
+[node name="portal_fog3" parent="." instance=ExtResource("9_1os57")]
+z_index = 10
+position = Vector2(998, 470)

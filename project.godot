@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Silent Brew"
 run/main_scene="res://scene/playground.tscn"
-config/features=PackedStringArray("4.4", "GL Compatibility")
+config/features=PackedStringArray("4.5", "GL Compatibility")
 boot_splash/bg_color=Color(0.298538, 0.587891, 0.320014, 1)
 config/icon="res://icon.svg"
 
@@ -26,7 +26,6 @@ audio="*res://sound/audio.tscn"
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
 
 [input]
 

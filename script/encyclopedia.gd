@@ -9,7 +9,7 @@ preload("res://scene/encyclopedia/death_cap_5.tscn"),
 preload("res://scene/encyclopedia/black_salmon_berry_6.tscn"),
 preload("res://scene/encyclopedia/murder_maple_7.tscn"),
 preload("res://scene/encyclopedia/sound_bloom_8.tscn"),
-preload("res://scene/encyclopedia/coughing_bean_9.tscn"),
+#preload("res://scene/encyclopedia/coughing_bean_9.tscn"),
 preload("res://scene/encyclopedia/soap_basil_10.tscn"),
 preload("res://scene/encyclopedia/sun_flower_11.tscn"),
 ]

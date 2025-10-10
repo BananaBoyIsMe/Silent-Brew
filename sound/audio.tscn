@@ -1,7 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://cieroyxnhx6jr"]
+[gd_scene load_steps=10 format=3 uid="uid://cieroyxnhx6jr"]
 
 [ext_resource type="Script" uid="uid://csplrn02ak535" path="res://sound/audio.gd" id="1_dqtri"]
-[ext_resource type="AudioStream" uid="uid://ddrqrry1s1h5l" path="res://sound/menu-wind.mp3" id="2_2316i"]
 [ext_resource type="AudioStream" uid="uid://djtu0oxya46sw" path="res://sound/walking.wav" id="2_jhm12"]
 [ext_resource type="AudioStream" uid="uid://celqmqi8baf72" path="res://sound/dark-cave.mp3" id="4_5ld2b"]
 [ext_resource type="AudioStream" uid="uid://tjponx6wixvk" path="res://sound/button.wav" id="4_lwdmc"]
@@ -15,11 +14,6 @@
 script = ExtResource("1_dqtri")
 
 [node name="room1" type="AudioStreamPlayer2D" parent="."]
-bus = &"Music"
-
-[node name="menu" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("2_2316i")
-volume_db = 10.0
 bus = &"Music"
 
 [node name="walking" type="AudioStreamPlayer2D" parent="."]

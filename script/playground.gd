@@ -4,9 +4,12 @@ var rng = RandomNumberGenerator.new()
 @onready var camera = $Camera2D
 @onready var spawn_zoom = $spawn_zoom
 
-#func _ready() -> void:
-	#pass # Replace with function body.
-#
+func _ready() -> void:
+	global.bark_emotion = $character_emotion
+	global.other_emotion = $character_emotion2
+	global.time = $time
+	global.foreground = $foreground
+
 #func _physics_process(_delta: float) -> void:
 	#pass
 

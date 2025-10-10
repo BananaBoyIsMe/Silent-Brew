@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccgyamsaj7lyt"]
+
+[ext_resource type="Script" uid="uid://c38vwvxy3aaw4" path="res://script/enemy_3.gd" id="1_nrovt"]
+[ext_resource type="Texture2D" uid="uid://k3a542vxpgsp" path="res://sprite/enemy/sb_enemy_tree1.png" id="2_ya2hd"]
+
+[node name="enemy_3" type="Node2D"]
+script = ExtResource("1_nrovt")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ya2hd")
+offset = Vector2(0, -10)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://sj6lkjotakf8"]
+[gd_scene load_steps=18 format=3 uid="uid://sj6lkjotakf8"]
 
 [ext_resource type="Script" uid="uid://dticv84bm3252" path="res://script/select_level.gd" id="1_8ebih"]
 [ext_resource type="Texture2D" uid="uid://drb0xdauq288q" path="res://sprite/menu/sb_next_button.png" id="2_vf7qe"]
@@ -9,12 +9,17 @@
 [ext_resource type="Texture2D" uid="uid://dbo1lt2brqixh" path="res://sprite/menu/sb_level4.png" id="6_uloro"]
 [ext_resource type="Texture2D" uid="uid://23v8jfuyjw0y" path="res://sprite/menu/sb_level5.png" id="7_55kyr"]
 [ext_resource type="Texture2D" uid="uid://f08qkn3r8i0y" path="res://sprite/menu/sb_level6.png" id="8_8ehqn"]
+[ext_resource type="Texture2D" uid="uid://but8v7w2vy4du" path="res://sprite/menu/sb_level7.png" id="9_8ehqn"]
+[ext_resource type="Texture2D" uid="uid://ctpnmpvbiyswl" path="res://sprite/menu/sb_level8.png" id="10_xajdu"]
+[ext_resource type="Texture2D" uid="uid://bhvn0a3nk6500" path="res://sprite/menu/sb_level9.png" id="11_q7x5q"]
+[ext_resource type="Texture2D" uid="uid://bjro4fv7txlft" path="res://sprite/menu/sb_level10.png" id="12_jsi6v"]
+[ext_resource type="Texture2D" uid="uid://n8aqfdnpqlv4" path="res://sprite/menu/sb_level11.png" id="13_mloim"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_div0t"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nnhxp"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rfwib"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nnhxp"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_div0t"]
 
 [node name="select_level" type="Node2D"]
 z_index = 600
@@ -38,17 +43,17 @@ offset_right = 330.0
 offset_bottom = 781.0
 rotation = -1.5708
 theme_override_font_sizes/font_size = 100
-theme_override_styles/focus = SubResource("StyleBoxEmpty_div0t")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_rfwib")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_nnhxp")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_nnhxp")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_nnhxp")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_nnhxp")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_nnhxp")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_nnhxp")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_nnhxp")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_nnhxp")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_nnhxp")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_nnhxp")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_nnhxp")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_nnhxp")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nnhxp")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_nnhxp")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_nnhxp")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_nnhxp")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_nnhxp")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_rfwib")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_div0t")
 metadata/_edit_use_anchors_ = true
 
 [node name="SbNextButton" type="Sprite2D" parent="left_bt"]
@@ -64,17 +69,17 @@ offset_right = 2172.0
 offset_bottom = 494.0
 rotation = 1.5708
 theme_override_font_sizes/font_size = 100
-theme_override_styles/focus = SubResource("StyleBoxEmpty_div0t")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_rfwib")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_nnhxp")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_nnhxp")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_nnhxp")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_nnhxp")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_nnhxp")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_nnhxp")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_nnhxp")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_nnhxp")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_nnhxp")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_nnhxp")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_nnhxp")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_nnhxp")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_nnhxp")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_nnhxp")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_nnhxp")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_nnhxp")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_nnhxp")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_rfwib")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_div0t")
 metadata/_edit_use_anchors_ = true
 
 [node name="SbNextButton2" type="Sprite2D" parent="right_bt"]
@@ -188,7 +193,7 @@ metadata/_edit_use_anchors_ = true
 modulate = Color(1, 1, 1, 0)
 position = Vector2(2040.4, 499.6)
 scale = Vector2(0.07, 0.07)
-texture = ExtResource("5_kuypm")
+texture = ExtResource("9_8ehqn")
 
 [node name="7" type="Label" parent="sb_select_level7"]
 offset_left = -1293.33
@@ -205,7 +210,7 @@ metadata/_edit_use_anchors_ = true
 modulate = Color(1, 1, 1, 0)
 position = Vector2(2040.4, 499.6)
 scale = Vector2(0.07, 0.07)
-texture = ExtResource("5_kuypm")
+texture = ExtResource("10_xajdu")
 
 [node name="8" type="Label" parent="sb_select_level8"]
 offset_left = -1293.33
@@ -222,7 +227,7 @@ metadata/_edit_use_anchors_ = true
 modulate = Color(1, 1, 1, 0)
 position = Vector2(2040.4, 499.6)
 scale = Vector2(0.07, 0.07)
-texture = ExtResource("5_kuypm")
+texture = ExtResource("11_q7x5q")
 
 [node name="9" type="Label" parent="sb_select_level9"]
 offset_left = -1293.33
@@ -239,7 +244,7 @@ metadata/_edit_use_anchors_ = true
 modulate = Color(1, 1, 1, 0)
 position = Vector2(2040.4, 499.6)
 scale = Vector2(0.07, 0.07)
-texture = ExtResource("5_kuypm")
+texture = ExtResource("12_jsi6v")
 
 [node name="10" type="Label" parent="sb_select_level10"]
 offset_left = -1293.33
@@ -256,7 +261,7 @@ metadata/_edit_use_anchors_ = true
 modulate = Color(1, 1, 1, 0)
 position = Vector2(2040.4, 499.6)
 scale = Vector2(0.07, 0.07)
-texture = ExtResource("5_kuypm")
+texture = ExtResource("13_mloim")
 
 [node name="11" type="Label" parent="sb_select_level11"]
 offset_left = -1293.33
@@ -390,7 +395,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="sb_select_level19" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(-119.6, 499.6)
+position = Vector2(2040.4, 499.6)
 scale = Vector2(0.07, 0.07)
 texture = ExtResource("5_kuypm")
 
@@ -406,8 +411,8 @@ vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="sb_select_level20" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.5)
-position = Vector2(420.4, 499.6)
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-119.6, 499.6)
 scale = Vector2(0.07, 0.07)
 texture = ExtResource("5_kuypm")
 
@@ -418,6 +423,23 @@ offset_right = 1255.67
 offset_bottom = 668.667
 theme_override_font_sizes/font_size = 1000
 text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="sb_select_level21" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(420.4, 499.6)
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("5_kuypm")
+
+[node name="21" type="Label" parent="sb_select_level21"]
+offset_left = -1293.33
+offset_top = -693.333
+offset_right = 1255.67
+offset_bottom = 668.667
+theme_override_font_sizes/font_size = 1000
+text = "21"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true

@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://4ofm4b5grxfu"]
+
+[ext_resource type="Texture2D" uid="uid://1wi2ggd1fqmf" path="res://sprite/enemy/sb_deathleaf.png" id="1_bjv4b"]
+[ext_resource type="Script" uid="uid://b0u25rjg7jsa6" path="res://script/enemy_3_leaf.gd" id="1_ek8dy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bjv4b"]
+radius = 55.00909
+
+[node name="enemy_3_leaf" type="Node2D"]
+script = ExtResource("1_ek8dy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_bjv4b")
+offset = Vector2(0, -10)
+
+[node name="enemy" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy"]
+position = Vector2(0, -4)
+shape = SubResource("CircleShape2D_bjv4b")

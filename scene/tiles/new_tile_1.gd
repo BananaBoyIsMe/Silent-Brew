@@ -5,7 +5,7 @@ var sprite_material
 var saturation = 1.0
 var rng = RandomNumberGenerator.new()
 
-var tile_text_load = preload("res://scene/tiles/tile_text.tscn")
+#var tile_text_load = preload("res://scene/tiles/tile_text.tscn")
 
 @export var tile_id = 1
 @export var tile_co = Vector2(0, 0)
@@ -16,7 +16,9 @@ var original_scale
 var original_modulate
 
 @export var input_tile = false
+#| = new conver @ = new line
 @export var input_text_str: String
+@export var input_face_str: String
 
 func _ready() -> void:
 	global.connect("inv_toggled", disable_tile)
@@ -116,12 +118,20 @@ func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int
 		return
 	if (event is InputEventMouseButton and event.pressed) or (event is InputEventScreenTouch and event.pressed):
 		if input_tile:
-			var tile_text = tile_text_load.instantiate()
-			tile_text.position = get_parent().get_parent().get_local_mouse_position()
-			tile_text.get_child(0).text = input_text_str
-			tile_text.scale = Vector2(1.1, 1.1)
-			get_parent().get_parent().add_child(tile_text)
+			#var tile_text = tile_text_load.instantiate()
+			#tile_text.position = get_parent().get_parent().get_local_mouse_position()
+			#tile_text.get_child(0).text = input_text_str
+			#tile_text.scale = Vector2(1.1, 1.1)
+			#get_parent().get_parent().add_child(tile_text)
 			#print("Hi")
+			global.bark_emotion.player_input = true
+			#global.bark_emotion.input_text = input_text_str
+			#global.bark_emotion.input_face = input_face_str
+			global.in_cutscene = true
+			global.bark_emotion.split_text_clean(input_text_str, input_face_str) 
+			
+			global.bark_emotion.cur_player_input_num = -1
+			
 			return
 		global.tile_co = tile_co
 		global.player_direction = global.find_shortest_path_even_q(global.player_des_pos, global.tile_co, global.all_room_dict[global.current_room])

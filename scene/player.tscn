@@ -9,11 +9,11 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_ofndg"]
 radius = 60.0
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oh5ij"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g2vtq"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hp4bs"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g2vtq"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oh5ij"]
 
 [node name="player" type="Node2D"]
 script = ExtResource("1_os8wr")
@@ -39,17 +39,17 @@ offset_bottom = 3.99998
 rotation = -1.22173
 scale = Vector2(-0.6, 1.5)
 theme_override_font_sizes/font_size = 100
-theme_override_styles/focus = SubResource("StyleBoxEmpty_oh5ij")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_hp4bs")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_g2vtq")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_g2vtq")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_g2vtq")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_g2vtq")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_g2vtq")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_g2vtq")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_g2vtq")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_g2vtq")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_hp4bs")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_oh5ij")
 script = ExtResource("4_s4jxa")
 metadata/_edit_use_anchors_ = true
 
@@ -69,17 +69,17 @@ offset_right = 381.0
 offset_bottom = -174.0
 scale = Vector2(-0.6, 1.5)
 theme_override_font_sizes/font_size = 100
-theme_override_styles/focus = SubResource("StyleBoxEmpty_oh5ij")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_hp4bs")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_g2vtq")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_g2vtq")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_g2vtq")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_g2vtq")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_g2vtq")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_g2vtq")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_g2vtq")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_g2vtq")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_hp4bs")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_oh5ij")
 script = ExtResource("4_s4jxa")
 metadata/_edit_use_anchors_ = true
 
@@ -100,17 +100,17 @@ offset_bottom = 184.0
 rotation = 1.22173
 scale = Vector2(-0.6, 1.5)
 theme_override_font_sizes/font_size = 100
-theme_override_styles/focus = SubResource("StyleBoxEmpty_oh5ij")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_hp4bs")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_g2vtq")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_g2vtq")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_g2vtq")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_g2vtq")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_g2vtq")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_g2vtq")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_g2vtq")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_g2vtq")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_hp4bs")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_oh5ij")
 script = ExtResource("4_s4jxa")
 metadata/_edit_use_anchors_ = true
 
@@ -131,17 +131,17 @@ offset_bottom = 561.0
 rotation = 1.91986
 scale = Vector2(-0.6, 1.5)
 theme_override_font_sizes/font_size = 100
-theme_override_styles/focus = SubResource("StyleBoxEmpty_oh5ij")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_hp4bs")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_g2vtq")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_g2vtq")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_g2vtq")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_g2vtq")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_g2vtq")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_g2vtq")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_g2vtq")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_g2vtq")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_hp4bs")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_oh5ij")
 script = ExtResource("4_s4jxa")
 metadata/_edit_use_anchors_ = true
 
@@ -162,17 +162,17 @@ offset_bottom = 797.0
 rotation = 3.14159
 scale = Vector2(-0.6, 1.5)
 theme_override_font_sizes/font_size = 100
-theme_override_styles/focus = SubResource("StyleBoxEmpty_oh5ij")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_hp4bs")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_g2vtq")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_g2vtq")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_g2vtq")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_g2vtq")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_g2vtq")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_g2vtq")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_g2vtq")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_g2vtq")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_hp4bs")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_oh5ij")
 script = ExtResource("4_s4jxa")
 metadata/_edit_use_anchors_ = true
 
@@ -193,17 +193,17 @@ offset_bottom = 383.0
 rotation = -1.91986
 scale = Vector2(-0.6, 1.5)
 theme_override_font_sizes/font_size = 100
-theme_override_styles/focus = SubResource("StyleBoxEmpty_oh5ij")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_hp4bs")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_g2vtq")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_g2vtq")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_g2vtq")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_g2vtq")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_g2vtq")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_g2vtq")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_g2vtq")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_g2vtq")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g2vtq")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_hp4bs")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_oh5ij")
 script = ExtResource("4_s4jxa")
 metadata/_edit_use_anchors_ = true
 

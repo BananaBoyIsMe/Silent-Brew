@@ -31,9 +31,10 @@ func _ready() -> void:
 	select_level_list.append($sb_select_level18)
 	select_level_list.append($sb_select_level19)
 	select_level_list.append($sb_select_level20)
+	select_level_list.append($sb_select_level21)
 	
-	select_level_cur.append(select_level_list[19])
 	select_level_cur.append(select_level_list[20])
+	select_level_cur.append(select_level_list[21])
 	select_level_cur.append(select_level_list[1])
 	select_level_cur.append(select_level_list[2])
 	select_level_cur.append(select_level_list[3])
@@ -65,7 +66,7 @@ func _on_left_bt_button_up() -> void:
 	
 	current_level -= 1
 	if current_level < 1:
-		current_level = 20
+		current_level = 21
 	
 	level_num.text = "Level " + str(current_level) + ": "
 	match current_level:
@@ -88,54 +89,57 @@ func _on_left_bt_button_up() -> void:
 			level_num.text += "Granny hut"
 			play_bt.disabled = false
 		7:
-			level_num.text += "Murder Maple (Coming soon)"
+			level_num.text += "Inside Granny hut"
 			play_bt.disabled = false
 		8:
-			level_num.text += "River monster (Coming soon)"
-			play_bt.disabled = true
+			level_num.text += "Murder Maple"
+			play_bt.disabled = false
 		9:
-			level_num.text += "The empty town (Coming soon)"
-			play_bt.disabled = true
+			level_num.text += "The lake"
+			play_bt.disabled = false
 		10:
-			level_num.text += "Uncle Nord (Coming soon)"
-			play_bt.disabled = true
+			level_num.text += "The empty town?"
+			play_bt.disabled = false
 		11:
-			level_num.text += "The lake (Coming soon)"
-			play_bt.disabled = true
+			level_num.text += "Uncle Nord"
+			play_bt.disabled = false
 		12:
-			level_num.text += "The star monster (Coming soon)"
+			level_num.text += "The river (Coming soon)"
 			play_bt.disabled = true
 		13:
-			level_num.text += "Riri (Coming soon)"
+			level_num.text += "The star monster (Coming soon)"
 			play_bt.disabled = true
 		14:
-			level_num.text += "The ruined camp (Coming soon)"
+			level_num.text += "Riri (Coming soon)"
 			play_bt.disabled = true
 		15:
-			level_num.text += "The plain (Coming soon)"
+			level_num.text += "The ruined camp (Coming soon)"
 			play_bt.disabled = true
 		16:
-			level_num.text += "Home (Coming soon)"
+			level_num.text += "The magmas (Coming soon)"
 			play_bt.disabled = true
 		17:
-			level_num.text += "The waterfall (Coming soon)"
+			level_num.text += "Home (Coming soon)"
 			play_bt.disabled = true
 		18:
-			level_num.text += "Summit run (Coming soon)"
+			level_num.text += "The waterfall (Coming soon)"
 			play_bt.disabled = true
 		19:
-			level_num.text += "Mother (Coming soon)"
+			level_num.text += "Summit run (Coming soon)"
 			play_bt.disabled = true
 		20:
+			level_num.text += "Mother (Coming soon)"
+			play_bt.disabled = true
+		21:
 			level_num.text += "Mountain heart (Coming soon)"
 			play_bt.disabled = true
 	level_num.text = level_num.text
 	
 	var add_level = current_level - 2
 	if add_level == -1:
-		add_level = 19
-	if add_level == 0:
 		add_level = 20
+	if add_level == 0:
+		add_level = 21
 	#var temp = select_level_cur.pop_back()
 	select_level_cur.pop_back()
 	select_level_cur.insert(0, select_level_list[add_level])
@@ -173,9 +177,9 @@ func _on_right_bt_button_up() -> void:
 	not_done = true
 	
 	current_level += 1
-	if current_level > 20:
+	if current_level > 21:
 		current_level = 1
-	
+	#print(current_level, " :cur_level")
 	level_num.text = "Level " + str(current_level) + ": "
 	match current_level:
 		1:
@@ -197,53 +201,56 @@ func _on_right_bt_button_up() -> void:
 			level_num.text += "Granny hut"
 			play_bt.disabled = false
 		7:
-			level_num.text += "Murder Maple (Coming soon)"
+			level_num.text += "Inside Granny hut"
 			play_bt.disabled = false
 		8:
-			level_num.text += "River monster (Coming soon)"
-			play_bt.disabled = true
+			level_num.text += "Murder maple"
+			play_bt.disabled = false
 		9:
-			level_num.text += "The empty town (Coming soon)"
-			play_bt.disabled = true
+			level_num.text += "The lake"
+			play_bt.disabled = false
 		10:
-			level_num.text += "Uncle Nord (Coming soon)"
-			play_bt.disabled = true
+			level_num.text += "The empty town?"
+			play_bt.disabled = false
 		11:
-			level_num.text += "The lake (Coming soon)"
-			play_bt.disabled = true
+			level_num.text += "Uncle Nord"
+			play_bt.disabled = false
 		12:
-			level_num.text += "The star monster (Coming soon)"
+			level_num.text += "The river (Coming soon)"
 			play_bt.disabled = true
 		13:
-			level_num.text += "Riri (Coming soon)"
+			level_num.text += "The star monster (Coming soon)"
 			play_bt.disabled = true
 		14:
-			level_num.text += "The ruined camp (Coming soon)"
+			level_num.text += "Riri (Coming soon)"
 			play_bt.disabled = true
 		15:
-			level_num.text += "The plain (Coming soon)"
+			level_num.text += "The ruined camp (Coming soon)"
 			play_bt.disabled = true
 		16:
-			level_num.text += "Home (Coming soon)"
+			level_num.text += "The magmas (Coming soon)"
 			play_bt.disabled = true
 		17:
-			level_num.text += "The waterfall (Coming soon)"
+			level_num.text += "Home (Coming soon)"
 			play_bt.disabled = true
 		18:
-			level_num.text += "Summit run (Coming soon)"
+			level_num.text += "The waterfall (Coming soon)"
 			play_bt.disabled = true
 		19:
-			level_num.text += "Mother (Coming soon)"
+			level_num.text += "Summit run (Coming soon)"
 			play_bt.disabled = true
 		20:
+			level_num.text += "Mother (Coming soon)"
+			play_bt.disabled = true
+		21:
 			level_num.text += "Mountain heart (Coming soon)"
 			play_bt.disabled = true
 	level_num.text = level_num.text
 	
 	var add_level = current_level + 2
-	if add_level == 22:
+	if add_level == 23:
 		add_level = 2
-	if add_level == 21:
+	if add_level == 22:
 		add_level = 1
 	#var temp = select_level_cur.pop_back()
 	select_level_cur.pop_front()

@@ -13,11 +13,6 @@ script = ExtResource("1_jt3vd")
 [node name="character_png" type="Sprite2D" parent="."]
 texture = ExtResource("2_g484t")
 
-[node name="text_box3" type="Sprite2D" parent="."]
-position = Vector2(614, 153)
-scale = Vector2(1e-05, 1e-05)
-texture = ExtResource("3_pwrmf")
-
 [node name="SbTextBox1" type="Sprite2D" parent="."]
 z_index = 101
 position = Vector2(732, -22)
@@ -57,3 +52,8 @@ ahidfhhdfhifhiofjfkhfjkf
 "
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
+
+[node name="text_box3" type="Sprite2D" parent="."]
+position = Vector2(614, 153)
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("3_pwrmf")

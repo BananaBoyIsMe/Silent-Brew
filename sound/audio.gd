@@ -11,7 +11,7 @@ extends Node2D
 
 func stop_all():
 	$room1.stop()
-	$menu.stop()
+	#$menu.stop()
 	$walking.stop()
 	$dark_cave.stop()
 	$button.stop()
@@ -22,12 +22,13 @@ func stop_all():
 	$beach.stop()
 
 func _ready():
-	play_menu()
+	pass
+	#play_menu()
 
-func play_menu():
-	if global.volume_mute[0] or global.volume_mute[1]:
-		return
-	$menu.play()
+#func play_menu():
+	#if global.volume_mute[0] or global.volume_mute[1]:
+		#return
+	#$menu.play()
 
 func play_room1():
 	if global.volume_mute[0] or global.volume_mute[1]:
