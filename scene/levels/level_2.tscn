@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bbpkj0rwcudua"]
+[gd_scene load_steps=13 format=3 uid="uid://bbpkj0rwcudua"]
 
 [ext_resource type="Script" uid="uid://dn5gqmcskh62i" path="res://script/level_2.gd" id="1_e3cis"]
 [ext_resource type="PackedScene" uid="uid://e2jhu0ksgvw1" path="res://scene/tiles/tile_1.tscn" id="1_w3nd6"]
@@ -12,7 +12,10 @@
 [ext_resource type="PackedScene" uid="uid://cbfvufi4n47he" path="res://scene/tiles/portal_fog.tscn" id="10_e3cis"]
 [ext_resource type="PackedScene" uid="uid://8bxyucq7navv" path="res://scene/enemy/enemy_1.tscn" id="11_hv11a"]
 
-[node name="level1" type="Node2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_gy3ye"]
+radius = 14.0357
+
+[node name="level2" type="Node2D"]
 script = ExtResource("1_e3cis")
 
 [node name="tiles" type="Node2D" parent="."]
@@ -68,7 +71,6 @@ rotation = -3.14159
 scale = Vector2(0.5, 0.313)
 tile_id = 2
 tile_co = Vector2(1, 2)
-input_tile = true
 input_text_str = " @I... shouldn't@ touch that|@The bees might@jump on me!"
 input_face_str = "11|9"
 
@@ -254,7 +256,6 @@ position = Vector2(900, 580)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
 tile_co = Vector2(6, 4)
-input_tile = true
 input_text_str = " @I... shouldn't@ touch that|@The bees might@jump on me!"
 input_face_str = "11|9"
 
@@ -405,7 +406,6 @@ position = Vector2(1400, 469)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
 tile_co = Vector2(11, 2)
-input_tile = true
 input_text_str = " @I... shouldn't@ touch that|@The bees might@jump on me!"
 input_face_str = "11|9"
 
@@ -1327,6 +1327,13 @@ position = Vector2(3.33321, 13.3332)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("6_laxja")
 
+[node name="blackberry1" type="Area2D" parent="bush/bush3"]
+position = Vector2(600, 540)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bush/bush3/blackberry1"]
+position = Vector2(-603.33325, -523.3334)
+shape = SubResource("CircleShape2D_gy3ye")
+
 [node name="bush4" type="Sprite2D" parent="bush"]
 modulate = Color(0.96, 0.96, 0.96, 1)
 position = Vector2(1400, 462)
@@ -1339,6 +1346,13 @@ position = Vector2(3.33321, 13.3332)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("6_laxja")
 
+[node name="blackberry2" type="Area2D" parent="bush/bush4"]
+position = Vector2(600, 540)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bush/bush4/blackberry2"]
+position = Vector2(-606.6665, -516.6666)
+shape = SubResource("CircleShape2D_gy3ye")
+
 [node name="bush5" type="Sprite2D" parent="bush"]
 modulate = Color(0.96, 0.96, 0.96, 1)
 position = Vector2(401, 460)
@@ -1350,6 +1364,13 @@ flip_h = true
 position = Vector2(3.33321, 13.3332)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("6_laxja")
+
+[node name="blackberry3" type="Area2D" parent="bush/bush5"]
+position = Vector2(600, 540)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bush/bush5/blackberry3"]
+position = Vector2(-603.33325, -516.6666)
+shape = SubResource("CircleShape2D_gy3ye")
 
 [node name="deco" type="Node2D" parent="."]
 z_index = 10

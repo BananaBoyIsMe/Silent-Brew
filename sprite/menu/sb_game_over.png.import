@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0b1v3urcomc2"
-path="res://.godot/imported/Silent Brew.apple-touch-icon.png-6f24fa9a12cb685022a3813675061b70.ctex"
+uid="uid://b41shynw0akcf"
+path="res://.godot/imported/sb_game_over.png-f61ab38d56093b3eaab1fe558298275f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://silent_brew_web/Silent Brew.apple-touch-icon.png"
-dest_files=["res://.godot/imported/Silent Brew.apple-touch-icon.png-6f24fa9a12cb685022a3813675061b70.ctex"]
+source_file="res://sprite/menu/sb_game_over.png"
+dest_files=["res://.godot/imported/sb_game_over.png-f61ab38d56093b3eaab1fe558298275f.ctex"]
 
 [params]
 

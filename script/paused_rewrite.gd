@@ -83,11 +83,12 @@ func get_random_outside_position() -> Vector2:
 
 func activate_menu():
 	audio.stop_all()
-	#audio.play_menu()
+	audio.play_menu()
 	global.inv_on = false
 	global.book_on = false
 	global.encyclopedia_on = false
 	global.map_on = false
+	#global.in_game = false
 	resume.position = Vector2(827, 393)
 	select_level.position = Vector2(827, 515)
 	options.position = Vector2(826, 640)
@@ -237,49 +238,70 @@ func deactivate_menu():
 	
 	var level = load("res://scene/levels/level_1.tscn").instantiate()
 	match global.current_room:
+		0:
+			level = load("res://scene/levels/level_0.tscn").instantiate()
+			#get_node("../spawn_zoom/map").position = Vector2(200, 0)
+			#get_node("../spawn_zoom/map").scale = Vector2(1.5, 1.5)
 		1:
 			level = load("res://scene/levels/level_1.tscn").instantiate()
-			get_node("../spawn_zoom/map").position = Vector2(0, 0)
-			get_node("../spawn_zoom/map").scale = Vector2(1.25, 1.25)
+			#get_node("../spawn_zoom/map").position = Vector2(0, 0)
+			#get_node("../spawn_zoom/map").scale = Vector2(1.25, 1.25)
 		2:
 			level = load("res://scene/levels/level_2.tscn").instantiate()
-			get_node("../spawn_zoom/map").position = Vector2(100, 0)
+			#get_node("../spawn_zoom/map").position = Vector2(100, 0)
+			#get_node("../spawn_zoom/map").scale = Vector2(1, 1)
 		3:
 			level = load("res://scene/levels/level_3.tscn").instantiate()
-			get_node("../spawn_zoom/map").position = Vector2(0, 0)
-			get_node("../spawn_zoom/map").scale = Vector2(1.25, 1.25)
+			#get_node("../spawn_zoom/map").position = Vector2(0, 0)
+			#get_node("../spawn_zoom/map").scale = Vector2(1.25, 1.25)
 		4:
 			level = load("res://scene/levels/level_4.tscn").instantiate()
-			get_node("../spawn_zoom/map").position = Vector2(0, -20)
-			get_node("../spawn_zoom/map").scale = Vector2(1.2, 1.2)
+			#get_node("../spawn_zoom/map").position = Vector2(0, -20)
+			#get_node("../spawn_zoom/map").scale = Vector2(1.2, 1.2)
 		5:
 			level = load("res://scene/levels/level_5.tscn").instantiate()
-			get_node("../spawn_zoom/map").position = Vector2(0, 0)
-			get_node("../spawn_zoom/map").scale = Vector2(1.2, 1.2)
+			#get_node("../spawn_zoom/map").position = Vector2(0, 0)
+			#get_node("../spawn_zoom/map").scale = Vector2(1.2, 1.2)
 		6:
 			level = load("res://scene/levels/level_6.tscn").instantiate()
-			get_node("../spawn_zoom/map").position = Vector2(0, 0)
-			get_node("../spawn_zoom/map").scale = Vector2(1.2, 1.2)
+			#get_node("../spawn_zoom/map").position = Vector2(0, 0)
+			#get_node("../spawn_zoom/map").scale = Vector2(1.2, 1.2)
 		7:
 			level = load("res://scene/levels/level_7.tscn").instantiate()
-			get_node("../spawn_zoom/map").position = Vector2(0, 200)
-			get_node("../spawn_zoom/map").scale = Vector2(1.2, 1.2)
+			#get_node("../spawn_zoom/map").position = Vector2(0, 200)
+			#get_node("../spawn_zoom/map").scale = Vector2(1.2, 1.2)
 		8:
 			level = load("res://scene/levels/level_8.tscn").instantiate()
-			get_node("../spawn_zoom/map").position = Vector2(0, 0)
-			get_node("../spawn_zoom/map").scale = Vector2(1.2, 1.2)
+			#get_node("../spawn_zoom/map").position = Vector2(0, 0)
+			#get_node("../spawn_zoom/map").scale = Vector2(1.2, 1.2)
 		9:
 			level = load("res://scene/levels/level_9.tscn").instantiate()
-			get_node("../spawn_zoom/map").position = Vector2(0, 0)
-			get_node("../spawn_zoom/map").scale = Vector2(1.2, 1.2)
+			#get_node("../spawn_zoom/map").position = Vector2(0, 0)
+			#get_node("../spawn_zoom/map").scale = Vector2(1.2, 1.2)
 		10:
 			level = load("res://scene/levels/level_10.tscn").instantiate()
-			get_node("../spawn_zoom/map").position = Vector2(0, 0)
-			get_node("../spawn_zoom/map").scale = Vector2(1.2, 1.2)
+			#get_node("../spawn_zoom/map").position = Vector2(0, 0)
+			#get_node("../spawn_zoom/map").scale = Vector2(1.2, 1.2)
 		11:
 			level = load("res://scene/levels/level_11.tscn").instantiate()
-			get_node("../spawn_zoom/map").position = Vector2(0, 0)
-			get_node("../spawn_zoom/map").scale = Vector2(1.2, 1.2)
+			#get_node("../spawn_zoom/map").position = Vector2(0, 0)
+			#get_node("../spawn_zoom/map").scale = Vector2(1.2, 1.2)
+		12:
+			level = load("res://scene/levels/level_12.tscn").instantiate()
+			#get_node("../spawn_zoom/map").position = Vector2(0, 0)
+			#get_node("../spawn_zoom/map").scale = Vector2(1.2, 1.2)
+		13:
+			level = load("res://scene/levels/level_13.tscn").instantiate()
+			#get_node("../spawn_zoom/map").position = Vector2(0, 0)
+			#get_node("../spawn_zoom/map").scale = Vector2(1.2, 1.2)
+		14:
+			level = load("res://scene/levels/level_14.tscn").instantiate()
+			#get_node("../spawn_zoom/map").position = Vector2(0, 0)
+			#get_node("../spawn_zoom/map").scale = Vector2(1.2, 1.2)
+		15:
+			level = load("res://scene/levels/level_15.tscn").instantiate()
+			#get_node("../spawn_zoom/map").position = Vector2(0, 0)
+			#get_node("../spawn_zoom/map").scale = Vector2(1.2, 1.2)
 	level.position = Vector2(-1920, -3000)/2
 	get_node("../spawn_zoom/map").add_child(level)
 	#level.modulate.a = 0

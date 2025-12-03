@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cbfvufi4n47he"]
+[gd_scene load_steps=6 format=3 uid="uid://cbfvufi4n47he"]
 
 [ext_resource type="Texture2D" uid="uid://mh03vupjivuj" path="res://sprite/tiles/fog.png" id="1_ib21k"]
+[ext_resource type="Script" uid="uid://cn6p5ap56flc5" path="res://script/portal_ripple.gd" id="2_t31vi"]
 
 [sub_resource type="Gradient" id="Gradient_krucv"]
 offsets = PackedFloat32Array(0.02, 0.51, 1)
@@ -43,3 +44,14 @@ hue_variation_curve = SubResource("Curve_ib21k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="portal"]
 shape = SubResource("CircleShape2D_t31vi")
+
+[node name="Node2D" type="Node2D" parent="."]
+script = ExtResource("2_t31vi")
+
+[node name="ColorRect" type="ColorRect" parent="Node2D"]
+offset_top = -10.0
+offset_right = 14.0
+offset_bottom = 4.0
+rotation = 0.7853982
+mouse_filter = 2
+color = Color(0, 0, 0, 0.75000006)

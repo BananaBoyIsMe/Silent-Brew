@@ -8,6 +8,10 @@ var player_input_num = 0
 var rng = RandomNumberGenerator.new()
 
 func _ready() -> void:
+	global.time.time_change(1)
+	get_parent().position = Vector2(0, 0)
+	get_parent().scale = Vector2(1.2, 1.2)
+	global.player_cur_health = 31
 	audio.stop_all()
 	
 	global.turn = 0
@@ -57,7 +61,7 @@ func on_user_input_received():
 		2:
 			global.other_emotion.gone_text(2)
 			await get_tree().create_timer(0.3).timeout
-			global.bark_emotion.new_text("*Vigorous nodding*", 1)
+			global.bark_emotion.new_text("\n*Vigorous nodding*", 1)
 			global.bark_emotion.change_character_png("bark13", true)
 			await get_tree().create_timer(0.5).timeout
 			player_input = false
@@ -99,14 +103,14 @@ func on_user_input_received():
 		8:
 			global.other_emotion.gone_text(2)
 			await get_tree().create_timer(0.3).timeout
-			global.bark_emotion.new_text("Wait what? \nI'm getting closer\n to mom?", 1)
+			global.bark_emotion.new_text("Wait what? \nI'm getting closer\nto mom?", 1)
 			global.bark_emotion.change_character_png("bark13", true)
 			await get_tree().create_timer(0.5).timeout
 			player_input = false
 		9:
 			global.bark_emotion.gone_text(1)
 			await get_tree().create_timer(0.3).timeout
-			global.other_emotion.new_text("Come here and\n let's wait this out...\n it's dangerous outside.", 2)
+			global.other_emotion.new_text("Come here and\nlet's wait this out...\nit's dangerous outside.", 2)
 			global.other_emotion.change_character_png("nord1", true)
 			await get_tree().create_timer(0.5).timeout
 			player_input = false
@@ -117,15 +121,38 @@ func on_user_input_received():
 			global.bark_emotion.change_character_png("bark1", true)
 			await get_tree().create_timer(0.5).timeout
 			player_input = false
-		11: 
+		11:
 			global.bark_emotion.gone_text(1)
-			var tween = create_tween()
-			tween.tween_property(self, "position:y", -2150, 1.5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
-			var tween_bark_emo1 = create_tween()
-			tween_bark_emo1.tween_property(global.bark_emotion, "position:y", 1280, 2).set_trans(Tween.TRANS_QUART).set_ease(Tween.EASE_OUT)
-			var tween_other_emo2 = create_tween()
-			tween_other_emo2.tween_property(global.other_emotion, "position:y", 1280, 2).set_trans(Tween.TRANS_QUART).set_ease(Tween.EASE_OUT)
-			#global.
+			await get_tree().create_timer(0.3).timeout
+			global.bark_emotion.new_text("I'm sleepy...\nMaybe a nap before\ngoing out...", 1)
+			global.bark_emotion.change_character_png("bark1", true)
+			await get_tree().create_timer(0.5).timeout
+			player_input = false
+		12: 
+			global.bark_emotion.gone_text(1)
+			await get_tree().create_timer(0.3).timeout
+			global.other_emotion.new_text("\nMust have been rough\n huh kiddo?", 2)
+			global.other_emotion.change_character_png("nord1", true)
+			await get_tree().create_timer(0.5).timeout
+			player_input = false
+		13: 
+			global.other_emotion.gone_text(2)
+			await get_tree().create_timer(0.3).timeout
+			global.other_emotion.new_text("\nJust go to sleep...\n I'll look over ya", 2)
+			global.other_emotion.change_character_png("nord1", true)
+			await get_tree().create_timer(0.5).timeout
+			player_input = false
+		14:
+			global.other_emotion.gone_text(2)
+			var tween_bark_emo = create_tween()
+			tween_bark_emo.tween_property(global.bark_emotion, "position:y", 1280, 2).set_trans(Tween.TRANS_QUART).set_ease(Tween.EASE_OUT)
+			var tween_other_emo = create_tween()
+			tween_other_emo.tween_property(global.other_emotion, "position:y", 1280, 2).set_trans(Tween.TRANS_QUART).set_ease(Tween.EASE_OUT)
+			var tweenb = create_tween()
+			tweenb.tween_property(global.foreground.get_child(0), "modulate:a", 1, 1.2)
+			await get_tree().create_timer(1.2).timeout
+			global.player.activate_portal()
+			
 
 func _input(event):
 	#if event.is_action_pressed("ui_cancel"):

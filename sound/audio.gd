@@ -20,20 +20,26 @@ func stop_all():
 	$lava.stop()
 	$bird_forest.stop()
 	$beach.stop()
+	$eat.stop()
 
 func _ready():
 	pass
-	#play_menu()
+	play_menu()
 
-#func play_menu():
-	#if global.volume_mute[0] or global.volume_mute[1]:
-		#return
-	#$menu.play()
+func play_menu():
+	if global.volume_mute[0] or global.volume_mute[1]:
+		return
+	$dark_cave.play()
 
 func play_room1():
 	if global.volume_mute[0] or global.volume_mute[1]:
 		return
 	$room1.play()
+
+func play_eat():
+	if global.volume_mute[0] or global.volume_mute[3]:
+		return
+	$eat.play()
 
 func play_walking():
 	if global.volume_mute[0] or global.volume_mute[3]:

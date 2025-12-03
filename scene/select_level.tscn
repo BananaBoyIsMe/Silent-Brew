@@ -1,25 +1,34 @@
-[gd_scene load_steps=18 format=3 uid="uid://sj6lkjotakf8"]
+[gd_scene load_steps=25 format=3 uid="uid://sj6lkjotakf8"]
 
 [ext_resource type="Script" uid="uid://dticv84bm3252" path="res://script/select_level.gd" id="1_8ebih"]
 [ext_resource type="Texture2D" uid="uid://drb0xdauq288q" path="res://sprite/menu/sb_next_button.png" id="2_vf7qe"]
 [ext_resource type="Texture2D" uid="uid://m7c5mcabu5tv" path="res://sprite/menu/sb_level1.png" id="3_aduhs"]
 [ext_resource type="Texture2D" uid="uid://bh6mydb5crovb" path="res://sprite/menu/sb_level2.png" id="4_7a70o"]
+[ext_resource type="Texture2D" uid="uid://r8rqyvew204s" path="res://sprite/plant/sb_sound_bloom.png" id="4_p7wn3"]
+[ext_resource type="FontFile" uid="uid://bias1she8j2dm" path="res://sfont/Caveat-VariableFont_wght.ttf" id="5_20ck4"]
 [ext_resource type="Texture2D" uid="uid://by8pvfe0qmyo7" path="res://sprite/menu/sb_level3.png" id="5_88rkn"]
 [ext_resource type="Texture2D" uid="uid://ckjv6kps6ibol" path="res://sprite/menu/sb_level_lock_blur.png" id="5_kuypm"]
 [ext_resource type="Texture2D" uid="uid://dbo1lt2brqixh" path="res://sprite/menu/sb_level4.png" id="6_uloro"]
 [ext_resource type="Texture2D" uid="uid://23v8jfuyjw0y" path="res://sprite/menu/sb_level5.png" id="7_55kyr"]
 [ext_resource type="Texture2D" uid="uid://f08qkn3r8i0y" path="res://sprite/menu/sb_level6.png" id="8_8ehqn"]
 [ext_resource type="Texture2D" uid="uid://but8v7w2vy4du" path="res://sprite/menu/sb_level7.png" id="9_8ehqn"]
-[ext_resource type="Texture2D" uid="uid://ctpnmpvbiyswl" path="res://sprite/menu/sb_level8.png" id="10_xajdu"]
 [ext_resource type="Texture2D" uid="uid://bhvn0a3nk6500" path="res://sprite/menu/sb_level9.png" id="11_q7x5q"]
 [ext_resource type="Texture2D" uid="uid://bjro4fv7txlft" path="res://sprite/menu/sb_level10.png" id="12_jsi6v"]
 [ext_resource type="Texture2D" uid="uid://n8aqfdnpqlv4" path="res://sprite/menu/sb_level11.png" id="13_mloim"]
+[ext_resource type="Texture2D" uid="uid://dmvd8ujwa7mdt" path="res://sprite/menu/sb_level12.png" id="16_tvcej"]
+[ext_resource type="Texture2D" uid="uid://by7woqk1bivph" path="res://sprite/menu/sb_level13.png" id="17_op24d"]
+[ext_resource type="Texture2D" uid="uid://byqbljv00oo4k" path="res://sprite/menu/sb_level0.png" id="17_sag14"]
+[ext_resource type="Texture2D" uid="uid://domgot1ioaw07" path="res://sprite/menu/sb_level14.png" id="18_ojvuj"]
+[ext_resource type="Texture2D" uid="uid://bd7c1jxskrmcd" path="res://sprite/menu/sb_level15.png" id="19_eijlc"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nnhxp"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rfwib"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_div0t"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_eijlc"]
+load_path = "res://.godot/imported/sb_level8.png-7f40d1a3f7ed6e57919e71a2dd2fc2cb.ctex"
 
 [node name="select_level" type="Node2D"]
 z_index = 600
@@ -104,6 +113,28 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
+[node name="completion" type="Sprite2D" parent="sb_select_level1"]
+visible = false
+position = Vector2(1853.3334, -1093.3333)
+rotation = 1.0408709
+scale = Vector2(3.9632158, 3.9632158)
+texture = ExtResource("4_p7wn3")
+
+[node name="2" type="Label" parent="sb_select_level1/completion"]
+offset_left = -197.54997
+offset_top = 34.385124
+offset_right = 2351.45
+offset_bottom = 1396.3851
+rotation = -0.547065
+scale = Vector2(0.13990548, 0.13990548)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_20ck4")
+theme_override_font_sizes/font_size = 350
+text = "complete"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
 [node name="sb_select_level2" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.5)
 position = Vector2(1500, 500)
@@ -117,6 +148,28 @@ offset_right = 1255.67
 offset_bottom = 668.667
 theme_override_font_sizes/font_size = 1000
 text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="completion" type="Sprite2D" parent="sb_select_level2"]
+visible = false
+position = Vector2(1853.3334, -1093.3333)
+rotation = 1.0408709
+scale = Vector2(3.9632158, 3.9632158)
+texture = ExtResource("4_p7wn3")
+
+[node name="2" type="Label" parent="sb_select_level2/completion"]
+offset_left = -197.54997
+offset_top = 34.385124
+offset_right = 2351.45
+offset_bottom = 1396.3851
+rotation = -0.547065
+scale = Vector2(0.13990548, 0.13990548)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_20ck4")
+theme_override_font_sizes/font_size = 350
+text = "complete"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
@@ -138,6 +191,28 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
+[node name="completion" type="Sprite2D" parent="sb_select_level3"]
+visible = false
+position = Vector2(1853.3334, -1093.3333)
+rotation = 1.0408709
+scale = Vector2(3.9632158, 3.9632158)
+texture = ExtResource("4_p7wn3")
+
+[node name="2" type="Label" parent="sb_select_level3/completion"]
+offset_left = -197.54997
+offset_top = 34.385124
+offset_right = 2351.45
+offset_bottom = 1396.3851
+rotation = -0.547065
+scale = Vector2(0.13990548, 0.13990548)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_20ck4")
+theme_override_font_sizes/font_size = 350
+text = "complete"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
 [node name="sb_select_level4" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
 position = Vector2(2040, 500)
@@ -151,6 +226,28 @@ offset_right = 1255.67
 offset_bottom = 668.667
 theme_override_font_sizes/font_size = 1000
 text = "4"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="completion" type="Sprite2D" parent="sb_select_level4"]
+visible = false
+position = Vector2(1853.3334, -1093.3333)
+rotation = 1.0408709
+scale = Vector2(3.9632158, 3.9632158)
+texture = ExtResource("4_p7wn3")
+
+[node name="2" type="Label" parent="sb_select_level4/completion"]
+offset_left = -197.54997
+offset_top = 34.385124
+offset_right = 2351.45
+offset_bottom = 1396.3851
+rotation = -0.547065
+scale = Vector2(0.13990548, 0.13990548)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_20ck4")
+theme_override_font_sizes/font_size = 350
+text = "complete"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
@@ -172,6 +269,28 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
+[node name="completion" type="Sprite2D" parent="sb_select_level5"]
+visible = false
+position = Vector2(1853.3334, -1093.3333)
+rotation = 1.0408709
+scale = Vector2(3.9632158, 3.9632158)
+texture = ExtResource("4_p7wn3")
+
+[node name="2" type="Label" parent="sb_select_level5/completion"]
+offset_left = -197.54997
+offset_top = 34.385124
+offset_right = 2351.45
+offset_bottom = 1396.3851
+rotation = -0.547065
+scale = Vector2(0.13990548, 0.13990548)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_20ck4")
+theme_override_font_sizes/font_size = 350
+text = "complete"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
 [node name="sb_select_level6" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
 position = Vector2(2040, 500)
@@ -185,6 +304,28 @@ offset_right = 1255.67
 offset_bottom = 668.667
 theme_override_font_sizes/font_size = 1000
 text = "6"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="completion" type="Sprite2D" parent="sb_select_level6"]
+visible = false
+position = Vector2(1853.3334, -1093.3333)
+rotation = 1.0408709
+scale = Vector2(3.9632158, 3.9632158)
+texture = ExtResource("4_p7wn3")
+
+[node name="2" type="Label" parent="sb_select_level6/completion"]
+offset_left = -197.54997
+offset_top = 34.385124
+offset_right = 2351.45
+offset_bottom = 1396.3851
+rotation = -0.547065
+scale = Vector2(0.13990548, 0.13990548)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_20ck4")
+theme_override_font_sizes/font_size = 350
+text = "complete"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
@@ -206,11 +347,33 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
+[node name="completion" type="Sprite2D" parent="sb_select_level7"]
+visible = false
+position = Vector2(1853.3334, -1093.3333)
+rotation = 1.0408709
+scale = Vector2(3.9632158, 3.9632158)
+texture = ExtResource("4_p7wn3")
+
+[node name="2" type="Label" parent="sb_select_level7/completion"]
+offset_left = -197.54997
+offset_top = 34.385124
+offset_right = 2351.45
+offset_bottom = 1396.3851
+rotation = -0.547065
+scale = Vector2(0.13990548, 0.13990548)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_20ck4")
+theme_override_font_sizes/font_size = 350
+text = "complete"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
 [node name="sb_select_level8" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
 position = Vector2(2040.4, 499.6)
 scale = Vector2(0.07, 0.07)
-texture = ExtResource("10_xajdu")
+texture = SubResource("CompressedTexture2D_eijlc")
 
 [node name="8" type="Label" parent="sb_select_level8"]
 offset_left = -1293.33
@@ -219,6 +382,28 @@ offset_right = 1255.67
 offset_bottom = 668.667
 theme_override_font_sizes/font_size = 1000
 text = "8"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="completion" type="Sprite2D" parent="sb_select_level8"]
+visible = false
+position = Vector2(1853.3334, -1093.3333)
+rotation = 1.0408709
+scale = Vector2(3.9632158, 3.9632158)
+texture = ExtResource("4_p7wn3")
+
+[node name="2" type="Label" parent="sb_select_level8/completion"]
+offset_left = -197.54997
+offset_top = 34.385124
+offset_right = 2351.45
+offset_bottom = 1396.3851
+rotation = -0.547065
+scale = Vector2(0.13990548, 0.13990548)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_20ck4")
+theme_override_font_sizes/font_size = 350
+text = "complete"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
@@ -240,6 +425,28 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
+[node name="completion" type="Sprite2D" parent="sb_select_level9"]
+visible = false
+position = Vector2(1853.3334, -1093.3333)
+rotation = 1.0408709
+scale = Vector2(3.9632158, 3.9632158)
+texture = ExtResource("4_p7wn3")
+
+[node name="2" type="Label" parent="sb_select_level9/completion"]
+offset_left = -197.54997
+offset_top = 34.385124
+offset_right = 2351.45
+offset_bottom = 1396.3851
+rotation = -0.547065
+scale = Vector2(0.13990548, 0.13990548)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_20ck4")
+theme_override_font_sizes/font_size = 350
+text = "complete"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
 [node name="sb_select_level10" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
 position = Vector2(2040.4, 499.6)
@@ -253,6 +460,28 @@ offset_right = 1255.67
 offset_bottom = 668.667
 theme_override_font_sizes/font_size = 1000
 text = "10"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="completion" type="Sprite2D" parent="sb_select_level10"]
+visible = false
+position = Vector2(1853.3334, -1093.3333)
+rotation = 1.0408709
+scale = Vector2(3.9632158, 3.9632158)
+texture = ExtResource("4_p7wn3")
+
+[node name="2" type="Label" parent="sb_select_level10/completion"]
+offset_left = -197.54997
+offset_top = 34.385124
+offset_right = 2351.45
+offset_bottom = 1396.3851
+rotation = -0.547065
+scale = Vector2(0.13990548, 0.13990548)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_20ck4")
+theme_override_font_sizes/font_size = 350
+text = "complete"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
@@ -274,11 +503,33 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
+[node name="completion" type="Sprite2D" parent="sb_select_level11"]
+visible = false
+position = Vector2(1853.3334, -1093.3333)
+rotation = 1.0408709
+scale = Vector2(3.9632158, 3.9632158)
+texture = ExtResource("4_p7wn3")
+
+[node name="2" type="Label" parent="sb_select_level11/completion"]
+offset_left = -197.54997
+offset_top = 34.385124
+offset_right = 2351.45
+offset_bottom = 1396.3851
+rotation = -0.547065
+scale = Vector2(0.13990548, 0.13990548)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_20ck4")
+theme_override_font_sizes/font_size = 350
+text = "complete"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
 [node name="sb_select_level12" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
 position = Vector2(2040.4, 499.6)
 scale = Vector2(0.07, 0.07)
-texture = ExtResource("5_kuypm")
+texture = ExtResource("16_tvcej")
 
 [node name="12" type="Label" parent="sb_select_level12"]
 offset_left = -1293.33
@@ -291,11 +542,33 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
+[node name="completion" type="Sprite2D" parent="sb_select_level12"]
+visible = false
+position = Vector2(1853.3334, -1093.3333)
+rotation = 1.0408709
+scale = Vector2(3.9632158, 3.9632158)
+texture = ExtResource("4_p7wn3")
+
+[node name="2" type="Label" parent="sb_select_level12/completion"]
+offset_left = -197.54997
+offset_top = 34.385124
+offset_right = 2351.45
+offset_bottom = 1396.3851
+rotation = -0.547065
+scale = Vector2(0.13990548, 0.13990548)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_20ck4")
+theme_override_font_sizes/font_size = 350
+text = "complete"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
 [node name="sb_select_level13" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
 position = Vector2(2040.4, 499.6)
 scale = Vector2(0.07, 0.07)
-texture = ExtResource("5_kuypm")
+texture = ExtResource("17_op24d")
 
 [node name="13" type="Label" parent="sb_select_level13"]
 offset_left = -1293.33
@@ -308,11 +581,33 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
+[node name="completion" type="Sprite2D" parent="sb_select_level13"]
+visible = false
+position = Vector2(1853.3334, -1093.3333)
+rotation = 1.0408709
+scale = Vector2(3.9632158, 3.9632158)
+texture = ExtResource("4_p7wn3")
+
+[node name="2" type="Label" parent="sb_select_level13/completion"]
+offset_left = -197.54997
+offset_top = 34.385124
+offset_right = 2351.45
+offset_bottom = 1396.3851
+rotation = -0.547065
+scale = Vector2(0.13990548, 0.13990548)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_20ck4")
+theme_override_font_sizes/font_size = 350
+text = "complete"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
 [node name="sb_select_level14" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
 position = Vector2(2040.4, 499.6)
 scale = Vector2(0.07, 0.07)
-texture = ExtResource("5_kuypm")
+texture = ExtResource("18_ojvuj")
 
 [node name="14" type="Label" parent="sb_select_level14"]
 offset_left = -1293.33
@@ -325,11 +620,33 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
+[node name="completion" type="Sprite2D" parent="sb_select_level14"]
+visible = false
+position = Vector2(1853.3334, -1093.3333)
+rotation = 1.0408709
+scale = Vector2(3.9632158, 3.9632158)
+texture = ExtResource("4_p7wn3")
+
+[node name="2" type="Label" parent="sb_select_level14/completion"]
+offset_left = -197.54997
+offset_top = 34.385124
+offset_right = 2351.45
+offset_bottom = 1396.3851
+rotation = -0.547065
+scale = Vector2(0.13990548, 0.13990548)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_20ck4")
+theme_override_font_sizes/font_size = 350
+text = "complete"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
 [node name="sb_select_level15" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(2040.4, 499.6)
+position = Vector2(-120, 500)
 scale = Vector2(0.07, 0.07)
-texture = ExtResource("5_kuypm")
+texture = ExtResource("19_eijlc")
 
 [node name="15" type="Label" parent="sb_select_level15"]
 offset_left = -1293.33
@@ -338,6 +655,28 @@ offset_right = 1255.67
 offset_bottom = 668.667
 theme_override_font_sizes/font_size = 1000
 text = "15"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="completion" type="Sprite2D" parent="sb_select_level15"]
+visible = false
+position = Vector2(1853.3334, -1093.3333)
+rotation = 1.0408709
+scale = Vector2(3.9632158, 3.9632158)
+texture = ExtResource("4_p7wn3")
+
+[node name="2" type="Label" parent="sb_select_level15/completion"]
+offset_left = -197.54997
+offset_top = 34.385124
+offset_right = 2351.45
+offset_bottom = 1396.3851
+rotation = -0.547065
+scale = Vector2(0.13990548, 0.13990548)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_20ck4")
+theme_override_font_sizes/font_size = 350
+text = "complete"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
@@ -359,6 +698,28 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
+[node name="completion" type="Sprite2D" parent="sb_select_level16"]
+visible = false
+position = Vector2(1853.3334, -1093.3333)
+rotation = 1.0408709
+scale = Vector2(3.9632158, 3.9632158)
+texture = ExtResource("4_p7wn3")
+
+[node name="2" type="Label" parent="sb_select_level16/completion"]
+offset_left = -197.54997
+offset_top = 34.385124
+offset_right = 2351.45
+offset_bottom = 1396.3851
+rotation = -0.547065
+scale = Vector2(0.13990548, 0.13990548)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_20ck4")
+theme_override_font_sizes/font_size = 350
+text = "complete"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
 [node name="sb_select_level17" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
 position = Vector2(2040.4, 499.6)
@@ -372,6 +733,28 @@ offset_right = 1255.67
 offset_bottom = 668.667
 theme_override_font_sizes/font_size = 1000
 text = "17"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="completion" type="Sprite2D" parent="sb_select_level17"]
+visible = false
+position = Vector2(1853.3334, -1093.3333)
+rotation = 1.0408709
+scale = Vector2(3.9632158, 3.9632158)
+texture = ExtResource("4_p7wn3")
+
+[node name="2" type="Label" parent="sb_select_level17/completion"]
+offset_left = -197.54997
+offset_top = 34.385124
+offset_right = 2351.45
+offset_bottom = 1396.3851
+rotation = -0.547065
+scale = Vector2(0.13990548, 0.13990548)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_20ck4")
+theme_override_font_sizes/font_size = 350
+text = "complete"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
@@ -393,6 +776,28 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
+[node name="completion" type="Sprite2D" parent="sb_select_level18"]
+visible = false
+position = Vector2(1853.3334, -1093.3333)
+rotation = 1.0408709
+scale = Vector2(3.9632158, 3.9632158)
+texture = ExtResource("4_p7wn3")
+
+[node name="2" type="Label" parent="sb_select_level18/completion"]
+offset_left = -197.54997
+offset_top = 34.385124
+offset_right = 2351.45
+offset_bottom = 1396.3851
+rotation = -0.547065
+scale = Vector2(0.13990548, 0.13990548)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_20ck4")
+theme_override_font_sizes/font_size = 350
+text = "complete"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
 [node name="sb_select_level19" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0)
 position = Vector2(2040.4, 499.6)
@@ -406,6 +811,28 @@ offset_right = 1255.67
 offset_bottom = 668.667
 theme_override_font_sizes/font_size = 1000
 text = "19"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="completion" type="Sprite2D" parent="sb_select_level19"]
+visible = false
+position = Vector2(1853.3334, -1093.3333)
+rotation = 1.0408709
+scale = Vector2(3.9632158, 3.9632158)
+texture = ExtResource("4_p7wn3")
+
+[node name="2" type="Label" parent="sb_select_level19/completion"]
+offset_left = -197.54997
+offset_top = 34.385124
+offset_right = 2351.45
+offset_bottom = 1396.3851
+rotation = -0.547065
+scale = Vector2(0.13990548, 0.13990548)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_20ck4")
+theme_override_font_sizes/font_size = 350
+text = "complete"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
@@ -427,9 +854,31 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
+[node name="completion" type="Sprite2D" parent="sb_select_level20"]
+visible = false
+position = Vector2(1853.3334, -1093.3333)
+rotation = 1.0408709
+scale = Vector2(3.9632158, 3.9632158)
+texture = ExtResource("4_p7wn3")
+
+[node name="2" type="Label" parent="sb_select_level20/completion"]
+offset_left = -197.54997
+offset_top = 34.385124
+offset_right = 2351.45
+offset_bottom = 1396.3851
+rotation = -0.547065
+scale = Vector2(0.13990548, 0.13990548)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_20ck4")
+theme_override_font_sizes/font_size = 350
+text = "complete"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
 [node name="sb_select_level21" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.5)
-position = Vector2(420.4, 499.6)
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-119.6, 499.6)
 scale = Vector2(0.07, 0.07)
 texture = ExtResource("5_kuypm")
 
@@ -440,6 +889,67 @@ offset_right = 1255.67
 offset_bottom = 668.667
 theme_override_font_sizes/font_size = 1000
 text = "21"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="completion" type="Sprite2D" parent="sb_select_level21"]
+visible = false
+position = Vector2(1853.3334, -1093.3333)
+rotation = 1.0408709
+scale = Vector2(3.9632158, 3.9632158)
+texture = ExtResource("4_p7wn3")
+
+[node name="2" type="Label" parent="sb_select_level21/completion"]
+offset_left = -197.54997
+offset_top = 34.385124
+offset_right = 2351.45
+offset_bottom = 1396.3851
+rotation = -0.547065
+scale = Vector2(0.13990548, 0.13990548)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_20ck4")
+theme_override_font_sizes/font_size = 350
+text = "complete"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="sb_select_level0" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(420.4, 499.6)
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("17_sag14")
+
+[node name="0" type="Label" parent="sb_select_level0"]
+offset_left = -1293.33
+offset_top = -693.333
+offset_right = 1255.67
+offset_bottom = 668.667
+theme_override_font_sizes/font_size = 700
+text = "Tutorial"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="completion" type="Sprite2D" parent="sb_select_level0"]
+visible = false
+position = Vector2(1853.3334, -1093.3333)
+rotation = 1.0408709
+scale = Vector2(3.9632158, 3.9632158)
+texture = ExtResource("4_p7wn3")
+
+[node name="2" type="Label" parent="sb_select_level0/completion"]
+offset_left = -197.54997
+offset_top = 34.385124
+offset_right = 2351.45
+offset_bottom = 1396.3851
+rotation = -0.547065
+scale = Vector2(0.13990548, 0.13990548)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_20ck4")
+theme_override_font_sizes/font_size = 350
+text = "complete"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true

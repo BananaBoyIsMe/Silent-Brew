@@ -1,9 +1,27 @@
-[gd_scene load_steps=2 format=3 uid="uid://enbee8hfv3l4"]
+[gd_scene load_steps=4 format=3 uid="uid://enbee8hfv3l4"]
 
-[ext_resource type="Texture2D" uid="uid://k3a542vxpgsp" path="res://sprite/enemy/sb_enemy_tree1.png" id="1_5bg1n"]
+[ext_resource type="Script" uid="uid://w2hwl34ncxgh" path="res://script/enemy_5.gd" id="1_0athj"]
+[ext_resource type="Texture2D" uid="uid://bysqscbjtoice" path="res://sprite/enemy/sb_enemy5.png" id="1_5bg1n"]
 
-[node name="enemy_3" type="Node2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0athj"]
+radius = 210.0
+height = 638.0
+
+[node name="enemy_5" type="Node2D"]
+script = ExtResource("1_0athj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(25, 430)
 texture = ExtResource("1_5bg1n")
-offset = Vector2(0, -10)
+centered = false
+offset = Vector2(-550, -1000)
+
+[node name="detect" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detect"]
+position = Vector2(0, 279)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_0athj")
+
+[connection signal="area_entered" from="detect" to="." method="_on_detect_area_entered"]
+[connection signal="area_exited" from="detect" to="." method="_on_detect_area_exited"]

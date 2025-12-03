@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7h2tvby4lj7y"]
+
+[ext_resource type="Texture2D" uid="uid://dvgc400wwgst6" path="res://sprite/map_ency_inven/sb_encyclopedia.png" id="1_g1h4m"]
+[ext_resource type="Script" uid="uid://c4djdjbucpem0" path="res://script/task.gd" id="1_y0qy6"]
+
+[node name="task" type="Node2D"]
+script = ExtResource("1_y0qy6")
+
+[node name="task_list" type="Sprite2D" parent="."]
+position = Vector2(1005, 601)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("1_g1h4m")
+
+[node name="Label" type="Label" parent="task_list"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -3296.5715
+offset_top = -2267.4287
+offset_right = -1204.5715
+offset_bottom = -1598.4286
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 120
+text = "What to do!
+
+"
+horizontal_alignment = 1
+vertical_alignment = 1

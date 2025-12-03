@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b7h10vgbrow"]
 
-[ext_resource type="Script" uid="uid://vlxc27vcks7d" path="res://script/enemy_4.gd" id="1_n678b"]
+[ext_resource type="Script" uid="uid://buk52ql0k26kx" path="res://script/enemy_4_new.gd" id="1_n678b"]
 [ext_resource type="Texture2D" uid="uid://d14ycnc0cemfa" path="res://sprite/enemy/sb_enemy4.png" id="1_ptfjl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ptfjl"]
@@ -19,3 +19,69 @@ offset = Vector2(0, -10)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="enemy"]
 shape = SubResource("CircleShape2D_ptfjl")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+offset_left = 0.8359424
+offset_top = 185.21486
+offset_right = 12669.836
+offset_bottom = 5946.215
+rotation = -0.34906584
+scale = Vector2(2.8830385, 0.005210492)
+mouse_filter = 2
+color = Color(1, 1, 1, 0.2)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+z_index = -1
+offset_left = 0.8359375
+offset_top = 185.21483
+offset_right = 12669.836
+offset_bottom = 5946.215
+rotation = -2.7925267
+scale = Vector2(2.8830385, 0.005210492)
+mouse_filter = 2
+color = Color(1, 1, 1, 0.2)
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+z_index = -1
+offset_left = 0.8359375
+offset_top = 185.21484
+offset_right = 12669.836
+offset_bottom = 5946.215
+rotation = 1.5707964
+scale = Vector2(2.8830385, 0.005210492)
+mouse_filter = 2
+color = Color(1, 1, 1, 0.2)
+
+[node name="ColorRect4" type="ColorRect" parent="."]
+z_index = -1
+offset_left = 0.8359395
+offset_top = 185.21484
+offset_right = 12669.836
+offset_bottom = 5946.215
+rotation = 2.7925267
+scale = Vector2(2.8830385, 0.005210492)
+mouse_filter = 2
+color = Color(1, 1, 1, 0.2)
+
+[node name="ColorRect5" type="ColorRect" parent="."]
+z_index = -1
+offset_left = 0.8359349
+offset_top = 185.21484
+offset_right = 12669.836
+offset_bottom = 5946.215
+rotation = 0.34906584
+scale = Vector2(2.8830385, 0.005210492)
+mouse_filter = 2
+color = Color(1, 1, 1, 0.2)
+
+[node name="ColorRect6" type="ColorRect" parent="."]
+z_index = -1
+offset_left = 0.8359375
+offset_top = 185.21484
+offset_right = 12669.836
+offset_bottom = 5946.215
+rotation = 4.712389
+scale = Vector2(2.8830385, 0.005210492)
+mouse_filter = 2
+color = Color(1, 1, 1, 0.2)

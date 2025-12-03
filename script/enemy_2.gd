@@ -11,6 +11,8 @@ var player_detected = false
 var tween1
 var tween2
 var tween3
+var bat_move = false
+#var bat_move_again = false
 
 func _ready() -> void:
 	global.connect("turn_changed", _on_turn_changed)
@@ -24,29 +26,26 @@ func _enemy_kill():
 func _on_enemy_move():
 	tween1 = create_tween()
 	tween1.tween_property(self, "position", target_pos, 0.8)
-	tween2 = create_tween()
-	tween2.kill()
-	pass
 
 func _on_move_changed(state: bool):
-	if state:
-		tween1 = create_tween()
-		tween1.tween_property(self, "position", target_pos, 0.8)
-		tween2 = create_tween()
-		tween2.kill()
+	bat_move = state
+	if bat_move:
+		while(bat_move):
+			tween1 = create_tween()
+			tween1.tween_property(self, "position", target_pos, 0.8)
+			await get_tree().create_timer(0.98).timeout
 	else:
 		tween2 = create_tween()
 		tween2.tween_property(self, "position", cur_pos, 0.8)
-		tween1 = create_tween()
-		tween1.kill()
 
 func _on_turn_changed(_new_turn: int):
+	#bat_move_again = true
 	cur_pos = position
 	if !player_detected:
 		var next_tile
 		while(true):
 			next_tile = cur_tile + Vector2(rng.randi_range(-1, 1), rng.randi_range(-1, 1))
-			print(str(next_tile))
+			#print(str(next_tile))
 			if next_tile in global.all_room[global.current_room]:
 				cur_tile = next_tile
 				break
@@ -59,7 +58,7 @@ func _on_detect_area_entered(area: Area2D) -> void:
 	if area.name == "player":
 		player_detected = true
 
-func _on_detect_area_exited(area: Area2D) -> void:
+#func _on_detect_area_exited(area: Area2D) -> void:
 	#if area.name == "player":
 		#player_detected = false
-	pass
+	#pass

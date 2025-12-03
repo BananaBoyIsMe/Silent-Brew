@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dod05gte2navs"]
+[gd_scene load_steps=24 format=3 uid="uid://c1vfs0moqci1r"]
 
 [ext_resource type="Script" uid="uid://c1wnuj5i8cm4w" path="res://script/level_1.gd" id="1_l3yqt"]
 [ext_resource type="PackedScene" uid="uid://e2jhu0ksgvw1" path="res://scene/tiles/tile_1.tscn" id="1_po07k"]
@@ -1723,26 +1723,26 @@ position = Vector2(500, 209)
 scale = Vector2(0.3, 0.288)
 texture = ExtResource("23_h8cr7")
 
-[node name="blackberry" type="Area2D" parent="."]
+[node name="blackberry1" type="Area2D" parent="."]
 position = Vector2(600, 691)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="blackberry"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="blackberry1"]
 shape = SubResource("CircleShape2D_s5dkk")
 
-[node name="blackberry" type="Area2D" parent="blackberry"]
-position = Vector2(399, 77)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="blackberry/blackberry"]
-shape = SubResource("CircleShape2D_s5dkk")
-
-[node name="snow" type="Area2D" parent="."]
+[node name="snow1" type="Area2D" parent="."]
 position = Vector2(899, 730)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="snow"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="snow1"]
 shape = SubResource("CircleShape2D_s5dkk")
 
-[node name="snow" type="Area2D" parent="snow"]
-position = Vector2(404, 75)
+[node name="blackberry2" type="Area2D" parent="."]
+position = Vector2(999, 768)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="snow/snow"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="blackberry2"]
+shape = SubResource("CircleShape2D_s5dkk")
+
+[node name="snow2" type="Area2D" parent="."]
+position = Vector2(1303, 805)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="snow2"]
 shape = SubResource("CircleShape2D_s5dkk")

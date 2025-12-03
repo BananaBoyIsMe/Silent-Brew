@@ -8,6 +8,10 @@ var player_input_num = 0
 var rng = RandomNumberGenerator.new()
 
 func _ready() -> void:
+	global.time.time_change(1)
+	get_parent().position = Vector2(30, 0)
+	get_parent().scale = Vector2(1.2, 1.2)
+	global.player_cur_health = 31
 	audio.stop_all()
 	
 	global.turn = 0
@@ -80,7 +84,7 @@ func on_user_input_received():
 			global.bark_emotion.gone_text(1)
 			await get_tree().create_timer(0.3).timeout
 			global.bark_emotion.new_text("I... I just need to\n avoid the leaves!\n I'll be ok...", 1)
-			global.bark_emotion.change_character_png("bark3", true)
+			global.bark_emotion.change_character_png("bark1", true)
 			await get_tree().create_timer(0.5).timeout
 			player_input = false
 		5: 

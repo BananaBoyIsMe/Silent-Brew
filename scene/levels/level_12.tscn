@@ -1,197 +1,198 @@
-[gd_scene load_steps=2 format=3 uid="uid://bx0v8auymdlda"]
+[gd_scene load_steps=11 format=3 uid="uid://bx0v8auymdlda"]
 
+[ext_resource type="Script" uid="uid://d0yvnmaiukw83" path="res://script/level_12.gd" id="1_kca1a"]
 [ext_resource type="PackedScene" uid="uid://e2jhu0ksgvw1" path="res://scene/tiles/tile_1.tscn" id="1_pxlsh"]
+[ext_resource type="PackedScene" uid="uid://b7h10vgbrow" path="res://scene/enemy/enemy_4.tscn" id="2_kca1a"]
+[ext_resource type="PackedScene" uid="uid://cwtosr5so2dc1" path="res://scene/deco/water_grass_1.tscn" id="3_wk13h"]
+[ext_resource type="PackedScene" uid="uid://dk75nkxegpdth" path="res://scene/deco/water_grass_2.tscn" id="4_b0hro"]
+[ext_resource type="Texture2D" uid="uid://eukrj1mwbad0" path="res://sprite/tiles/sb_bush1.png" id="4_ucd8n"]
+[ext_resource type="Texture2D" uid="uid://crw5uo7whh8f3" path="res://sprite/tiles/sb_bush2.png" id="6_ucd8n"]
+[ext_resource type="Texture2D" uid="uid://l7wtdmgcwydm" path="res://sprite/tiles/sb_camp.png" id="7_pkdtv"]
+[ext_resource type="Texture2D" uid="uid://crj5fby8vqum0" path="res://sprite/tiles/sb_campfire.png" id="8_ntwec"]
+[ext_resource type="PackedScene" uid="uid://cbfvufi4n47he" path="res://scene/tiles/portal_fog.tscn" id="9_ntwec"]
 
 [node name="level_12" type="Node2D"]
+script = ExtResource("1_kca1a")
 
 [node name="tiles" type="Node2D" parent="."]
 
-[node name="tile_2_1" parent="tiles" instance=ExtResource("1_pxlsh")]
-modulate = Color(0.85, 0.85, 0.85, 1)
-position = Vector2(500, 358)
+[node name="tile_1_0" parent="tiles" instance=ExtResource("1_pxlsh")]
+modulate = Color(1, 1.05, 1.05, 1)
+position = Vector2(400, 321)
+rotation = 3.14159
 scale = Vector2(0.5, 0.313)
 tile_id = 2
-tile_co = Vector2(10, 4)
+tile_co = Vector2(1, 0)
+input_tile = true
+input_text_str = "That's mama's tent"
+
+[node name="tile_1_1" parent="tiles" instance=ExtResource("1_pxlsh")]
+modulate = Color(0.9, 0.9, 0.9, 1)
+position = Vector2(400, 395)
+rotation = -3.14159
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(1, 1)
+input_tile = true
+input_text_str = "@That's mama's tent|@Mom might be@ sleeping..."
+input_face_str = "13|1"
+
+[node name="tile_1_2" parent="tiles" instance=ExtResource("1_pxlsh")]
+modulate = Color(0.9, 0.9, 0.9, 1)
+position = Vector2(400, 469)
+rotation = -3.14159
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(1, 2)
+
+[node name="tile_2_0" parent="tiles" instance=ExtResource("1_pxlsh")]
+modulate = Color(1, 1.02, 1.05, 1)
+position = Vector2(500, 284)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(2, 0)
+
+[node name="tile_2_1" parent="tiles" instance=ExtResource("1_pxlsh")]
+modulate = Color(1, 1.1, 1.1, 1)
+position = Vector2(500, 358)
+scale = Vector2(0.5, 0.313)
+skew = 1.01328e-05
+tile_id = 2
+tile_co = Vector2(2, 1)
 
 [node name="tile_2_2" parent="tiles" instance=ExtResource("1_pxlsh")]
-modulate = Color(0.85, 0.85, 0.85, 1)
+modulate = Color(0.9, 0.9, 0.9, 1)
 position = Vector2(500, 432)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
-tile_co = Vector2(10, 4)
+tile_co = Vector2(2, 2)
+input_tile = true
+input_text_str = " @That's mama's tent|@Mom might be@ sleeping..."
+input_face_str = "13|3"
 
 [node name="tile_2_3" parent="tiles" instance=ExtResource("1_pxlsh")]
-modulate = Color(0.85, 0.85, 0.85, 1)
+modulate = Color(0.98, 1.02, 0.98, 1)
 position = Vector2(500, 506)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
-tile_co = Vector2(10, 4)
+tile_co = Vector2(2, 3)
 
 [node name="tile_2_4" parent="tiles" instance=ExtResource("1_pxlsh")]
-modulate = Color(0.85, 0.85, 0.85, 1)
+modulate = Color(0.98, 1.02, 0.98, 1)
 position = Vector2(500, 580)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
-tile_co = Vector2(10, 4)
+tile_co = Vector2(2, 4)
 
 [node name="tile_2_5" parent="tiles" instance=ExtResource("1_pxlsh")]
-modulate = Color(0.91, 0.91, 0.91, 1)
+modulate = Color(0.97, 0.97, 0.97, 1)
 position = Vector2(500, 654)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
-tile_co = Vector2(10, 5)
-delay_time = 0.6
-
-[node name="tile_2_6" parent="tiles" instance=ExtResource("1_pxlsh")]
-position = Vector2(500, 728)
-scale = Vector2(0.5, 0.313)
-tile_id = 2
-tile_co = Vector2(10, 6)
-delay_time = 0.3
+tile_co = Vector2(2, 5)
 
 [node name="tile_3_0" parent="tiles" instance=ExtResource("1_pxlsh")]
+modulate = Color(1, 1.1, 1.1, 1)
 position = Vector2(600, 321)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
-tile_co = Vector2(3, 2)
+tile_co = Vector2(3, 0)
 
 [node name="tile_3_1" parent="tiles" instance=ExtResource("1_pxlsh")]
+modulate = Color(0.95, 1.1, 1.12, 1)
 position = Vector2(600, 395)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
-tile_co = Vector2(3, 2)
+tile_co = Vector2(3, 1)
 
 [node name="tile_3_2" parent="tiles" instance=ExtResource("1_pxlsh")]
+modulate = Color(1, 1.1, 1.08, 1)
 position = Vector2(600, 469)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
 tile_co = Vector2(3, 2)
 
 [node name="tile_3_3" parent="tiles" instance=ExtResource("1_pxlsh")]
-modulate = Color(0.8, 0.8, 0.8, 1)
+modulate = Color(1, 1.03, 1.02, 1)
 position = Vector2(600, 543)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
 tile_co = Vector2(3, 3)
 
 [node name="tile_3_4" parent="tiles" instance=ExtResource("1_pxlsh")]
-modulate = Color(0.9, 0.9, 0.9, 1)
 position = Vector2(600, 617)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
 tile_co = Vector2(3, 4)
 
 [node name="tile_3_5" parent="tiles" instance=ExtResource("1_pxlsh")]
+modulate = Color(0.97, 0.97, 0.97, 1)
 position = Vector2(600, 691)
 scale = Vector2(0.5, 0.313)
-tile_id = 33
-tile_co = Vector2(3, 5)
-delay_time = 0.6
-input_tile = true
-input_text_str = "ohhhl water sausage!"
-
-[node name="tile_3_6" parent="tiles" instance=ExtResource("1_pxlsh")]
-modulate = Color(0.9, 0.9, 0.9, 1)
-position = Vector2(600, 765)
-scale = Vector2(0.5, 0.313)
-tile_id = 33
-tile_co = Vector2(3, 6)
-delay_time = 0.3
-input_tile = true
-input_text_str = "ohhhl water sausage!"
-
-[node name="tile_4_0" parent="tiles" instance=ExtResource("1_pxlsh")]
-modulate = Color(0.8, 0.8, 0.8, 1)
-position = Vector2(700, 284)
-scale = Vector2(0.5, 0.313)
 tile_id = 2
-tile_co = Vector2(4, 0)
+tile_co = Vector2(3, 5)
 
 [node name="tile_4_1" parent="tiles" instance=ExtResource("1_pxlsh")]
-modulate = Color(0.8, 0.8, 0.8, 1)
+modulate = Color(0.95, 1.1, 1.15, 1)
 position = Vector2(700, 358)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
-tile_co = Vector2(4, 0)
+tile_co = Vector2(4, 1)
 
 [node name="tile_4_2" parent="tiles" instance=ExtResource("1_pxlsh")]
-modulate = Color(0.8, 0.8, 0.8, 1)
+modulate = Color(0.9, 1.1, 1.15, 1)
 position = Vector2(700, 432)
 rotation = 3.14159
 scale = Vector2(0.5, 0.313)
 tile_id = 2
 tile_co = Vector2(4, 2)
+input_tile = true
+input_text_str = "@Fire bush thingy!|@It was very nice@ and cozy last night..."
+input_face_str = "12|13"
 
 [node name="tile_4_3" parent="tiles" instance=ExtResource("1_pxlsh")]
-modulate = Color(0.8, 0.8, 0.8, 1)
+modulate = Color(0.95, 1.04, 1.08, 1)
 position = Vector2(700, 506)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
 tile_co = Vector2(4, 3)
-input_tile = true
-input_text_str = "Granny's hut!"
 
 [node name="tile_4_4" parent="tiles" instance=ExtResource("1_pxlsh")]
-modulate = Color(0.93, 0.93, 0.93, 1)
 position = Vector2(700, 580)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
 tile_co = Vector2(4, 4)
 
 [node name="tile_4_5" parent="tiles" instance=ExtResource("1_pxlsh")]
-modulate = Color(0.93, 0.93, 0.93, 1)
+modulate = Color(0.97, 0.97, 0.97, 1)
 position = Vector2(700, 654)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
 tile_co = Vector2(4, 5)
 
-[node name="tile_4_6" parent="tiles" instance=ExtResource("1_pxlsh")]
-position = Vector2(700, 728)
-scale = Vector2(0.5, 0.313)
-tile_id = 33
-tile_co = Vector2(4, 6)
-delay_time = 0.3
-input_tile = true
-input_text_str = "Nice pond!"
-
-[node name="tile_4_7" parent="tiles" instance=ExtResource("1_pxlsh")]
-modulate = Color(0.9, 0.9, 0.9, 1)
-position = Vector2(700, 802)
-scale = Vector2(0.5, 0.313)
-tile_id = 33
-tile_co = Vector2(4, 0)
-input_tile = true
-input_text_str = "Nice pond!"
-
-[node name="tile_5_0" parent="tiles" instance=ExtResource("1_pxlsh")]
-modulate = Color(0.83, 0.83, 0.83, 1)
-position = Vector2(800, 321)
-scale = Vector2(0.5, 0.313)
-tile_id = 2
-tile_co = Vector2(5, 0)
-
 [node name="tile_5_1" parent="tiles" instance=ExtResource("1_pxlsh")]
-modulate = Color(0.83, 0.83, 0.83, 1)
+modulate = Color(0.9, 1.1, 1.2, 1)
 position = Vector2(800, 395)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
-tile_co = Vector2(5, 0)
+tile_co = Vector2(5, 1)
 
 [node name="tile_5_2" parent="tiles" instance=ExtResource("1_pxlsh")]
-modulate = Color(0.89, 0.89, 0.89, 1)
+modulate = Color(0.9, 1.1, 1.15, 1)
 position = Vector2(800, 469)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
 tile_co = Vector2(5, 2)
 
 [node name="tile_5_3" parent="tiles" instance=ExtResource("1_pxlsh")]
-modulate = Color(0.93, 0.93, 0.93, 1)
+modulate = Color(0.94, 1.07, 1.1, 1)
 position = Vector2(800, 543)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
 tile_co = Vector2(5, 3)
 
 [node name="tile_5_4" parent="tiles" instance=ExtResource("1_pxlsh")]
+modulate = Color(1, 1.03, 1.04, 1)
 position = Vector2(800, 617)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
@@ -203,32 +204,16 @@ scale = Vector2(0.5, 0.313)
 tile_id = 2
 tile_co = Vector2(5, 5)
 
-[node name="tile_5_6" parent="tiles" instance=ExtResource("1_pxlsh")]
-position = Vector2(800, 765)
-scale = Vector2(0.5, 0.313)
-tile_id = 2
-tile_co = Vector2(5, 6)
-delay_time = 0.3
-input_text_str = "Grandma has good pond!"
-
-[node name="tile_6_1" parent="tiles" instance=ExtResource("1_pxlsh")]
-modulate = Color(0.8, 0.8, 0.8, 1)
-position = Vector2(900, 358)
-rotation = 3.14159
-scale = Vector2(0.5, 0.313)
-tile_id = 2
-tile_co = Vector2(6, 0)
-
 [node name="tile_6_2" parent="tiles" instance=ExtResource("1_pxlsh")]
-modulate = Color(0.9, 0.9, 0.9, 1)
+modulate = Color(0.9, 1.17, 1.24, 1)
 position = Vector2(900, 432)
-rotation = 3.14159
+rotation = -3.14159
 scale = Vector2(0.5, 0.313)
 tile_id = 2
 tile_co = Vector2(6, 2)
 
 [node name="tile_6_3" parent="tiles" instance=ExtResource("1_pxlsh")]
-modulate = Color(0.95, 0.95, 0.95, 1)
+modulate = Color(0.9, 1.1, 1.15, 1)
 position = Vector2(900, 506)
 rotation = 3.14159
 scale = Vector2(0.5, 0.313)
@@ -236,50 +221,36 @@ tile_id = 2
 tile_co = Vector2(6, 3)
 
 [node name="tile_6_4" parent="tiles" instance=ExtResource("1_pxlsh")]
+modulate = Color(0.95, 1.07, 1.1, 1)
 position = Vector2(900, 580)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
 tile_co = Vector2(6, 4)
 
 [node name="tile_6_5" parent="tiles" instance=ExtResource("1_pxlsh")]
-modulate = Color(1.02, 1.02, 1.02, 1)
+modulate = Color(1, 1.05, 1.05, 1)
 position = Vector2(900, 654)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
 tile_co = Vector2(6, 5)
 
 [node name="tile_6_6" parent="tiles" instance=ExtResource("1_pxlsh")]
+modulate = Color(0.98, 0.98, 0.98, 1)
 position = Vector2(900, 728)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
 tile_co = Vector2(6, 6)
-delay_time = 0.3
-
-[node name="tile_6_7" parent="tiles" instance=ExtResource("1_pxlsh")]
-position = Vector2(900, 802)
-scale = Vector2(0.5, 0.313)
-tile_id = 2
-tile_co = Vector2(6, 6)
-delay_time = 0.3
-
-[node name="tile_7_0" parent="tiles" instance=ExtResource("1_pxlsh")]
-modulate = Color(0.8, 0.8, 0.8, 1)
-position = Vector2(1000, 321)
-rotation = -3.14159
-scale = Vector2(0.5, 0.313)
-tile_id = 2
-tile_co = Vector2(7, 0)
 
 [node name="tile_7_1" parent="tiles" instance=ExtResource("1_pxlsh")]
-modulate = Color(0.8, 0.8, 0.8, 1)
+modulate = Color(0.9, 1.1, 1.2, 1)
 position = Vector2(1000, 395)
-rotation = -3.14159
+rotation = 3.14159
 scale = Vector2(0.5, 0.313)
 tile_id = 2
-tile_co = Vector2(7, 0)
+tile_co = Vector2(7, 1)
 
 [node name="tile_7_2" parent="tiles" instance=ExtResource("1_pxlsh")]
-modulate = Color(0.9, 0.9, 0.9, 1)
+modulate = Color(0.9, 1.15, 1.2, 1)
 position = Vector2(1000, 469)
 rotation = -3.14159
 scale = Vector2(0.5, 0.313)
@@ -287,21 +258,21 @@ tile_id = 2
 tile_co = Vector2(7, 2)
 
 [node name="tile_7_3" parent="tiles" instance=ExtResource("1_pxlsh")]
-modulate = Color(0.92, 0.92, 0.92, 1)
+modulate = Color(0.95, 1.1, 1.15, 1)
 position = Vector2(1000, 543)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
 tile_co = Vector2(7, 3)
 
 [node name="tile_7_4" parent="tiles" instance=ExtResource("1_pxlsh")]
-modulate = Color(1.02, 1.02, 1.02, 1)
+modulate = Color(0.97, 1.07, 1.1, 1)
 position = Vector2(1000, 617)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
 tile_co = Vector2(7, 4)
 
 [node name="tile_7_5" parent="tiles" instance=ExtResource("1_pxlsh")]
-modulate = Color(1.02, 1.02, 1.02, 1)
+modulate = Color(1, 1.05, 1.05, 1)
 position = Vector2(1000, 691)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
@@ -312,177 +283,353 @@ position = Vector2(1000, 765)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
 tile_co = Vector2(7, 6)
-delay_time = 0.3
-
-[node name="tile_8_0" parent="tiles" instance=ExtResource("1_pxlsh")]
-modulate = Color(0.8, 0.8, 0.8, 1)
-position = Vector2(1100, 284)
-scale = Vector2(0.5, 0.313)
-tile_id = 2
-tile_co = Vector2(8, 2)
 
 [node name="tile_8_1" parent="tiles" instance=ExtResource("1_pxlsh")]
-modulate = Color(0.8, 0.8, 0.8, 1)
+modulate = Color(0.98, 0.98, 0.98, 1)
 position = Vector2(1100, 358)
 scale = Vector2(0.5, 0.313)
-tile_id = 2
-tile_co = Vector2(8, 2)
+tile_id = 3
+tile_co = Vector2(8, 1)
+input_tile = true
+input_text_str = "@Don't wanna go @in the river.|@Wet fur sad life!"
+input_face_str = "11|3"
 
 [node name="tile_8_2" parent="tiles" instance=ExtResource("1_pxlsh")]
-modulate = Color(0.8, 0.8, 0.8, 1)
 position = Vector2(1100, 432)
 scale = Vector2(0.5, 0.313)
-tile_id = 2
+tile_id = 3
 tile_co = Vector2(8, 2)
+delay_time = 0.2
+input_tile = true
+input_text_str = "@Ooh! Water sausage.| @...| Mom said you @can eat them @ by cooking...| @Mom's weird..."
+input_face_str = "12|1|10|8"
+
+[node name="water_grass_1" parent="tiles/tile_8_2" instance=ExtResource("3_wk13h")]
+position = Vector2(40.0001, -108.626)
+scale = Vector2(0.7, 0.9)
+
+[node name="water_grass_2" parent="tiles/tile_8_2" instance=ExtResource("3_wk13h")]
+position = Vector2(24.0001, -83.067)
+scale = Vector2(0.4, 0.514)
 
 [node name="tile_8_3" parent="tiles" instance=ExtResource("1_pxlsh")]
-modulate = Color(0.84, 0.84, 0.84, 1)
+modulate = Color(0.9, 1.12, 1.2, 1)
 position = Vector2(1100, 506)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
 tile_co = Vector2(8, 3)
 
 [node name="tile_8_4" parent="tiles" instance=ExtResource("1_pxlsh")]
-modulate = Color(0.91, 0.91, 0.91, 1)
+modulate = Color(0.9, 1.12, 1.2, 1)
 position = Vector2(1100, 580)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
 tile_co = Vector2(8, 4)
 
 [node name="tile_8_5" parent="tiles" instance=ExtResource("1_pxlsh")]
+modulate = Color(0.95, 1.1, 1.15, 1)
 position = Vector2(1100, 654)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
 tile_co = Vector2(8, 5)
 
 [node name="tile_8_6" parent="tiles" instance=ExtResource("1_pxlsh")]
+modulate = Color(1, 1.07, 1.07, 1)
 position = Vector2(1100, 728)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
 tile_co = Vector2(8, 6)
-delay_time = 0.3
-
-[node name="tile_8_7" parent="tiles" instance=ExtResource("1_pxlsh")]
-position = Vector2(1100, 802)
-scale = Vector2(0.5, 0.313)
-tile_id = 2
-tile_co = Vector2(8, 6)
-delay_time = 0.3
 
 [node name="tile_9_0" parent="tiles" instance=ExtResource("1_pxlsh")]
-modulate = Color(0.85, 0.85, 0.85, 1)
+modulate = Color(0.92, 0.92, 0.92, 1)
 position = Vector2(1200, 321)
 scale = Vector2(0.5, 0.313)
-tile_id = 2
-tile_co = Vector2(9, 3)
+tile_id = 3
+tile_co = Vector2(9, 0)
+input_tile = true
+input_text_str = "@Don't wanna go @in the river.|@Wet fur sad life!"
+input_face_str = "11|3"
 
 [node name="tile_9_1" parent="tiles" instance=ExtResource("1_pxlsh")]
-modulate = Color(0.85, 0.85, 0.85, 1)
+modulate = Color(0.95, 0.95, 0.95, 1)
 position = Vector2(1200, 395)
 scale = Vector2(0.5, 0.313)
-tile_id = 2
-tile_co = Vector2(9, 3)
+tile_id = 3
+tile_co = Vector2(9, 1)
+delay_time = 0.2
+input_tile = true
+input_text_str = "@Don't wanna go @in the river.|@Wet fur sad life!"
+input_face_str = "11|3"
 
 [node name="tile_9_2" parent="tiles" instance=ExtResource("1_pxlsh")]
-modulate = Color(0.85, 0.85, 0.85, 1)
+modulate = Color(0.98, 0.98, 0.98, 1)
 position = Vector2(1200, 469)
 scale = Vector2(0.5, 0.313)
-tile_id = 2
-tile_co = Vector2(9, 3)
+tile_id = 3
+tile_co = Vector2(9, 2)
+delay_time = 0.4
+input_tile = true
+input_text_str = "@Don't wanna go @in the river.|@Wet fur sad life!"
+input_face_str = "11|3"
+
+[node name="water_grass_2" parent="tiles/tile_9_2" instance=ExtResource("4_b0hro")]
+position = Vector2(-58, 25.5591)
+scale = Vector2(0.7, 0.7)
 
 [node name="tile_9_3" parent="tiles" instance=ExtResource("1_pxlsh")]
-modulate = Color(0.85, 0.85, 0.85, 1)
 position = Vector2(1200, 543)
 scale = Vector2(0.5, 0.313)
-tile_id = 2
+tile_id = 3
 tile_co = Vector2(9, 3)
+delay_time = 0.6
+input_tile = true
+input_text_str = "@Don't wanna go @in the river.|@Wet fur sad life!"
+input_face_str = "11|3"
 
 [node name="tile_9_4" parent="tiles" instance=ExtResource("1_pxlsh")]
-modulate = Color(0.91, 0.91, 0.91, 1)
+modulate = Color(0.9, 1.12, 1.2, 1)
 position = Vector2(1200, 617)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
 tile_co = Vector2(9, 4)
 
 [node name="tile_9_5" parent="tiles" instance=ExtResource("1_pxlsh")]
+modulate = Color(0.95, 1.1, 1.15, 1)
 position = Vector2(1200, 691)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
 tile_co = Vector2(9, 5)
-delay_time = 0.6
 
 [node name="tile_9_6" parent="tiles" instance=ExtResource("1_pxlsh")]
+modulate = Color(1, 1.05, 1.05, 1)
 position = Vector2(1200, 765)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
 tile_co = Vector2(9, 6)
-delay_time = 0.3
 
 [node name="tile_10_1" parent="tiles" instance=ExtResource("1_pxlsh")]
-modulate = Color(0.85, 0.85, 0.85, 1)
+modulate = Color(0.9, 0.9, 0.9, 1)
 position = Vector2(1300, 358)
 scale = Vector2(0.5, 0.313)
-tile_id = 2
-tile_co = Vector2(10, 4)
+tile_id = 3
+tile_co = Vector2(10, 1)
+delay_time = 0.2
+input_tile = true
+input_text_str = "@Don't wanna go @in the river.|@Wet fur sad life!"
+input_face_str = "11|3"
 
 [node name="tile_10_2" parent="tiles" instance=ExtResource("1_pxlsh")]
-modulate = Color(0.85, 0.85, 0.85, 1)
+modulate = Color(0.93, 0.93, 0.93, 1)
 position = Vector2(1300, 432)
 scale = Vector2(0.5, 0.313)
-tile_id = 2
-tile_co = Vector2(10, 4)
+tile_id = 3
+tile_co = Vector2(10, 2)
+delay_time = 0.4
+input_tile = true
+input_text_str = "@Don't wanna go @in the river.|@Wet fur sad life!"
+input_face_str = "11|3"
 
 [node name="tile_10_3" parent="tiles" instance=ExtResource("1_pxlsh")]
-modulate = Color(0.85, 0.85, 0.85, 1)
+modulate = Color(0.95, 0.95, 0.95, 1)
 position = Vector2(1300, 506)
 scale = Vector2(0.5, 0.313)
-tile_id = 2
-tile_co = Vector2(10, 4)
+tile_id = 3
+tile_co = Vector2(10, 3)
+delay_time = 0.6
+input_tile = true
+input_text_str = "@Don't wanna go @in the river.|@Wet fur sad life!"
+input_face_str = "11|3"
 
 [node name="tile_10_4" parent="tiles" instance=ExtResource("1_pxlsh")]
-modulate = Color(0.85, 0.85, 0.85, 1)
+modulate = Color(0.95, 0.95, 0.95, 1)
 position = Vector2(1300, 580)
 scale = Vector2(0.5, 0.313)
-tile_id = 2
+tile_id = 3
 tile_co = Vector2(10, 4)
+delay_time = 0.8
+input_tile = true
+input_text_str = "@Don't wanna go @in the river.|@Wet fur sad life!"
+input_face_str = "11|3"
 
 [node name="tile_10_5" parent="tiles" instance=ExtResource("1_pxlsh")]
-modulate = Color(0.91, 0.91, 0.91, 1)
+modulate = Color(0.9, 1.12, 1.2, 1)
 position = Vector2(1300, 654)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
 tile_co = Vector2(10, 5)
-delay_time = 0.6
 
 [node name="tile_10_6" parent="tiles" instance=ExtResource("1_pxlsh")]
+modulate = Color(0.95, 1.1, 1.12, 1)
 position = Vector2(1300, 728)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
 tile_co = Vector2(10, 6)
-delay_time = 0.3
+
+[node name="tile_10_7" parent="tiles" instance=ExtResource("1_pxlsh")]
+modulate = Color(1, 1.05, 1.05, 1)
+position = Vector2(1300, 802)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(10, 7)
+
+[node name="tile_11_2" parent="tiles" instance=ExtResource("1_pxlsh")]
+modulate = Color(0.92, 0.92, 0.92, 1)
+position = Vector2(1400, 469)
+scale = Vector2(0.5, 0.313)
+tile_id = 3
+tile_co = Vector2(11, 2)
+delay_time = 0.6
+input_tile = true
+input_text_str = "@Don't wanna go @in the river.|@Wet fur sad life!"
+input_face_str = "11|3"
+
+[node name="tile_11_3" parent="tiles" instance=ExtResource("1_pxlsh")]
+modulate = Color(0.92, 0.92, 0.92, 1)
+position = Vector2(1400, 543)
+scale = Vector2(0.5, 0.313)
+tile_id = 3
+tile_co = Vector2(11, 3)
+delay_time = 0.8
+input_tile = true
+input_text_str = "@Don't wanna go @in the river.|@Wet fur sad life!"
+input_face_str = "11|3"
+
+[node name="tile_11_4" parent="tiles" instance=ExtResource("1_pxlsh")]
+modulate = Color(0.96, 0.96, 0.96, 1)
+position = Vector2(1400, 617)
+scale = Vector2(0.5, 0.313)
+tile_id = 3
+tile_co = Vector2(11, 4)
+delay_time = 1.0
+input_tile = true
+input_text_str = "@Don't wanna go @in the river.|@Wet fur sad life!"
+input_face_str = "11|3"
+
+[node name="tile_11_5" parent="tiles" instance=ExtResource("1_pxlsh")]
+position = Vector2(1400, 691)
+scale = Vector2(0.5, 0.313)
+tile_id = 3
+tile_co = Vector2(11, 5)
+delay_time = 1.2
+input_tile = true
+input_text_str = "@Don't wanna go @in the river.|@Wet fur sad life!"
+input_face_str = "11|3"
+
+[node name="tile_11_6" parent="tiles" instance=ExtResource("1_pxlsh")]
+modulate = Color(0.9, 1.12, 1.15, 1)
+position = Vector2(1400, 765)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(11, 6)
+
+[node name="tile_12_4" parent="tiles" instance=ExtResource("1_pxlsh")]
+modulate = Color(0.92, 0.92, 0.92, 1)
+position = Vector2(1500, 580)
+scale = Vector2(0.5, 0.313)
+tile_id = 3
+tile_co = Vector2(12, 4)
+delay_time = 1.0
+input_tile = true
+input_text_str = "@Don't wanna go @in the river.|@Wet fur sad life!"
+input_face_str = "11|3"
+
+[node name="tile_12_5" parent="tiles" instance=ExtResource("1_pxlsh")]
+modulate = Color(0.96, 0.96, 0.96, 1)
+position = Vector2(1500, 654)
+scale = Vector2(0.5, 0.313)
+tile_id = 3
+tile_co = Vector2(12, 5)
+delay_time = 1.2
+input_tile = true
+input_text_str = "@Don't wanna go @in the river.|@Wet fur sad life!"
+input_face_str = "11|3"
+
+[node name="tile_12_6" parent="tiles" instance=ExtResource("1_pxlsh")]
+position = Vector2(1500, 728)
+scale = Vector2(0.5, 0.313)
+tile_id = 3
+tile_co = Vector2(12, 6)
+delay_time = 1.4
+input_tile = true
+input_text_str = "@Don't wanna go @in the river.|@Wet fur sad life!"
+input_face_str = "11|3"
+
+[node name="tile_12_7" parent="tiles" instance=ExtResource("1_pxlsh")]
+modulate = Color(0.9, 1.12, 1.15, 1)
+position = Vector2(1500, 802)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(12, 7)
 
 [node name="tree_bg_tiles" type="Node2D" parent="."]
+
+[node name="deco" type="Node2D" parent="."]
+z_index = 10
+
+[node name="bush" type="Node2D" parent="."]
+
+[node name="bush2" type="Sprite2D" parent="bush"]
+position = Vector2(900, 721)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_ucd8n")
+flip_h = true
+
+[node name="bush3" type="Sprite2D" parent="bush"]
+position = Vector2(999, 758)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("6_ucd8n")
+flip_h = true
+
+[node name="bush4" type="Sprite2D" parent="bush"]
+position = Vector2(1303, 793)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("6_ucd8n")
+flip_h = true
+
+[node name="bush5" type="Sprite2D" parent="bush"]
+position = Vector2(599, 681)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("6_ucd8n")
+
+[node name="SbCamp" type="Sprite2D" parent="."]
+modulate = Color(0.8, 0.9, 0.9, 1)
+position = Vector2(470, 394)
+rotation = -0.139626
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("7_pkdtv")
+
+[node name="SbCampfire" type="Sprite2D" parent="."]
+position = Vector2(696, 422)
+rotation = -0.0698132
+scale = Vector2(0.38, 0.38)
+texture = ExtResource("8_ntwec")
+
+[node name="portal_fog" parent="." instance=ExtResource("9_ntwec")]
+position = Vector2(499, 652)
+
+[node name="portal_fog2" parent="." instance=ExtResource("9_ntwec")]
+position = Vector2(1305, 651)
+
+[node name="enemy_4" parent="." instance=ExtResource("2_kca1a")]
+position = Vector2(901, 704)
+scale = Vector2(0.15, 0.15)
+cur_tile = Vector2(6, 6)
+next_tile = Vector2(6, 5)
 
 [node name="bg" type="Node2D" parent="."]
 
 [node name="ColorRect11" type="ColorRect" parent="bg"]
-visible = false
 z_index = -10
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -10003.0
-offset_top = -4906.0
-offset_right = 9287.0
-offset_bottom = 6064.0
+offset_left = -8586.0
+offset_top = -4991.0
+offset_right = 10704.0
+offset_bottom = 5979.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-color = Color(0.207386, 0.255859, 0.226321, 1)
-
-[node name="bush" type="Node2D" parent="."]
-
-[node name="deco" type="Node2D" parent="."]
-z_index = 10
+color = Color(0.255981, 0.455078, 0.333753, 1)

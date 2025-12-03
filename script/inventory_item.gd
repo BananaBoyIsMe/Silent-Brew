@@ -6,6 +6,7 @@ var in_slot = false
 
 @onready var item_sprite = $SbPlant
 @onready var item_area = $itm
+@onready var eat_bt = $Button
 
 func _ready() -> void:
 	global.connect("inv_toggled", delete_inv)
@@ -117,3 +118,16 @@ func _on_area_2d_mouse_exited() -> void:
 	if !in_slot:
 		var tween2 = create_tween()
 		tween2.tween_property(self, "scale", Vector2(1, 1), 0.5).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+
+func _on_texture_rect_mouse_entered() -> void:
+	var tween = create_tween()
+	tween.tween_property(eat_bt, "position:y", -25, 0.5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
+	var tween1 = create_tween()
+	tween1.tween_property(eat_bt, "modulate:a", 1, 0.5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
+
+
+func _on_texture_rect_mouse_exited() -> void:
+	var tween = create_tween()
+	tween.tween_property(eat_bt, "position:y", 25, 0.5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
+	var tween1 = create_tween()
+	tween1.tween_property(eat_bt, "modulate:a", 0, 0.5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)

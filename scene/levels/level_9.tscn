@@ -1,9 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://b0s74js8qj2rx"]
+[gd_scene load_steps=10 format=3 uid="uid://b0s74js8qj2rx"]
 
 [ext_resource type="PackedScene" uid="uid://e2jhu0ksgvw1" path="res://scene/tiles/tile_1.tscn" id="1_35uwu"]
 [ext_resource type="Script" uid="uid://bmkih0gtqnlq8" path="res://script/level_9.gd" id="1_j1nx6"]
 [ext_resource type="PackedScene" uid="uid://cbfvufi4n47he" path="res://scene/tiles/portal_fog.tscn" id="2_jhwcs"]
 [ext_resource type="Shader" uid="uid://bkexlxs4tam0g" path="res://shader/nighttime.gdshader" id="3_8kic1"]
+[ext_resource type="Texture2D" uid="uid://bgvj4fylq4qd2" path="res://sprite/plant/sb_heally_pad.png" id="3_pt1a7"]
+[ext_resource type="Script" uid="uid://crs3eikt6yim" path="res://script/heally_pad_ripple.gd" id="4_fgnqb"]
+[ext_resource type="Shader" uid="uid://bwuo38ypvi2eh" path="res://shader/aurora.gdshader" id="7_fgnqb"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vwjda"]
 shader = ExtResource("3_8kic1")
@@ -12,6 +15,19 @@ shader_parameter/desaturate = 0.30000001425
 shader_parameter/tint_color = Color(0.12528992, 0.13906068, 0.62890625, 1)
 shader_parameter/tint_strength = 0.0800000038
 shader_parameter/contrast = 1.20000003325
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ayk3d"]
+shader = ExtResource("7_fgnqb")
+shader_parameter/speed = 0.050000002375
+shader_parameter/distortion = 0.0
+shader_parameter/intensity = 1.0000000475
+shader_parameter/transparency = 0.150000007125
+shader_parameter/color1 = Color(1, 0.8, 0.7, 1)
+shader_parameter/color2 = Color(0.6, 0.8, 1, 1)
+shader_parameter/color3 = Color(0.5, 0.7, 0.9, 0.6)
+shader_parameter/color4 = Color(0.5, 1, 0.5, 1)
+shader_parameter/color5 = Color(0.9, 0.9, 0.3, 1)
+shader_parameter/seed_offset = Vector2(0, 0)
 
 [node name="level_9" type="Node2D"]
 script = ExtResource("1_j1nx6")
@@ -57,7 +73,7 @@ modulate = Color(0.785777, 0.785777, 0.785777, 1)
 position = Vector2(600, 395)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
-tile_co = Vector2(3, 2)
+tile_co = Vector2(3, 1)
 
 [node name="tile_3_2" parent="tiles" instance=ExtResource("1_35uwu")]
 modulate = Color(0.7977378, 0.7977378, 0.7977378, 1)
@@ -66,7 +82,8 @@ scale = Vector2(0.5, 0.313)
 tile_id = 3
 tile_co = Vector2(3, 2)
 delay_time = 0.8
-input_tile = true
+input_text_str = "@Dark water...@Scary!"
+input_face_str = "11"
 
 [node name="tile_3_3" parent="tiles" instance=ExtResource("1_35uwu")]
 modulate = Color(0.8, 0.8, 0.8, 1)
@@ -75,7 +92,8 @@ scale = Vector2(0.5, 0.313)
 tile_id = 3
 tile_co = Vector2(3, 3)
 delay_time = 0.8
-input_tile = true
+input_text_str = "@Dark water...@Scary!"
+input_face_str = "11"
 
 [node name="tile_3_4" parent="tiles" instance=ExtResource("1_35uwu")]
 modulate = Color(0.9, 0.9, 0.9, 1)
@@ -84,7 +102,8 @@ scale = Vector2(0.5, 0.313)
 tile_id = 3
 tile_co = Vector2(3, 4)
 delay_time = 0.8
-input_tile = true
+input_text_str = "@Dark water...@Scary!"
+input_face_str = "11"
 
 [node name="tile_3_5" parent="tiles" instance=ExtResource("1_35uwu")]
 position = Vector2(600, 691)
@@ -92,7 +111,8 @@ scale = Vector2(0.5, 0.313)
 tile_id = 3
 tile_co = Vector2(3, 5)
 delay_time = 0.8
-input_tile = true
+input_text_str = "@Dark water...@Scary!"
+input_face_str = "11"
 
 [node name="tile_3_6" parent="tiles" instance=ExtResource("1_35uwu")]
 modulate = Color(0.9593466, 0.9593466, 0.9593466, 1)
@@ -101,7 +121,6 @@ scale = Vector2(0.5, 0.313)
 tile_id = 2
 tile_co = Vector2(3, 6)
 delay_time = 0.3
-input_tile = true
 
 [node name="tile_4_1" parent="tiles" instance=ExtResource("1_35uwu")]
 modulate = Color(0.8, 0.8, 0.8, 1)
@@ -118,7 +137,8 @@ scale = Vector2(0.5, 0.313)
 tile_id = 3
 tile_co = Vector2(4, 2)
 delay_time = 0.8
-input_tile = true
+input_text_str = "@Dark water...@Scary!"
+input_face_str = "11"
 
 [node name="tile_4_3" parent="tiles" instance=ExtResource("1_35uwu")]
 modulate = Color(0.8209799, 0.8209799, 0.8209799, 1)
@@ -128,6 +148,8 @@ tile_id = 3
 tile_co = Vector2(4, 3)
 delay_time = 0.6
 input_tile = true
+input_text_str = "@Dark water...@Scary!"
+input_face_str = "11"
 
 [node name="tile_4_4" parent="tiles" instance=ExtResource("1_35uwu")]
 modulate = Color(0.93, 0.93, 0.93, 1)
@@ -137,6 +159,8 @@ tile_id = 3
 tile_co = Vector2(4, 4)
 delay_time = 0.6
 input_tile = true
+input_text_str = "@Dark water...@Scary!"
+input_face_str = "11"
 
 [node name="tile_4_5" parent="tiles" instance=ExtResource("1_35uwu")]
 modulate = Color(0.93, 0.93, 0.93, 1)
@@ -146,6 +170,8 @@ tile_id = 3
 tile_co = Vector2(4, 5)
 delay_time = 0.6
 input_tile = true
+input_text_str = "@Dark water...@Scary!"
+input_face_str = "11"
 
 [node name="tile_4_6" parent="tiles" instance=ExtResource("1_35uwu")]
 position = Vector2(700, 728)
@@ -153,7 +179,8 @@ scale = Vector2(0.5, 0.313)
 tile_id = 3
 tile_co = Vector2(4, 6)
 delay_time = 0.8
-input_tile = true
+input_text_str = "@Dark water...@Scary!"
+input_face_str = "11"
 
 [node name="tile_4_7" parent="tiles" instance=ExtResource("1_35uwu")]
 modulate = Color(0.9593466, 0.9593466, 0.9593466, 1)
@@ -161,7 +188,6 @@ position = Vector2(700, 802)
 scale = Vector2(0.5, 0.313)
 tile_id = 2
 tile_co = Vector2(4, 7)
-input_tile = true
 
 [node name="tile_5_0" parent="tiles" instance=ExtResource("1_35uwu")]
 modulate = Color(0.80363095, 0.80363095, 0.80363095, 1)
@@ -177,7 +203,8 @@ scale = Vector2(0.5, 0.313)
 tile_id = 3
 tile_co = Vector2(5, 1)
 delay_time = 0.8
-input_tile = true
+input_text_str = "@Dark water...@Scary!"
+input_face_str = "11"
 
 [node name="tile_5_2" parent="tiles" instance=ExtResource("1_35uwu")]
 modulate = Color(0.89, 0.89, 0.89, 1)
@@ -187,6 +214,8 @@ tile_id = 3
 tile_co = Vector2(5, 2)
 delay_time = 0.6
 input_tile = true
+input_text_str = "@Dark water...@Scary!"
+input_face_str = "11"
 
 [node name="tile_5_3" parent="tiles" instance=ExtResource("1_35uwu")]
 modulate = Color(0.93, 0.93, 0.93, 1)
@@ -196,6 +225,8 @@ tile_id = 3
 tile_co = Vector2(5, 3)
 delay_time = 0.4
 input_tile = true
+input_text_str = "@Dark water...@Scary!"
+input_face_str = "11"
 
 [node name="tile_5_4" parent="tiles" instance=ExtResource("1_35uwu")]
 position = Vector2(800, 617)
@@ -204,6 +235,8 @@ tile_id = 3
 tile_co = Vector2(5, 4)
 delay_time = 0.4
 input_tile = true
+input_text_str = "@Dark water...@Scary!"
+input_face_str = "11"
 
 [node name="tile_5_5" parent="tiles" instance=ExtResource("1_35uwu")]
 position = Vector2(800, 691)
@@ -212,6 +245,8 @@ tile_id = 3
 tile_co = Vector2(5, 5)
 delay_time = 0.6
 input_tile = true
+input_text_str = "@Dark water...@Scary!"
+input_face_str = "11"
 
 [node name="tile_5_6" parent="tiles" instance=ExtResource("1_35uwu")]
 position = Vector2(800, 765)
@@ -219,7 +254,8 @@ scale = Vector2(0.5, 0.313)
 tile_id = 3
 tile_co = Vector2(5, 6)
 delay_time = 0.8
-input_tile = true
+input_text_str = "@Dark water...@Scary!"
+input_face_str = "11"
 
 [node name="tile_5_7" parent="tiles" instance=ExtResource("1_35uwu")]
 position = Vector2(800, 839)
@@ -244,7 +280,8 @@ scale = Vector2(0.5, 0.313)
 tile_id = 3
 tile_co = Vector2(6, 1)
 delay_time = 0.8
-input_tile = true
+input_text_str = "@Dark water...@Scary!"
+input_face_str = "11"
 
 [node name="tile_6_2" parent="tiles" instance=ExtResource("1_35uwu")]
 modulate = Color(0.9, 0.9, 0.9, 1)
@@ -255,6 +292,8 @@ tile_id = 3
 tile_co = Vector2(6, 2)
 delay_time = 0.6
 input_tile = true
+input_text_str = "@Dark water...@Scary!"
+input_face_str = "11"
 
 [node name="tile_6_3" parent="tiles" instance=ExtResource("1_35uwu")]
 modulate = Color(0.95, 0.95, 0.95, 1)
@@ -265,6 +304,8 @@ tile_id = 3
 tile_co = Vector2(6, 3)
 delay_time = 0.4
 input_tile = true
+input_text_str = "@Dark water...@Scary!"
+input_face_str = "11"
 
 [node name="tile_6_4" parent="tiles" instance=ExtResource("1_35uwu")]
 position = Vector2(900, 580)
@@ -273,6 +314,8 @@ tile_id = 3
 tile_co = Vector2(6, 4)
 delay_time = 0.2
 input_tile = true
+input_text_str = "@Dark water...@Scary!"
+input_face_str = "11"
 
 [node name="tile_6_5" parent="tiles" instance=ExtResource("1_35uwu")]
 modulate = Color(1.02, 1.02, 1.02, 1)
@@ -282,6 +325,8 @@ tile_id = 3
 tile_co = Vector2(6, 5)
 delay_time = 0.4
 input_tile = true
+input_text_str = "@Dark water...@Scary!"
+input_face_str = "11"
 
 [node name="tile_6_6" parent="tiles" instance=ExtResource("1_35uwu")]
 position = Vector2(900, 728)
@@ -290,6 +335,8 @@ tile_id = 3
 tile_co = Vector2(6, 6)
 delay_time = 0.6
 input_tile = true
+input_text_str = "@Dark water...@Scary!"
+input_face_str = "11"
 
 [node name="tile_6_7" parent="tiles" instance=ExtResource("1_35uwu")]
 position = Vector2(900, 802)
@@ -297,7 +344,8 @@ scale = Vector2(0.5, 0.313)
 tile_id = 3
 tile_co = Vector2(6, 7)
 delay_time = 0.8
-input_tile = true
+input_text_str = "@Dark water...@Scary!"
+input_face_str = "11"
 
 [node name="tile_6_8" parent="tiles" instance=ExtResource("1_35uwu")]
 position = Vector2(900, 876)
@@ -321,7 +369,8 @@ scale = Vector2(0.5, 0.313)
 tile_id = 3
 tile_co = Vector2(7, 1)
 delay_time = 0.8
-input_tile = true
+input_text_str = "@Dark water...@Scary!"
+input_face_str = "11"
 
 [node name="tile_7_2" parent="tiles" instance=ExtResource("1_35uwu")]
 modulate = Color(0.9, 0.9, 0.9, 1)
@@ -332,6 +381,8 @@ tile_id = 3
 tile_co = Vector2(7, 2)
 delay_time = 0.6
 input_tile = true
+input_text_str = "@Dark water...@Scary!"
+input_face_str = "11"
 
 [node name="tile_7_3" parent="tiles" instance=ExtResource("1_35uwu")]
 modulate = Color(0.92, 0.92, 0.92, 1)
@@ -341,6 +392,8 @@ tile_id = 3
 tile_co = Vector2(7, 3)
 delay_time = 0.4
 input_tile = true
+input_text_str = "@Dark water...@Scary!"
+input_face_str = "11"
 
 [node name="tile_7_4" parent="tiles" instance=ExtResource("1_35uwu")]
 modulate = Color(1.02, 1.02, 1.02, 1)
@@ -350,6 +403,8 @@ tile_id = 3
 tile_co = Vector2(7, 4)
 delay_time = 0.4
 input_tile = true
+input_text_str = "@Dark water...@Scary!"
+input_face_str = "11"
 
 [node name="tile_7_5" parent="tiles" instance=ExtResource("1_35uwu")]
 modulate = Color(1.02, 1.02, 1.02, 1)
@@ -359,6 +414,8 @@ tile_id = 3
 tile_co = Vector2(7, 5)
 delay_time = 0.6
 input_tile = true
+input_text_str = "@Dark water...@Scary!"
+input_face_str = "11"
 
 [node name="tile_7_6" parent="tiles" instance=ExtResource("1_35uwu")]
 position = Vector2(1000, 765)
@@ -366,7 +423,8 @@ scale = Vector2(0.5, 0.313)
 tile_id = 3
 tile_co = Vector2(7, 6)
 delay_time = 0.8
-input_tile = true
+input_text_str = "@Dark water...@Scary!"
+input_face_str = "11"
 
 [node name="tile_7_7" parent="tiles" instance=ExtResource("1_35uwu")]
 position = Vector2(1000, 839)
@@ -388,7 +446,8 @@ scale = Vector2(0.5, 0.313)
 tile_id = 3
 tile_co = Vector2(8, 2)
 delay_time = 0.8
-input_tile = true
+input_text_str = "@Dark water...@Scary!"
+input_face_str = "11s"
 
 [node name="tile_8_3" parent="tiles" instance=ExtResource("1_35uwu")]
 modulate = Color(0.84, 0.84, 0.84, 1)
@@ -398,6 +457,8 @@ tile_id = 3
 tile_co = Vector2(8, 3)
 delay_time = 0.6
 input_tile = true
+input_text_str = "@Dark water...@Scary!"
+input_face_str = "11s"
 
 [node name="tile_8_4" parent="tiles" instance=ExtResource("1_35uwu")]
 modulate = Color(0.91, 0.91, 0.91, 1)
@@ -407,6 +468,8 @@ tile_id = 3
 tile_co = Vector2(8, 4)
 delay_time = 0.6
 input_tile = true
+input_text_str = "@Dark water...@Scary!"
+input_face_str = "11s"
 
 [node name="tile_8_5" parent="tiles" instance=ExtResource("1_35uwu")]
 position = Vector2(1100, 654)
@@ -415,6 +478,8 @@ tile_id = 3
 tile_co = Vector2(8, 5)
 delay_time = 0.6
 input_tile = true
+input_text_str = "@Dark water...@Scary!"
+input_face_str = "11s"
 
 [node name="tile_8_6" parent="tiles" instance=ExtResource("1_35uwu")]
 position = Vector2(1100, 728)
@@ -422,7 +487,8 @@ scale = Vector2(0.5, 0.313)
 tile_id = 3
 tile_co = Vector2(8, 6)
 delay_time = 0.8
-input_tile = true
+input_text_str = "@Dark water...@Scary!"
+input_face_str = "11s"
 
 [node name="tile_8_7" parent="tiles" instance=ExtResource("1_35uwu")]
 position = Vector2(1100, 802)
@@ -445,7 +511,8 @@ scale = Vector2(0.5, 0.313)
 tile_id = 3
 tile_co = Vector2(9, 2)
 delay_time = 0.8
-input_tile = true
+input_text_str = "@Dark water...@Scary!"
+input_face_str = "11"
 
 [node name="tile_9_3" parent="tiles" instance=ExtResource("1_35uwu")]
 modulate = Color(0.85, 0.85, 0.85, 1)
@@ -454,7 +521,8 @@ scale = Vector2(0.5, 0.313)
 tile_id = 3
 tile_co = Vector2(9, 3)
 delay_time = 0.8
-input_tile = true
+input_text_str = "@Dark water...@Scary!"
+input_face_str = "11"
 
 [node name="tile_9_4" parent="tiles" instance=ExtResource("1_35uwu")]
 modulate = Color(0.91, 0.91, 0.91, 1)
@@ -463,7 +531,8 @@ scale = Vector2(0.5, 0.313)
 tile_id = 3
 tile_co = Vector2(9, 4)
 delay_time = 0.8
-input_tile = true
+input_text_str = "@Dark water...@Scary!"
+input_face_str = "11"
 
 [node name="tile_9_5" parent="tiles" instance=ExtResource("1_35uwu")]
 position = Vector2(1200, 691)
@@ -471,7 +540,8 @@ scale = Vector2(0.5, 0.313)
 tile_id = 3
 tile_co = Vector2(9, 5)
 delay_time = 0.8
-input_tile = true
+input_text_str = "@Dark water...@Scary!"
+input_face_str = "11"
 
 [node name="tile_9_6" parent="tiles" instance=ExtResource("1_35uwu")]
 position = Vector2(1200, 765)
@@ -516,29 +586,143 @@ tile_co = Vector2(10, 6)
 
 [node name="tree_bg_tiles" type="Node2D" parent="."]
 
-[node name="bg" type="Node2D" parent="."]
-
-[node name="ColorRect11" type="ColorRect" parent="bg"]
-visible = false
-z_index = -10
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -10003.0
-offset_top = -4906.0
-offset_right = 9287.0
-offset_bottom = 6064.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-color = Color(0.207386, 0.255859, 0.226321, 1)
-
 [node name="bush" type="Node2D" parent="."]
 
 [node name="deco" type="Node2D" parent="."]
 z_index = 10
+
+[node name="SbHeallyPad" type="Sprite2D" parent="deco"]
+position = Vector2(603, 464)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_pt1a7")
+script = ExtResource("4_fgnqb")
+
+[node name="SbHeallyPad18" type="Sprite2D" parent="deco"]
+position = Vector2(1002, 757)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_pt1a7")
+script = ExtResource("4_fgnqb")
+
+[node name="SbHeallyPad2" type="Sprite2D" parent="deco"]
+position = Vector2(603, 540)
+rotation = 0.5164085
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("3_pt1a7")
+script = ExtResource("4_fgnqb")
+
+[node name="SbHeallyPad14" type="Sprite2D" parent="deco"]
+position = Vector2(998.00006, 390.9999)
+rotation = 0.5164085
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("3_pt1a7")
+script = ExtResource("4_fgnqb")
+
+[node name="SbHeallyPad3" type="Sprite2D" parent="deco"]
+position = Vector2(600, 614.00006)
+rotation = -0.22252294
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("3_pt1a7")
+flip_h = true
+script = ExtResource("4_fgnqb")
+
+[node name="SbHeallyPad12" type="Sprite2D" parent="deco"]
+position = Vector2(1098, 722)
+rotation = -0.22252294
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("3_pt1a7")
+flip_h = true
+script = ExtResource("4_fgnqb")
+
+[node name="SbHeallyPad4" type="Sprite2D" parent="deco"]
+position = Vector2(600.00006, 687.00006)
+rotation = 0.29828176
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3_pt1a7")
+flip_h = true
+script = ExtResource("4_fgnqb")
+
+[node name="SbHeallyPad16" type="Sprite2D" parent="deco"]
+position = Vector2(1202, 686)
+rotation = -0.09176049
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3_pt1a7")
+script = ExtResource("4_fgnqb")
+
+[node name="SbHeallyPad11" type="Sprite2D" parent="deco"]
+position = Vector2(1198, 465.00006)
+rotation = 0.29828176
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3_pt1a7")
+flip_h = true
+script = ExtResource("4_fgnqb")
+
+[node name="SbHeallyPad5" type="Sprite2D" parent="deco"]
+position = Vector2(702, 725.00006)
+rotation = 0.29828176
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("3_pt1a7")
+script = ExtResource("4_fgnqb")
+
+[node name="SbHeallyPad10" type="Sprite2D" parent="deco"]
+position = Vector2(700.00006, 428.00003)
+rotation = 0.29828176
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("3_pt1a7")
+script = ExtResource("4_fgnqb")
+
+[node name="SbHeallyPad9" type="Sprite2D" parent="deco"]
+position = Vector2(1200, 541)
+rotation = 0.29828176
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("3_pt1a7")
+script = ExtResource("4_fgnqb")
+
+[node name="SbHeallyPad15" type="Sprite2D" parent="deco"]
+position = Vector2(900, 356)
+rotation = 0.29828176
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("3_pt1a7")
+script = ExtResource("4_fgnqb")
+
+[node name="SbHeallyPad6" type="Sprite2D" parent="deco"]
+position = Vector2(799.9999, 760.99994)
+rotation = -0.07689363
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("3_pt1a7")
+flip_h = true
+script = ExtResource("4_fgnqb")
+
+[node name="SbHeallyPad17" type="Sprite2D" parent="deco"]
+position = Vector2(1196, 616)
+rotation = -0.07689363
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("3_pt1a7")
+flip_h = true
+script = ExtResource("4_fgnqb")
+
+[node name="SbHeallyPad13" type="Sprite2D" parent="deco"]
+position = Vector2(798.9999, 389.99997)
+rotation = -0.07689363
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("3_pt1a7")
+flip_h = true
+script = ExtResource("4_fgnqb")
+
+[node name="SbHeallyPad7" type="Sprite2D" parent="deco"]
+position = Vector2(898, 797.00006)
+rotation = -0.2746002
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_pt1a7")
+flip_h = true
+script = ExtResource("4_fgnqb")
+
+[node name="SbHeallyPad8" type="Sprite2D" parent="deco"]
+position = Vector2(1099, 428.00003)
+rotation = -0.2746002
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_pt1a7")
+flip_h = true
+script = ExtResource("4_fgnqb")
 
 [node name="overlay" type="Node2D" parent="."]
 z_index = 1000
@@ -551,6 +735,26 @@ offset_right = 7482.0
 offset_bottom = 3538.0
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="portal_fog" parent="." instance=ExtResource("2_jhwcs")]
 position = Vector2(900, 867)
+
+[node name="bg" type="Node2D" parent="."]
+
+[node name="ColorRect11" type="ColorRect" parent="bg"]
+z_index = -10
+material = SubResource("ShaderMaterial_ayk3d")
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -3085.0
+offset_top = -2970.0
+offset_right = 5642.0
+offset_bottom = 4867.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.21087265, 0.29101563, 0.24140331, 1)

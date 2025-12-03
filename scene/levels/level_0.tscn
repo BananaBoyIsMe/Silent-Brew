@@ -1,0 +1,758 @@
+[gd_scene load_steps=13 format=3 uid="uid://dod05gte2navs"]
+
+[ext_resource type="Script" uid="uid://d27wwv2iigb1j" path="res://script/level_0.gd" id="1_0st52"]
+[ext_resource type="PackedScene" uid="uid://e2jhu0ksgvw1" path="res://scene/tiles/tile_1.tscn" id="2_h8cr7"]
+[ext_resource type="Texture2D" uid="uid://boeia04062ts5" path="res://sprite/tiles/sb_tree_tile3.png" id="5_rfo5j"]
+[ext_resource type="Texture2D" uid="uid://41tovekmvj6a" path="res://sprite/tiles/sb_tree_tile2.png" id="6_utupm"]
+[ext_resource type="Texture2D" uid="uid://crw5uo7whh8f3" path="res://sprite/tiles/sb_bush2.png" id="9_80vst"]
+[ext_resource type="Texture2D" uid="uid://chwsvmx5ls8xw" path="res://sprite/plant/sb_plant6.png" id="10_vpff4"]
+[ext_resource type="PackedScene" uid="uid://d2fn13up552pa" path="res://scene/deco/rock_3.tscn" id="13_qt7wp"]
+[ext_resource type="PackedScene" uid="uid://dj5exfowx7tyd" path="res://scene/deco/rock_4.tscn" id="14_fkbgr"]
+[ext_resource type="PackedScene" uid="uid://s8pxk22vv63m" path="res://scene/deco/flower_2.tscn" id="16_p0pse"]
+[ext_resource type="PackedScene" uid="uid://d1w8p4sjdwsms" path="res://scene/deco/grass_2.tscn" id="17_rd784"]
+[ext_resource type="PackedScene" uid="uid://cnjrfy04j0dno" path="res://scene/deco/grass_3.tscn" id="18_w21nn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sa5f5"]
+radius = 14.0357
+
+[node name="level0" type="Node2D"]
+script = ExtResource("1_0st52")
+
+[node name="tiles" type="Node2D" parent="."]
+
+[node name="tile_3_2" parent="tiles" instance=ExtResource("2_h8cr7")]
+modulate = Color(1, 1.1, 1.08, 1)
+position = Vector2(600, 469)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(3, 2)
+
+[node name="tile_3_3" parent="tiles" instance=ExtResource("2_h8cr7")]
+modulate = Color(1, 1.03, 1.02, 1)
+position = Vector2(600, 543)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(3, 3)
+
+[node name="tile_3_4" parent="tiles" instance=ExtResource("2_h8cr7")]
+position = Vector2(600, 617)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(3, 4)
+
+[node name="tile_4_2" parent="tiles" instance=ExtResource("2_h8cr7")]
+modulate = Color(0.9, 1.1, 1.15, 1)
+position = Vector2(700, 432)
+rotation = 3.14159
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(4, 2)
+input_tile = true
+input_text_str = "@Fire bush thingy!|@It was very nice@ and cozy last night..."
+input_face_str = "12|13"
+
+[node name="tile_4_3" parent="tiles" instance=ExtResource("2_h8cr7")]
+modulate = Color(0.95, 1.04, 1.08, 1)
+position = Vector2(700, 506)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(4, 3)
+
+[node name="tile_4_4" parent="tiles" instance=ExtResource("2_h8cr7")]
+position = Vector2(700, 580)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(4, 4)
+
+[node name="tile_4_5" parent="tiles" instance=ExtResource("2_h8cr7")]
+modulate = Color(0.97, 0.97, 0.97, 1)
+position = Vector2(700, 654)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(4, 5)
+
+[node name="tile_5_1" parent="tiles" instance=ExtResource("2_h8cr7")]
+modulate = Color(0.9, 1.1, 1.2, 1)
+position = Vector2(800, 395)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(5, 1)
+
+[node name="tile_5_2" parent="tiles" instance=ExtResource("2_h8cr7")]
+modulate = Color(0.9, 1.1, 1.15, 1)
+position = Vector2(800, 469)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(5, 2)
+
+[node name="tile_5_3" parent="tiles" instance=ExtResource("2_h8cr7")]
+modulate = Color(0.94, 1.07, 1.1, 1)
+position = Vector2(800, 543)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(5, 3)
+
+[node name="tile_5_4" parent="tiles" instance=ExtResource("2_h8cr7")]
+modulate = Color(1, 1.03, 1.04, 1)
+position = Vector2(800, 617)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(5, 4)
+
+[node name="tile_5_5" parent="tiles" instance=ExtResource("2_h8cr7")]
+position = Vector2(800, 691)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(5, 5)
+
+[node name="tile_6_2" parent="tiles" instance=ExtResource("2_h8cr7")]
+modulate = Color(0.9, 1.17, 1.24, 1)
+position = Vector2(900, 432)
+rotation = -3.14159
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(6, 2)
+
+[node name="tile_6_3" parent="tiles" instance=ExtResource("2_h8cr7")]
+modulate = Color(0.9, 1.1, 1.15, 1)
+position = Vector2(900, 506)
+rotation = 3.14159
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(6, 3)
+
+[node name="tile_6_4" parent="tiles" instance=ExtResource("2_h8cr7")]
+modulate = Color(0.95, 1.07, 1.1, 1)
+position = Vector2(900, 580)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(6, 4)
+
+[node name="tile_6_5" parent="tiles" instance=ExtResource("2_h8cr7")]
+modulate = Color(1, 1.05, 1.05, 1)
+position = Vector2(900, 654)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(6, 5)
+
+[node name="tile_7_2" parent="tiles" instance=ExtResource("2_h8cr7")]
+modulate = Color(0.9, 1.15, 1.2, 1)
+position = Vector2(1000, 469)
+rotation = -3.14159
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(7, 2)
+
+[node name="tile_7_3" parent="tiles" instance=ExtResource("2_h8cr7")]
+modulate = Color(0.95, 1.1, 1.15, 1)
+position = Vector2(1000, 543)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(7, 3)
+
+[node name="tile_7_4" parent="tiles" instance=ExtResource("2_h8cr7")]
+modulate = Color(0.97, 1.07, 1.1, 1)
+position = Vector2(1000, 617)
+scale = Vector2(0.5, 0.313)
+tile_id = 2
+tile_co = Vector2(7, 4)
+
+[node name="tree_bg_tiles" type="Node2D" parent="."]
+visible = false
+
+[node name="tree_bg2" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(501, 141)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_rfo5j")
+
+[node name="tree_bg3" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(586, 169)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_rfo5j")
+
+[node name="tree_bg4" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(701.12, 200.8)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_rfo5j")
+
+[node name="tree_bg5" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(801.12, 238.8)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_rfo5j")
+
+[node name="tree_bg6" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1005, 241)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_rfo5j")
+
+[node name="tree_bg7" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(639, 225)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_rfo5j")
+
+[node name="tree_bg8" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(628, 212)
+rotation = 1.5708
+scale = Vector2(0.31, 0.54)
+texture = ExtResource("5_rfo5j")
+
+[node name="tree_bg9" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(903, 279)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_rfo5j")
+
+[node name="tree_bg11" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(502, 125)
+rotation = 3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_rfo5j")
+
+[node name="tree_bg12" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(598, 145)
+rotation = 3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_rfo5j")
+
+[node name="tree_bg13" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(700, 180)
+rotation = 3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_rfo5j")
+
+[node name="tree_bg14" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(788, 205)
+rotation = 3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_rfo5j")
+
+[node name="tree_bg15" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(900, 231)
+rotation = -3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_rfo5j")
+
+[node name="tree_bg16" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1006, 239)
+rotation = -3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_rfo5j")
+
+[node name="tree_bg17" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1400.12, 881.8)
+rotation = -3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_rfo5j")
+
+[node name="tree_bg18" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1302.12, 912.8)
+rotation = -3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_rfo5j")
+
+[node name="tree_bg19" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1199.12, 880.8)
+rotation = -3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_rfo5j")
+
+[node name="tree_bg20" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1108.12, 845.8)
+rotation = -3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_rfo5j")
+
+[node name="tree_bg21" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1003, 872)
+rotation = -3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_rfo5j")
+
+[node name="tree_bg22" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(897, 835)
+rotation = -3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_rfo5j")
+
+[node name="tree_bg23" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(786, 790)
+rotation = -3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_rfo5j")
+
+[node name="tree_bg24" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(703, 764)
+rotation = -3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_rfo5j")
+
+[node name="tree_bg25" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(604, 791)
+rotation = -3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_rfo5j")
+
+[node name="tree_bg26" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(495, 766)
+rotation = -3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_rfo5j")
+
+[node name="tree_bg27" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(400, 745)
+rotation = -3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_rfo5j")
+
+[node name="tree_bg28" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(320, 702)
+rotation = -3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_rfo5j")
+
+[node name="tree_bg29" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(331, 629)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("6_utupm")
+
+[node name="tree_bg30" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(327, 553)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("6_utupm")
+
+[node name="tree_bg31" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(266, 522)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("6_utupm")
+
+[node name="tree_bg32" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(249, 452)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("6_utupm")
+
+[node name="tree_bg33" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(260, 434)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("6_utupm")
+
+[node name="tree_bg34" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(252, 384)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("6_utupm")
+
+[node name="tree_bg10" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1344, 242)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_rfo5j")
+
+[node name="tree_bg35" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1437, 284)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_rfo5j")
+
+[node name="tree_bg36" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1459, 361)
+rotation = 3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("6_utupm")
+
+[node name="tree_bg37" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1529, 411)
+rotation = 3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("6_utupm")
+
+[node name="tree_bg38" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1540, 493)
+rotation = 3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("6_utupm")
+
+[node name="tree_bg39" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1568, 453)
+rotation = 3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("6_utupm")
+
+[node name="tree_bg40" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1634, 543)
+rotation = 3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("6_utupm")
+
+[node name="tree_bg41" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1633, 616)
+rotation = 3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("6_utupm")
+
+[node name="tree_bg42" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1634, 687)
+rotation = 3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("6_utupm")
+
+[node name="tree_bg43" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1635, 758)
+rotation = 3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("6_utupm")
+
+[node name="tree_bg44" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1651, 805)
+rotation = 3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("6_utupm")
+
+[node name="tree_bg45" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(188, 342)
+rotation = -3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_rfo5j")
+
+[node name="tree_bg46" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(158, 306)
+rotation = -3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_rfo5j")
+
+[node name="tree_bg47" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(170, 241)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("6_utupm")
+
+[node name="tree_bg48" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(197, 189)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("6_utupm")
+
+[node name="tree_bg49" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(238, 163)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("6_utupm")
+
+[node name="tree_bg50" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(731, 253)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_rfo5j")
+
+[node name="tree_bg51" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(821, 289)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_rfo5j")
+
+[node name="tree_bg52" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(902, 314)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_rfo5j")
+
+[node name="tree_bg53" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(988, 286)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_rfo5j")
+
+[node name="tree_bg54" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1088, 251)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_rfo5j")
+
+[node name="tree_bg55" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1195, 213)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_rfo5j")
+
+[node name="tree_bg56" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1297, 239)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_rfo5j")
+
+[node name="tree_bg57" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1398, 272)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_rfo5j")
+
+[node name="tree_bg58" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(496, 185)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_rfo5j")
+
+[node name="tree_bg59" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(401, 211)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_rfo5j")
+
+[node name="tree_bg60" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(324, 177)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_rfo5j")
+
+[node name="tree_bg61" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(574, 189)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_rfo5j")
+
+[node name="tree_bg62" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(363, 555)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("6_utupm")
+
+[node name="tree_bg63" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(365, 621)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("6_utupm")
+
+[node name="tree_bg64" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(369, 687)
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("6_utupm")
+
+[node name="tree_bg65" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(694, 818)
+rotation = -3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_rfo5j")
+
+[node name="tree_bg66" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(846, 824)
+rotation = -3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_rfo5j")
+
+[node name="tree_bg67" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1100, 831)
+rotation = -3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_rfo5j")
+
+[node name="tree_bg68" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1433, 383)
+rotation = 3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("6_utupm")
+
+[node name="tree_bg69" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1484, 395)
+rotation = 3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("6_utupm")
+
+[node name="tree_bg70" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1611, 510)
+rotation = 3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("6_utupm")
+
+[node name="tree_bg71" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1500, 912)
+rotation = -3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_rfo5j")
+
+[node name="tree_bg72" type="Sprite2D" parent="tree_bg_tiles"]
+modulate = Color(1, 1.1, 1.1, 1)
+z_index = 20
+position = Vector2(1602, 884)
+rotation = -3.14159
+scale = Vector2(0.54, 0.35)
+texture = ExtResource("5_rfo5j")
+
+[node name="bg" type="Node2D" parent="."]
+
+[node name="ColorRect11" type="ColorRect" parent="bg"]
+z_index = -10
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8586.0
+offset_top = -4991.0
+offset_right = 10704.0
+offset_bottom = 5979.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.255981, 0.455078, 0.333753, 1)
+
+[node name="deco" type="Node2D" parent="."]
+z_index = 10
+
+[node name="rock_3" parent="deco" instance=ExtResource("13_qt7wp")]
+position = Vector2(716, 664)
+scale = Vector2(0.5, 0.5)
+
+[node name="rock_4" parent="deco" instance=ExtResource("14_fkbgr")]
+position = Vector2(882, 453)
+
+[node name="grass_3" parent="deco" instance=ExtResource("18_w21nn")]
+position = Vector2(616, 640)
+
+[node name="grass_4" parent="deco" instance=ExtResource("18_w21nn")]
+position = Vector2(985, 566)
+
+[node name="grass_2" parent="deco" instance=ExtResource("17_rd784")]
+position = Vector2(678, 383)
+
+[node name="bush3" type="Sprite2D" parent="deco"]
+position = Vector2(602.00006, 535)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("9_80vst")
+flip_h = true
+
+[node name="SbPlant7" type="Sprite2D" parent="deco/bush3"]
+position = Vector2(3.33321, 13.3332)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("10_vpff4")
+
+[node name="flower_2" parent="." instance=ExtResource("16_p0pse")]
+position = Vector2(829, 553)
+scale = Vector2(0.54, 0.54)
+
+[node name="flower_3" parent="." instance=ExtResource("16_p0pse")]
+position = Vector2(819, 554.00006)
+scale = Vector2(0.77, 0.77)
+
+[node name="blackberry1" type="Area2D" parent="."]
+position = Vector2(600, 540)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="blackberry1"]
+shape = SubResource("CircleShape2D_sa5f5")

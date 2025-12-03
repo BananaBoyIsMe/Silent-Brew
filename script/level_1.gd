@@ -9,6 +9,10 @@ var player_input = true
 var player_input_num = 0
 
 func _ready() -> void:
+	global.connect("remove_item", bush_gone)
+	get_parent().position = Vector2(0, 0)
+	get_parent().scale = Vector2(1.2, 1.2)
+	global.player_cur_health = 31
 	global.turn = 0
 	global.other_emotion.visible = true
 	global.bark_emotion.visible = true
@@ -256,3 +260,18 @@ func _input(event):
 		player_input = true
 		player_input_num += 1
 		on_user_input_received()
+
+func bush_gone(item) -> void:
+	match item:
+		"blackberry1":
+			$bush/bush5/SbPlant7.queue_free()
+			$blackberry1.queue_free()
+		"blackberry2":
+			$bush/bush3/SbPlant7.queue_free()
+			$blackberry2.queue_free()
+		"snow1":
+			$bush/bush2/SbPlant2.queue_free()
+			$snow1.queue_free()
+		"snow2":
+			$bush/bush4/SbPlant4.queue_free()
+			$snow2.queue_free()

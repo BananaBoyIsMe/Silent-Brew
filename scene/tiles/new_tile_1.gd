@@ -157,10 +157,7 @@ func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int
 		
 
 func disable_tile(state: bool) -> void:
-	if state:
-		$Area2D/CollisionPolygon2D.disabled = true
-	else:
-		$Area2D/CollisionPolygon2D.disabled = false
+	$Area2D/CollisionPolygon2D.set_deferred("disabled", state)
 
 func allow_collision():
 	await get_tree().create_timer(2).timeout

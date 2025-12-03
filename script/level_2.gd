@@ -5,7 +5,15 @@ var player_load = preload("res://scene/player.tscn")
 var player_input = true
 var player_input_num = 0
 
+@onready var berry_img1 = $bush/bush3
+@onready var berry_img2 = $bush/bush4
+@onready var berry_img3 = $bush/bush5
+
 func _ready() -> void:
+	global.connect("remove_item", bush_gone)
+	get_parent().position = Vector2(100, 0)
+	get_parent().scale = Vector2(1, 1)
+	global.player_cur_health = 31
 	audio.stop_all()
 	audio.play_bird_forest()
 	global.turn = 0
@@ -35,7 +43,7 @@ func _ready() -> void:
 	await get_tree().create_timer(3.5).timeout
 	global.bark_emotion.change_character_png("bark10", true)
 	global.bark_emotion.new_text("\n How am I so deep\nin the forest!", 1)
-	await get_tree().create_timer(2).timeout
+	await get_tree().create_timer(0.5).timeout
 	player_input = false
 	#global.bark_emotion.change_character_png("bark1")
 
@@ -75,3 +83,15 @@ func _input(event):
 		player_input = true
 		player_input_num += 1
 		on_user_input_received()
+
+func bush_gone(item) -> void:
+	match item:
+		"blackberry1":
+			berry_img1.get_child(0).queue_free()
+			berry_img1.get_child(1).queue_free()
+		"blackberry2":
+			berry_img2.get_child(0).queue_free()
+			berry_img2.get_child(1).queue_free()
+		"blackberry3":
+			berry_img3.get_child(0).queue_free()
+			berry_img3.get_child(1).queue_free()

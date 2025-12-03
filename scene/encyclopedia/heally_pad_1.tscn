@@ -50,7 +50,4 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_ny7j1")
 theme_override_font_sizes/font_size = 55
 text = "Mama say they are really 
-big and I can walk on it!
-
-They like water and can
-use in healing potio"
+big and I can walk on it!"

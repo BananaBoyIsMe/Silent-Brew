@@ -1,10 +1,45 @@
-[gd_scene load_steps=4 format=3 uid="uid://c3pqvhcx12suf"]
+[gd_scene load_steps=9 format=3 uid="uid://c3pqvhcx12suf"]
 
 [ext_resource type="Script" uid="uid://claht4a8rtit3" path="res://script/inventory_item.gd" id="1_d507n"]
 [ext_resource type="Texture2D" uid="uid://4ui6ogbv8407" path="res://sprite/plant/sb_plant1.png" id="2_d507n"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_d507n"]
 radius = 94.0053
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d507n"]
+bg_color = Color(0.7055968, 0.7055968, 0.7055968, 0.8)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5sqjd"]
+bg_color = Color(0.7055968, 0.7055968, 0.7055968, 0.8)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0awlo"]
+bg_color = Color(0.69008625, 0.80363095, 0.69008625, 0.8)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lq6dg"]
+bg_color = Color(0.7055968, 0.7055968, 0.7055968, 0.8)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4n6ex"]
+bg_color = Color(0.7055968, 0.7055968, 0.7055968, 0.8)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
 
 [node name="inventory_item" type="Node2D"]
 z_index = 10
@@ -15,10 +50,57 @@ position = Vector2(5, 0)
 texture = ExtResource("2_d507n")
 
 [node name="itm" type="Area2D" parent="."]
+collision_layer = 129
+collision_mask = 129
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="itm"]
 shape = SubResource("CircleShape2D_d507n")
 
+[node name="Button" type="Button" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 116.0
+offset_top = 12.0
+offset_right = 314.0
+offset_bottom = 67.39287
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 1.1199993)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 0.5019608)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 0.4)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_d507n")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5sqjd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0awlo")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_lq6dg")
+theme_override_styles/focus = SubResource("StyleBoxFlat_4n6ex")
+disabled = true
+text = "Hold to eat"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -100.0
+offset_top = -104.0
+offset_right = 374.0
+offset_bottom = 121.0
+
 [connection signal="input_event" from="itm" to="." method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="itm" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="itm" to="." method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="TextureRect" to="." method="_on_texture_rect_mouse_entered"]
+[connection signal="mouse_exited" from="TextureRect" to="." method="_on_texture_rect_mouse_exited"]

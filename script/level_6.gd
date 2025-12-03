@@ -6,6 +6,9 @@ var player_input = true
 var player_input_num = 0
 
 func _ready() -> void:
+	get_parent().position = Vector2(0, 0)
+	get_parent().scale = Vector2(1.2, 1.2)
+	global.player_cur_health = 31
 	audio.stop_all()
 	audio.play_bird_forest()
 	global.turn = 0

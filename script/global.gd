@@ -8,6 +8,19 @@ var player_cur_pos = Vector2(0, 0)
 var player_direction = [Vector2(0, 0)]
 var player_direction_real_pos = []
 var player_direction_num = 1
+signal player_cur_health_toggled(state: int)
+var player_cur_health: int = 30:
+	set(value):
+		if player_cur_health != value:
+			player_cur_health = value
+			emit_signal("player_cur_health_toggled", player_cur_health)
+var player_max_health = 30
+signal player_lost_toggled(state: int)
+var player_lost: bool = false:
+	set(value):
+		if player_lost != value:
+			player_lost = value
+			emit_signal("player_lost_toggled", player_lost)
 var tile_co
 
 var bark_emotion
@@ -15,12 +28,16 @@ var other_emotion
 var time
 var foreground
 
-var in_cutscene = true
+signal in_cutscene_toggled(state: bool)
+var in_cutscene: bool = true: 
+	set(value):
+		if in_cutscene != value:
+			in_cutscene = value
+			emit_signal("in_cutscene_toggled", in_cutscene)
 
 var move_timer = 0
 
 signal in_game_toggled(state: bool)
-
 var in_game: bool = false: 
 	set(value):
 		if in_game != value:
@@ -47,9 +64,14 @@ signal map_toggled(state: bool)
 signal pause_toggled(state: bool)
 signal inv_toggled(state: bool)
 
+@warning_ignore("unused_signal")
 signal enemy_move()
+@warning_ignore("unused_signal")
 signal kill_enemy()
+@warning_ignore("unused_signal")
 signal add_inventory(item: String)
+@warning_ignore("unused_signal")
+signal remove_item(item: String)
 
 #var move_now = false
 
@@ -94,6 +116,35 @@ var turn: int = 0:
 		if turn != value:
 			turn = value
 			emit_signal("turn_changed", turn)
+
+var room0 = [Vector2(3, 2), Vector2(3, 3), Vector2(3, 4),
+			Vector2(4, 2), Vector2(4, 3), Vector2(4, 4), Vector2(4, 5),
+			Vector2(5, 1), Vector2(5, 2), Vector2(5, 3), Vector2(5, 4), Vector2(5, 5),
+			Vector2(6, 2), Vector2(6, 3), Vector2(6, 4), Vector2(6, 5),
+			Vector2(7, 2), Vector2(7, 3), Vector2(7, 4)]
+
+var room0_dict = {
+	Vector2(3, 2): true,
+	Vector2(3, 3): true,
+	Vector2(3, 4): true,
+	Vector2(4, 2): true,
+	Vector2(4, 3): true,
+	Vector2(4, 4): true,
+	Vector2(4, 5): true,
+	Vector2(5, 1): true,
+	Vector2(5, 2): true,
+	Vector2(5, 3): true,
+	Vector2(5, 4): true,
+	Vector2(5, 5): true,
+	Vector2(6, 2): true,
+	Vector2(6, 3): true,
+	Vector2(6, 4): true,
+	Vector2(6, 5): true,
+	Vector2(7, 2): true,
+	Vector2(7, 3): true,
+	Vector2(7, 4): true,
+}
+
 
 var room1 = [Vector2(1, 0), Vector2(1, 1), Vector2(1, 2), 
 			Vector2(2, 0), Vector2(2, 1), Vector2(2, 2), Vector2(2, 3), Vector2(2, 4), Vector2(2, 5),
@@ -968,13 +1019,13 @@ var room8_dict = {
 			#]
 
 var room9 = [Vector2(2, 2), Vector2(2, 3), Vector2(2, 4), Vector2(2, 5), Vector2(2, 6),
-			Vector2(3, 1), Vector2(3, 6), 
-			Vector2(4, 1), Vector2(4, 7), 
-			Vector2(5, 0), Vector2(5, 7), 
-			Vector2(6, 0), Vector2(6, 8),
-			Vector2(7, 0), Vector2(7, 7), 
-			Vector2(8, 1), Vector2(8, 7), 
-			Vector2(9, 1), Vector2(9, 6),
+			Vector2(3, 1), Vector2(3, 2), Vector2(3, 3), Vector2(3, 4), Vector2(3, 5), Vector2(3, 6), 
+			Vector2(4, 1), Vector2(4, 2), Vector2(4, 6), Vector2(4, 7), 
+			Vector2(5, 0), Vector2(5, 1), Vector2(5, 6), Vector2(5, 7), 
+			Vector2(6, 0), Vector2(6, 1), Vector2(6, 2), Vector2(6, 8),
+			Vector2(7, 0), Vector2(7, 1), Vector2(7, 6), Vector2(7, 7), 
+			Vector2(8, 1), Vector2(8, 2), Vector2(8, 6), Vector2(8, 7), 
+			Vector2(9, 1), Vector2(9, 2), Vector2(9, 5), Vector2(9, 6),
 			Vector2(10, 2), Vector2(10, 3), Vector2(10, 4), Vector2(10, 5), Vector2(10, 6),
 			]
 
@@ -985,60 +1036,124 @@ var room9_dict = {
 	Vector2(2, 5): true, 
 	Vector2(2, 6): true, 
 	Vector2(3, 1): true, 
-	Vector2(3, 2): false, 
-	Vector2(3, 3): false, 
-	Vector2(3, 4): false, 
-	Vector2(3, 5): false, 
+	Vector2(3, 2): true, 
+	Vector2(3, 3): true, 
+	Vector2(3, 4): true, 
+	Vector2(3, 5): true, 
 	Vector2(3, 6): true, 
 	Vector2(4, 1): true, 
-	Vector2(4, 2): false, 
-	Vector2(4, 3): false, 
-	Vector2(4, 4): false, 
-	Vector2(4, 5): false, 
-	Vector2(4, 6): false, 
+	Vector2(4, 2): true, 
+	#Vector2(4, 3): false, 
+	#Vector2(4, 4): false, 
+	#Vector2(4, 5): false, 
+	Vector2(4, 6): true, 
 	Vector2(4, 7): true,
 	Vector2(5, 0): true, 
-	Vector2(5, 1): false, 
-	Vector2(5, 2): false, 
-	Vector2(5, 3): false, 
-	Vector2(5, 4): false, 
-	Vector2(5, 5): false, 
-	Vector2(5, 6): false, 
+	Vector2(5, 1): true, 
+	#Vector2(5, 2): false, 
+	#Vector2(5, 3): false, 
+	#Vector2(5, 4): false, 
+	#Vector2(5, 5): false, 
+	Vector2(5, 6): true, 
 	Vector2(5, 7): true, 
 	Vector2(6, 0): true, 
-	Vector2(6, 1): false, 
-	Vector2(6, 2): false, 
-	Vector2(6, 3): false, 
-	Vector2(6, 4): false, 
-	Vector2(6, 5): false, 
-	Vector2(6, 6): false, 
-	Vector2(6, 7): false, 
+	Vector2(6, 1): true, 
+	#Vector2(6, 2): false, 
+	#Vector2(6, 3): false, 
+	#Vector2(6, 4): false, 
+	#Vector2(6, 5): false, 
+	#Vector2(6, 6): false, 
+	Vector2(6, 7): true, 
 	Vector2(6, 8): true, 
 	Vector2(7, 0): true, 
-	Vector2(7, 1): false, 
-	Vector2(7, 2): false, 
-	Vector2(7, 3): false, 
-	Vector2(7, 4): false, 
-	Vector2(7, 5): false, 
-	Vector2(7, 6): false, 
+	Vector2(7, 1): true, 
+	#Vector2(7, 2): false, 
+	#Vector2(7, 3): false, 
+	#Vector2(7, 4): false, 
+	#Vector2(7, 5): false, 
+	Vector2(7, 6): true, 
 	Vector2(7, 7): true, 
 	Vector2(8, 1): true, 
-	Vector2(8, 2): false, 
-	Vector2(8, 3): false, 
-	Vector2(8, 4): false, 
-	Vector2(8, 5): false, 
-	Vector2(8, 6): false, 
+	Vector2(8, 2): true, 
+	#Vector2(8, 3): false, 
+	#Vector2(8, 4): false, 
+	#Vector2(8, 5): false, 
+	Vector2(8, 6): true, 
 	Vector2(8, 7): true, 
 	Vector2(9, 1): true, 
-	Vector2(9, 2): false, 
-	Vector2(9, 3): false, 
-	Vector2(9, 4): false, 
-	Vector2(9, 5): false, 
+	Vector2(9, 2): true, 
+	#Vector2(9, 3): false, 
+	#Vector2(9, 4): false, 
+	Vector2(9, 5): true, 
 	Vector2(9, 6): true, 
 	Vector2(10, 2): true, 
-	Vector2(10, 3): false, 
-	Vector2(10, 4): false, 
-	Vector2(10, 5): false, 
+	Vector2(10, 3): true, 
+	Vector2(10, 4): true, 
+	Vector2(10, 5): true, 
+	Vector2(10, 6): true, 
+}
+
+var room9_dict_rock = { 
+	Vector2(2, 2): true, 
+	Vector2(2, 3): true, 
+	Vector2(2, 4): true, 
+	Vector2(2, 5): true, 
+	Vector2(2, 6): true, 
+	Vector2(3, 1): true, 
+	Vector2(3, 2): true, 
+	Vector2(3, 3): true, 
+	Vector2(3, 4): true, 
+	Vector2(3, 5): true, 
+	Vector2(3, 6): true, 
+	Vector2(4, 1): true, 
+	Vector2(4, 2): true, 
+	Vector2(4, 3): true, 
+	Vector2(4, 4): true, 
+	Vector2(4, 5): true, 
+	Vector2(4, 6): true, 
+	Vector2(4, 7): true,
+	Vector2(5, 0): true, 
+	Vector2(5, 1): true, 
+	Vector2(5, 2): true, 
+	Vector2(5, 3): true, 
+	Vector2(5, 4): true, 
+	Vector2(5, 5): true, 
+	Vector2(5, 6): true, 
+	Vector2(5, 7): true, 
+	Vector2(6, 0): true, 
+	Vector2(6, 1): true, 
+	Vector2(6, 2): true, 
+	Vector2(6, 3): true, 
+	Vector2(6, 4): true, 
+	Vector2(6, 5): true, 
+	Vector2(6, 6): true, 
+	Vector2(6, 7): true, 
+	Vector2(6, 8): true, 
+	Vector2(7, 0): true, 
+	Vector2(7, 1): true, 
+	Vector2(7, 2): true, 
+	Vector2(7, 3): true, 
+	Vector2(7, 4): true, 
+	Vector2(7, 5): true, 
+	Vector2(7, 6): true, 
+	Vector2(7, 7): true, 
+	Vector2(8, 1): true, 
+	Vector2(8, 2): true, 
+	Vector2(8, 3): true, 
+	Vector2(8, 4): true, 
+	Vector2(8, 5): true, 
+	Vector2(8, 6): true, 
+	Vector2(8, 7): true, 
+	Vector2(9, 1): true, 
+	Vector2(9, 2): true, 
+	Vector2(9, 3): true, 
+	Vector2(9, 4): true, 
+	Vector2(9, 5): true, 
+	Vector2(9, 6): true, 
+	Vector2(10, 2): true, 
+	Vector2(10, 3): true, 
+	Vector2(10, 4): true, 
+	Vector2(10, 5): true, 
 	Vector2(10, 6): true, 
 }
 
@@ -1091,16 +1206,23 @@ var room10_dict = {
 	Vector2(10, 6): true, 
 }
 
-var all_room = [null, room1, room2, room3, room4, room5, room6, room7, room8, room9, room10, null]
-var all_room_dict = [null, room1_dict, room2_dict, room3_dict, room4_dict, room5_dict, room6_dict, room7_dict, room8_dict, room9_dict, room10_dict, null]
+var completed_level = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 0]
+var all_room = [room0, room1, room2, room3, room4, room5, room6, room7, room8, room9, room10, null, room1, room3, room8]
+var all_room_dict = [room0_dict, room1_dict, room2_dict, room3_dict, room4_dict, room5_dict, room6_dict, room7_dict, room8_dict, room9_dict, room10_dict, null, room1_dict, room3_dict, room8_dict]
+var all_room_dict_rock = [null, null, null, null, null, null, null, null, null, room9_dict_rock, null, null, room1_dict, null, null]
 
 #var all_room_dict_deco = [null, room1_dict_deco, room2_dict_deco]
 #var all_room_dict_enemy = [null, room1_dict_enemy, room2_dict_enemy]
 #var player_room_start_point = [null, Vector2(0, 0), Vector2(3, 0)]
 #var player_room_end_point = [null, Vector2(0, 0), Vector2(14, 0)]
-var current_room = 1
-var current_level = null
+signal current_room_change(state: int)
+var current_room:int = 0:
+	set(value):
+		if current_room != value:
+			current_room = value
+			emit_signal("current_room_change", current_room)
 
+var current_level = null
 
 
 func get_neighbors_even_q(current: Vector2, grid: Dictionary) -> Array:
@@ -1127,7 +1249,6 @@ func get_neighbors_even_q(current: Vector2, grid: Dictionary) -> Array:
 
 	for dir in directions:
 		var neighbor = current + dir
-		# Check if the neighbor exists in the grid
 		if grid.has(neighbor):
 			neighbors.append(neighbor)
 	return neighbors
@@ -1159,6 +1280,54 @@ func find_shortest_path_even_q(start: Vector2, target: Vector2, grid: Dictionary
 				came_from[neighbor] = current
 				
 	return []
+
+func get_straight_lines_even_q(start: Vector2, grid: Dictionary) -> Array:
+	var all_lines: Array = []
+
+	for dir_idx in range(6):
+		#start at up-left and go clockwise and end on down-left
+		var current_line: Array = []
+		var current_pos: Vector2 = start
+
+		while true:
+			var q := int(current_pos.x)
+
+			# compute direction based on q parity
+			var dir: Vector2
+			if q % 2 == 1:
+				match dir_idx:
+					0: dir = Vector2(-1, 0)   # up-left
+					1: dir = Vector2(0, -1)   # up
+					2: dir = Vector2(1, 0)  # up-right
+					3: dir = Vector2(1, 1)  # down-right
+					4: dir = Vector2(0, 1)  # down
+					5: dir = Vector2(-1, 1)  # down-left
+			else:
+				match dir_idx:
+					0: dir = Vector2(-1, -1)   # up-left
+					1: dir = Vector2(0, -1)   # up
+					2: dir = Vector2(1, -1)  # up-right
+					3: dir = Vector2(1, 0)  # down-right
+					4: dir = Vector2(0, 1)  # down
+					5: dir = Vector2(-1, 0)  # down-left
+					
+	
+
+			# step to next tile
+			current_pos = Vector2(
+				current_pos.x + dir.x,
+				current_pos.y + dir.y
+			)
+
+			# stop if grid doesn't have this tile
+			if not grid.has(current_pos):
+				break
+
+			current_line.append(current_pos)
+
+		all_lines.append(current_line)
+
+	return all_lines
 
 func find_real_pos(des_posx: int, des_posy: int) -> Vector2:
 	var y = 321 + 74 * des_posy if (des_posx % 2 == 1) else 284 + 74 * des_posy 

@@ -8,6 +8,10 @@ var player_input_num = 0
 var rng = RandomNumberGenerator.new()
 
 func _ready() -> void:
+	global.time.time_change(1)
+	get_parent().position = Vector2(0, 50)
+	get_parent().scale = Vector2(1, 1)
+	global.player_cur_health = 31
 	audio.stop_all()
 	
 	global.turn = 0

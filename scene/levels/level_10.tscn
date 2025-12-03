@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c1mqkcdkprf6"]
+[gd_scene load_steps=12 format=3 uid="uid://c1mqkcdkprf6"]
 
 [ext_resource type="Script" uid="uid://p3dxwo6vq2fj" path="res://script/level_10.gd" id="1_6hmmq"]
 [ext_resource type="PackedScene" uid="uid://e2jhu0ksgvw1" path="res://scene/tiles/tile_1.tscn" id="1_35uwu"]
@@ -6,6 +6,8 @@
 [ext_resource type="Shader" uid="uid://bkexlxs4tam0g" path="res://shader/nighttime.gdshader" id="3_8kic1"]
 [ext_resource type="Texture2D" uid="uid://itp7d112xlnb" path="res://sprite/deco/sb_broken_house.png" id="4_070ud"]
 [ext_resource type="Texture2D" uid="uid://c01krani0444q" path="res://sprite/deco/sb_crystal_fruit_vine.png" id="5_w3uop"]
+[ext_resource type="PackedScene" uid="uid://enbee8hfv3l4" path="res://scene/enemy/enemy_5.tscn" id="7_lxtc0"]
+[ext_resource type="Shader" uid="uid://bwuo38ypvi2eh" path="res://shader/aurora.gdshader" id="8_wk3ho"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_r25v2"]
 shader = ExtResource("3_8kic1")
@@ -17,6 +19,19 @@ shader_parameter/contrast = 1.20000003325
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6hmmq"]
 radius = 14.0357
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pnpw2"]
+shader = ExtResource("8_wk3ho")
+shader_parameter/speed = 0.050000002375
+shader_parameter/distortion = 0.0
+shader_parameter/intensity = 1.0000000475
+shader_parameter/transparency = 0.150000007125
+shader_parameter/color1 = Color(1, 0.8, 0.7, 1)
+shader_parameter/color2 = Color(0.6, 0.8, 1, 1)
+shader_parameter/color3 = Color(0.5, 0.7, 0.9, 0.6)
+shader_parameter/color4 = Color(0.5, 1, 0.5, 1)
+shader_parameter/color5 = Color(0.9, 0.9, 0.3, 1)
+shader_parameter/seed_offset = Vector2(0, 0)
 
 [node name="level_10" type="Node2D"]
 script = ExtResource("1_6hmmq")
@@ -489,25 +504,6 @@ tile_co = Vector2(10, 6)
 
 [node name="tree_bg_tiles" type="Node2D" parent="."]
 
-[node name="bg" type="Node2D" parent="."]
-
-[node name="ColorRect11" type="ColorRect" parent="bg"]
-visible = false
-z_index = -10
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -10003.0
-offset_top = -4906.0
-offset_right = 9287.0
-offset_bottom = 6064.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-color = Color(0.207386, 0.255859, 0.226321, 1)
-
 [node name="bush" type="Node2D" parent="."]
 
 [node name="deco" type="Node2D" parent="."]
@@ -534,6 +530,7 @@ scale = Vector2(0.4, 0.4)
 texture = ExtResource("4_070ud")
 
 [node name="SbCrystalFruitVine" type="Sprite2D" parent="."]
+z_index = 1
 position = Vector2(1309, 377)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("5_w3uop")
@@ -573,3 +570,33 @@ position = Vector2(-105, -111)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="water_cry/water_cry/water_cry/water_cry/water_cry/water_cry"]
 shape = SubResource("CircleShape2D_6hmmq")
+
+[node name="enemy_5" parent="." instance=ExtResource("7_lxtc0")]
+modulate = Color(0.84640056, 0.6961441, 0.92578125, 1)
+position = Vector2(1238, 345.00006)
+rotation = -0.2443461
+scale = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" parent="enemy_5" index="0"]
+position = Vector2(57.93747, 338.058)
+
+[node name="bg" type="Node2D" parent="."]
+
+[node name="ColorRect11" type="ColorRect" parent="bg"]
+z_index = -10
+material = SubResource("ShaderMaterial_pnpw2")
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -3085.0
+offset_top = -2970.0
+offset_right = 5642.0
+offset_bottom = 4867.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.21087265, 0.29101563, 0.24140331, 1)
+
+[editable path="enemy_5"]

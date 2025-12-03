@@ -1,6 +1,6 @@
 extends Node2D
 
-var select_level_list = [null]
+var select_level_list = []
 var select_level_cur = []
 var current_level = 1
 var not_done = false
@@ -11,6 +11,7 @@ var gone = true
 @onready var back_bt = $back
 
 func _ready() -> void:
+	select_level_list.append($sb_select_level0)
 	select_level_list.append($sb_select_level1)
 	select_level_list.append($sb_select_level2)
 	select_level_list.append($sb_select_level3)
@@ -26,18 +27,24 @@ func _ready() -> void:
 	select_level_list.append($sb_select_level13)
 	select_level_list.append($sb_select_level14)
 	select_level_list.append($sb_select_level15)
-	select_level_list.append($sb_select_level16)
-	select_level_list.append($sb_select_level17)
-	select_level_list.append($sb_select_level18)
-	select_level_list.append($sb_select_level19)
-	select_level_list.append($sb_select_level20)
-	select_level_list.append($sb_select_level21)
+	#select_level_list.append($sb_select_level16)
+	#select_level_list.append($sb_select_level17)
+	#select_level_list.append($sb_select_level18)
+	#select_level_list.append($sb_select_level19)
+	#select_level_list.append($sb_select_level20)
+	#select_level_list.append($sb_select_level21)
 	
-	select_level_cur.append(select_level_list[20])
-	select_level_cur.append(select_level_list[21])
+	select_level_cur.append(select_level_list[15])
+	select_level_cur.append(select_level_list[0])
 	select_level_cur.append(select_level_list[1])
 	select_level_cur.append(select_level_list[2])
 	select_level_cur.append(select_level_list[3])
+	
+	var num = 0
+	for i in global.completed_level:
+		if i == -1:
+			select_level_list[num].get_child(1).visible = true
+		num += 1
 	
 	await get_tree().create_timer(1).timeout
 	gone = false
@@ -65,11 +72,14 @@ func _on_left_bt_button_up() -> void:
 	not_done = true
 	
 	current_level -= 1
-	if current_level < 1:
-		current_level = 21
+	if current_level < 0:
+		current_level = 15
 	
 	level_num.text = "Level " + str(current_level) + ": "
 	match current_level:
+		0:
+			level_num.text += "Tutorial"
+			play_bt.disabled = false
 		1:
 			level_num.text += "Calm camp"
 			play_bt.disabled = false
@@ -104,42 +114,24 @@ func _on_left_bt_button_up() -> void:
 			level_num.text += "Uncle Nord"
 			play_bt.disabled = false
 		12:
-			level_num.text += "The river (Coming soon)"
-			play_bt.disabled = true
+			level_num.text += "The camp again"
+			play_bt.disabled = false
 		13:
-			level_num.text += "The star monster (Coming soon)"
-			play_bt.disabled = true
+			level_num.text += "The chaotic beach"
+			play_bt.disabled = false
 		14:
-			level_num.text += "Riri (Coming soon)"
-			play_bt.disabled = true
+			level_num.text += "I'm... tired"
+			play_bt.disabled = false
 		15:
-			level_num.text += "The ruined camp (Coming soon)"
-			play_bt.disabled = true
-		16:
-			level_num.text += "The magmas (Coming soon)"
-			play_bt.disabled = true
-		17:
-			level_num.text += "Home (Coming soon)"
-			play_bt.disabled = true
-		18:
-			level_num.text += "The waterfall (Coming soon)"
-			play_bt.disabled = true
-		19:
-			level_num.text += "Summit run (Coming soon)"
-			play_bt.disabled = true
-		20:
-			level_num.text += "Mother (Coming soon)"
-			play_bt.disabled = true
-		21:
-			level_num.text += "Mountain heart (Coming soon)"
-			play_bt.disabled = true
+			level_num.text += "Mountain heart"
+			play_bt.disabled = false
 	level_num.text = level_num.text
 	
 	var add_level = current_level - 2
+	if add_level == -2:
+		add_level = 14
 	if add_level == -1:
-		add_level = 20
-	if add_level == 0:
-		add_level = 21
+		add_level = 15
 	#var temp = select_level_cur.pop_back()
 	select_level_cur.pop_back()
 	select_level_cur.insert(0, select_level_list[add_level])
@@ -177,11 +169,14 @@ func _on_right_bt_button_up() -> void:
 	not_done = true
 	
 	current_level += 1
-	if current_level > 21:
-		current_level = 1
+	if current_level > 15:
+		current_level = 0
 	#print(current_level, " :cur_level")
 	level_num.text = "Level " + str(current_level) + ": "
 	match current_level:
+		0:
+			level_num.text += "Tutorial"
+			play_bt.disabled = false
 		1:
 			level_num.text += "Calm camp"
 			play_bt.disabled = false
@@ -216,42 +211,24 @@ func _on_right_bt_button_up() -> void:
 			level_num.text += "Uncle Nord"
 			play_bt.disabled = false
 		12:
-			level_num.text += "The river (Coming soon)"
-			play_bt.disabled = true
+			level_num.text += "The camp again"
+			play_bt.disabled = false
 		13:
-			level_num.text += "The star monster (Coming soon)"
-			play_bt.disabled = true
+			level_num.text += "The chaotic beach"
+			play_bt.disabled = false
 		14:
-			level_num.text += "Riri (Coming soon)"
-			play_bt.disabled = true
+			level_num.text += "I'm... tired"
+			play_bt.disabled = false
 		15:
-			level_num.text += "The ruined camp (Coming soon)"
-			play_bt.disabled = true
-		16:
-			level_num.text += "The magmas (Coming soon)"
-			play_bt.disabled = true
-		17:
-			level_num.text += "Home (Coming soon)"
-			play_bt.disabled = true
-		18:
-			level_num.text += "The waterfall (Coming soon)"
-			play_bt.disabled = true
-		19:
-			level_num.text += "Summit run (Coming soon)"
-			play_bt.disabled = true
-		20:
-			level_num.text += "Mother (Coming soon)"
-			play_bt.disabled = true
-		21:
-			level_num.text += "Mountain heart (Coming soon)"
-			play_bt.disabled = true
+			level_num.text += "Mountain heart"
+			play_bt.disabled = false
 	level_num.text = level_num.text
 	
 	var add_level = current_level + 2
-	if add_level == 23:
-		add_level = 2
-	if add_level == 22:
+	if add_level == 17:
 		add_level = 1
+	if add_level == 16:
+		add_level = 0
 	#var temp = select_level_cur.pop_back()
 	select_level_cur.pop_front()
 	select_level_cur.append(select_level_list[add_level])

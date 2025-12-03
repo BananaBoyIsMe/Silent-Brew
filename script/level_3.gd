@@ -6,6 +6,9 @@ var player_input = true
 var player_input_num = 0
 
 func _ready() -> void:
+	get_parent().position = Vector2(-30, 0)
+	get_parent().scale = Vector2(1.25, 1.25)
+	global.player_cur_health = 31
 	audio.stop_all()
 	audio.play_beach()
 	global.turn = 0

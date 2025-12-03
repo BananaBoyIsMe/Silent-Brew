@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b55c07apc8152"
-path="res://.godot/imported/Silent Brew.png-e814b243343230801de34c3331833529.ctex"
+uid="uid://domgot1ioaw07"
+path="res://.godot/imported/sb_level14.png-715837212cfd10e0371a08671fd71178.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://silent_brew_web/Silent Brew.png"
-dest_files=["res://.godot/imported/Silent Brew.png-e814b243343230801de34c3331833529.ctex"]
+source_file="res://sprite/menu/sb_level14.png"
+dest_files=["res://.godot/imported/sb_level14.png-715837212cfd10e0371a08671fd71178.ctex"]
 
 [params]
 

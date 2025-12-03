@@ -13,7 +13,8 @@ var tween1
 var tween2
 var tween3
 #vector2(0, -17)
-
+var bee_move = false
+#var bee_move_again = false
 @onready var sprite = $Sprite2D
 
 func _ready() -> void:
@@ -34,22 +35,20 @@ func _enemy_kill():
 func _on_enemy_move():
 	tween1 = create_tween()
 	tween1.tween_property(self, "position", next_tile_pos, 0.8)
-	tween2 = create_tween()
-	tween2.kill()
 
 func _on_move_changed(state: bool):
-	if state:
-		tween1 = create_tween()
-		tween1.tween_property(self, "position", next_tile_pos, 0.8)
-		tween2 = create_tween()
-		tween2.kill()
+	bee_move = state
+	if bee_move:
+		while(bee_move):
+			tween1 = create_tween()
+			tween1.tween_property(self, "position", next_tile_pos, 0.8)
+			await get_tree().create_timer(0.98).timeout
 	else:
 		tween2 = create_tween()
 		tween2.tween_property(self, "position", cur_tile_pos, 0.8)
-		tween1 = create_tween()
-		tween1.kill()
 
 func _on_turn_changed(_new_turn: int):
+	#bee_move_again = true
 	match direction:
 		1:
 			#left_up
@@ -134,4 +133,3 @@ func _on_turn_changed(_new_turn: int):
 	var tween_rot = create_tween()
 	tween_rot.tween_property(self, "rotation_degrees", cur_rotation, 1).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
 	#print("Hi")
-	pass
